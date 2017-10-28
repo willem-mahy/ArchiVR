@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 8830e1da6cbc5ac4688f81b7b939c3a8
+timeCreated: 1504567315
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 80c63bfa8cefbfb0ecbe585651050936
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -3.3715074, y: 1.6292964, z: -3.375683}
+      lookAt: {x: -0.45806476, y: 0.69415575, z: 0.389367}
+      up: {x: 0.11795887, y: 0.9812483, z: 0.1524386}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: FencePanelA
+    100002: FencePanelB
+    100004: FencePostA
+    100006: FencePostB
+    100008: FencePostC
+    100010: FenceRail
+    100012: FenceRail 1
+    100014: FenceRail 2
+    100016: FenceRail 3
+    100018: FenceRail 4
+    100020: FenceRail 5
+    100022: //RootNode
+    400000: FencePanelA
+    400002: FencePanelB
+    400004: FencePostA
+    400006: FencePostB
+    400008: FencePostC
+    400010: FenceRail
+    400012: FenceRail 1
+    400014: FenceRail 2
+    400016: FenceRail 3
+    400018: FenceRail 4
+    400020: FenceRail 5
+    400022: //RootNode
+    2300000: FencePanelA
+    2300002: FencePanelB
+    2300004: FencePostA
+    2300006: FencePostB
+    2300008: FencePostC
+    2300010: FenceRail
+    2300012: FenceRail 1
+    2300014: FenceRail 2
+    2300016: FenceRail 3
+    2300018: FenceRail 4
+    2300020: FenceRail 5
+    3300000: FencePanelA
+    3300002: FencePanelB
+    3300004: FencePostA
+    3300006: FencePostB
+    3300008: FencePostC
+    3300010: FenceRail
+    3300012: FenceRail 1
+    3300014: FenceRail 2
+    3300016: FenceRail 3
+    3300018: FenceRail 4
+    3300020: FenceRail 5
+    4300000: Mesh FencePanelA
+    4300002: Mesh FencePostB
+    4300004: Mesh FenceRail
+    4300006: Mesh FencePostA
+    4300008: Mesh FencePanelB
+    4300010: Mesh FencePostC
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
