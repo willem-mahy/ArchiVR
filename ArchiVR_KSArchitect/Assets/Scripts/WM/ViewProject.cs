@@ -11,14 +11,7 @@ namespace Assets.Scripts.WM
 {
     public class ViewProject : MonoBehaviour
     {
-        //! The root UI conrol for the overlay menu
-        GameObject m_uiControlMenuOverlay = null;
-
-        //! The root UI conrol for the FPS control in the non-VR Overlay menu
-        GameObject m_uiControlFPS = null;
-
-        //! The root UI conrol for the gaze menu
-        GameObject m_uiControlMenuGaze = null;
+        UIManager m_uiManager = null;
 
         //! The root UI conrol for the VR Overlay menu
         GameObject m_uiControlVROverlay = null;
@@ -36,9 +29,7 @@ namespace Assets.Scripts.WM
         public string[] m_supportedDevices = null;
         public List<string> m_devices = new List<string>();
 
-        private GameObject m_canvasTime = null;
-
-        public List<Button> m_buttonToggleUIArray = new List<Button>();
+        public List<GameObject> m_menuTimeArray = null;        
 
         // Use this for initialization
         void Start()
@@ -46,10 +37,10 @@ namespace Assets.Scripts.WM
             // Firs get references to all UI controls, before hiding them by setting them inactive.
             GetReferencesToUiControls();
 
-            // Hide m_canvasTime
-            if (m_canvasTime != null)
+            // Hide time menus
+            foreach (var gameObject in m_menuTimeArray)
             {
-                m_canvasTime.SetActive(false);
+                gameObject.SetActive(false);
             }
 
             // Hide debug logging altogether
@@ -58,12 +49,7 @@ namespace Assets.Scripts.WM
                 m_canvasDebug.SetActive(false);
             }
 
-            for (int i = 0; i < m_buttonToggleUIArray.Count; ++i)
-            {
-                var buttonGameObject = m_buttonToggleUIArray[i];
-                var buttonComponent = buttonGameObject.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(ButtonToggleActiveUI_OnClick);
-            }
+            m_uiManager = gameObject.GetComponent<UIManager>();
 
             // Set the initial active debug logging type to the first one.
             SetActiveDebuggingType(0);
@@ -106,14 +92,7 @@ namespace Assets.Scripts.WM
                 }
             }
         }
-
-
-        public void ButtonToggleActiveUI_OnClick()
-        {
-            var toggleActiveBehaviorComponent = gameObject.GetComponent<ToggleActiveBehavior>();
-            toggleActiveBehaviorComponent.TogglActiveState();
-        }
-
+        
         //! Add a device to he list of selectable devices if supported by the system.
         void AddDeviceIfSupported(string deviceName)
         {
@@ -137,25 +116,22 @@ namespace Assets.Scripts.WM
 
         public void buttonTime_OnButtonClick(BaseEventData obj)
         {
-            m_canvasTime.SetActive(!m_canvasTime.activeSelf);
-
-            if (m_canvasTime.activeSelf)
+            if (m_menuTimeArray.Count == 0)
             {
-                //TODO: GamerObject.find(WMCameraControlDPad).SetActive(false);
+                return; // sanity
+            }
+
+            bool show = !m_menuTimeArray[0].activeSelf;
+
+            foreach (var gameObject in m_menuTimeArray)
+            {
+                gameObject.SetActive(show);
             }
         }
 
         void GetReferencesToUiControls()
         {
             m_canvasDebug = GameObject.Find("CanvasDebug");
-
-            m_uiControlMenuOverlay = GameObject.Find("CanvasOverlayMenu");
-
-            m_uiControlFPS = GameObject.Find("CanvasFPS");
-
-            m_uiControlMenuGaze = GameObject.Find("CanvasGazeMenu");
-
-            m_canvasTime = GameObject.Find("CanvasTime");
 
             m_uiControlDebug.Add(GameObject.Find("TextDebugSystemInfo"));
             m_uiControlDebug.Add(GameObject.Find("TextDebugCamera"));
@@ -235,6 +211,21 @@ namespace Assets.Scripts.WM
             }
         }
 
+        private bool IsViewModeVR(string deviceName)
+        {
+            if (deviceName.CompareTo("") == 0)
+            {
+                return false;
+            }
+
+            if (deviceName.ToLower().CompareTo("none") == 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void SetViewMode(int viewMode)
         {
             for (int i = 0; i < m_toggleButtonsViewMode.Count; ++i)
@@ -246,35 +237,10 @@ namespace Assets.Scripts.WM
             bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
             string deviceName = invalidIndex ? "" : m_devices[viewMode];
 
-            // update Menu visibility
-            if (
-                deviceName.CompareTo("") == 0
-                || deviceName.ToLower().CompareTo("none") == 0
-                )
-            {
-                m_uiControlMenuOverlay.SetActive(true);
-                m_uiControlFPS.SetActive(true);
-                m_uiControlMenuGaze.SetActive(false);
-                m_uiControlVROverlay.SetActive(false);
-            }
-            else
-            {
-                m_uiControlMenuOverlay.SetActive(false);
-                m_uiControlFPS.SetActive(false);
-                m_uiControlMenuGaze.SetActive(true);
-                m_uiControlVROverlay.SetActive(true);
+            // update UI visibility
+            bool isViewModeVR = IsViewModeVR(deviceName);
 
-                // While it was disabled, the menu did not update its position in order to be in front of the player.
-                // So update it once now just before setting it visible.
-                var c = m_uiControlMenuGaze.GetComponent<PlayerGazeMenuBehavior>();
-
-                if (null != c)
-                {
-                    c.UpdateLocationFromCamera();
-                }
-
-
-            }
+            m_uiManager.SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
 
             if (null != m_textControlDebugViewMode)
             {
@@ -284,16 +250,10 @@ namespace Assets.Scripts.WM
             if (deviceName.CompareTo("") == 0)
             {
                 DisableVR();
-
-                //XRSettings.LoadDeviceByName("");
-                //XRSettings.enabled = false;
             }
             else
             {
                 EnableVR(deviceName);
-
-                //XRSettings.LoadDeviceByName(deviceName);
-                //XRSettings.enabled = true;
             }
         }
 

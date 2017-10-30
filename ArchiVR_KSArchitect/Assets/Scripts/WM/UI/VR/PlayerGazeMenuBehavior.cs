@@ -19,10 +19,20 @@ namespace Assets.Scripts.WM.UI.VR
         // Update is called once per frame
         void Update()
         {
-            UpdateLocationFromCamera();
+            UpdateLocationFromCamera(false);           
         }
 
-        public void UpdateLocationFromCamera()
+        public bool IsCameraLookingDown(float angleDegrees)
+        {
+            if (null == m_camera)
+            {
+                return false;
+            }
+            
+            return (m_camera.transform.rotation.eulerAngles.x > angleDegrees);
+        }
+
+        public void UpdateLocationFromCamera(bool alwaysUpdateRotation)
         {
             if (null == m_camera)
             {
@@ -30,17 +40,28 @@ namespace Assets.Scripts.WM.UI.VR
             }
 
             var cameraPosition = m_camera.transform.position;
-            var cameraRotationEuler = m_camera.transform.rotation.eulerAngles;
 
             gameObject.transform.position = cameraPosition + m_offsetFromCamera;
 
             // Only adjust the rotation of player gaze menu to follow camera orientation,
             // when not looking down at the menu.
             // This enables the player to gaze at different buttons in the menu.
-            if (cameraRotationEuler.x < 30)
+            if (alwaysUpdateRotation || !IsCameraLookingDown(40.0f))
             {
-                gameObject.transform.rotation = Quaternion.Euler(90, cameraRotationEuler.y, 0);
+                UpdateRotationFromCamera();
             }
+        }
+
+        private void UpdateRotationFromCamera()
+        {
+            if (null == m_camera)
+            {
+                return;
+            }
+
+            var cameraRotationEuler = m_camera.transform.rotation.eulerAngles;
+
+            gameObject.transform.rotation = Quaternion.Euler(90, cameraRotationEuler.y, 0);
         }
     }
 }
