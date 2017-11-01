@@ -6,6 +6,7 @@ namespace Assets.Scripts.WM.UI.VR
 {
     public class OnHoverHighlight : MonoBehaviour
     {
+        public float m_highlightScaleFactor = 1.2f;
 
         // Use this for initialization
         void Start()
@@ -28,7 +29,7 @@ namespace Assets.Scripts.WM.UI.VR
         private void HandleOver()
         {
             Debug.Log("HandleOver");
-            gameObject.transform.localScale = 1.1f * Vector3.one;
+            gameObject.transform.localScale = m_highlightScaleFactor * Vector3.one;
         }
 
         //Handle the Out event
