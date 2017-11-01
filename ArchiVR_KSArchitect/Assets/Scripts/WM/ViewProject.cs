@@ -26,8 +26,7 @@ namespace Assets.Scripts.WM
 
         public Text m_textControlDebugViewMode = null;
 
-        public string[] m_supportedDevices = null;
-        public List<string> m_devices = new List<string>();
+        public List<string> m_devices = null;
 
         public List<GameObject> m_menuTimeArray = null;        
 
@@ -53,13 +52,15 @@ namespace Assets.Scripts.WM
 
             // Set the initial active debug logging type to the first one.
             SetActiveDebuggingType(0);
+
+            AddSupportedDevices();
+
+            //SetViewMode(0);
         }
 
         // Update is called once per frame
         void Update()
         {
-            AddSupportedDevices();
-
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
             {
@@ -93,12 +94,12 @@ namespace Assets.Scripts.WM
             }
         }
         
-        //! Add a device to he list of selectable devices if supported by the system.
+        //! Add a device to the list of selectable devices if supported by the system.
         void AddDeviceIfSupported(string deviceName)
         {
-            for (int i = 0; i < m_supportedDevices.Length; ++i)
+            foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
             {
-                if (m_supportedDevices[i].ToLower().Equals(deviceName.ToLower()))
+                if (supportedDeviceName.ToLower().Equals(deviceName.ToLower()))
                 {
                     m_devices.Add(deviceName);
                     return;
@@ -144,57 +145,50 @@ namespace Assets.Scripts.WM
 
         void AddSupportedDevices()
         {
-            if (null == m_supportedDevices || 0 == m_supportedDevices.Length)
+            // Log supported devices
+            if (m_textControlDebugViewMode != null)
             {
-                m_supportedDevices = UnityEngine.XR.XRSettings.supportedDevices;
+                m_textControlDebugViewMode.text += "\nSupported VR devices:";
 
-                // No VR
-                AddDeviceIfSupported("none");
-
-                // VR
-                // Regular split screen H
-                AddDeviceIfSupported("stereo");
-
-                // X Eye Split screen H
-                AddDeviceIfSupported("split");
-
-                // Oculus And GearVR
-                AddDeviceIfSupported("Oculus");
-
-                // Open VR
-                //AddDeviceIfSupported("OpenVR");
-
-                // Vive
-                //AddDeviceIfSupported("vive");
-
-                List<string> optionSpritePaths = new List<string>();
-
-                if (m_textControlDebugViewMode != null)
+                foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
                 {
-                    m_textControlDebugViewMode.text += "\nSupported VR devices:";
+                    m_textControlDebugViewMode.text += "\n -" + supportedDeviceName;
                 }
+            }
 
-                for (int i = 0; i < m_devices.Count; ++i)
-                {
-                    optionSpritePaths.Add("Menu/ViewMode/" + m_devices[i]);
+            // No VR
+            AddDeviceIfSupported("none");
 
-                    if (m_textControlDebugViewMode != null)
-                    {
+            // VR
+            // Regular split screen H
+            AddDeviceIfSupported("stereo");
 
-                        m_textControlDebugViewMode.text += "\n -" + m_supportedDevices[i];
-                    }
-                }
+            // X Eye Split screen H
+            AddDeviceIfSupported("split");
 
-                // Initialize 'View Mode' toggle buttons.
-                for (int i = 0; i < m_toggleButtonsViewMode.Count; ++i)
-                {
-                    var m_toggleButtonViewMode = m_toggleButtonsViewMode[i];
-                    m_toggleButtonViewMode.LoadOptions(optionSpritePaths);
+            // Oculus And GearVR
+            AddDeviceIfSupported("Oculus");
 
-                    m_toggleButtonViewMode.GetComponent<Button>().onClick.AddListener(toggleButtonViewMode_OnClick);
-                }
+            // Open VR
+            //AddDeviceIfSupported("OpenVR");
 
-                SetViewMode(0);
+            // Vive
+            //AddDeviceIfSupported("vive");
+
+            // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
+            List<string> optionSpritePaths = new List<string>();
+
+            foreach (var deviceName in m_devices)
+            {
+                optionSpritePaths.Add("Menu/ViewMode/" + deviceName);
+            }
+
+            // Initialize 'View Mode' toggle buttons.
+            foreach (var toggleButtonViewMode in  m_toggleButtonsViewMode)
+            {
+                toggleButtonViewMode.LoadOptions(optionSpritePaths);
+
+                toggleButtonViewMode.GetComponent<Button>().onClick.AddListener(toggleButtonViewMode_OnClick);
             }
         }
 
@@ -211,7 +205,14 @@ namespace Assets.Scripts.WM
             }
         }
 
-        private bool IsViewModeVR(string deviceName)
+        public static bool IsActiveViewModeVR()
+        {
+            var loadedDeviceName = XRSettings.loadedDeviceName;
+
+            return IsViewModeVR(loadedDeviceName);
+        }
+
+        public static bool IsViewModeVR(string deviceName)
         {
             if (deviceName.CompareTo("") == 0)
             {
