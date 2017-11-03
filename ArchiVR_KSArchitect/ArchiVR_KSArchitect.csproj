@@ -225,6 +225,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MenuSettings.cs" />
     <Compile Include="Assets\ProjectSelectButton.cs" />
     <Compile Include="Assets\Scripts\WM\ConstructionLighting.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\LightCelestialBehavior.cs" />
