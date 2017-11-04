@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -226,12 +228,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MenuSettings.cs" />
-    <Compile Include="Assets\ProjectSelectButton.cs" />
-    <Compile Include="Assets\Scripts\WM\ConstructionLighting.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\ProjectSelectButton.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\ConstructionLighting.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\LightCelestialBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\SkyBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\ReflectionProbe.cs" />
-    <Compile Include="Assets\Scripts\WM\TimeBehavior.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\TimeBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonConstructionLightingMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonRotateMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonTimeOfDay.cs" />
@@ -260,7 +264,7 @@
     <Compile Include="Assets\Scripts\WM\UI\VR\VRButton.cs" />
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />
-    <Compile Include="Assets\Scripts\WM\ViewProject.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />

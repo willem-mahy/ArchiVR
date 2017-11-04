@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.WM
+namespace Assets.Scripts.WM.ArchiVR
 {
     public class TimeBehavior : MonoBehaviour
     {

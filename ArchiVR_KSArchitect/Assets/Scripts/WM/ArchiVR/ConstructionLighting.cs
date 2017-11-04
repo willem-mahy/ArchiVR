@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Assets.Scripts.WM.UI;
 
-namespace Assets.Scripts.WM
+namespace Assets.Scripts.WM.ArchiVR
 {
     public class ConstructionLighting : MonoBehaviour
     {

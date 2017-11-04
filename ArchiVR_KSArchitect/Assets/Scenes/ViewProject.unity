@@ -393,7 +393,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46305332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1260, y: 716.8735, z: 0}
+  m_LocalPosition: {x: -1260, y: 807.1866, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1595630128}
@@ -504,7 +504,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61936661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -220.27293, z: 0}
+  m_LocalPosition: {x: 0, y: -248.49582, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 422865805}
@@ -1572,7 +1572,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262424146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1040, y: 716.8735, z: 0}
+  m_LocalPosition: {x: -1040, y: 807.1866, z: 0}
   m_LocalScale: {x: 1.0000024, y: 1.0000024, z: 1.0000024}
   m_Children:
   - {fileID: 681952478}
@@ -1844,7 +1844,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303044785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 611.8735, z: 0}
+  m_LocalPosition: {x: 0, y: 702.1866, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576071921}
@@ -2532,7 +2532,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 432992898}
+        - m_Target: {fileID: 0}
           m_MethodName: buttonTime_OnButtonClick
           m_Mode: 0
           m_Arguments:
@@ -2798,8 +2798,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422865804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 403, y: 232, z: 0}
-  m_LocalScale: {x: 1.0075, y: 1.0075, z: 1.0075}
+  m_LocalPosition: {x: 359, y: 232, z: 0}
+  m_LocalScale: {x: 0.8975, y: 0.8975, z: 0.8975}
   m_Children:
   - {fileID: 61936662}
   m_Father: {fileID: 889306270}
@@ -2875,15 +2875,15 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 432992899}
-  - component: {fileID: 432992898}
   - component: {fileID: 432992900}
   - component: {fileID: 432992901}
   - component: {fileID: 432992902}
   - component: {fileID: 432992903}
   - component: {fileID: 432992904}
   - component: {fileID: 432992905}
+  - component: {fileID: 432992898}
   m_Layer: 8
-  m_Name: ViewProject
+  m_Name: Application
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2897,18 +2897,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 432992897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b39b02ea9988c48b812b8e6c25efc7, type: 3}
+  m_Script: {fileID: 11500000, guid: d5e82086c6742dd40a7ecb871fe203ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_toggleButtonsViewMode:
-  - {fileID: 8254678}
-  - {fileID: 1945458131}
-  m_textControlDebugViewMode: {fileID: 0}
-  m_supportedDevices: []
-  m_devices: []
-  m_menuTimeArray:
-  - {fileID: 1163454867}
-  - {fileID: 74462277}
+  m_time: {fileID: 552090057}
+  m_gameObjectWorldConstructionLighting: {fileID: 0}
+  m_buttonConstructionLightingModeList:
+  - {fileID: 1496764617}
+  - {fileID: 564143977}
+  m_initialState: 1
+  m_state: 1
 --- !u!4 &432992899
 Transform:
   m_ObjectHideFlags: 0
@@ -2920,7 +2918,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &432992900
 MonoBehaviour:
@@ -2987,16 +2985,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 432992897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028563ad10462054faeff976476ee038, type: 3}
+  m_Script: {fileID: 11500000, guid: 118e4e147e239654e8cac4984faeab6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_time: {fileID: 552090057}
-  m_gameObjectWorldConstructionLighting: {fileID: 0}
-  m_buttonConstructionLightingModeList:
-  - {fileID: 1496764617}
-  - {fileID: 564143977}
-  m_initialState: 1
-  m_state: 1
+  m_toggleButtonsViewMode:
+  - {fileID: 8254678}
+  - {fileID: 1945458131}
+  m_textControlDebugViewMode: {fileID: 0}
+  m_devices: []
+  m_menuTimeArray:
+  - {fileID: 1163454867}
+  - {fileID: 74462277}
 --- !u!114 &432992904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3215,10 +3214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 552090056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d98843c98592c4994c0f6900144f6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c968cce555c4274eba69871b40b814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_timeText: {fileID: 2026799520}
+  m_timeText: {fileID: 0}
   m_animationSpeed: 1
   m_time: 0
   m_delta: 0
@@ -4457,8 +4456,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 878122793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 403, y: 232, z: 0}
-  m_LocalScale: {x: 1.0075, y: 1.0075, z: 1.0075}
+  m_LocalPosition: {x: 359, y: 232, z: 0}
+  m_LocalScale: {x: 0.8975, y: 0.8975, z: 0.8975}
   m_Children:
   - {fileID: 1689463190}
   - {fileID: 1955253335}
@@ -5329,8 +5328,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1163454867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 403, y: 232, z: 0}
-  m_LocalScale: {x: 0.31484374, y: 0.31484374, z: 0.31484374}
+  m_LocalPosition: {x: 359, y: 232, z: 0}
+  m_LocalScale: {x: 0.28046876, y: 0.28046876, z: 0.28046876}
   m_Children:
   - {fileID: 212468902}
   - {fileID: 1749296607}
@@ -6135,7 +6134,7 @@ Transform:
   - {fileID: 1572712933}
   - {fileID: 1329705864}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1320743661
 GameObject:
@@ -6161,7 +6160,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1320743661}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -400, y: -322.93115, z: 0}
+  m_LocalPosition: {x: -400, y: -294.70828, z: 0}
   m_LocalScale: {x: 0.0011922504, y: 0.001192251, z: 0.001192251}
   m_Children: []
   m_Father: {fileID: 878122794}
@@ -6657,7 +6656,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 432992898}
+        - m_Target: {fileID: 0}
           m_MethodName: buttonTime_OnButtonClick
           m_Mode: 0
           m_Arguments:
@@ -7313,7 +7312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1104214876560462, guid: 59a21d4fe2863dc4da2f6530a9874c6b, type: 2}
       propertyPath: m_Name
-      value: ButtonConstructionLightingMode
+      value: ButtonConstructionLightingMode_VR
       objectReference: {fileID: 0}
     - target: {fileID: 114135442697270536, guid: 59a21d4fe2863dc4da2f6530a9874c6b,
         type: 2}
@@ -7931,8 +7930,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1576071917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 403, y: 232, z: 0}
-  m_LocalScale: {x: 0.31484374, y: 0.31484374, z: 0.31484374}
+  m_LocalPosition: {x: 359, y: 232, z: 0}
+  m_LocalScale: {x: 0.28046876, y: 0.28046876, z: 0.28046876}
   m_Children:
   - {fileID: 46305333}
   - {fileID: 262424147}
@@ -9728,7 +9727,7 @@ GameObject:
   - component: {fileID: 1945458129}
   - component: {fileID: 1945458131}
   m_Layer: 5
-  m_Name: ButtonViewMode
+  m_Name: ButtonViewMode_VR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9903,7 +9902,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 432992898}
+        - m_Target: {fileID: 0}
           m_MethodName: toggleButtonViewMode_OnButtonClick
           m_Mode: 0
           m_Arguments:

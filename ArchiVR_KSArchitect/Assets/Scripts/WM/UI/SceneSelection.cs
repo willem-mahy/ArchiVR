@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Assets.Scripts.WM.ArchiVR.Application;
 
 namespace Assets.Scripts.WM
 {
@@ -141,7 +142,7 @@ namespace Assets.Scripts.WM
 
         public void LoadMainMenu()
         {
-            if (ViewProject.IsActiveViewModeVR())
+            if (ApplicationStatePlay.IsActiveViewModeVR())
             {
                 SceneManager.LoadScene("MainMenu_VR");
             }
@@ -246,20 +247,27 @@ namespace Assets.Scripts.WM
 
         void ExitButtonOnClick()
         {
-            Debug.Log("Exit button clicked.");
+            Debug.Log("ExitButtonOnClick()");
+
             Quit();
         }
 
         private void Quit()
         {
-            m_textStatus.text = "Exiting... ";
+            Debug.Log("Quit()");
+
+            if (null != m_textStatus)
+            {
+                m_textStatus.text = "Exiting... ";
+            }
 
             Application.Quit();
         }
 
         void GoButtonOnClick()
         {
-            Debug.Log("Go Project button clicked.");
+            Debug.Log("GoButtonOnClick()");
+
             if ((m_activeProjectIndex < 0) || (m_activeProjectIndex > m_projectNames.Count))
             {
                 m_textStatus.text = "m_activeProjectIndex=" + m_activeProjectIndex;

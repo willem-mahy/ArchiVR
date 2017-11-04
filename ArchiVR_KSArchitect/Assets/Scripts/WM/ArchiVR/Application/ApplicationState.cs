@@ -4,17 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
 using Assets.Scripts.WM.UI;
-using Assets.Scripts.WM.UI.VR;
 using UnityEngine.EventSystems;
 
-namespace Assets.Scripts.WM
+namespace Assets.Scripts.WM.ArchiVR.Application
 {
-    public class ViewProject : MonoBehaviour
+    public class ApplicationState : MonoBehaviour
     {
         UIManager m_uiManager = null;
-
-        //! The root UI conrol for the VR Overlay menu
-        GameObject m_uiControlVROverlay = null;
 
         // The parent UI control that contains all debug logging UI controls for all types of debugging information.
         GameObject m_canvasDebug = null;
@@ -28,10 +24,10 @@ namespace Assets.Scripts.WM
 
         public List<string> m_devices = null;
 
-        public List<GameObject> m_menuTimeArray = null;        
+        public List<GameObject> m_menuTimeArray = null;
 
         // Use this for initialization
-        void Start()
+        protected virtual void Start()
         {
             // Firs get references to all UI controls, before hiding them by setting them inactive.
             GetReferencesToUiControls();
@@ -54,12 +50,10 @@ namespace Assets.Scripts.WM
             SetActiveDebuggingType(0);
 
             AddSupportedDevices();
-
-            //SetViewMode(0);
         }
 
         // Update is called once per frame
-        void Update()
+        protected virtual void Update()
         {
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
@@ -139,8 +133,6 @@ namespace Assets.Scripts.WM
             m_uiControlDebug.Add(GameObject.Find("TextDebugSkyLight1"));
             m_uiControlDebug.Add(GameObject.Find("TextDebugSkyLight2"));
             m_uiControlDebug.Add(GameObject.Find("TextDebugWMTracker"));
-
-            m_uiControlVROverlay = GameObject.Find("VROverlayUI");
         }
 
         void AddSupportedDevices()

@@ -15,8 +15,11 @@ public class CameraRotateBySwipe : CameraRotate
     }
 
     /// <summary>
-    /// Cast a ray to test if Input.mousePosition is over any UI object in EventSystem.current. This is a replacement
-    /// for IsPointerOverGameObject() which does not work on Android in 4.6.0f3
+    /// Cast a ray to test if Input.mousePosition is over any UI object in EventSystem.current.
+    /// This is a replacement for IsPointerOverGameObject(), which does not work on Android in 4.6.0f3
+    /// 
+    /// \note UI Objects with following tags are not taken into consideration:
+    /// - VRMenu
     /// </summary>
     private bool IsPointerOverUIObject(Touch t)
     {
@@ -30,21 +33,31 @@ public class CameraRotateBySwipe : CameraRotate
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 
-        if (results.Count > 0)
-        {
-            Debug.Log("Over UI Object '" + results[0].gameObject.name + "'.");
-        }
-        else
+        if (results.Count == 0)
         {
             Debug.Log("Not over UI Object.");
+            return false;
         }
 
-        return results.Count > 0;
+        foreach (var result in results)
+        {
+            Debug.Log("Over UI Object '" + result.gameObject.name + "'.");
+        }
+
+        foreach (var result in results)
+        {
+            if (result.gameObject.tag != "VRMenu")
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private int GetIndexOfTouchClosestToLastTouch()
     {
-        Debug.Log("CameraRotateBySwipe.GetIndexOfTouchClosestToLastTouch()");
+        //Debug.Log("CameraRotateBySwipe.GetIndexOfTouchClosestToLastTouch()");
 
         int touchIndex = -1;
 
@@ -65,7 +78,7 @@ public class CameraRotateBySwipe : CameraRotate
             }
         }
 
-        Debug.Log("Index of closest touch = " + touchIndex);
+        //Debug.Log("Index of closest touch = " + touchIndex);
 
         return touchIndex;
     }
@@ -98,14 +111,16 @@ public class CameraRotateBySwipe : CameraRotate
 
                     m_lastTouchPosition = closestTouch.position;
 
+                    //Debug.Log(m_swiping ? "Swiping..." : "Not swiping...");
+                    //Debug.Log("Touch phase:" + closestTouch.phase);
+
                     if (m_swiping)
                     {
-                        Debug.Log("Swiping...");
                         switch (closestTouch.phase)
                         {
                             case TouchPhase.Moved:
                                 {
-                                    Debug.Log("Continue Swipe");
+                                    //Debug.Log("Continue Swipe");
                                     Vector2 offset = closestTouch.position - m_swipeStart;
                                     Vector2 euler = 0.1f * offset;
                                     Quaternion rotX = Quaternion.Euler(new Vector3(euler.y, 0, 0));
@@ -139,9 +154,6 @@ public class CameraRotateBySwipe : CameraRotate
                     }
                     else
                     {
-                        Debug.Log("Not swiping...");
-
-                        Debug.Log("Touch phase:" + closestTouch.phase);
                         switch (closestTouch.phase)
                         {
                             case TouchPhase.Began:                                
