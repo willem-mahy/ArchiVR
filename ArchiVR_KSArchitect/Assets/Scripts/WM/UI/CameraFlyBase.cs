@@ -6,14 +6,6 @@ using Assets.Scripts.WM.Util;
 
 public class CameraFlyBase : MonoBehaviour
 {
-    static private void LogKeyPress(string keyName)
-    {
-        if (Input.GetKeyDown(keyName))
-        {
-            UnityEngine.Debug.Log(keyName + " key was pressed");
-        }
-    }
-
     static float xSpeed = 100.0f;
     static float ySpeed = 100.0f;
 
@@ -24,62 +16,66 @@ public class CameraFlyBase : MonoBehaviour
 
     public Text m_textDebug = null;
 
+    //! The camera to be controlled.
     public Camera m_camera = null;
 
-    public float m_translateSpeed = 1.0f;   
+    //! The normal translation speed, in units/sec.
+    public float m_translateSpeedNormal = 20.0f;
 
-    // Use this for initialization
-    void Start () {
-		
-	}   
+    //! The normal translation speed, in units/sec.
+    public float m_translateSpeedFast = 50.0f;
 
-	// Update is called once per frame
+    // Update is called once per frame
 	public virtual void Update()
     {
-        LogKeyPress("space");
-        LogKeyPress("left");
-        LogKeyPress("right");
-        LogKeyPress("up");
-        LogKeyPress("space");
+        //DebugUtil.LogKeyPress("space");
+        //DebugUtil.LogKeyPress("left");
+        //DebugUtil.LogKeyPress("right");
+        //DebugUtil.LogKeyPress("up");
+        //DebugUtil.LogKeyPress("down");
     }
 
-    protected void TranslateXZ(Vector2 offsetXZ)
+    /*
+     * cameraMovementDirXZ_World_Vector2    The translation direction, expressed in the Camera local frame, and encoded in a 2d vector (X=X, Y=Z).
+     * offset                               The magnitude of the translation.
+     * bool fixY                            Whether to constrain movement to the world XZ plane.
+     */
+    protected void TranslateXZ(
+        Vector2 cameraMovementDirXZ_Camera_Vector2,
+        float offset,
+        bool fixY)
     {
-        //offsetXZ.Normalize();
+        // Put the movement direction into a 3D Vector.
+        Vector3 cameraMovementDirection_Camera = new Vector3(cameraMovementDirXZ_Camera_Vector2.x, 0, cameraMovementDirXZ_Camera_Vector2.y);
 
-        Vector3 cameraMovement_Camera = new Vector3(offsetXZ.x, 0, offsetXZ.y);
-        Vector3 cameraMovement = m_camera.transform.localToWorldMatrix.MultiplyVector(cameraMovement_Camera);
+        // Express the movement direction in the Camera's local frame.
+        Vector3 cameraMovementDirection_World = m_camera.transform.localToWorldMatrix.MultiplyVector(cameraMovementDirection_Camera);
 
-        bool m_fixY = true;
-
-        if (m_fixY)
+        if (fixY)
         {
-            // Project movement vector into XZ plane.
-            cameraMovement.y = 0;
+            // Project movement vector into Camera local frame's XZ plane.
+            cameraMovementDirection_World.y = 0;
 
-            if (cameraMovement.sqrMagnitude < 0.01)
+            if (cameraMovementDirection_World.sqrMagnitude < 0.01)
             {
-                cameraMovement = Vector3.zero;
-            }
-            else
-            {
-                Vector3 cameraMovementDir = cameraMovement;
-                cameraMovementDir.Normalize();
-                
-                cameraMovement = cameraMovementDir * offsetXZ.magnitude;
-
-                // Extrapolate in time.
-                cameraMovement*= m_translateSpeed * Time.deltaTime;
+                return; // no movement
             }
         }
 
-        m_camera.transform.position = m_camera.transform.position + cameraMovement;
+        // Normalize the movement dir.
+        cameraMovementDirection_World.Normalize();
+
+        // Compute the 3D translation offset with magnitude.
+        Vector3 cameraMovement_World = cameraMovementDirection_World * offset;
+
+        m_camera.transform.position = m_camera.transform.position + cameraMovement_World;
     }
 
-    protected void TranslateY(float offsetY)
+    protected void TranslateY(
+        float offset)
     {
         var p = m_camera.transform.position;
-        p.y += offsetY * m_translateSpeed * Time.deltaTime;
+        p.y += offset;
         m_camera.transform.position = p;
     }
 

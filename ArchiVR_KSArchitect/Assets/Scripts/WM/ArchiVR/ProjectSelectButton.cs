@@ -27,15 +27,9 @@ public class ProjectSelectButton : MonoBehaviour {
 
         buttonImageComponent.sprite = spriteProjectPreview;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnClick()
     {
-
         SceneManager.LoadScene(m_projectName);
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);

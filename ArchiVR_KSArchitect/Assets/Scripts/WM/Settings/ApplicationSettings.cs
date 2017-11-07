@@ -62,6 +62,11 @@ namespace Assets.Scripts.WM
         {
             Debug.Log("ApplicationSettings.Load()");
 
+            if (!File.Exists(GetFilePath()))
+            {
+                return; // Nothing to load.
+            }
+
             //Opens file and deserializes the object from it.
             var stream = File.Open(GetFilePath(), FileMode.Open);
             var formatter = new BinaryFormatter();

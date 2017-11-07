@@ -5,6 +5,9 @@ public class CameraFlyByMouseKB : CameraFlyBase
     public Vector3 m_lastMousePosition = Vector3.zero;
     public bool m_lastMousePositionSet = false;
 
+    //! Whether to constrain Forward/Backward/Left_Right translation movement to the World XZ plane.
+    public bool m_fixY = false;
+
     // Use this for initialization
     void Start()
     {
@@ -15,38 +18,33 @@ public class CameraFlyByMouseKB : CameraFlyBase
     {
         base.Update();
 
-        var offsetXZ = Vector2.zero;
+        float speed = (Input.GetKey("right shift") ? m_translateSpeedNormal : m_translateSpeedFast);
 
-        float speed = 20.0f;
+        float offset = speed * Time.deltaTime;
 
-        if (Input.GetKey("right shift"))
+        var translateDirXZ = Vector2.zero;
+
+        if (Input.GetKey("up")) // Forward
         {
-            speed *= 2;
+            translateDirXZ += Vector2.up;
         }
 
-        var offset = speed * Time.deltaTime;
-
-        if (Input.GetKey("up"))
+        if (Input.GetKey("down")) // Backward
         {
-            offsetXZ += offset * Vector2.up;
+            translateDirXZ += Vector2.down;
         }
 
-        if (Input.GetKey("down"))
+        if (Input.GetKey("left")) // Left
         {
-            offsetXZ += offset * Vector2.down;
+            translateDirXZ += Vector2.left;
         }
 
-        if (Input.GetKey("left"))
+        if (Input.GetKey("right")) // Right
         {
-            offsetXZ += offset * Vector2.left;
+            translateDirXZ += Vector2.right;
         }
 
-        if (Input.GetKey("right"))
-        {
-            offsetXZ += offset * Vector2.right;
-        }
-
-        TranslateXZ(offsetXZ);
+        TranslateXZ(translateDirXZ, offset, m_fixY);
 
         if (Input.GetKey("u"))
         {

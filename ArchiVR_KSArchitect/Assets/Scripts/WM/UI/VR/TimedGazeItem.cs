@@ -25,7 +25,7 @@ namespace Assets.Scripts.WM.UI.VR
 
             var vii = m_button.GetComponent<VRStandardAssets.Utils.VRInteractiveItem>();
 
-            if (null == m_button)
+            if (null == vii)
             {
                 //throw new Exception();
             }

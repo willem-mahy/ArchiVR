@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class ControlCameraFlyDPad : CameraFlyBase
 {
+    //! The virtual gamepad to control Forward/Backward/Left/Right movement.
     private GameObject m_padXZ = null;
+
+    //! The virtual gamepad to control Up/Down movement.
     private GameObject m_padY = null;
+
+    //! Whether to constrain Forward/Backward/Left_Right translation movement to the World XZ plane.
+    public bool m_fixY = false;
+
 
     // Use this for initialization
     void Start()
@@ -36,7 +43,7 @@ public class ControlCameraFlyDPad : CameraFlyBase
         var stickXZ = m_padXZ.GetComponent<DPadBehavior>();
         var offsetXZ = stickXZ.GetStickOffset();
 
-        TranslateXZ(offsetXZ);
+        TranslateXZ(offsetXZ, m_translateSpeedNormal, m_fixY);
 
         // Adjust Y.
         var stickY = m_padY.GetComponent<DPadBehavior>();

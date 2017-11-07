@@ -736,7 +736,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x
+  m_Text: <
 --- !u!222 &298899959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1279,6 +1279,7 @@ GameObject:
   - component: {fileID: 386863169}
   - component: {fileID: 386863168}
   - component: {fileID: 386863170}
+  - component: {fileID: 386863171}
   m_Layer: 0
   m_Name: Panel_MenuGraphicsSettings_VR
   m_TagString: VRMenu
@@ -1321,14 +1322,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1354,6 +1355,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2000, y: 2000, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &386863171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 386863166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426e6ea09a031b14a85c8ee34049d1e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_menuSettings: {fileID: 439782134}
+  m_exitButton: {fileID: 681843373}
+  m_enableDynamicGrassButton: {fileID: 1617206021}
+  m_showFPSButton: {fileID: 299175336}
 --- !u!1 &392804793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,13 +1608,14 @@ GameObject:
   - component: {fileID: 439782135}
   - component: {fileID: 439782137}
   - component: {fileID: 439782136}
+  - component: {fileID: 439782138}
   m_Layer: 0
   m_Name: Panel_MenuSettings_VR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &439782135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1632,14 +1649,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.503}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1653,6 +1670,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 439782134}
+--- !u!114 &439782138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439782134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b4036a073d0ab4da361f713f28a742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mainMenu: {fileID: 1126078000}
+  m_menuGraphicsSettings: {fileID: 386863166}
+  m_menuControlsSettings: {fileID: 1674106491}
+  m_exitButton: {fileID: 166664750}
+  m_graphicsSettingsButton: {fileID: 466519544}
+  m_controlsSettingsButton: {fileID: 302406787}
 --- !u!1 &459087485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2791,7 @@ GameObject:
   - component: {fileID: 681843370}
   - component: {fileID: 681843369}
   m_Layer: 5
-  m_Name: VRButtonExit
+  m_Name: VRButtonBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3457,6 +3491,9 @@ MonoBehaviour:
   m_textControlDebugViewMode: {fileID: 0}
   m_devices: []
   m_menuTimeArray: []
+  m_settingsButton: {fileID: 803376761}
+  m_mainMenu: {fileID: 1126078000}
+  m_settingsMenu: {fileID: 439782134}
 --- !u!114 &844347396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,7 +3631,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x
+  m_Text: <
 --- !u!222 &943116188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4360,7 +4397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1368770138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5439,6 +5476,7 @@ GameObject:
   - component: {fileID: 1674106495}
   - component: {fileID: 1674106494}
   - component: {fileID: 1674106493}
+  - component: {fileID: 1674106496}
   m_Layer: 0
   m_Name: Panel_MenuControlsSettings_VR
   m_TagString: VRMenu
@@ -5493,14 +5531,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5514,6 +5552,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1674106491}
+--- !u!114 &1674106496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674106491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b5762c086cc9745a9302cba2651dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_menuSettings: {fileID: 439782134}
+  m_exitButton: {fileID: 1691544794}
+  m_rotateModeButton: {fileID: 1567948880}
+  m_translateModeButton: {fileID: 1791180928}
 --- !u!1 &1691544788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,7 +5584,7 @@ GameObject:
   - component: {fileID: 1691544791}
   - component: {fileID: 1691544790}
   m_Layer: 5
-  m_Name: VRButtonExit
+  m_Name: VRButtonBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5755,14 +5808,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6043,6 +6096,7 @@ GameObject:
   - component: {fileID: 1818701636}
   - component: {fileID: 1818701637}
   - component: {fileID: 1818701638}
+  - component: {fileID: 1818701629}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6050,6 +6104,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1818701629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818701628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21861edb5acbfb419dd1169cc5fb8de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_doDebug: 0
+  m_textDebug: {fileID: 0}
+  m_camera: {fileID: 1818701633}
+  m_translateSpeedNormal: 20
+  m_translateSpeedFast: 50
+  m_lastMousePosition: {x: 0, y: 0, z: 0}
+  m_lastMousePositionSet: 0
+  m_fixY: 0
 --- !u!81 &1818701630
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6208,7 +6281,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845110344}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
   - {fileID: 1126078001}
@@ -6218,7 +6291,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2000, y: 2000}
+  m_SizeDelta: {x: 2000, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845110346
 MonoBehaviour:
