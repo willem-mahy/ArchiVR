@@ -2186,6 +2186,7 @@ GameObject:
   - component: {fileID: 571562549}
   - component: {fileID: 571562548}
   - component: {fileID: 571562547}
+  - component: {fileID: 571562554}
   m_Layer: 5
   m_Name: VRButtonViewMode
   m_TagString: Untagged
@@ -2343,6 +2344,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 571562545}
+--- !u!114 &571562554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571562545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f397778007e126c42bdd39b3f376b6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_button: {fileID: 571562551}
+  m_autoToggleOnClick: 0
 --- !u!1 &576371192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff761181231b82b4ca332d856242ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_toggleButtonsViewMode: []
+  m_toggleButtonsViewMode:
+  - {fileID: 571562554}
   m_textControlDebugViewMode: {fileID: 0}
   m_devices: []
   m_menuTimeArray: []

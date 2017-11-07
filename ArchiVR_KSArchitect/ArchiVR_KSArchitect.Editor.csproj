@@ -288,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
+    <None Include="Assets\Plugins\Android\Assets\oculussig_ce11160bbd4ac71303.txt" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\SkyDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\Sun.shader" />

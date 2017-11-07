@@ -95,6 +95,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 if (supportedDeviceName.ToLower().Equals(deviceName.ToLower()))
                 {
+                    Debug.Log("Supported device: " + deviceName);
                     m_devices.Add(deviceName);
                     return;
                 }
