@@ -149,24 +149,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
-            // No VR
-            AddDeviceIfSupported("none");
+            AddDeviceIfSupported("none");       // No VR: Regular full-screen mono rendering.
+            AddDeviceIfSupported("stereo");     // Regular split screen H
+            AddDeviceIfSupported("split");      // X Eye Split screen H
+            AddDeviceIfSupported("Oculus");     // Oculus And GearVR
+            AddDeviceIfSupported("cardboard");  // Google cardboard
 
-            // VR
-            // Regular split screen H
-            AddDeviceIfSupported("stereo");
-
-            // X Eye Split screen H
-            AddDeviceIfSupported("split");
-
-            // Oculus And GearVR
-            AddDeviceIfSupported("Oculus");
-
-            // Open VR
-            //AddDeviceIfSupported("OpenVR");
-
-            // Vive
-            //AddDeviceIfSupported("vive");
 
             // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
             List<string> optionSpritePaths = new List<string>();
@@ -253,13 +241,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         IEnumerator LoadDevice(string deviceName, bool enable)
         {
-            XRSettings.LoadDeviceByName(deviceName);
-            yield return null;
-            XRSettings.enabled = enable;
-        }
-
-        IEnumerator LoadDevice2(string deviceName, bool enable)
-        {
             XRSettings.enabled = enable;
             yield return new WaitForEndOfFrame();
             XRSettings.LoadDeviceByName(deviceName);
@@ -269,12 +250,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         void EnableVR(string deviceName)
         {
-            StartCoroutine(LoadDevice2(deviceName, true));
+            Debug.Log("ApplicationState.EnableVR(" + deviceName + ")");
+            StartCoroutine(LoadDevice(deviceName, true));
         }
 
         void DisableVR()
         {
-            StartCoroutine(LoadDevice2("", false));
+            Debug.Log("ApplicationState.DisableVR()");
+            StartCoroutine(LoadDevice("", false));
         }
     }
 }

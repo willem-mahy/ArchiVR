@@ -272,6 +272,8 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - Oculus
+    - cardboard
+    - None
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -648,12 +650,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 519d391f-a106-4600-af14-eb851a6b86bf
-  projectName: ArchiVR
-  organizationId: WillemMahy
+  cloudProjectId: a23cc7da-1be8-48eb-89a1-5cb4b5ae3245
+  projectName: KSArchitect
+  organizationId: willemmahy
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

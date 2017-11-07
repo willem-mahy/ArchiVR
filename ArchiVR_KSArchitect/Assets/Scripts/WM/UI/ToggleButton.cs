@@ -62,9 +62,18 @@ namespace Assets.Scripts.WM.UI
         //eg: "Menu/Light/Lightbulb 01 ON transp 256p"
         public void LoadOptions(List<string> optionSpritePaths)
         {
-            for (int i = 0; i < optionSpritePaths.Count; ++i)
+            foreach (var optionSpritePath in optionSpritePaths)
             {
-                var sprite = Resources.Load<Sprite>(optionSpritePaths[i]);
+                // Load the 'option' Sprite from project Reosources ('Assets/Resources')
+                var sprite = Resources.Load<Sprite>(optionSpritePath);
+
+                if (null == sprite)
+                {
+                    var msg = "Option Sprite '" + optionSpritePath + "' not found in resources!";
+                    Debug.Log(msg);
+                    //throw new System.Exception(msg);
+                }
+
                 m_optionSprites.Add(sprite);
             }
 

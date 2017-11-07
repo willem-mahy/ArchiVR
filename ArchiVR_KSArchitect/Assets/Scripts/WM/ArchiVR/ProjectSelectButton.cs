@@ -17,11 +17,22 @@ public class ProjectSelectButton : MonoBehaviour {
         // Verify that the project exists.
         if (SceneUtility.GetBuildIndexByScenePath(scenePath) == -1)
         {
-            throw new System.Exception();
+            var msg = "Scene '" + scenePath + "' not found in build scenes!";
+            Debug.Log(msg);
+            //throw new System.Exception(msg);
         }
 
-        var spriteProjectPreviewPath = "ProjectPreview/" + m_projectName;
-        var spriteProjectPreview = (Sprite)Resources.Load(spriteProjectPreviewPath, typeof(Sprite));
+        // Load the 'project preview' Sprite from project Reosources ('Assets/Resources')
+        var spriteProjectPreviewResourcePath = "ProjectPreview/" + m_projectName;
+                
+        var spriteProjectPreview = Resources.Load<Sprite>(spriteProjectPreviewResourcePath);
+
+        if (null == spriteProjectPreview)
+        {
+            var msg = "Project preview Sprite '" + spriteProjectPreviewResourcePath + "' not found in resources!";
+            Debug.Log(msg);
+            //throw new System.Exception(msg);
+        }
 
         var buttonImageComponent = gameObject.transform.GetComponentInChildren<Image>();
 
