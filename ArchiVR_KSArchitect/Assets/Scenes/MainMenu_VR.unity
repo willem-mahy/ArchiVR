@@ -572,6 +572,54 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 182897927}
+--- !u!1 &194676590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 194676592}
+  - component: {fileID: 194676591}
+  m_Layer: 0
+  m_Name: ApplicationSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &194676591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194676590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e240bc598e47ae40bcfd8d3daae8662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_graphicSettings:
+      m_enableDynamicGrass: 0
+      m_showFPS: 0
+      m_qualityLevelName: 
+    m_controlSettings:
+      m_rotateMode: 0
+      m_translateMode: 0
+--- !u!4 &194676592
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194676590}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0.19999976, z: 1.5000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217734580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,6 +3652,7 @@ MonoBehaviour:
     m_graphicSettings:
       m_enableDynamicGrass: 0
       m_showFPS: 0
+      m_qualityLevelName: 
     m_controlSettings:
       m_rotateMode: 0
       m_translateMode: 0
@@ -6529,6 +6578,7 @@ GameObject:
   - component: {fileID: 1818701637}
   - component: {fileID: 1818701638}
   - component: {fileID: 1818701629}
+  - component: {fileID: 1818701639}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6686,6 +6736,22 @@ MonoBehaviour:
   m_Image: {fileID: 1476292814}
   m_ReticleTransform: {fileID: 1476292816}
   m_Camera: {fileID: 1818701634}
+--- !u!114 &1818701639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818701628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75610734480356f42b269da64eff8149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_doDebug: 0
+  m_textDebug: {fileID: 0}
+  m_camera: {fileID: 1818701633}
+  m_translateSpeedNormal: 10
+  m_translateSpeedFast: 25
 --- !u!1 &1845110344
 GameObject:
   m_ObjectHideFlags: 0

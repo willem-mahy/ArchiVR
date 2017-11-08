@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.WM.Util
 {
@@ -15,6 +11,17 @@ namespace Assets.Scripts.WM.Util
             if (Input.GetKeyDown(keyName))
             {
                 UnityEngine.Debug.Log(keyName + " key pressed");
+            }
+        }
+
+        //! Log when a physical joystick (gamepad) key is pressed.
+        static public void LogJoystickButtonPress()
+        {
+            for (int i = 0; i < 10; ++i)
+            {
+                String name = "joystick button " + i.ToString();
+
+                LogKeyPress(name);
             }
         }
 

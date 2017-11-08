@@ -1,16 +1,12 @@
-﻿using System.IO;
-using System.Runtime.Serialization;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Assets.Scripts.WM
+﻿namespace Assets.Scripts.WM
 {
     [System.Serializable()]
     public class GraphicsSettings
     {
-        public bool m_enableDynamicGrass;
+        public bool m_enableDynamicGrass = true;
 
-        public bool m_showFPS;
+        public bool m_showFPS = false;
+
+        public string m_qualityLevelName = null;
     }
 }

@@ -228,6 +228,8 @@
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\POISelection.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\SceneSelection.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\ConstructionLighting.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Menu\Home_MainMenu.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Menu\MenuControlsSettings.cs" />
@@ -235,6 +237,13 @@
     <Compile Include="Assets\Scripts\WM\ArchiVR\Menu\MenuSettings.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\ProjectSelectButton.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\TimeBehavior.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\CameraFlyBase.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\CameraFlyByMouseKB.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\CameraRotateByGyro.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\CameraRotateBySwipe.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\CameraTranslateByButtons.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\ControlCameraFlyDPad.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraControl\ControlCameraFlyGamePad.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\LightCelestialBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\SkyBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Rendering\ReflectionProbe.cs" />
@@ -244,12 +253,6 @@
     <Compile Include="Assets\Scripts\WM\UI\ButtonConstructionLightingMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonRotateMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonTimeOfDay.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\CameraFlyBase.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\CameraFlyByMouseKB.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\CameraRotateByGyro.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\CameraRotateBySwipe.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\CameraTranslateByButtons.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\ControlCameraFlyDPad.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DeviceSensors.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DisplayCamera.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DisplayFPS.cs" />
@@ -257,8 +260,6 @@
     <Compile Include="Assets\Scripts\WM\UI\InputSwipe.cs" />
     <Compile Include="Assets\Scripts\WM\UI\MenuSetTimeBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\OnHoverHighlight.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\POISelection.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\SceneSelection.cs" />
     <Compile Include="Assets\Scripts\WM\UI\TextCameraLocation.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ToggleActiveBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ToggleButton.cs" />

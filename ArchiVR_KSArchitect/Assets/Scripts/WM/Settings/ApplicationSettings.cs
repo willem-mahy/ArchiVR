@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;    
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Assets.Scripts.WM
 {
@@ -25,6 +21,8 @@ namespace Assets.Scripts.WM
         // Use this for initialization
         void Awake()
         {
+            Debug.Log("ApplicationSettings.Awake()");
+
             if (null == s_applicationSettings)
             {
                 DontDestroyOnLoad(gameObject);
@@ -34,6 +32,11 @@ namespace Assets.Scripts.WM
             {
                 Destroy(gameObject);
             }
+        }
+
+        void Start()
+        {
+            Debug.Log("ApplicationSettings.Start()");
         }
 
         // Update is called once per frame

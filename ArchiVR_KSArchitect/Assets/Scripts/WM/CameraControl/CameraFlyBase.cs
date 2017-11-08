@@ -74,6 +74,11 @@ public class CameraFlyBase : MonoBehaviour
     protected void TranslateY(
         float offset)
     {
+        if (offset == 0)
+        {
+            return;
+        }
+
         var p = m_camera.transform.position;
         p.y += offset;
         m_camera.transform.position = p;
