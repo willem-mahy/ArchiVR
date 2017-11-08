@@ -203,7 +203,7 @@ namespace Assets.Scripts.WM.ArchiVR
 
                 if (buttonConstructionLightMode)
                 {
-                    buttonConstructionLightMode.SetOption((int)m_state);
+                    buttonConstructionLightMode.SelectOptionByIndex((int)m_state);
                 }
             }
         }

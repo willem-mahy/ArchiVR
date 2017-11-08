@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts.WM.UI;
+using Assets.Scripts.WM.Util;
 
 namespace Assets.Scripts.WM.ArchiVR.Menu
     {
@@ -28,6 +29,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
                 m_exitButton.onClick.AddListener(ExitButton_OnClick);
                 m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
                 m_showFPSButton.onClick.AddListener(ShowFPSButton_OnClick);
+                m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
 
                 InitQualityButton();
             }
@@ -36,17 +38,37 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             {
                 Debug.Log("MenuGraphicsSettings.InitQualityButton()");
 
+                DebugUtil.LogQualitySettings();
+
+                // Get the supported Quality setting names.
                 string[] names = QualitySettings.names;
 
-                List<string> qualityOptions = new List<string>();
+                // Get the currently active Quality setting name.
+                var activeName = names[QualitySettings.GetQualityLevel()];
 
+
+                // Initialize the options on the toggle button.
+                List<string> qualityOptions = new List<string>();
                 foreach (var name in names)
                 {
-                    Debug.Log("qualityOptionName " + name);
                     qualityOptions.Add(name);
                 }
 
                 m_qualityButton.LoadOptions(qualityOptions, null);
+
+                // Set the currently active Quality setting as selected on the toggle button.
+                m_qualityButton.SelectOptionByText(activeName);
+            }
+
+            void QualityButton_OnClick()
+            {
+                Debug.Log("MenuGraphicsSettings.QualityButton_OnClick()");
+                var qualityLevel = m_qualityButton.SetNextOption();
+                var qualityLevelName = QualitySettings.names[qualityLevel];
+
+                Debug.Log("Set quality level to " + qualityLevel + " (" + qualityLevelName + ")");
+
+                QualitySettings.SetQualityLevel(qualityLevel);
             }
 
             void ExitButton_OnClick()

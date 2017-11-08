@@ -20,7 +20,7 @@ namespace Assets.Scripts.WM.UI
     public class ToggleButton : MonoBehaviour
     {
         // The target button to behave like a toggle button.
-        private Button m_button = null;
+        private Button m_buttonComponent = null;
 
         private GameObject m_image = null;
         private Image m_imageComponent = null;
@@ -35,24 +35,55 @@ namespace Assets.Scripts.WM.UI
 
         private List<ToggleButtonOption> m_optionList = new List<ToggleButtonOption>();
 
-        private EventTrigger.Entry m_eventTrigerEntry_OnPointerClick = null;
+        void Awake()
+        {
+            Debug.Log("ToggleButton('" + gameObject.name + "').Awake()");
+
+            InitializeReferences();
+        }
 
         void Start()
         {
-            m_button = gameObject.GetComponent<Button>();
+            Debug.Log("ToggleButton('" + gameObject.name + "').Start()");
 
-            if (null == m_button) // Sanity: We must have a reference to the Button
+            if (m_autoToggleOnClick)
+            {
+                m_buttonComponent.onClick.AddListener(DoSetNextOption);
+            }
+        }
+
+        private void InitializeReferences()
+        {
+            Debug.Log("ToggleButton('" + gameObject.name + "').InitializeReferences()");
+
+            // Get reference to button component.
+            m_buttonComponent = gameObject.GetComponent<Button>();
+
+            if (null == m_buttonComponent) // Sanity: We must have a reference to the Button component
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get Button component!";
                 Debug.Log(msg);
                 //throw new System.Exception(msg);
                 return;
             }
+            
+            var childImageTransformComponent = m_buttonComponent.transform.Find("Image");
 
-            m_image = m_button.transform.Find("Image").gameObject;
-            m_imageComponent = m_button.transform.Find("Image").GetComponentInChildren<Image>();
+            // Get reference to child Image.
+            m_image = childImageTransformComponent.gameObject;
 
-            if (null == m_imageComponent) // Sanity: We must have a reference to the Button's Image child Image Component
+            if (null == m_image) // Sanity: We must have a reference to the Button's child Image
+            {
+                var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Text!";
+                Debug.Log(msg);
+                //throw new System.Exception(msg);
+                return;
+            }
+
+            // Get reference to child Image component.
+            m_imageComponent = childImageTransformComponent.GetComponentInChildren<Image>();
+
+            if (null == m_imageComponent) // Sanity: We must have a reference to the Button's child Image's Image Component
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Image's Image component!";
                 Debug.Log(msg);
@@ -60,38 +91,30 @@ namespace Assets.Scripts.WM.UI
                 return;
             }
 
-            m_text = m_button.transform.Find("Text").gameObject;
-            m_textComponent = m_button.transform.Find("Text").GetComponentInChildren<Text>();
+            var childTextTransformComponent = m_buttonComponent.transform.Find("Text");
 
-            if (null == m_textComponent) // Sanity: We must have a reference to the Button's Text child
+            // Get reference to child Text.
+            m_text = childTextTransformComponent.gameObject;
+
+            if (null == m_text) // Sanity: We must have a reference to the Button's child Text
+            {
+                var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Text!";
+                Debug.Log(msg);
+                //throw new System.Exception(msg);
+                return;
+            }
+
+            // Get reference to child Text component.
+            m_textComponent = childTextTransformComponent.GetComponentInChildren<Text>();
+
+            if (null == m_textComponent) // Sanity: We must have a reference to the Button's child Text's Text componente
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get Text component!";
                 Debug.Log(msg);
                 //throw new System.Exception(msg);
                 return;
             }
-
-            if (m_autoToggleOnClick)
-            {
-                m_button.onClick.AddListener(DoSetNextOption);
-                //var eventTrigger = gameObject.GetComponent<EventTrigger>();
-
-                //// Create a new TriggerEvent and add a listener.
-                //EventTrigger.TriggerEvent trigger = new EventTrigger.TriggerEvent();
-                //trigger.AddListener((eventData) => OnPointerClick()); // ignore event data
-
-                //// Create and initialise EventTrigger.Entry using the created TriggerEvent
-                //m_eventTrigerEntry_OnPointerClick =
-                //    new EventTrigger.Entry()
-                //    {
-                //        callback = trigger,
-                //        eventID = EventTriggerType.PointerClick
-                //    };
-
-                //// Add the EventTrigger.Entry to delegates list on the EventTrigger
-                //eventTrigger.triggers.Add(m_eventTrigerEntry_OnPointerClick);
-            }
-        }
+    }
 
         /*! Initialize the list of possible options.
          *
@@ -104,6 +127,8 @@ namespace Assets.Scripts.WM.UI
             List<string> optionTextList,
             List<string> optionSpritePathList)
         {
+            Debug.Log("ToggleButton('" + gameObject.name + "').LoadOptions()");
+
             if ((null == optionSpritePathList) && (null == optionTextList))
             {
                 var msg = "Neither option texts or sprites supplied!";
@@ -184,7 +209,7 @@ namespace Assets.Scripts.WM.UI
 
             if (HasOptions())
             {
-                SetOption(0);
+                SelectOptionByIndex(0);
             }
         }
 
@@ -193,14 +218,62 @@ namespace Assets.Scripts.WM.UI
             return (m_optionList.Count > 0);
         }
 
-        // Get the currently selected option.
-        public int GetOption()
+        /*! Linearily searches the list of options for the first option that has the given text.
+         *
+         * \return The index into the option list of the first matching option, or -1 if no matching option found.
+         */
+        public int GetOptionIndexByText(string text)
+        {
+            for (int optionIndex = 0; optionIndex < m_optionList.Count; ++optionIndex)
+            {
+                if (m_optionList[optionIndex].m_text == text)
+                {
+                    return optionIndex;
+                }
+            }
+
+            return -1;
+        }
+
+        /*! Selects the first option that has the given text.  If no matching option found, sets selection to 'none'.
+         * 
+         * \return The index of the newly selected option, or -1 if no matching option found.
+         */
+        public int SelectOptionByText(string text)
+        {
+            int optionIndex = GetOptionIndexByText(text);
+            SelectOptionByIndex(optionIndex);
+            return m_selectedOptionIndex;
+        }
+
+        //! Query whether the list of options contains an option that has the given text.
+        public bool HasOptionWithText(string text)
+        {
+            foreach (var option in m_optionList)
+            {
+                if (option.m_text == text)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        //! Get the currently selected option index.
+        public int GetSelectedOptionIndex()
         {
             return m_selectedOptionIndex;
         }
 
+        //! Get the currently selected option, or null if no option selected.
+        private ToggleButtonOption GetSelectedOption()
+        {
+            return (m_selectedOptionIndex == -1) ? null : m_optionList[m_selectedOptionIndex];
+        }
+
         // Set the currently selected option.
-        public void SetOption(int optionIndex)
+        public void SelectOptionByIndex(int optionIndex)
         {
             m_selectedOptionIndex = optionIndex;
 
@@ -228,8 +301,8 @@ namespace Assets.Scripts.WM.UI
 
         public void DoSetNextOption()
         {
-            var newOption = (HasOptions() ? ++m_selectedOptionIndex % NumOptions() : -1);
-            SetOption(newOption);
+            var nextOptionIndex = (HasOptions() ? ++m_selectedOptionIndex % NumOptions() : -1);
+            SelectOptionByIndex(nextOptionIndex);
         }
 
         public int SetPreviousOption()
@@ -240,18 +313,18 @@ namespace Assets.Scripts.WM.UI
 
         public void DoSetPreviousOption()
         {
-            var newOption = (HasOptions() ? --m_selectedOptionIndex % NumOptions() : -1);
-            SetOption(newOption);
+            var previousOptionIndex = (HasOptions() ? --m_selectedOptionIndex % NumOptions() : -1);
+            SelectOptionByIndex(previousOptionIndex);
         }
 
         public void SetFirstOption()
         {
-            SetOption(0);
+            SelectOptionByIndex(0);
         }
 
         public void SetLastOption()
         {
-            SetOption(NumOptions() - 1);
+            SelectOptionByIndex(NumOptions() - 1);
         }
 
         public void OnPointerClick()

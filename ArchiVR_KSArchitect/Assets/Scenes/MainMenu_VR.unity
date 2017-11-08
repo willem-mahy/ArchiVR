@@ -6260,7 +6260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f397778007e126c42bdd39b3f376b6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_autoToggleOnClick: 1
+  m_autoToggleOnClick: 0
 --- !u!1 &1791180922
 GameObject:
   m_ObjectHideFlags: 0

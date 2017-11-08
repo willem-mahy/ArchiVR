@@ -83,7 +83,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
                     b.SetNextOption();
 
-                    SetViewMode(b.GetOption());
+                    SetViewMode(b.GetSelectedOptionIndex());
                 }
             }
         }
@@ -107,7 +107,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             var toggleButtonViewMode = m_toggleButtonsViewMode[0];
             
             toggleButtonViewMode.SetNextOption();
-            SetViewMode(toggleButtonViewMode.GetOption());
+            SetViewMode(toggleButtonViewMode.GetSelectedOptionIndex());
         }
 
         public void buttonTime_OnButtonClick(BaseEventData obj)
@@ -213,7 +213,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             for (int i = 0; i < m_toggleButtonsViewMode.Count; ++i)
             {
                 var m_toggleButtonViewMode = m_toggleButtonsViewMode[i];
-                m_toggleButtonViewMode.SetOption(viewMode);
+                m_toggleButtonViewMode.SelectOptionByIndex(viewMode);
             }
 
             bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
