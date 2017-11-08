@@ -32,10 +32,10 @@ namespace Assets.Scripts.WM.ArchiVR
         // Use this for initialization
         void Start()
         {
-            List<string> optionSpritePaths = new List<string>();
-            optionSpritePaths.Add("Menu/LightMode/Construction/Auto");
-            optionSpritePaths.Add("Menu/LightMode/Construction/On");
-            optionSpritePaths.Add("Menu/LightMode/Construction/Off");
+            List<string> optionSpritePathList = new List<string>();
+            optionSpritePathList.Add("Menu/LightMode/Construction/Auto");
+            optionSpritePathList.Add("Menu/LightMode/Construction/On");
+            optionSpritePathList.Add("Menu/LightMode/Construction/Off");
 
             for (int i = 0; i < m_buttonConstructionLightingModeList.Count; ++i) // hack: are we in the 'Manager' scene?
             {
@@ -43,7 +43,7 @@ namespace Assets.Scripts.WM.ArchiVR
 
                 if (buttonConstructionLightMode)
                 {
-                    buttonConstructionLightMode.LoadOptions(optionSpritePaths);
+                    buttonConstructionLightMode.LoadOptions(null, optionSpritePathList);
                 }
             }
         }

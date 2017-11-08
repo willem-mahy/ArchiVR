@@ -71,10 +71,10 @@ namespace Assets.Scripts.WM.UI.VR
                 return false;
             }
 
-            if (null == collider.bounds)
-            {
-                return false;
-            }
+            //if (null == collider.bounds)
+            //{
+            //    return false;
+            //}
 
             if (null == m_camera)
             {

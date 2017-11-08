@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.WM.UI;
 
 namespace Assets.Scripts.WM.ArchiVR.Menu
     {
@@ -19,12 +20,33 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             //! The 'Translate Mode' button.
             public Button m_showFPSButton = null;
 
+            public ToggleButton m_qualityButton = null;
+
             // Use this for initialization
             void Start()
             {
                 m_exitButton.onClick.AddListener(ExitButton_OnClick);
                 m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
                 m_showFPSButton.onClick.AddListener(ShowFPSButton_OnClick);
+
+                InitQualityButton();
+            }
+
+            private void InitQualityButton()
+            {
+                Debug.Log("MenuGraphicsSettings.InitQualityButton()");
+
+                string[] names = QualitySettings.names;
+
+                List<string> qualityOptions = new List<string>();
+
+                foreach (var name in names)
+                {
+                    Debug.Log("qualityOptionName " + name);
+                    qualityOptions.Add(name);
+                }
+
+                m_qualityButton.LoadOptions(qualityOptions, null);
             }
 
             void ExitButton_OnClick()
@@ -50,7 +72,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
                 // TODO:
                 //m_showFPSButton.SetSelected(!m_showFPSButton.IsSelected());
                 //m_fps.SetActive(m_showFPSButton.IsSelected());
+            }
         }
-    }
     }
 

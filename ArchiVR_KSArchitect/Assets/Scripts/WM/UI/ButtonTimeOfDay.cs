@@ -13,7 +13,7 @@ namespace Assets.Scripts.WM.UI
             optionSpritePaths.Add("Menu/LightMode/Environmental/Noon");
             optionSpritePaths.Add("Menu/LightMode/Environmental/Sunset");
             optionSpritePaths.Add("Menu/LightMode/Environmental/Midnight");
-            LoadOptions(optionSpritePaths);
+            LoadOptions(null, optionSpritePaths);
         }
 
         // Update is called once per frame

@@ -157,17 +157,17 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
 
             // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
-            List<string> optionSpritePaths = new List<string>();
+            List<string> optionSpritePathList = new List<string>();
 
             foreach (var deviceName in m_devices)
             {
-                optionSpritePaths.Add("Menu/ViewMode/" + deviceName);
+                optionSpritePathList.Add("Menu/ViewMode/" + deviceName);
             }
 
             // Initialize 'View Mode' toggle buttons.
             foreach (var toggleButtonViewMode in  m_toggleButtonsViewMode)
             {
-                toggleButtonViewMode.LoadOptions(optionSpritePaths);
+                toggleButtonViewMode.LoadOptions(null, optionSpritePathList);
 
                 toggleButtonViewMode.GetComponent<Button>().onClick.AddListener(toggleButtonViewMode_OnClick);
             }
