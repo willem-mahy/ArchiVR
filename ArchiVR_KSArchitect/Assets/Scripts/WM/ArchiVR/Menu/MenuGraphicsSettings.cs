@@ -64,11 +64,8 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             {
                 Debug.Log("MenuGraphicsSettings.QualityButton_OnClick()");
                 var qualityLevel = m_qualityButton.SetNextOption();
-                var qualityLevelName = QualitySettings.names[qualityLevel];
 
-                Debug.Log("Set quality level to " + qualityLevel + " (" + qualityLevelName + ")");
-
-                QualitySettings.SetQualityLevel(qualityLevel);
+                ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel(qualityLevel);                
             }
 
             void ExitButton_OnClick()

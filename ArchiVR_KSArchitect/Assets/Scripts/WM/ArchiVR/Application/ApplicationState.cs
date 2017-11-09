@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR;
 using Assets.Scripts.WM.UI;
 using UnityEngine.EventSystems;
+using Assets.Scripts.WM.Util;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
@@ -27,10 +28,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         public List<GameObject> m_menuTimeArray = null;
 
         // Use this for initialization
+        protected virtual void Awake()
+        {
+            Debug.Log("ApplicationState.Awake()");
+
+            // Get references to all UI controls.
+            GetReferencesToUiControls();
+
+            // Get a reference to the UI Manager.
+            m_uiManager = gameObject.GetComponent<UIManager>();
+        }
+
+        // Use this for initialization
         protected virtual void Start()
         {
-            // Firs get references to all UI controls, before hiding them by setting them inactive.
-            GetReferencesToUiControls();
+            Debug.Log("ApplicationState.Start()");
 
             // Hide time menus
             foreach (var gameObject in m_menuTimeArray)
@@ -42,14 +54,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (m_canvasDebug != null)
             {
                 m_canvasDebug.SetActive(false);
-            }
-
-            m_uiManager = gameObject.GetComponent<UIManager>();
+            }            
 
             // Set the initial active debug logging type to the first one.
             SetActiveDebuggingType(0);
 
-            AddSupportedDevices();
+            AddSupportedXRDevices();
         }
 
         // Update is called once per frame
@@ -86,20 +96,40 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     SetViewMode(b.GetSelectedOptionIndex());
                 }
             }
+
+            if (Input.GetKeyUp("q"))
+            {
+                ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
+            }
         }
         
-        //! Add a device to the list of selectable devices if supported by the system.
-        void AddDeviceIfSupported(string deviceName)
+        //! Add devices from the given list, to the list of selectable devices, if they are supported by the system.
+        void AddSupportedXRDevices(List<string> deviceNames)
         {
-            foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
+            var text = "XRSettings selectable devices:\n";
+
+            foreach (var deviceName in deviceNames)
             {
-                if (supportedDeviceName.ToLower().Equals(deviceName.ToLower()))
+                foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
                 {
-                    Debug.Log("Supported device: " + deviceName);
-                    m_devices.Add(deviceName);
-                    return;
+                    if (supportedDeviceName.ToLower().Equals(deviceName.ToLower()))
+                    {
+                        text += deviceName;
+
+                        if (deviceName == XRSettings.loadedDeviceName)
+                        {
+                            text += " (loaded)";
+                        }
+
+                        text += "\n";
+
+                        m_devices.Add(deviceName);
+                        break;
+                    }
                 }
             }
+
+            Debug.Log(text);
         }
         
         public void toggleButtonViewMode_OnClick()
@@ -136,9 +166,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             m_uiControlDebug.Add(GameObject.Find("TextDebugWMTracker"));
         }
 
-        void AddSupportedDevices()
+        void AddSupportedXRDevices()
         {
-            // Log supported devices
+            DebugUtil.LogSupportedXRDevices();
+
+            // List supported XR devices in debug window
             if (m_textControlDebugViewMode != null)
             {
                 m_textControlDebugViewMode.text += "\nSupported VR devices:";
@@ -149,12 +181,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
-            AddDeviceIfSupported("none");       // No VR: Regular full-screen mono rendering.
-            AddDeviceIfSupported("stereo");     // Regular split screen H
-            AddDeviceIfSupported("split");      // X Eye Split screen H
-            AddDeviceIfSupported("Oculus");     // Oculus And GearVR
-            AddDeviceIfSupported("cardboard");  // Google cardboard
+            List<string> deviceNames = new List<string>();
+            deviceNames.Add("none");        // No VR: Regular full-screen mono rendering.
+            deviceNames.Add("stereo");      // Regular split screen H
+            deviceNames.Add("split");       // X Eye Split screen H
+            deviceNames.Add("oculus");      // Oculus And GearVR
+            deviceNames.Add("cardboard");   // Google cardboard
 
+            AddSupportedXRDevices(deviceNames); 
 
             // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
             List<string> optionSpritePathList = new List<string>();

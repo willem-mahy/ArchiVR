@@ -1,10 +1,30 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.XR;
 
 namespace Assets.Scripts.WM.Util
 {
     class DebugUtil
     {
+        // Log all supported XR devices that are supported on the system.
+        static public void LogSupportedXRDevices()
+        {
+            var text = "XRSettings.supportedDevices:\n";
+
+            foreach (var deviceName in XRSettings.supportedDevices)
+            {
+                text += deviceName;
+
+                if (deviceName == XRSettings.loadedDeviceName)
+                {
+                    text += " (loaded)";
+                }
+                text+= "\n";
+            }
+
+            Debug.Log(text);
+        }
+
         //! Log when a keyboard key is pressed.
         static public void LogKeyPress(string keyName)
         {

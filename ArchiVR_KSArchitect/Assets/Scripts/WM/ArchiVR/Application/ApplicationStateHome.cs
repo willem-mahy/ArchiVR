@@ -19,7 +19,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // Use this for initialization
         override protected void Start()
         {
+            Debug.Log("ApplicationStateHome.Start()");
             base.Start();
+
+            ApplicationSettings.GetInstance().Load();           
 
             m_settingsButton.onClick.AddListener(MenuSettingsButton_OnClick);
         }

@@ -1412,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &386863167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3556,7 +3556,6 @@ GameObject:
   - component: {fileID: 844347392}
   - component: {fileID: 844347394}
   - component: {fileID: 844347395}
-  - component: {fileID: 844347396}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -3637,25 +3636,6 @@ MonoBehaviour:
   m_settingsButton: {fileID: 803376761}
   m_mainMenu: {fileID: 1126078000}
   m_settingsMenu: {fileID: 439782134}
---- !u!114 &844347396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 844347391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e240bc598e47ae40bcfd8d3daae8662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_data:
-    m_graphicSettings:
-      m_enableDynamicGrass: 0
-      m_showFPS: 0
-      m_qualityLevelName: 
-    m_controlSettings:
-      m_rotateMode: 0
-      m_translateMode: 0
 --- !u!1 &845810705
 GameObject:
   m_ObjectHideFlags: 0

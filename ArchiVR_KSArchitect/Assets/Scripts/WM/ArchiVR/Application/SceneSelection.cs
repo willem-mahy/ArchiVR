@@ -76,6 +76,8 @@ namespace Assets.Scripts.WM
         // Use this for initialization
         void Start()
         {
+            Debug.Log("SceneSelection.Start()")
+
             DynamicallyLoadProjects();
 
             if (m_prevProjectButton)
@@ -126,12 +128,26 @@ namespace Assets.Scripts.WM
         // Update is called once per frame
         void Update()
         {
-            //m_selectedProjectName.text = "WMSceneSelection.Update();";
+            //Debug.Log("SceneSelection.Update()");
 
             if (m_exitButton != null && Input.GetKey("escape"))
             {
-                Quit();
+                QuitApplication();
             }
+        }
+
+        private void QuitApplication()
+        {
+            Debug.Log("SceneSelection.QuitApplication");
+
+            if (null != m_textStatus)
+            {
+                m_textStatus.text = "Exiting... ";
+            }
+
+            ApplicationSettings.GetInstance().Save();
+
+            Application.Quit();
         }
 
         void MainMenuButtonOnClick()
@@ -249,19 +265,7 @@ namespace Assets.Scripts.WM
         {
             Debug.Log("ExitButtonOnClick()");
 
-            Quit();
-        }
-
-        private void Quit()
-        {
-            Debug.Log("Quit()");
-
-            if (null != m_textStatus)
-            {
-                m_textStatus.text = "Exiting... ";
-            }
-
-            Application.Quit();
+            QuitApplication();
         }
 
         void GoButtonOnClick()

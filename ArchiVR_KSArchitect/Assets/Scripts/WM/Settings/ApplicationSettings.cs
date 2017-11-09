@@ -14,7 +14,7 @@ namespace Assets.Scripts.WM
 
     public class ApplicationSettings : MonoBehaviour {
 
-        static ApplicationSettings s_applicationSettings = null;
+        static ApplicationSettings s_instance = null;
 
         public ApplicationSettingsData m_data = new ApplicationSettingsData();
 
@@ -23,12 +23,12 @@ namespace Assets.Scripts.WM
         {
             Debug.Log("ApplicationSettings.Awake()");
 
-            if (null == s_applicationSettings)
+            if (null == s_instance)
             {
                 DontDestroyOnLoad(gameObject);
-                s_applicationSettings = this;
+                s_instance = this;
             }
-            else if (s_applicationSettings != this)
+            else if (s_instance != this)
             {
                 Destroy(gameObject);
             }
@@ -63,10 +63,12 @@ namespace Assets.Scripts.WM
 
         public void Load()
         {
-            Debug.Log("ApplicationSettings.Load()");
+            Debug.Log("ApplicationSettings.Load(" + GetFilePath() + ")");
 
+            // First load the application settings.
             if (!File.Exists(GetFilePath()))
             {
+                Save();
                 return; // Nothing to load.
             }
 
@@ -77,6 +79,32 @@ namespace Assets.Scripts.WM
             m_data = (ApplicationSettingsData)formatter.Deserialize(stream);
 
             stream.Close();
+
+            // Then push the application settings onto the application.
+            m_data.m_graphicSettings.Apply();            
+        }
+
+        public static ApplicationSettings GetInstance()
+        {
+            return s_instance;
+        }
+
+        public void SetGraphicSettingsQualityLevel(int qualityLevel)
+        {
+            Debug.Log("ApplicationSettings.SetGraphicSettingsQualityLevel()");
+
+            if (qualityLevel < 0 || qualityLevel >= QualitySettings.names.Length)
+            {
+                Debug.Log("Trying to set an invalid quality level! (" + qualityLevel + ")");
+            }
+
+            var qualityLevelName = QualitySettings.names[qualityLevel];
+
+            Debug.Log("Set quality level to " + qualityLevel + " (" + qualityLevelName + ")");
+
+            m_data.m_graphicSettings.m_qualityLevelName = qualityLevelName;           
+
+            QualitySettings.SetQualityLevel(qualityLevel);
         }
     }
 }

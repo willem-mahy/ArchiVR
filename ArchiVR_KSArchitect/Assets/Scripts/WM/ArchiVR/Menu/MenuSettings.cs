@@ -33,12 +33,6 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             m_controlsSettingsButton.onClick.AddListener(ControlsSettingsButton_OnClick);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         void ExitButton_OnClick()
         {
             Debug.Log("MenuSettings.ExitButton_OnClick()");
