@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: d16657902da80184883f7371e8ad6cdd
+timeCreated: 1510655229
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 55d05a353d65e25f67ac0729662ffbf9
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 5.3617716, y: 2.4464498, z: 3.333981}
+      lookAt: {x: 16.95417, y: 0.67269284, z: -1.7133175}
+      up: {x: 0.12737913, y: 0.9903023, z: -0.055460528}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: bar chair
+    100002: bar chair 1
+    100004: Buren
+    100006: Buur Links
+    100008: Buur Rechts
+    100010: CHAIR#4
+    100012: CHAIR#4 1
+    100014: CHAIR#4 2
+    100016: CHAIR#4 3
+    100018: Eethoek Stoelen
+    100020: Group 18
+    100022: Group 20
+    100024: Group 24
+    100026: Group 26
+    100028: Keuken
+    100030: Keuken Aanrecht
+    100032: Keuken Eiland
+    100034: Keuken Kast
+    100036: Keuken Stoelen
+    100038: //RootNode
+    100040: L0 Binnenmuren
+    100042: L0 Dak Aanbouw
+    100044: L0 Gevel
+    100046: L0 Plafond
+    100048: L0 Vloer
+    100050: L1 Binnenmuren
+    100052: L1 Gevel
+    100054: L1 Plafond
+    100056: L1 Vloer
+    100058: Lichtstraat
+    100060: SchuifDeur Achter
+    100062: Tuin
+    100064: Tuin Muur
+    100066: Tuin Vloer
+    400000: bar chair
+    400002: bar chair 1
+    400004: Buren
+    400006: Buur Links
+    400008: Buur Rechts
+    400010: CHAIR#4
+    400012: CHAIR#4 1
+    400014: CHAIR#4 2
+    400016: CHAIR#4 3
+    400018: Eethoek Stoelen
+    400020: Group 18
+    400022: Group 20
+    400024: Group 24
+    400026: Group 26
+    400028: Keuken
+    400030: Keuken Aanrecht
+    400032: Keuken Eiland
+    400034: Keuken Kast
+    400036: Keuken Stoelen
+    400038: //RootNode
+    400040: L0 Binnenmuren
+    400042: L0 Dak Aanbouw
+    400044: L0 Gevel
+    400046: L0 Plafond
+    400048: L0 Vloer
+    400050: L1 Binnenmuren
+    400052: L1 Gevel
+    400054: L1 Plafond
+    400056: L1 Vloer
+    400058: Lichtstraat
+    400060: SchuifDeur Achter
+    400062: Tuin
+    400064: Tuin Muur
+    400066: Tuin Vloer
+    2300000: bar chair
+    2300002: bar chair 1
+    2300004: Buur Links
+    2300006: Buur Rechts
+    2300008: CHAIR#4
+    2300010: CHAIR#4 1
+    2300012: CHAIR#4 2
+    2300014: CHAIR#4 3
+    2300016: Group 18
+    2300018: Group 20
+    2300020: Group 24
+    2300022: Group 26
+    2300024: Keuken Aanrecht
+    2300026: Keuken Eiland
+    2300028: Keuken Kast
+    2300030: L0 Binnenmuren
+    2300032: L0 Dak Aanbouw
+    2300034: L0 Gevel
+    2300036: L0 Plafond
+    2300038: L0 Vloer
+    2300040: L1 Binnenmuren
+    2300042: L1 Gevel
+    2300044: L1 Plafond
+    2300046: L1 Vloer
+    2300048: Lichtstraat
+    2300050: SchuifDeur Achter
+    2300052: Tuin Muur
+    2300054: Tuin Vloer
+    3300000: bar chair
+    3300002: bar chair 1
+    3300004: Buur Links
+    3300006: Buur Rechts
+    3300008: CHAIR#4
+    3300010: CHAIR#4 1
+    3300012: CHAIR#4 2
+    3300014: CHAIR#4 3
+    3300016: Group 18
+    3300018: Group 20
+    3300020: Group 24
+    3300022: Group 26
+    3300024: Keuken Aanrecht
+    3300026: Keuken Eiland
+    3300028: Keuken Kast
+    3300030: L0 Binnenmuren
+    3300032: L0 Dak Aanbouw
+    3300034: L0 Gevel
+    3300036: L0 Plafond
+    3300038: L0 Vloer
+    3300040: L1 Binnenmuren
+    3300042: L1 Gevel
+    3300044: L1 Plafond
+    3300046: L1 Vloer
+    3300048: Lichtstraat
+    3300050: SchuifDeur Achter
+    3300052: Tuin Muur
+    3300054: Tuin Vloer
+    4300000: Mesh L1 Gevel
+    4300002: Mesh CHAIR#4
+    4300004: Mesh Keuken Eiland
+    4300006: Mesh bar chair
+    4300008: Mesh Group 18
+    4300010: Mesh Group 20
+    4300012: Mesh Keuken Aanrecht
+    4300014: Mesh Keuken Kast
+    4300016: Mesh Tuin Vloer
+    4300018: Mesh Tuin Muur
+    4300020: Mesh Buur Rechts
+    4300022: Mesh Buur Links
+    4300024: Mesh L0 Gevel
+    4300026: Mesh SchuifDeur Achter
+    4300028: Mesh Lichtstraat
+    4300030: Mesh L0 Vloer
+    4300032: Mesh L0 Dak Aanbouw
+    4300034: Mesh L0 Binnenmuren
+    4300036: Mesh L1 Vloer
+    4300038: Mesh L0 Plafond
+    4300040: Mesh L1 Binnenmuren
+    4300042: Mesh L1 Plafond
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0078_DarkSlateGray
+    second: {fileID: 2100000, guid: 44e36bfaaec3dc94b9db0ddc24e8bc93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0135_DarkGray
+    second: {fileID: 2100000, guid: 97409121743410a4995328b7d2973f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aluminum
+    second: {fileID: 2100000, guid: 667a4cdf5667d71498a5ba0b8f068484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blacktop Old 01
+    second: {fileID: 2100000, guid: cf953499a27232748b5ecd5709eb64bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick Antique 01
+    second: {fileID: 2100000, guid: 5487b9f31fd614c4893feffbb9c6703f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_004
+    second: {fileID: 2100000, guid: b1b630c461721cf43838c9c53b086620, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_005
+    second: {fileID: 2100000, guid: 42dcd18ed875ff44e8da29bae981791e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete Aggregate Smoke
+    second: {fileID: 2100000, guid: 6e95a69b33fbc994eadf57627f72007d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fencing Chain Link
+    second: {fileID: 2100000, guid: 340719045cf6b3e44a0c66413e5617ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass Dark Green
+    second: {fileID: 2100000, guid: 95e2043a6ef54ea4598ec083d13d7ae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Groundcover Rock Crushed 2 inch
+    second: {fileID: 2100000, guid: 76d2bf02c3717af4a9915d0170a3816a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Seamed
+    second: {fileID: 2100000, guid: 896581844743aa64984a587c28c5c444, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Aluminum_Anodized
+    second: {fileID: 2100000, guid: 19ddeffd63844f24ca1ebd5c8e58b718, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Grey
+    second: {fileID: 2100000, guid: 9a9249fdf84fa2b4c8e6e58a81e75677, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 835aa2deb94952746ab55214ebf9570b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Bamboo
+    second: {fileID: 2100000, guid: 8448c477ee315c2458d9271a909f098f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Lumber_ButtJoined
+    second: {fileID: 2100000, guid: 6de56dab6d6df4d4b9d7c3cfa4ef0460, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _3
+    second: {fileID: 2100000, guid: 12de0bcb6667e694e87a56654b5c1908, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Chalk_
+    second: {fileID: 2100000, guid: 201e0e35694d5c849811392f1df1e672, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 0f198412a01c69a4282d1a5f2b64c1c1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -62,7 +62,7 @@ namespace Assets.Scripts.WM.UI
             if (null == m_buttonComponent) // Sanity: We must have a reference to the Button component
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get Button component!";
-                Debug.Log(msg);
+                Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
             }
@@ -75,7 +75,7 @@ namespace Assets.Scripts.WM.UI
             if (null == m_image) // Sanity: We must have a reference to the Button's child Image
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Text!";
-                Debug.Log(msg);
+                Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
             }
@@ -86,7 +86,7 @@ namespace Assets.Scripts.WM.UI
             if (null == m_imageComponent) // Sanity: We must have a reference to the Button's child Image's Image Component
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Image's Image component!";
-                Debug.Log(msg);
+                Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
             }
@@ -99,7 +99,7 @@ namespace Assets.Scripts.WM.UI
             if (null == m_text) // Sanity: We must have a reference to the Button's child Text
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Text!";
-                Debug.Log(msg);
+                Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
             }
@@ -110,7 +110,7 @@ namespace Assets.Scripts.WM.UI
             if (null == m_textComponent) // Sanity: We must have a reference to the Button's child Text's Text componente
             {
                 var msg = "ToggleButton '" + gameObject.name + "': Failed to get Text component!";
-                Debug.Log(msg);
+                Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
             }
