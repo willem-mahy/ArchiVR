@@ -17,9 +17,7 @@ namespace Assets.Scripts.WM
         public Button m_nextProjectButton = null;
 
         public List<Text> m_selectedProjectNameTextArray = new List<Text>();
-        public Text m_textStatus = null;
-
-        public List<Button> m_mainMenuButtons = new List<Button>();
+        public Text m_textStatus = null;        
         
         public Image m_projectPreview = null;
         public Button m_goButton = null;
@@ -33,8 +31,6 @@ namespace Assets.Scripts.WM
             m_projectNames.Clear();
             m_projectImages.Clear();
 
-            //var numScenes = SceneManager.sceneCountInBuildSettings;
-
             for (int i = 0; i < 100; ++i) // Check for Project000 up to to Project100
             {
                 var sceneName = "Project" + StringUtil.Get3Digit(i);
@@ -47,6 +43,12 @@ namespace Assets.Scripts.WM
 
                     var spriteProjectPreviewPath = "ProjectPreview/" + sceneName;
                     var spriteProjectPreview = (Sprite)Resources.Load(spriteProjectPreviewPath, typeof(Sprite));
+
+                    if (null == spriteProjectPreview)
+                    {
+                        Debug.LogWarning("Project preview Sprite for project '" + sceneName + "' not found!");
+                    }
+
                     m_projectImages.Add(spriteProjectPreview);
                 }
             }
@@ -92,16 +94,6 @@ namespace Assets.Scripts.WM
                 btn.onClick.AddListener(NextProjectButtonOnClick);
             }
 
-            foreach (var button in m_mainMenuButtons)
-            {
-                if (null == button)
-                {
-                    continue;
-                }
-
-                button.onClick.AddListener(MainMenuButtonOnClick);
-            }            
-
             if (m_goButton)
             {
                 Button btn = m_goButton.GetComponent<Button>();
@@ -124,25 +116,7 @@ namespace Assets.Scripts.WM
         {
             //Debug.Log("SceneSelection.Update()");            
         }        
-
-        void MainMenuButtonOnClick()
-        {
-            Debug.Log("Main Menu Button clicked.");
-            LoadMainMenu();
-        }
-
-        public void LoadMainMenu()
-        {
-            if (ApplicationStatePlay.IsActiveViewModeVR())
-            {
-                SceneManager.LoadScene("MainMenu_VR");
-            }
-            else
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-        }
-
+        
         // Validate whether OK to activate given index (true), or not (false).
         bool IsValidProjectIndex(int index)
         {

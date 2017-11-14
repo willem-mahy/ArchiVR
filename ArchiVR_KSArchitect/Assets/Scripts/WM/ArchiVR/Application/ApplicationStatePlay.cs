@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.XR;
-using Assets.Scripts.WM.UI;
-using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
@@ -18,11 +16,15 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // with the project designated in 'm_initialProjectSceneName'.
         public string m_initialProjectSceneName = "";
 
+        // List of references to the buttons to open the 'Home' menu.
+        public List<Button> m_homeButtons = new List<Button>();
+
         // Use this for initialization
         override protected void Start()
         {
             base.Start();
 
+            // For debugging purposes: enables to open an initial project (defined by 'm_initialProjectSceneName') when starting the application in 'Play' mode.
             if (s_firstTime)
             {
                 s_firstTime = false;
@@ -32,12 +34,41 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     OpenProject(m_initialProjectSceneName);
                 }
             }
+            
+            // Attach 'OnClick' handler to the buttons to open the 'Home' mode.
+            foreach (var button in m_homeButtons)
+            {
+                if (null == button)
+                {
+                    continue;
+                }
+
+                button.onClick.AddListener(HomeButton_OnClick);
+            }
         }
 
         // Update is called once per frame
         override protected void Update()
         {
             base.Update();
+        }
+
+        void HomeButton_OnClick()
+        {
+            Debug.Log("Home Button clicked.");
+            OpenHomeMenu();
+        }
+
+        public void OpenHomeMenu()
+        {
+            if (ApplicationStatePlay.IsActiveViewModeVR())
+            {
+                SceneManager.LoadScene("MainMenu_VR");
+            }
+            else
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
         }
     }
 }
