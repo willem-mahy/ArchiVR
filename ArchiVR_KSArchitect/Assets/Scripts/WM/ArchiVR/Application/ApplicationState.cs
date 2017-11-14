@@ -1,16 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR;
+
 using Assets.Scripts.WM.UI;
-using UnityEngine.EventSystems;
 using Assets.Scripts.WM.Util;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationState : MonoBehaviour
     {
+        //! Reference to the button to quit the application.
+        public Button m_exitButton = null;
+
+        //! Reference to the GameObject that contains the 'Main' menu.
+        public GameObject m_mainMenu = null;
+
+        //! Reference to the button to open the 'Settings' menu.
+        public Button m_settingsButton = null;
+
+        //! Reference to the GameObject that contains the 'Settings' menu.
+        public GameObject m_settingsMenu = null;
+
+        //! Reference to the UI Manager.
         UIManager m_uiManager = null;
 
         // The parent UI control that contains all debug logging UI controls for all types of debugging information.
@@ -43,6 +59,19 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         protected virtual void Start()
         {
             Debug.Log("ApplicationState.Start()");
+
+            // Attach an OnClick handler to the 'Quit Application' button.
+            if (m_exitButton)
+            {
+                Button btn = m_exitButton.GetComponent<Button>();
+                btn.onClick.AddListener(ExitButton_OnClick);
+            }
+
+            // Attach an OnClick handler to the 'Quit Application' button.
+            if (m_settingsButton)
+            {
+                m_settingsButton.onClick.AddListener(MenuSettingsButton_OnClick);
+            }
 
             // Hide time menus
             foreach (var gameObject in m_menuTimeArray)
@@ -102,7 +131,31 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
             }
         }
-        
+
+        void ExitButton_OnClick()
+        {
+            Debug.Log("ApplicationState.ExitButton_OnClick()");
+
+            QuitApplication();
+        }
+
+        void MenuSettingsButton_OnClick()
+        {
+            Debug.Log("ApplicationState.MenuSettingsButton_OnClick()");
+            m_settingsMenu.SetActive(true);
+            m_mainMenu.SetActive(false);
+        }
+
+        //! Quit the application.
+        protected void QuitApplication()
+        {
+            Debug.Log("ApplicationState.QuitApplication");
+
+            ApplicationSettings.GetInstance().Save();
+
+            UnityEngine.Application.Quit();
+        }
+
         //! Add devices from the given list, to the list of selectable devices, if they are supported by the system.
         void AddSupportedXRDevices(List<string> deviceNames)
         {
@@ -292,6 +345,61 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationState.DisableVR()");
             StartCoroutine(LoadDevice("", false));
+        }
+
+        static string s_loadingProjectSceneName = "";
+
+        static public void OpenProject(string sceneName)
+        {
+            Debug.Log("OpenProject(" + sceneName + ")");
+
+            s_loadingProjectSceneName = sceneName;
+
+            SceneManager.LoadScene(sceneName);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);
+        }
+
+        static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
+        {
+            var sp = SceneManager.GetSceneByName(s_loadingProjectSceneName);
+
+            if (!sp.IsValid())
+                return;
+
+            if (!sp.isLoaded)
+                return;
+
+            var svp = SceneManager.GetSceneByName("ViewProject");
+
+            if (!svp.IsValid())
+                return;
+
+            if (svp.isLoaded == false)
+                return;
+
+            var textProjectName = GameObject.Find("TextProjectName");
+
+            if (textProjectName)
+            {
+                var text = textProjectName.GetComponent<Text>();
+
+                if (text)
+                {
+                    text.text = s_loadingProjectSceneName;
+                }
+            }
+
+            var gameObjects = sp.GetRootGameObjects();
+
+            var gameObjectWorld = gameObjects[0];
+
+            if (gameObjectWorld)
+            {
+                SceneManager.MoveGameObjectToScene(gameObjectWorld, svp);
+                SceneManager.SetActiveScene(svp);
+                SceneManager.UnloadSceneAsync(sp);
+            }
         }
     }
 }

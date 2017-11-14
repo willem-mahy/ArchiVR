@@ -82,6 +82,7 @@ namespace Assets.Scripts.WM.UI
 
         private bool ToggleUIVisible()
         {
+            Debug.Log("UIManager.ToggleUIVisible(): -> " + !m_uiVisible);
             m_uiVisible = !m_uiVisible;
 
             UpdateUiControlsActiveState();
@@ -91,6 +92,7 @@ namespace Assets.Scripts.WM.UI
 
         public void SetUIMode(UIMode uiMode)
         {
+            Debug.Log("UIManager.SetUIMode(" + uiMode + ")");
             m_uiMode = uiMode;
 
             UpdateUiControlsActiveState();

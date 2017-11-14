@@ -20,7 +20,7 @@ namespace Assets.Scripts.WM
         public Text m_textStatus = null;
 
         public List<Button> m_mainMenuButtons = new List<Button>();
-        public Button m_exitButton = null;
+        
         public Image m_projectPreview = null;
         public Button m_goButton = null;
 
@@ -76,7 +76,7 @@ namespace Assets.Scripts.WM
         // Use this for initialization
         void Start()
         {
-            Debug.Log("SceneSelection.Start()")
+            Debug.Log("SceneSelection.Start()");
 
             DynamicallyLoadProjects();
 
@@ -100,13 +100,7 @@ namespace Assets.Scripts.WM
                 }
 
                 button.onClick.AddListener(MainMenuButtonOnClick);
-            }
-
-            if (m_exitButton)
-            {
-                Button btn = m_exitButton.GetComponent<Button>();
-                btn.onClick.AddListener(ExitButtonOnClick);
-            }
+            }            
 
             if (m_goButton)
             {
@@ -128,27 +122,8 @@ namespace Assets.Scripts.WM
         // Update is called once per frame
         void Update()
         {
-            //Debug.Log("SceneSelection.Update()");
-
-            if (m_exitButton != null && Input.GetKey("escape"))
-            {
-                QuitApplication();
-            }
-        }
-
-        private void QuitApplication()
-        {
-            Debug.Log("SceneSelection.QuitApplication");
-
-            if (null != m_textStatus)
-            {
-                m_textStatus.text = "Exiting... ";
-            }
-
-            ApplicationSettings.GetInstance().Save();
-
-            Application.Quit();
-        }
+            //Debug.Log("SceneSelection.Update()");            
+        }        
 
         void MainMenuButtonOnClick()
         {
@@ -261,13 +236,6 @@ namespace Assets.Scripts.WM
             SetActiveProject(newActiveProjectIndex);
         }
 
-        void ExitButtonOnClick()
-        {
-            Debug.Log("ExitButtonOnClick()");
-
-            QuitApplication();
-        }
-
         void GoButtonOnClick()
         {
             Debug.Log("GoButtonOnClick()");
@@ -281,53 +249,8 @@ namespace Assets.Scripts.WM
                 m_textStatus.text = "Opening...";
 
             var sceneName = m_projectNames[m_activeProjectIndex];
-            SceneManager.LoadScene(sceneName);
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);
-        }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
-        {
-            var sceneName = m_projectNames[m_activeProjectIndex];
-
-            var sp = SceneManager.GetSceneByName(sceneName);
-
-            if (!sp.IsValid())
-                return;
-
-            if (!sp.isLoaded)
-                return;
-
-            var svp = SceneManager.GetSceneByName("ViewProject");
-
-            if (!svp.IsValid())
-                return;
-
-            if (svp.isLoaded == false)
-                return;
-
-            var textProjectName = GameObject.Find("TextProjectName");
-
-            if (textProjectName)
-            {
-                var text = textProjectName.GetComponent<Text>();
-
-                if (text)
-                {
-                    text.text = m_projectNames[m_activeProjectIndex];
-                }
-            }
-
-            var gameObjects = sp.GetRootGameObjects();
-
-            var gameObjectWorld = gameObjects[0];
-
-            if (gameObjectWorld)
-            {
-                SceneManager.MoveGameObjectToScene(gameObjectWorld, svp);
-                SceneManager.SetActiveScene(svp);
-                SceneManager.UnloadSceneAsync(sp);
-            }
-        }
+            ApplicationState.OpenProject(sceneName);
+        }        
     }
 }
