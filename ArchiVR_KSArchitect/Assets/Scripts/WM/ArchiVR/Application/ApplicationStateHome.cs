@@ -1,12 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
+using Assets.Scripts.WM.Settings;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStateHome : ApplicationState
     {
+        override protected string GetName()
+        {
+            return "Home";
+        }
+
         // Use this for initialization
         override protected void Start()
         {

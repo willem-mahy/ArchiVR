@@ -992,8 +992,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 325597080}
-  - component: {fileID: 325597081}
-  - component: {fileID: 325597082}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -1016,42 +1014,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -30.501001, z: 0}
---- !u!114 &325597081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325597079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0c9642799a3f64a874ca9431442650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_inputSwipe: {fileID: 0}
-  m_prevProjectButton: {fileID: 0}
-  m_nextProjectButton: {fileID: 0}
-  m_selectedProjectName: {fileID: 0}
-  m_textStatus: {fileID: 0}
-  m_mainMenuButtons: []
-  m_exitButton: {fileID: 0}
-  m_projectPreview: {fileID: 0}
-  m_goButton: {fileID: 0}
-  m_activeProjectIndex: -1
-  m_projectNames: []
-  m_projectImages: []
---- !u!114 &325597082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325597079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efb6ccd474f4f249aead232f8f1c83a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_button: {fileID: 0}
-  m_autoToggleOnClick: 0
 --- !u!1001 &347240863
 Prefab:
   m_ObjectHideFlags: 0

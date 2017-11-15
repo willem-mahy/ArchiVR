@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR;
 
+using Assets.Scripts.WM.Settings;
 using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Util;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
-    public class ApplicationState : MonoBehaviour
+    public abstract class ApplicationState : MonoBehaviour
     {
         //! Reference to the button to quit the application.
         public Button m_exitButton = null;
@@ -103,6 +104,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
+            // 'l' key: Show/hide debugging info
+            if (Input.GetKeyUp("q"))
+            {
+                MakeScreenCapture();
+            }
+
             // 'f1' to 'f9' keys: Select active debugging type.
             for (int debugType = 0; debugType < m_uiControlDebug.Count; ++debugType)
             {
@@ -131,6 +138,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
             }
         }
+
+        protected abstract string GetName();
 
         void ExitButton_OnClick()
         {
@@ -345,15 +354,13 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationState.DisableVR()");
             StartCoroutine(LoadDevice("", false));
-        }
-
-        static string s_loadingProjectSceneName = "";
+        }        
 
         static public void OpenProject(string sceneName)
         {
             Debug.Log("OpenProject(" + sceneName + ")");
 
-            s_loadingProjectSceneName = sceneName;
+            ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName = sceneName;
 
             SceneManager.LoadScene(sceneName);
             SceneManager.sceneLoaded += OnSceneLoaded;
@@ -362,7 +369,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
         {
-            var sp = SceneManager.GetSceneByName(s_loadingProjectSceneName);
+            var projectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
+
+            var sp = SceneManager.GetSceneByName(projectName);
 
             if (!sp.IsValid())
                 return;
@@ -386,7 +395,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
                 if (text)
                 {
-                    text.text = s_loadingProjectSceneName;
+                    text.text = projectName;
                 }
             }
 
@@ -399,6 +408,39 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 SceneManager.MoveGameObjectToScene(gameObjectWorld, svp);
                 SceneManager.SetActiveScene(svp);
                 SceneManager.UnloadSceneAsync(sp);
+            }
+        }
+
+        public void MakeScreenCapture()
+        {
+            StartCoroutine(DoMakeScreenCapture());
+        }
+
+        IEnumerator DoMakeScreenCapture()
+        {
+            string time = Time.time.ToString();
+            string path =
+                "ScreenCapture/"
+                + GetName()
+                + "_" + ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName
+                + "_" + time
+                + ".png";
+
+            var reticle = GameObject.Find("CanvasReticle");
+
+            if (null != reticle)
+            {
+                reticle.SetActive(false);
+                yield return new WaitForEndOfFrame();
+            }
+
+            ScreenCapture.CaptureScreenshot(path);
+            
+
+            if (null != reticle)
+            {
+                yield return new WaitForEndOfFrame();
+                reticle.SetActive(true);
             }
         }
     }

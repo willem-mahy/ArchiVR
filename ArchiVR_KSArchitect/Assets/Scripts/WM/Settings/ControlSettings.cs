@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.WM
+namespace Assets.Scripts.WM.Settings
 {
     [System.Serializable()]
     public class ControlSettings

@@ -2,11 +2,13 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Assets.Scripts.WM
+namespace Assets.Scripts.WM.Settings
 {
     [System.Serializable()]
     public class ApplicationSettingsData
     {
+        public StateSettings m_stateSettings = new StateSettings();
+
         public GraphicsSettings m_graphicSettings = new GraphicsSettings();
 
         public ControlSettings m_controlSettings = new ControlSettings();

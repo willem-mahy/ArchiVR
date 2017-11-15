@@ -19,6 +19,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // List of references to the buttons to open the 'Home' menu.
         public List<Button> m_homeButtons = new List<Button>();
 
+        override protected string GetName()
+        {
+            return "Play";
+        }
+
         // Use this for initialization
         override protected void Start()
         {
@@ -69,6 +74,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 SceneManager.LoadScene("MainMenu");
             }
-        }
+        }        
     }
 }

@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts.WM.ArchiVR.Application;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ProjectSelectButton : MonoBehaviour {
-
     public string m_projectName = "";
 
 	// Use this for initialization
@@ -41,57 +39,6 @@ public class ProjectSelectButton : MonoBehaviour {
 
     void OnClick()
     {
-        SceneManager.LoadScene(m_projectName);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
-    {
-        // Make sure the 'Project' scene has been loaded.
-        var sp = SceneManager.GetSceneByName(m_projectName);
-
-        if (!sp.IsValid())
-            return;
-
-        if (!sp.isLoaded)
-            return;
-
-        // Make sure the 'ViewProject' scene has been loaded.
-        var svp = SceneManager.GetSceneByName("ViewProject");
-
-        if (!svp.IsValid())
-            return;
-
-        if (svp.isLoaded == false)
-            return;
-
-        // Set the caption for the project name.
-        var textProjectName = GameObject.Find("TextProjectName");
-
-        if (textProjectName)
-        {
-            var text = textProjectName.GetComponent<Text>();
-
-            if (text)
-            {
-                text.text = m_projectName;
-            }
-        }
-
-        var gameObjects = sp.GetRootGameObjects();
-
-        var gameObjectWorld = gameObjects[0];
-
-        if (gameObjectWorld)
-        {
-            // Migrate the 'World' gameobject from the 'Project' scene into the 'ViewProject' scene.
-            SceneManager.MoveGameObjectToScene(gameObjectWorld, svp);
-
-            SceneManager.SetActiveScene(svp);
-
-            // Then unload the 'Project' scene.
-            SceneManager.UnloadSceneAsync(sp);
-        }
-    }
+        ApplicationState.OpenProject(m_projectName);
+    }    
 }

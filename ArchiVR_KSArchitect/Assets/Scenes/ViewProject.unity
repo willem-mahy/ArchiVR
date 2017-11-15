@@ -3024,9 +3024,7 @@ MonoBehaviour:
   m_inputSwipe: {fileID: 0}
   m_prevProjectButton: {fileID: 0}
   m_nextProjectButton: {fileID: 0}
-  m_selectedProjectNameTextArray:
-  - {fileID: 303044787}
-  - {fileID: 1609971251}
+  m_selectedProjectNameTextArray: []
   m_textStatus: {fileID: 0}
   m_projectPreview: {fileID: 0}
   m_goButton: {fileID: 0}
@@ -3069,7 +3067,7 @@ MonoBehaviour:
   m_menuTimeArray:
   - {fileID: 1163454867}
   - {fileID: 74462277}
-  m_initialProjectSceneName: Project032
+  m_initialProjectSceneName: Project002
   m_homeButtons:
   - {fileID: 46305334}
   - {fileID: 146667346}
@@ -6226,6 +6224,56 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1255615344}
+--- !u!1 &1264843201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1264843203}
+  - component: {fileID: 1264843202}
+  m_Layer: 8
+  m_Name: ApplicationSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1264843202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264843201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e240bc598e47ae40bcfd8d3daae8662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_stateSettings:
+      m_activeProjectName: 
+    m_graphicSettings:
+      m_enableDynamicGrass: 0
+      m_showFPS: 0
+      m_qualityLevelName: 
+    m_controlSettings:
+      m_rotateMode: 0
+      m_translateMode: 0
+--- !u!4 &1264843203
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264843201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1264968147
 GameObject:
   m_ObjectHideFlags: 0

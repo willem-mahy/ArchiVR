@@ -403,34 +403,6 @@ Transform:
   m_Father: {fileID: 560594073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &171386743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 171386744}
-  m_Layer: 0
-  m_Name: L1 Slaapkamer Kind 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &171386744
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 171386743}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2200, y: 443.5, z: -1002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195278578
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,34 +502,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &206262648
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 206262649}
-  m_Layer: 0
-  m_Name: L1 Buro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &206262649
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 206262648}
-  m_LocalRotation: {x: -0, y: 0.4987549, z: -0, w: 0.8667431}
-  m_LocalPosition: {x: -1685, y: 443.5, z: -1288}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 59.835003, z: 0}
 --- !u!1 &218432821
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,34 +752,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4537102645675606, guid: 07cdc7cbf9a249c48877ac527c8eda81,
     type: 2}
   m_PrefabInternal: {fileID: 275868202}
---- !u!1 &287525903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 287525904}
-  m_Layer: 0
-  m_Name: L1 Nachthal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &287525904
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 287525903}
-  m_LocalRotation: {x: -0, y: 0.7937107, z: -0, w: 0.60829544}
-  m_LocalPosition: {x: -2148, y: 443.5, z: -482}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 105.067, z: 0}
 --- !u!1001 &293079335
 Prefab:
   m_ObjectHideFlags: 0
@@ -905,11 +821,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297112282}
   m_LocalRotation: {x: 0.22794618, y: -0, z: -0, w: 0.97367376}
-  m_LocalPosition: {x: 405, y: 330, z: 202}
+  m_LocalPosition: {x: 605, y: 330, z: 688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 26.352001, y: 0, z: 0}
 --- !u!1 &325597079
 GameObject:
@@ -919,8 +835,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 325597080}
-  - component: {fileID: 325597081}
-  - component: {fileID: 325597082}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -943,39 +857,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -30.501001, z: 0}
---- !u!114 &325597081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325597079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0c9642799a3f64a874ca9431442650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_inputSwipe: {fileID: 0}
-  m_prevProjectButton: {fileID: 0}
-  m_nextProjectButton: {fileID: 0}
-  m_selectedProjectNameTextArray: []
-  m_textStatus: {fileID: 0}
-  m_projectPreview: {fileID: 0}
-  m_goButton: {fileID: 0}
-  m_activeProjectIndex: -1
-  m_projectNames: []
-  m_projectImages: []
---- !u!114 &325597082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325597079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efb6ccd474f4f249aead232f8f1c83a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_autoToggleOnClick: 0
 --- !u!1001 &347240863
 Prefab:
   m_ObjectHideFlags: 0
@@ -1058,34 +939,6 @@ Transform:
   m_Father: {fileID: 412706385}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &407983849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 407983850}
-  m_Layer: 0
-  m_Name: L1 Slaapkamer Ouders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &407983850
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 407983849}
-  m_LocalRotation: {x: -0, y: 0.9740106, z: -0, w: 0.22650266}
-  m_LocalPosition: {x: -1288, y: 443.5, z: -490}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 153.81801, z: 0}
 --- !u!1 &412706384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -60.421, z: 0}
 --- !u!1001 &539579838
 Prefab:
@@ -2432,62 +2285,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1107409757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1107409758}
-  m_Layer: 0
-  m_Name: BovenAanzicht VR
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &1107409758
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1107409757}
-  m_LocalRotation: {x: -0.0013424184, y: -0.99795526, z: 0.059854165, w: 0.022382364}
-  m_LocalPosition: {x: -1796, y: 475, z: 950}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 6.8580003, y: -177.412, z: 0.30900002}
---- !u!1 &1168000024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1168000025}
-  m_Layer: 0
-  m_Name: L0 Garage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &1168000025
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168000024}
-  m_LocalRotation: {x: -0, y: -0.91489756, z: -0, w: 0.40368623}
-  m_LocalPosition: {x: -1639, y: 180, z: -49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: -132.382, z: 0}
 --- !u!1 &1184199225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1184199226
 Transform:
   m_ObjectHideFlags: 0
@@ -2510,11 +2307,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1184199225}
   m_LocalRotation: {x: 0.06411408, y: 0.33981556, z: -0.023226628, w: 0.9380167}
-  m_LocalPosition: {x: -2903, y: 475, z: -1859}
+  m_LocalPosition: {x: 287, y: 330, z: 44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 7.82, y: 39.828003, z: 0}
 --- !u!4 &1214567161
 Transform:
@@ -2720,7 +2517,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 1.8, y: 46.8, z: 0}
 --- !u!1 &1327675930
 GameObject:
@@ -2819,34 +2616,6 @@ Transform:
   m_Father: {fileID: 2072601763}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1370083291
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1370083292}
-  m_Layer: 0
-  m_Name: L0 Buro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &1370083292
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1370083291}
-  m_LocalRotation: {x: -0, y: -0.89306957, z: -0, w: 0.4499187}
-  m_LocalPosition: {x: -1108, y: 160, z: -599}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: -126.523, z: 0}
 --- !u!1 &1379431948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,24 +2641,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
-  - {fileID: 1774321942}
-  - {fileID: 1107409758}
   - {fileID: 1184199226}
   - {fileID: 297112283}
-  - {fileID: 2027651640}
-  - {fileID: 1436933938}
-  - {fileID: 1673677906}
   - {fileID: 1690546575}
-  - {fileID: 1314274193}
-  - {fileID: 1168000025}
-  - {fileID: 1370083292}
-  - {fileID: 287525904}
-  - {fileID: 525931969}
+  - {fileID: 1673677906}
   - {fileID: 1793569921}
-  - {fileID: 407983850}
-  - {fileID: 171386744}
-  - {fileID: 1608219000}
-  - {fileID: 206262649}
+  - {fileID: 1314274193}
+  - {fileID: 1436933938}
+  - {fileID: 525931969}
   m_Father: {fileID: 325597080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2965,7 +2724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 23.883001, z: 0}
 --- !u!1 &1451158473
 GameObject:
@@ -3256,34 +3015,6 @@ Transform:
   m_Father: {fileID: 1083699627}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 29.679, z: 0}
---- !u!1 &1608218999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1608219000}
-  m_Layer: 0
-  m_Name: L1 Slaapkamer Kind 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &1608219000
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1608218999}
-  m_LocalRotation: {x: -0, y: 0.99945074, z: -0, w: 0.033140376}
-  m_LocalPosition: {x: -1900, y: 443.5, z: -865}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 176.20201, z: 0}
 --- !u!1 &1673677905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,7 +3041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 74.37701, z: 0}
 --- !u!1 &1690546574
 GameObject:
@@ -3338,36 +3069,8 @@ Transform:
   m_LocalScale: {x: 1.0000004, y: 1, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 219.944, z: 0}
---- !u!1 &1774321941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1774321942}
-  m_Layer: 0
-  m_Name: BovenAanzicht VL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &1774321942
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1774321941}
-  m_LocalRotation: {x: 0.06977188, y: -0.8548503, z: 0.11942358, w: 0.5001009}
-  m_LocalPosition: {x: -38, y: 837, z: 40}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.900001, y: -119.342, z: 0.009000001}
 --- !u!1 &1793569920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,7 +3097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379431949}
-  m_RootOrder: 13
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 209.49199, z: 0}
 --- !u!1 &1814637721
 GameObject:
@@ -3875,34 +3578,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &2027651639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2027651640}
-  m_Layer: 0
-  m_Name: Voortuin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
---- !u!4 &2027651640
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2027651639}
-  m_LocalRotation: {x: -0, y: -0.84950274, z: -0, w: 0.52758425}
-  m_LocalPosition: {x: -664, y: 180, z: 60}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379431949}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -116.315, z: 0}
 --- !u!1 &2028495553
 GameObject:
   m_ObjectHideFlags: 0
