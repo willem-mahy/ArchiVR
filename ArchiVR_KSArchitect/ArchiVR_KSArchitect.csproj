@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -259,11 +257,13 @@
     <Compile Include="Assets\Scripts\WM\UI\ButtonConstructionLightingMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonRotateMode.cs" />
     <Compile Include="Assets\Scripts\WM\UI\ButtonTimeOfDay.cs" />
+    <Compile Include="Assets\Scripts\WM\UI\CheckBox.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DeviceSensors.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DisplayCamera.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DisplayFPS.cs" />
     <Compile Include="Assets\Scripts\WM\UI\DPadBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\InputSwipe.cs" />
+    <Compile Include="Assets\Scripts\WM\UI\Menu.cs" />
     <Compile Include="Assets\Scripts\WM\UI\MenuSetTimeBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\OnHoverHighlight.cs" />
     <Compile Include="Assets\Scripts\WM\UI\TextCameraLocation.cs" />
@@ -274,6 +274,7 @@
     <Compile Include="Assets\Scripts\WM\UI\VR\PlayerGazeMenuBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\VR\TimedGazeItem.cs" />
     <Compile Include="Assets\Scripts\WM\UI\VR\VRButton.cs" />
+    <Compile Include="Assets\Scripts\WM\UI\Widget.cs" />
     <Compile Include="Assets\Scripts\WM\Util\DebugUtil.cs" />
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />

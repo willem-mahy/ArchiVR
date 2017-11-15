@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.WM.UI;
+using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,9 +16,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // For debugging purposes: allows to start up in 'Play' state,
         // with the project designated in 'm_initialProjectSceneName'.
         public string m_initialProjectSceneName = "";
-
-        // List of references to the buttons to open the 'Home' menu.
-        public List<Button> m_homeButtons = new List<Button>();
 
         override protected string GetName()
         {
@@ -39,17 +37,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     OpenProject(m_initialProjectSceneName);
                 }
             }
-            
-            // Attach 'OnClick' handler to the buttons to open the 'Home' mode.
-            foreach (var button in m_homeButtons)
-            {
-                if (null == button)
-                {
-                    continue;
-                }
-
-                button.onClick.AddListener(HomeButton_OnClick);
-            }
         }
 
         // Update is called once per frame
@@ -58,10 +45,18 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             base.Update();
         }
 
-        void HomeButton_OnClick()
+        public void HomeButton_OnClick()
         {
-            Debug.Log("Home Button clicked.");
+            Debug.Log("ApplicationStatePlay.HomeButton_OnClick()");
             OpenHomeMenu();
+        }
+
+        public void MenuTimeButton_OnClick()
+        {
+            Debug.Log("ApplicationStatePlay.MenuTimeButton_OnClick()");
+
+            //UIManager.GetInstance().OpenMenu("MenuTime");
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuTime").GetComponent<Assets.Scripts.WM.UI.Menu>());
         }
 
         public void OpenHomeMenu()

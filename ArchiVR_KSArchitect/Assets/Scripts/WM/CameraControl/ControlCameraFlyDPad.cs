@@ -35,10 +35,8 @@ public class ControlCameraFlyDPad : CameraFlyBase
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
-        base.Update();
-
         // Adjust XZ.
         var stickXZ = m_padXZ.GetComponent<DPadBehavior>();
         var offsetXZ = stickXZ.GetStickOffset();

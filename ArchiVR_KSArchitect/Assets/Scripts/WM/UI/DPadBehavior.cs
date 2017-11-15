@@ -24,14 +24,13 @@ namespace Assets.Scripts.WM.UI
 
         public bool m_autoReturnToZero;
 
-
         // Flag indicating whether the stick is currently being manipulated.
         private bool m_isBeingManipulated = false;
 
-        // The UI Button representing a D-pad stick.
-        private Button m_stick = null;
+        // The UI Button representing a D-pad stick.  Must be defined.
+        public Button m_stick = null;
 
-        // The UI Button representing a D-pad stick.
+        // The area to which to constrain the D-Pad strick.  Optional.  Stick is unconstrained if not defined.
         public GameObject m_stickArea = null;
 
         // The base position for the stick in rest mode.
@@ -43,13 +42,6 @@ namespace Assets.Scripts.WM.UI
         // Use this for initialization
         void Start()
         {
-            m_stick = gameObject.transform.Find("Stick").gameObject.GetComponent<Button>();
-
-            if (!m_stick)
-            {
-                throw new Exception(gameObject.name + ".Start(): Cannot find child UI.Button 'Stick' below DPad UI.Panel gameobject.");
-            }
-
             m_stickBasePosition.Set(m_stick.transform.position.x, m_stick.transform.position.y, m_stick.transform.position.z);
         }
 
@@ -161,8 +153,8 @@ namespace Assets.Scripts.WM.UI
 
                 newStickPosition.x = Math.Max(stickAreaTransform.position.x + stickAreaTransform.rect.xMin, newStickPosition.x);
                 newStickPosition.y = Math.Max(stickAreaTransform.position.y + stickAreaTransform.rect.yMin, newStickPosition.y);
-
             }
+
             m_stick.transform.position = newStickPosition;
         }
 

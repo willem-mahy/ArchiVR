@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+using UnityEngine;
+
 namespace Assets.Scripts.WM.Settings
 {
-    [System.Serializable()]
+    [Serializable()]
     public class ApplicationSettingsData
     {
         public StateSettings m_stateSettings = new StateSettings();
@@ -56,8 +58,9 @@ namespace Assets.Scripts.WM.Settings
         {
             Debug.Log("ApplicationSettings.Save()");
 
-            //Opens a file and serializes the object into it.            
-            var stream = File.Open(GetFilePath(), FileMode.Create);
+            //Opens a file and serializes the object into it.
+            var fp = GetFilePath();
+            var stream = File.Open(fp, FileMode.Create);
             var formatter = new BinaryFormatter();
             formatter.Serialize(stream, m_data);
             stream.Close();
@@ -68,14 +71,15 @@ namespace Assets.Scripts.WM.Settings
             Debug.Log("ApplicationSettings.Load(" + GetFilePath() + ")");
 
             // First load the application settings.
-            if (!File.Exists(GetFilePath()))
+            var fp = GetFilePath();
+            if (!File.Exists(fp))
             {
                 Save();
                 return; // Nothing to load.
             }
 
             //Opens file and deserializes the object from it.
-            var stream = File.Open(GetFilePath(), FileMode.Open);
+            var stream = File.Open(fp, FileMode.Open);
             var formatter = new BinaryFormatter();
 
             m_data = (ApplicationSettingsData)formatter.Deserialize(stream);

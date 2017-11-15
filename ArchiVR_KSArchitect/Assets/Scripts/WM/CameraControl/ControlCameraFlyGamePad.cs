@@ -10,17 +10,6 @@ namespace Assets.Scripts.WM.CameraControl
         // Use this for initialization
         void Start()
         {
-            //m_HorizontalPhysicalAxis = new CrossPlatformInputManager.VirtualAxis("Horizontal");
-            //CrossPlatformInputManager.UnRegisterVirtualAxis("Horizontal");
-            //CrossPlatformInputManager.RegisterVirtualAxis(m_HorizontalPhysicalAxis);
-
-            //m_VerticalPhysicalAxis = new CrossPlatformInputManager.VirtualAxis("Vertical");
-            //CrossPlatformInputManager.UnRegisterVirtualAxis("Vertical");
-            //CrossPlatformInputManager.RegisterVirtualAxis(m_VerticalPhysicalAxis);
-
-            //m_jumpButton = new CrossPlatformInputManager.VirtualButton("Jump");
-            //CrossPlatformInputManager.UnRegisterVirtualButton("Jump");
-            //CrossPlatformInputManager.RegisterVirtualButton(m_jumpButton);
         }
 
         // Physical gamepad buttons are mapped as follows:

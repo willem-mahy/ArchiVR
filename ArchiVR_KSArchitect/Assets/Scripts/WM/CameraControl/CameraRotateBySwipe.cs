@@ -9,7 +9,8 @@ public class CameraRotateBySwipe : CameraRotate
     private Vector2 m_lastTouchPosition = new Vector2(0,0);
 
     // Use this for initialization
-    new public void Start () {
+    new public void Start ()
+    {
         base.Start();
         Debug.Log("CameraRotateBySwipe.Start()");
     }

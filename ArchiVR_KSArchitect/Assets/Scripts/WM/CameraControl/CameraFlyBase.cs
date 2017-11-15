@@ -25,16 +25,6 @@ public class CameraFlyBase : MonoBehaviour
     //! The normal translation speed, in units/sec.
     public float m_translateSpeedFast = 50.0f;
 
-    // Update is called once per frame
-	public virtual void Update()
-    {
-        //DebugUtil.LogKeyPress("space");
-        //DebugUtil.LogKeyPress("left");
-        //DebugUtil.LogKeyPress("right");
-        //DebugUtil.LogKeyPress("up");
-        //DebugUtil.LogKeyPress("down");
-    }
-
     /*
      * cameraMovementDirXZ_World_Vector2    The translation direction, expressed in the Camera local frame, and encoded in a 2d vector (X=X, Y=Z).
      * offset                               The magnitude of the translation.
@@ -45,6 +35,11 @@ public class CameraFlyBase : MonoBehaviour
         float offset,
         bool fixY)
     {
+        if (offset == 0)
+        {
+            return;
+        }
+
         // Put the movement direction into a 3D Vector.
         Vector3 cameraMovementDirection_Camera = new Vector3(cameraMovementDirXZ_Camera_Vector2.x, 0, cameraMovementDirXZ_Camera_Vector2.y);
 

@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.WM.Settings
 {
-    [System.Serializable()]
+    [Serializable()]
     public class GraphicsSettings
     {
         public bool m_enableDynamicGrass = true;

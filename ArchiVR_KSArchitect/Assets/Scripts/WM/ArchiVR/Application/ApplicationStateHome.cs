@@ -17,7 +17,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             Debug.Log("ApplicationStateHome.Start()");
             base.Start();
 
-            ApplicationSettings.GetInstance().Load();                     
+            ApplicationSettings.GetInstance().Load();
+
+            SetViewMode(1);
         }
 
         // Update is called once per frame
@@ -30,6 +32,13 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 QuitApplication();
             }
-        }        
+        }
+
+        public void QuitButton_OnClick()
+        {
+            Debug.Log("ApplicationStateHome.QuitButton_OnClick()");
+
+            QuitApplication();
+        }
     }
 }

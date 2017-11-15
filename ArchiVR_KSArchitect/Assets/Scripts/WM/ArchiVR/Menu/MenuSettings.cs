@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.WM.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,15 +8,6 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 {
     public class MenuSettings : MonoBehaviour
     {
-        //! The 'Main' menu.
-        public GameObject m_mainMenu = null;
-
-        //! The 'Graphics Settings' submenu.
-        public GameObject m_menuGraphicsSettings = null;
-
-        //! The 'Controls Settings' submenu.
-        public GameObject m_menuControlsSettings = null;
-
         //! The button to close this menu.
         public Button m_exitButton = null;
 
@@ -36,22 +28,19 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         void ExitButton_OnClick()
         {
             Debug.Log("MenuSettings.ExitButton_OnClick()");
-            gameObject.SetActive(false);
-            m_mainMenu.SetActive(true);
+            UIManager.GetInstance().CloseMenu();
         }
 
         void GraphicsSettingsButton_OnClick()
         {
             Debug.Log("MenuSettings.GraphicsSettingsButton_OnClick()");
-            gameObject.SetActive(false);
-            m_menuGraphicsSettings.SetActive(true);
+            UIManager.GetInstance().OpenMenu("MenuGraphicsSettings");
         }
 
         void ControlsSettingsButton_OnClick()
         {
             Debug.Log("MenuSettings.ControlsSettingsButton_OnClick()");
-            gameObject.SetActive(false);
-            m_menuControlsSettings.SetActive(true);
+            UIManager.GetInstance().OpenMenu("MenuControlsSettings");
         }
     }
 }

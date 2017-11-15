@@ -1,8 +1,7 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Assets.Scripts.WM.UI.VR;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.WM.UI
 {
@@ -14,14 +13,30 @@ namespace Assets.Scripts.WM.UI
             VR
         }
 
-        //! The list of references to UI controls to be enabled in Non-VR modes.
-        public List<GameObject> m_uiControlsNonVR = new List<GameObject>();
+        //! Reference to the singleton instance.
+        private static UIManager s_instance = null;
 
-        //! The list of references to UI controls to be enabled in VR modes.
-        public List<GameObject> m_uiControlsVR = new List<GameObject>();
+        //! Get reference to the singleton instance.         
+        public static UIManager GetInstance()
+        {
+            if (null == s_instance)
+            {
+                Debug.LogWarning("UIManager.GetInstance() = null!");
+            }
 
-        //! The list of buttons to toggle UI visible/invisible.
-        public List<Button> m_buttonToggleUIArray = new List<Button>();
+            return s_instance;
+        }
+
+        public Menu m_initialMenu = null;
+
+        //! Reference to the currently shown menu.
+        private Menu m_menu;
+
+        public Widget m_widgetDebug = null;
+
+        public Widget m_widgetFPS = null;
+
+        public Widget m_widgetDPad = null;
 
         // The active UI mode.
         private UIMode m_uiMode = UIMode.NonVR;
@@ -29,63 +44,146 @@ namespace Assets.Scripts.WM.UI
         // The 'ui visible' state.
         private bool m_uiVisible = true;
 
+        public string m_toggleUIVisibleKey = "";
+
+        // Flags whether a touch is in progress that can be further considered as a valid trigger tap.
+        private bool m_considerTouch = false;
+        private float m_touchStartTime;
+
+        // Use this for initialization
+        void Awake()
+        {
+            Debug.Log("UIManager.Awake()");
+            s_instance = this;
+        }
+
         // Use this for initialization
         void Start()
         {
-            foreach (var button in m_buttonToggleUIArray)
+            if (m_initialMenu)
             {
-                var buttonComponent = button.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(ButtonToggleActiveUI_OnClick);
+                OpenMenu(m_initialMenu);
             }
+
+            UpdateUIState();
         }
 
         // Update is called once per frame
         void Update()
         {
-            // 'u' key: Toggle UI show/hide.
-            if (Input.GetKeyUp("u"))
+            if (m_toggleUIVisibleKey != "")
             {
-                ToggleUIVisible();
+                if (Input.GetKeyUp(m_toggleUIVisibleKey))
+                {
+                    ToggleUIVisible();
+                }
             }
+
+            HandleTouches();
         }
 
-        private List<GameObject> GetControlsForActiveMode()
+        /// <summary>
+        /// Cast a ray to test if Input.mousePosition is over any UI object in EventSystem.current.
+        /// This is a replacement for IsPointerOverGameObject(),
+        /// which does not work on Android in 4.6.0f3
+        /// </summary>
+        private bool IsPointerOverUIObject(Touch t)
         {
-            switch (m_uiMode)
+            // Referencing this code for GraphicRaycaster https://gist.github.com/stramit/ead7ca1f432f3c0f181f
+            // the ray cast appears to require only eventData.position.
+            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+            eventDataCurrentPosition.position = new Vector2(t.position.x, t.position.y);
+
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+            return results.Count > 0;
+        }
+
+        void HandleTouches()
+        {
+            switch (Input.touchCount)
             {
-                case UIMode.NonVR:
-                    return m_uiControlsNonVR;
-                case UIMode.VR:
-                    return m_uiControlsVR;
+                case 1:
+                    {
+                        var touch = Input.GetTouch(0);
+
+                        switch (touch.phase)
+                        {
+                            case TouchPhase.Began:
+                                // Only consider touches that are not on UI elements.
+                                m_considerTouch = !IsPointerOverUIObject(touch);
+                                m_touchStartTime = Time.time;
+                                break;
+                            case TouchPhase.Ended:
+                                {
+                                    if (m_considerTouch)
+                                    {
+                                        var touchEndTime = Time.time;
+                                        var touchDuration = touchEndTime - m_touchStartTime;
+                                        if (touchDuration < 0.5)
+                                        {
+                                            // Upon each timely ended single-touch as a 'tap' where there are no UI elements,
+                                            // each tap toggles visibility of the targeted UI elements.
+                                            ToggleUIVisible();
+                                        }
+                                        m_considerTouch = false;
+                                        m_touchStartTime = 0;
+                                    }
+                                    break;
+                                }
+                        }
+                        break;
+                    }
                 default:
-                    return null;
+                    m_considerTouch = false;
+                    m_touchStartTime = 0;
+                    break;
             }
         }
 
-        private List<GameObject> GetControlsForNonActiveMode()
+        private void OnDestroy()
         {
-            switch (m_uiMode)
-            {
-                case UIMode.NonVR:
-                    return m_uiControlsVR;
-                case UIMode.VR:
-                    return m_uiControlsNonVR;
-                default:
-                    return null;
-            }
+            Debug.Log("UIManager.OnDestroy()");
+            s_instance = null;
         }
 
-        public void ButtonToggleActiveUI_OnClick()
-        {
-            ToggleUIVisible();
-        }
-
-        private bool ToggleUIVisible()
+        public bool ToggleUIVisible()
         {
             Debug.Log("UIManager.ToggleUIVisible(): -> " + !m_uiVisible);
+
             m_uiVisible = !m_uiVisible;
 
-            UpdateUiControlsActiveState();
+            UpdateUIState();
+
+            return m_uiVisible;
+        }
+
+        private void UpdateUIState()
+        {
+            if (m_menu)
+            {
+                m_menu.UpdateUiControlsActiveState();
+            }
+
+            if (m_widgetDebug)
+            {
+                m_widgetDebug.UpdateUiControlsActiveState();
+            }
+
+            if (m_widgetFPS)
+            {
+                m_widgetFPS.UpdateUiControlsActiveState();
+            }
+
+            if (m_widgetDPad)
+            {
+                m_widgetDPad.UpdateUiControlsActiveState();
+            }
+        }
+
+        public bool IsUIVisible()
+        {
+            //Debug.Log("UIManager.IsUIVisible() = " + m_uiVisible);
 
             return m_uiVisible;
         }
@@ -93,45 +191,57 @@ namespace Assets.Scripts.WM.UI
         public void SetUIMode(UIMode uiMode)
         {
             Debug.Log("UIManager.SetUIMode(" + uiMode + ")");
+
             m_uiMode = uiMode;
 
-            UpdateUiControlsActiveState();
+            UpdateUIState();
         }
 
-        private void UpdateUiControlsActiveState()
+        public UIMode GetUIMode()
         {
-            var uiControlsForActiveMode = GetControlsForActiveMode();
+            //Debug.Log("UIManager.GetUIMode() = " + m_uiMode);
 
-            // Set controls for active UI mode to the current 'ui visible' state.
-            foreach (var gameObject in uiControlsForActiveMode)
+            return m_uiMode;
+        }
+
+        public void OpenMenu(string menuName)
+        {
+            var menus = gameObject.transform.Find("Menu");
+
+            var menu = menus.transform.Find(menuName).GetComponent<Menu>();
+
+            OpenMenu(menu);
+        }
+
+        public void OpenMenu(Menu menu)
+        {
+            if (null != m_menu)
             {
-                gameObject.SetActive(m_uiVisible);                
+                m_menu.Close();
             }
 
-            // HACK: TODO: implement in a cleaner way...
-            if (m_uiVisible)
+            if (menu)
             {
-                var menu_ground_VR = GameObject.Find("CanvasMainMenu_VR");
-
-                if (null != menu_ground_VR)
-                {
-                    // While it was disabled, the VR ground menu did not update its position.
-                    // So update it once now just before setting it visible, in order to put it conveniently in front of the player.
-                    var c = menu_ground_VR.GetComponent<PlayerGazeMenuBehavior>();
-
-                    if (null != c)
-                    {
-                        c.UpdateLocationFromCamera(true);
-                    }
-                }
+                menu.Open(m_menu);
             }
 
-            // Set controls for non-active UI mode(s) to 'invisible'.
-            var uiControlsForNonActiveMode = GetControlsForNonActiveMode();
+            m_menu = menu;
+        }
 
-            foreach (var gameObject in uiControlsForNonActiveMode)
+        public void CloseMenu()
+        {
+            if (null == m_menu)
             {
-                gameObject.SetActive(false);
+                return;
+            }
+
+            var parentMenu = m_menu.Close();
+            
+            m_menu = parentMenu;
+
+            if (m_menu)
+            {
+                m_menu.Open();
             }
         }
     }

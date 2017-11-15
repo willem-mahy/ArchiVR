@@ -9,92 +9,97 @@ using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Util;
 
 namespace Assets.Scripts.WM.ArchiVR.Menu
+{
+    public class MenuGraphicsSettings : MonoBehaviour
     {
-        public class MenuGraphicsSettings : MonoBehaviour
+        //! The button to close this menu.
+        public Button m_exitButton = null;
+
+        //! The 'Enable Dynamic Grass' button.
+        public Button m_enableDynamicGrassButton = null;
+
+        //! The 'Show FPS' button.
+        public Button m_showFPSButton = null;
+
+        //! The 'Quality Level' button.
+        public ToggleButton m_qualityButton = null;
+
+        // Use this for initialization
+        void Start()
         {
-            //! The 'Settings' parent menu.
-            public GameObject m_menuSettings = null;
+            m_exitButton.onClick.AddListener(ExitButton_OnClick);
+            m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
+            m_showFPSButton.onClick.AddListener(ShowFPSButton_OnClick);
+            m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
 
-            //! The button to close this menu.
-            public Button m_exitButton = null;
+            InitQualityButton();
+        }
 
-            //! The 'Rotate Mode' button.
-            public Button m_enableDynamicGrassButton = null;
+        // Use this for initialization
+        void Update()
+        {
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
 
-            //! The 'Translate Mode' button.
-            public Button m_showFPSButton = null;
+            m_enableDynamicGrassButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableDynamicGrass);
+            m_showFPSButton.GetComponent<CheckBox>().SetCheckedState(s.m_showFPS);
+            m_qualityButton.SelectOptionByText(s.m_qualityLevelName);        
+        }
 
-            public ToggleButton m_qualityButton = null;
+        private void InitQualityButton()
+        {
+            Debug.Log("MenuGraphicsSettings.InitQualityButton()");
 
-            // Use this for initialization
-            void Start()
+            DebugUtil.LogQualitySettings();
+
+            // Get the supported Quality setting names.
+            string[] names = QualitySettings.names;
+
+            // Get the currently active Quality setting name.
+            var activeName = names[QualitySettings.GetQualityLevel()];
+
+
+            // Initialize the options on the toggle button.
+            List<string> qualityOptions = new List<string>();
+            foreach (var name in names)
             {
-                m_exitButton.onClick.AddListener(ExitButton_OnClick);
-                m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
-                m_showFPSButton.onClick.AddListener(ShowFPSButton_OnClick);
-                m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
-
-                InitQualityButton();
+                qualityOptions.Add(name);
             }
 
-            private void InitQualityButton()
-            {
-                Debug.Log("MenuGraphicsSettings.InitQualityButton()");
+            m_qualityButton.LoadOptions(qualityOptions, null);
 
-                DebugUtil.LogQualitySettings();
+            // Set the currently active Quality setting as selected on the toggle button.
+            m_qualityButton.SelectOptionByText(activeName);
+        }
 
-                // Get the supported Quality setting names.
-                string[] names = QualitySettings.names;
+        void QualityButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.QualityButton_OnClick()");
+            var qualityLevel = m_qualityButton.SetNextOption();
 
-                // Get the currently active Quality setting name.
-                var activeName = names[QualitySettings.GetQualityLevel()];
+            ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel(qualityLevel);                
+        }
 
+        void ExitButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.ExitButton_OnClick()");
+            UIManager.GetInstance().CloseMenu();
+        }
 
-                // Initialize the options on the toggle button.
-                List<string> qualityOptions = new List<string>();
-                foreach (var name in names)
-                {
-                    qualityOptions.Add(name);
-                }
+        void EnableDynamicGrassButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.EnableDynamicGrassButton_OnClick()");
+            ApplicationSettings.GetInstance().m_data.m_graphicSettings.m_enableDynamicGrass = !ApplicationSettings.GetInstance().m_data.m_graphicSettings.m_enableDynamicGrass;
+        }
 
-                m_qualityButton.LoadOptions(qualityOptions, null);
+        void ShowFPSButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.ShowFPSButton_OnClick()");
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
 
-                // Set the currently active Quality setting as selected on the toggle button.
-                m_qualityButton.SelectOptionByText(activeName);
-            }
+            s.m_showFPS = !s.m_showFPS;
 
-            void QualityButton_OnClick()
-            {
-                Debug.Log("MenuGraphicsSettings.QualityButton_OnClick()");
-                var qualityLevel = m_qualityButton.SetNextOption();
-
-                ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel(qualityLevel);                
-            }
-
-            void ExitButton_OnClick()
-            {
-                Debug.Log("MenuGraphicsSettings.ExitButton_OnClick()");
-                gameObject.SetActive(false);
-                m_menuSettings.SetActive(true);
-            }
-
-            void EnableDynamicGrassButton_OnClick()
-            {
-                Debug.Log("MenuGraphicsSettings.EnableDynamicGrassButton_OnClick()");
-
-                // TODO:
-                //m_enableDynamicGrassButton.SetSelected(!m_enableDynamicGrassButton.IsSelected());
-                //m_fps.SetActive(m_enableDynamicGrassButton.IsSelected());
-            }
-
-            void ShowFPSButton_OnClick()
-            {
-                Debug.Log("MenuGraphicsSettings.ShowFPSButton_OnClick()");
-
-                // TODO:
-                //m_showFPSButton.SetSelected(!m_showFPSButton.IsSelected());
-                //m_fps.SetActive(m_showFPSButton.IsSelected());
-            }
+            UIManager.GetInstance().m_widgetFPS.SetVisible(s.m_showFPS);
         }
     }
+}
 

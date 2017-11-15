@@ -14,9 +14,13 @@ public class CameraFlyByMouseKB : CameraFlyBase
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
-        base.Update();
+        //DebugUtil.LogKeyPress("space");
+        //DebugUtil.LogKeyPress("left");
+        //DebugUtil.LogKeyPress("right");
+        //DebugUtil.LogKeyPress("up");
+        //DebugUtil.LogKeyPress("down");
 
         float speed = (Input.GetKey("right shift") ? m_translateSpeedNormal : m_translateSpeedFast);
 

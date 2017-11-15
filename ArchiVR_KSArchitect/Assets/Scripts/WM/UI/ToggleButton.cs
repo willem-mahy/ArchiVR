@@ -48,8 +48,58 @@ namespace Assets.Scripts.WM.UI
 
             if (m_autoToggleOnClick)
             {
-                m_buttonComponent.onClick.AddListener(DoSetNextOption);
+                GetButtonComponent().onClick.AddListener(DoSetNextOption);
             }
+        }
+
+        private Button GetButtonComponent()
+        {
+            if (null == m_buttonComponent)
+            {
+                InitializeReferences();
+            }
+
+            return m_buttonComponent;
+        }
+
+        private Image GetImageComponent()
+        {
+            if (null == m_imageComponent)
+            {
+                InitializeReferences();
+            }
+
+            return m_imageComponent;
+        }
+
+        private Text GetTextComponent()
+        {
+            if (null == m_textComponent)
+            {
+                InitializeReferences();
+            }
+
+            return m_textComponent;
+        }
+
+        private GameObject GetText()
+        {
+            if (null == m_text)
+            {
+                InitializeReferences();
+            }
+
+            return m_text;
+        }
+
+        private GameObject GetImage()
+        {
+            if (null == m_image)
+            {
+                InitializeReferences();
+            }
+
+            return m_image;
         }
 
         private void InitializeReferences()
@@ -74,7 +124,7 @@ namespace Assets.Scripts.WM.UI
 
             if (null == m_image) // Sanity: We must have a reference to the Button's child Image
             {
-                var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Text!";
+                var msg = "ToggleButton '" + gameObject.name + "': Failed to get child Image!";
                 Debug.LogWarning(msg);
                 //throw new System.Exception(msg);
                 return;
@@ -201,11 +251,11 @@ namespace Assets.Scripts.WM.UI
 
             // If no sprites supplied for the options, hide the button image.
             bool enableImage = HasOptions() && (null != optionSpritePathList);
-            m_image.SetActive(enableImage);
+            GetImage().SetActive(enableImage);
 
             // If no texts supplied for the options, hide the button text.
             bool enableText = HasOptions() && (null != optionTextList);
-            m_text.SetActive(enableText);
+            GetText().SetActive(enableText);
 
             if (HasOptions())
             {
@@ -284,8 +334,8 @@ namespace Assets.Scripts.WM.UI
         {
             var selectedOption = (m_selectedOptionIndex == -1) ? null : m_optionList[m_selectedOptionIndex];
 
-            m_imageComponent.sprite = selectedOption.m_sprite;
-            m_textComponent.text = selectedOption.m_text;
+            GetImageComponent().sprite = (null == selectedOption) ? null : selectedOption.m_sprite;
+            GetTextComponent().text = (null == selectedOption) ? "" : selectedOption.m_text;
         }
 
         int NumOptions()

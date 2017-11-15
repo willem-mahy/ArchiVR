@@ -1,12 +1,8 @@
-﻿using System.IO;
-using System.Runtime.Serialization;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
 namespace Assets.Scripts.WM.Settings
 {
-    [System.Serializable()]
+    [Serializable()]
     public class ControlSettings
     {
         public enum RotateMode

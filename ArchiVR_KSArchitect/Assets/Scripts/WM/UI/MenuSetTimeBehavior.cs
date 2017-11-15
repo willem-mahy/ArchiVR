@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 using Assets.Scripts.WM.ArchiVR;
 
 namespace Assets.Scripts.WM.UI
 {
     public class MenuSetTimeBehavior : MonoBehaviour
     {
+        //! The button to close this menu.
+        public Button m_exitButton = null;
 
         public TimeBehavior m_time = null;
 
@@ -15,13 +19,13 @@ namespace Assets.Scripts.WM.UI
         // Use this for initialization
         void Start()
         {
-
+            m_exitButton.onClick.AddListener(ExitButton_OnClick);
         }
 
         // Update is called once per frame
         void Update()
         {
-            float s = gameObject.GetComponent<Canvas>().scaleFactor;
+            float s = gameObject.GetComponentInParent<Canvas>().scaleFactor;
 
             if (m_dpadAnimation)
             {
@@ -55,6 +59,12 @@ namespace Assets.Scripts.WM.UI
                     m_time.m_time = time;
                 }
             }
+        }
+
+        void ExitButton_OnClick()
+        {
+            Debug.Log("MenuSetTimeBehavior.ExitButton_OnClick()");
+            UIManager.GetInstance().CloseMenu();
         }
     }
 }

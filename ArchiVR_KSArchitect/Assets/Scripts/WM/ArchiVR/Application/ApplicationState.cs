@@ -15,79 +15,23 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public abstract class ApplicationState : MonoBehaviour
     {
-        //! Reference to the button to quit the application.
-        public Button m_exitButton = null;
-
-        //! Reference to the GameObject that contains the 'Main' menu.
-        public GameObject m_mainMenu = null;
-
-        //! Reference to the button to open the 'Settings' menu.
-        public Button m_settingsButton = null;
-
-        //! Reference to the GameObject that contains the 'Settings' menu.
-        public GameObject m_settingsMenu = null;
-
-        //! Reference to the UI Manager.
-        UIManager m_uiManager = null;
-
-        // The parent UI control that contains all debug logging UI controls for all types of debugging information.
-        GameObject m_canvasDebug = null;
-
-        // List of UI control that one UI control for each debug logging information type.
-        List<GameObject> m_uiControlDebug = new List<GameObject>();
-
-        public List<ToggleButton> m_toggleButtonsViewMode = new List<ToggleButton>();
-
-        public Text m_textControlDebugViewMode = null;
+        int m_viewMode = 0;
 
         public List<string> m_devices = null;
-
-        public List<GameObject> m_menuTimeArray = null;
 
         // Use this for initialization
         protected virtual void Awake()
         {
             Debug.Log("ApplicationState.Awake()");
-
-            // Get references to all UI controls.
-            GetReferencesToUiControls();
-
-            // Get a reference to the UI Manager.
-            m_uiManager = gameObject.GetComponent<UIManager>();
         }
 
         // Use this for initialization
         protected virtual void Start()
         {
-            Debug.Log("ApplicationState.Start()");
-
-            // Attach an OnClick handler to the 'Quit Application' button.
-            if (m_exitButton)
-            {
-                Button btn = m_exitButton.GetComponent<Button>();
-                btn.onClick.AddListener(ExitButton_OnClick);
-            }
-
-            // Attach an OnClick handler to the 'Quit Application' button.
-            if (m_settingsButton)
-            {
-                m_settingsButton.onClick.AddListener(MenuSettingsButton_OnClick);
-            }
-
-            // Hide time menus
-            foreach (var gameObject in m_menuTimeArray)
-            {
-                gameObject.SetActive(false);
-            }
-
-            // Hide debug logging altogether
-            if (m_canvasDebug != null)
-            {
-                m_canvasDebug.SetActive(false);
-            }            
+            Debug.Log("ApplicationState.Start()"); 
 
             // Set the initial active debug logging type to the first one.
-            SetActiveDebuggingType(0);
+            //SetActiveDebuggingType(0);
 
             AddSupportedXRDevices();
         }
@@ -98,18 +42,19 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
             {
-                if (m_canvasDebug != null)
+                if (UIManager.GetInstance().m_widgetDebug)
                 {
-                    m_canvasDebug.SetActive(!m_canvasDebug.activeSelf);
+                    UIManager.GetInstance().m_widgetDebug.ToggleVisible();
                 }
             }
 
-            // 'l' key: Show/hide debugging info
-            if (Input.GetKeyUp("q"))
+            // 'c' key: Generate ScreenCapture.
+            if (Input.GetKeyUp("c"))
             {
                 MakeScreenCapture();
             }
 
+            /*
             // 'f1' to 'f9' keys: Select active debugging type.
             for (int debugType = 0; debugType < m_uiControlDebug.Count; ++debugType)
             {
@@ -119,40 +64,57 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     break;
                 }
             }
+            */
 
             // 'v' key: Toggle View Mode.
             if (Input.GetKeyUp("v"))
             {
-                if (m_toggleButtonsViewMode.Count > 0)
-                {
-                    var b = m_toggleButtonsViewMode[0];
-
-                    b.SetNextOption();
-
-                    SetViewMode(b.GetSelectedOptionIndex());
-                }
+                SetNextViewMode();
             }
 
+            // 'q' key: Toggle Quality Level.
             if (Input.GetKeyUp("q"))
             {
                 ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
             }
-        }
+        }        
 
-        protected abstract string GetName();
+        protected abstract string GetName();        
 
-        void ExitButton_OnClick()
-        {
-            Debug.Log("ApplicationState.ExitButton_OnClick()");
-
-            QuitApplication();
-        }
-
-        void MenuSettingsButton_OnClick()
+        public void MenuSettingsButton_OnClick()
         {
             Debug.Log("ApplicationState.MenuSettingsButton_OnClick()");
-            m_settingsMenu.SetActive(true);
-            m_mainMenu.SetActive(false);
+
+            //UIManager.GetInstance().OpenMenu("MenuSettings");
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuSettings").GetComponent<Assets.Scripts.WM.UI.Menu>());
+        }
+
+        public void MenuGraphicsSettingsButton_OnClick()
+        {
+            Debug.Log("ApplicationState.MenuGraphicsSettingsButton_OnClick()");
+
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuGraphicsSettings").GetComponent<Assets.Scripts.WM.UI.Menu>());
+        }
+
+        public void MenuControlsSettingsButton_OnClick()
+        {
+            Debug.Log("ApplicationState.MenuControlsSettingsButton_OnClick()");
+
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuControlsSettings").GetComponent<Assets.Scripts.WM.UI.Menu>());
+        }
+
+        public void ToggleUIButton_OnClick()
+        {
+            Debug.Log("ApplicationState.ToggleUIButton_OnClick()");
+
+            UIManager.GetInstance().ToggleUIVisible();
+        }
+
+        public void MenuClose_OnClick()
+        {
+            Debug.Log("ApplicationState.MenuClose_OnClick()");
+
+            UIManager.GetInstance().CloseMenu();
         }
 
         //! Quit the application.
@@ -194,38 +156,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             Debug.Log(text);
         }
         
-        public void toggleButtonViewMode_OnClick()
-        {
-            var toggleButtonViewMode = m_toggleButtonsViewMode[0];
-            
-            toggleButtonViewMode.SetNextOption();
-            SetViewMode(toggleButtonViewMode.GetSelectedOptionIndex());
+        public void ButtonViewMode_OnClick()
+        {            
+            SetNextViewMode();
         }
 
-        public void buttonTime_OnButtonClick(BaseEventData obj)
+        public void SetNextViewMode()
         {
-            if (m_menuTimeArray.Count == 0)
-            {
-                return; // sanity
-            }
-
-            bool show = !m_menuTimeArray[0].activeSelf;
-
-            foreach (var gameObject in m_menuTimeArray)
-            {
-                gameObject.SetActive(show);
-            }
-        }
-
-        void GetReferencesToUiControls()
-        {
-            m_canvasDebug = GameObject.Find("CanvasDebug");
-
-            m_uiControlDebug.Add(GameObject.Find("TextDebugSystemInfo"));
-            m_uiControlDebug.Add(GameObject.Find("TextDebugCamera"));
-            m_uiControlDebug.Add(GameObject.Find("TextDebugSkyLight1"));
-            m_uiControlDebug.Add(GameObject.Find("TextDebugSkyLight2"));
-            m_uiControlDebug.Add(GameObject.Find("TextDebugWMTracker"));
+            SetViewMode(++m_viewMode % m_devices.Count);
         }
 
         void AddSupportedXRDevices()
@@ -233,6 +171,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             DebugUtil.LogSupportedXRDevices();
 
             // List supported XR devices in debug window
+            /*
             if (m_textControlDebugViewMode != null)
             {
                 m_textControlDebugViewMode.text += "\nSupported VR devices:";
@@ -242,6 +181,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     m_textControlDebugViewMode.text += "\n -" + supportedDeviceName;
                 }
             }
+            */
 
             List<string> deviceNames = new List<string>();
             deviceNames.Add("none");        // No VR: Regular full-screen mono rendering.
@@ -260,6 +200,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 optionSpritePathList.Add("Menu/ViewMode/" + deviceName);
             }
 
+            /*
             // Initialize 'View Mode' toggle buttons.
             foreach (var toggleButtonViewMode in  m_toggleButtonsViewMode)
             {
@@ -267,8 +208,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
                 toggleButtonViewMode.GetComponent<Button>().onClick.AddListener(toggleButtonViewMode_OnClick);
             }
+            */
         }
 
+        /*
         void SetActiveDebuggingType(int toActivate)
         {
             for (int i = 0; i < m_uiControlDebug.Count; ++i)
@@ -281,6 +224,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 m_uiControlDebug[i].SetActive(i == toActivate);
             }
         }
+        */
 
         public static bool IsActiveViewModeVR()
         {
@@ -306,11 +250,13 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public void SetViewMode(int viewMode)
         {
+            /*
             for (int i = 0; i < m_toggleButtonsViewMode.Count; ++i)
             {
                 var m_toggleButtonViewMode = m_toggleButtonsViewMode[i];
                 m_toggleButtonViewMode.SelectOptionByIndex(viewMode);
             }
+            */
 
             bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
             string deviceName = invalidIndex ? "" : m_devices[viewMode];
@@ -318,12 +264,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // update UI visibility
             bool isViewModeVR = IsViewModeVR(deviceName);
 
-            m_uiManager.SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
+            UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
 
+            /*
             if (null != m_textControlDebugViewMode)
             {
                 m_textControlDebugViewMode.text += "\nSet ViewMode device:" + deviceName;
             }
+            */
 
             if (deviceName.CompareTo("") == 0)
             {
