@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_devices: []
-  m_initialProjectSceneName: Project002
+  m_initialProjectSceneName: Project001
 --- !u!114 &432992904
 MonoBehaviour:
   m_ObjectHideFlags: 0
