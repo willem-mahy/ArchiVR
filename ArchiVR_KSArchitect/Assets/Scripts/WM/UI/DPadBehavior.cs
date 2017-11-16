@@ -94,7 +94,11 @@ namespace Assets.Scripts.WM.UI
             if (m_autoReturnToZero)
             {
                 Debug.Log("Returning stick to zero position.");
-                m_stick.transform.position.Set(m_stickBasePosition.x, m_stickBasePosition.y, m_stickBasePosition.z);
+
+                // WM: Foes not seem to work?!?
+                //m_stick.transform.position.Set(m_stickBasePosition.x, m_stickBasePosition.y, m_stickBasePosition.z);
+
+                m_stick.transform.position = m_stickBasePosition;
             }
         }
 

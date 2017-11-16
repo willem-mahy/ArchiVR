@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_devices: []
-  m_initialProjectSceneName: 
+  m_initialProjectSceneName: Project040
 --- !u!114 &432992904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4957,8 +4957,8 @@ MonoBehaviour:
   m_doDebug: 0
   m_textDebug: {fileID: 1117911010}
   m_camera: {fileID: 1818701633}
-  m_translateSpeedNormal: 20
-  m_translateSpeedFast: 50
+  m_translateSpeedNormal: 0.2
+  m_translateSpeedFast: 0.5
   m_fixY: 0
 --- !u!114 &738213427
 MonoBehaviour:
