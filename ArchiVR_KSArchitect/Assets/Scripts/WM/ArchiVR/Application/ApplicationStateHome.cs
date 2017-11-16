@@ -6,6 +6,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStateHome : ApplicationState
     {
+        // Used to omit some actions upon re-entry from Play mode (eg Loading the application settings.
+        static bool s_firstTime = true;
+
         override protected string GetName()
         {
             return "Home";
@@ -17,7 +20,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             Debug.Log("ApplicationStateHome.Start()");
             base.Start();
 
-            ApplicationSettings.GetInstance().Load();
+            if (s_firstTime)
+            {
+                s_firstTime = false;
+                ApplicationSettings.GetInstance().Load();
+            }
 
             SetViewMode(1);
         }

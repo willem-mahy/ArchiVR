@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Assets.Scripts.WM.ArchiVR.Application;
+using Assets.Scripts.WM.Settings;
 
 namespace Assets.Scripts.WM
 {
@@ -100,8 +101,6 @@ namespace Assets.Scripts.WM
                 btn.onClick.AddListener(GoButtonOnClick);
             }
 
-            SetActiveProject(0);
-
             // Do this at the very end:
             // this makes sure m_selectedProjectName text is not overwritten.
             if (m_inputSwipe)
@@ -109,6 +108,9 @@ namespace Assets.Scripts.WM
                 //m_textStatus.text = "D:m_inputSwipe!=null";
                 m_inputSwipe.SwipeEvent += this.OnSwipe;
             }
+
+            var activeProjectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
+            SetActiveProjectByName(activeProjectName);
         }
 
         // Update is called once per frame
@@ -158,19 +160,39 @@ namespace Assets.Scripts.WM
             return index;
         }
 
+        void SetActiveProjectByName(String projectNameToActivate)
+        {
+            for (int projectIndex = 0; projectIndex < m_projectNames.Count; ++ projectIndex)
+            {
+                var projectName = m_projectNames[projectIndex];
+
+                if (projectName == projectNameToActivate)
+                {
+                    SetActiveProject(projectIndex);
+                    return;
+                }
+            }
+
+            SetActiveProject(0);
+        }
+
         void SetActiveProject(int index)
         {
             m_activeProjectIndex = MakeValidProjectIndexCycle(index);
+
+            var s = ApplicationSettings.GetInstance().m_data.m_stateSettings;
 
             if (IsValidProjectIndex(m_activeProjectIndex)) // Could not make it a valid projectIndex
             {
                 SetSelectedProjectPreview(m_projectImages[m_activeProjectIndex]);
                 SetSelectedProjectName(m_projectNames[m_activeProjectIndex]);
+                s.m_activeProjectName = m_projectNames[m_activeProjectIndex]; 
             }
             else
             {
                 SetSelectedProjectPreview(null);
                 SetSelectedProjectName("No project selected");
+                s.m_activeProjectName = "";
             }
         }
 
