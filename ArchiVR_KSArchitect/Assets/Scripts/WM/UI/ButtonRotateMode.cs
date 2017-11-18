@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
+
+using Assets.Scripts.WM.CameraControl.CameraNavigation;
+using Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl;
+
 
 namespace Assets.Scripts.WM.UI
 {
@@ -104,51 +109,79 @@ namespace Assets.Scripts.WM.UI
             var button1 = GetComponentInChildren<Button>();
             var button = button1.transform.Find("Image").GetComponentInChildren<Image>();
             var controlMouseKB = m_camera.GetComponentInChildren<CameraFlyByMouseKB>();
-            var controlCameraRotateByGyro = m_camera.GetComponentInChildren<CameraRotateByGyro>();
-            var WMCameraRotateBySwipe = m_camera.GetComponentInChildren<CameraRotateBySwipe>();
+
+            var cameraNavigation = GameObject.Find("CameraNavigation");
+            var cameraNavigationComponent = cameraNavigation.GetComponent<CameraNavigation>();
+
+            //var controlCameraRotateByGyro = m_camera.GetComponentInChildren<CameraRotateByGyro>();
+            //var WMCameraRotateBySwipe = m_camera.GetComponentInChildren<CameraRotateBySwipe>();
 
             switch (mode)
             {
                 case Modes.None:
                     gameObject.SetActive(false);
                     button.sprite = null;
+
                     SetTouchControlsActive(false);
-                    controlMouseKB.enabled = false;
+
+                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+
+                    /*
+                    controlMouseKB.enabled = false;                    
                     controlCameraRotateByGyro.enabled = false;
                     WMCameraRotateBySwipe.enabled = false;
+                    */
                     break;
                 case Modes.Gyro:
                     gameObject.SetActive(true);
                     button.sprite = m_spriteGyro;
+
                     SetTouchControlsActive(true);
+
+                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+
+                    /*
                     controlMouseKB.enabled = false;
                     controlCameraRotateByGyro.enabled = true;
                     WMCameraRotateBySwipe.enabled = false;
+                    */
                     break;
                 case Modes.Touch:
                     gameObject.SetActive(true);
                     button.sprite = m_spriteTouch;
+
                     SetTouchControlsActive(true);
+
+                    cameraNavigationComponent.m_rotationControl = new RotationControlSwipe();
+
+                    /*
                     controlMouseKB.enabled = false;
                     controlCameraRotateByGyro.enabled = false;
                     WMCameraRotateBySwipe.enabled = true;
+                    */
                     break;
                 case Modes.MouseKB:
                     gameObject.SetActive(true);
                     button.sprite = m_spriteMouseKB;
+
                     SetTouchControlsActive(false);
+
+                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+
+                    /*
                     controlMouseKB.enabled = true;
                     controlCameraRotateByGyro.enabled = false;
                     WMCameraRotateBySwipe.enabled = false;
+                    */
                     break;
             }
         }
 
         private void SetTouchControlsActive(bool state)
         {
-            for (int i = 0; i < m_touchControls.Count; ++i)
+            foreach (var touchControl in m_touchControls)
             {
-                m_touchControls[i].SetActive(state);
+                touchControl.SetActive(state);
             }
         }
 
@@ -173,3 +206,5 @@ namespace Assets.Scripts.WM.UI
         }
     }
 }
+ 
+ 

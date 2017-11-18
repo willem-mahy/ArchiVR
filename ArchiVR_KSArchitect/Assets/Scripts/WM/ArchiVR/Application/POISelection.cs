@@ -1,7 +1,10 @@
 ﻿using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+using Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl;
 
 namespace Assets.Scripts.WM
 {
@@ -150,7 +153,7 @@ namespace Assets.Scripts.WM
                 }
                 else
                 {
-                    Quaternion cameraRotationFromGyro = CameraRotateByGyro.GetRotationFromGyro();
+                    Quaternion cameraRotationFromGyro = RotationCOntrolGyro.GetRotationFromGyro();
 
                     GameObject temp = new GameObject();
                     temp.transform.Rotate(cameraRotationFromGyro.eulerAngles);
@@ -168,12 +171,15 @@ namespace Assets.Scripts.WM
 
                         //m_POINameText.text = "fCam:" + forwardCameraFromGyro.ToString() + " fPOI:" + forwardPOI.ToString();
 
+                        //TODO:
+                        /*
                         CameraRotateByGyro.m_offsetRotY = (180.0f / Mathf.PI) * Mathf.Acos(Vector3.Dot(forwardPOI, forwardCameraFromGyro));
 
                         if (Vector3.Cross(forwardPOI, forwardCameraFromGyro).y > 0)
                         {
                             CameraRotateByGyro.m_offsetRotY = -CameraRotateByGyro.m_offsetRotY;
                         }
+                        */
                     }
                 }
             }
