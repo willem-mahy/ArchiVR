@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiVR_KSArchitect.Plugins
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiVR_KSArchitect", "ArchiVR_KSArchitect.csproj", "{3C6065C0-A3BD-7ACA-A39B-FC1ECD9FE86C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiVR_KSArchitect.Editor.Plugins", "ArchiVR_KSArchitect.Editor.Plugins.csproj", "{1736446D-54E6-09A4-F389-BAC27BEC17DA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiVR_KSArchitect.Editor", "ArchiVR_KSArchitect.Editor.csproj", "{18806538-189D-C2BD-E00B-0020C68D99B4}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{3C6065C0-A3BD-7ACA-A39B-FC1ECD9FE86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C6065C0-A3BD-7ACA-A39B-FC1ECD9FE86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C6065C0-A3BD-7ACA-A39B-FC1ECD9FE86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1736446D-54E6-09A4-F389-BAC27BEC17DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1736446D-54E6-09A4-F389-BAC27BEC17DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1736446D-54E6-09A4-F389-BAC27BEC17DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1736446D-54E6-09A4-F389-BAC27BEC17DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18806538-189D-C2BD-E00B-0020C68D99B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18806538-189D-C2BD-E00B-0020C68D99B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18806538-189D-C2BD-E00B-0020C68D99B4}.Release|Any CPU.ActiveCfg = Release|Any CPU

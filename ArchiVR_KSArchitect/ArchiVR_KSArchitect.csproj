@@ -354,6 +354,8 @@
     <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\SkyDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\Sun.shader" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />

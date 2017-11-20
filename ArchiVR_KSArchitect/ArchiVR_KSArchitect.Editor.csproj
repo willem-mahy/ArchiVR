@@ -287,6 +287,10 @@
       <Project>{3C6065C0-A3BD-7ACA-A39B-FC1ECD9FE86C}</Project>
       <Name>ArchiVR_KSArchitect</Name>
     </ProjectReference>
+    <ProjectReference Include="ArchiVR_KSArchitect.Editor.Plugins.csproj">
+      <Project>{1736446D-54E6-09A4-F389-BAC27BEC17DA}</Project>
+      <Name>ArchiVR_KSArchitect.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
@@ -298,6 +302,8 @@
     <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\SkyDome.shader" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\Sun.shader" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
