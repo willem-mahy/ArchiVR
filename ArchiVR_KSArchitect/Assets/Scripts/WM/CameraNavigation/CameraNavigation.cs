@@ -124,6 +124,7 @@ namespace Assets.Scripts.WM.CameraNavigation
                 if (mode.name == name)
                 {
                     SetActiveRotationControlMode(modeIndex);
+                    return;
                 }
                 ++modeIndex;
             }
