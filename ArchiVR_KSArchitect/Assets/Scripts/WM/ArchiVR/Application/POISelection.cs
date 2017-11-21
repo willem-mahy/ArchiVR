@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl;
+using Assets.Scripts.WM.CameraNavigation.RotationControl;
 
 namespace Assets.Scripts.WM
 {
@@ -153,7 +153,7 @@ namespace Assets.Scripts.WM
                 }
                 else
                 {
-                    Quaternion cameraRotationFromGyro = RotationCOntrolGyro.GetRotationFromGyro();
+                    Quaternion cameraRotationFromGyro = RotationControlGyro.GetRotationFromGyro();
 
                     GameObject temp = new GameObject();
                     temp.transform.Rotate(cameraRotationFromGyro.eulerAngles);

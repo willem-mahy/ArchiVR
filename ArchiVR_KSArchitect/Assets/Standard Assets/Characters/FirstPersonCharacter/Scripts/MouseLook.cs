@@ -112,4 +112,36 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
     }
+
+    [Serializable]
+    public class GyroLook
+    {
+        public void Init(Transform character, Transform camera)
+        {
+        }
+
+        public static Quaternion GetRotationFromGyro()
+        {
+            Quaternion att = Input.gyro.attitude;
+            att.z = -att.z;
+            att.w = -att.w;
+
+            Quaternion rot = Quaternion.Euler(new Vector3(90, 0, 0));
+
+            Quaternion rotation = rot * att;
+
+            return rotation;
+        }
+
+        public void LookRotation(Transform character, Transform camera)
+        {
+            Quaternion rot = GetRotationFromGyro();
+            
+            Quaternion m_CharacterTargetRot  = Quaternion.Euler(0, rot.eulerAngles.y, 0);
+            Quaternion m_CameraTargetRot = Quaternion.Euler(rot.eulerAngles.x, 0, 0);
+            
+            character.localRotation = m_CharacterTargetRot;
+            camera.localRotation = m_CameraTargetRot;
+        }
+    }
 }

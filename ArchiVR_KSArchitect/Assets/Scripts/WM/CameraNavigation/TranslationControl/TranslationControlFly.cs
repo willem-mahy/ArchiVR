@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
+﻿
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
-using Assets.Scripts.WM.Util;
-
-namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
+namespace Assets.Scripts.WM.CameraNavigation.TranslationControl
 {
+    /*
     public interface ITranslationControlFlyInput
     {
         Vector3 GetTranslationVector();
         bool IsFast();
     }
-
+    
     public class TranslationControlFlyInputKB : ITranslationControlFlyInput
     {
         public Vector3 GetTranslationVector()
@@ -115,44 +114,68 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
             return false;
         }
     }
+    */
 
-    public class TranslationControlFly : ITranslationControl
+    public class TranslationControlFly : TranslationControlBase
     {
-        ITranslationControlFlyInput m_input = null;
-
-        static float xSpeed = 100.0f;
-        static float ySpeed = 100.0f;
-
-        static float xRotMin = -90.0f;
-        static float xRotMax = 90;
+        //ITranslationControlFlyInput m_input = null;
 
         public bool m_doDebug = false;
 
         public Text m_textDebug = null;
 
-        //! The camera to be controlled.
-        public Camera m_camera = null;
+        public float m_translateSpeedNormal = 1;
 
-        //! The normal translation speed, in units/sec.
-        public float m_translateSpeedNormal = 20.0f;
+        public float m_translateSpeedFast = 2;
 
-        //! The normal translation speed, in units/sec.
-        public float m_translateSpeedFast = 50.0f;
+        public FirstPersonController m_firstPersonController;
 
-        public void UpdateTranslation(GameObject gameObject)
+        private void Awake()
         {
+            //m_input = new TranslationControl.TranslationControlFlyInputKB();
+        }
+                
+        void OnDisable()
+        {
+            Debug.Log("TranslationControlFly.OnDisable()");
+        }
+
+        void OnEnable()
+        {
+            Debug.Log("TranslationControlFly.OnEnable()");
+            m_firstPersonController.gameObject.transform.localPosition = Vector3.zero;
+            m_firstPersonController.gameObject.transform.localRotation = Quaternion.identity;
+
+            var c = m_firstPersonController.transform.Find("FirstPersonCharacter");
+            c.transform.localPosition = Vector3.zero;
+            c.transform.localRotation = Quaternion.identity;
+        }
+
+        public override void UpdateTranslation(GameObject gameObject)
+        {
+            float leftRight = CrossPlatformInputManager.GetAxis("Horizontal");
+            float forwardBackward = CrossPlatformInputManager.GetAxis("Vertical");
+            float upDown = 0;//TODO: CrossPlatformInputManager.GetAxis("UpDown");
+            
+            Vector3 translationVector = new Vector3(leftRight, upDown, forwardBackward);
+
+            /*
             if (null == m_input)
             {
                 Debug.LogWarning("m_input == null!");
                 m_input = new TranslationControlFlyInputKB();
                 return;
             }
-
+            
             Vector3 translationVector = m_input.GetTranslationVector();
+            */
 
-            Vector2 translationVectorHorizontal = new Vector2(translationVector.x, translationVector.y);
+            //Vector2 translationVectorHorizontal = new Vector2(translationVector.x, translationVector.y);
 
-            float speed = (m_input.IsFast() ? m_translateSpeedNormal : m_translateSpeedFast);
+            float speed = (
+                //m_input.IsFast()
+                Input.GetKey(KeyCode.LeftShift) 
+                ? m_translateSpeedFast : m_translateSpeedNormal);
 
             float offset = speed * Time.deltaTime;
 
@@ -183,7 +206,7 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
             Vector3 cameraMovementDirection_Camera = new Vector3(cameraMovementDirXZ_Camera_Vector2.x, 0, cameraMovementDirXZ_Camera_Vector2.y);
 
             // Express the movement direction in the Camera's local frame.
-            Vector3 cameraMovementDirection_World = m_camera.transform.localToWorldMatrix.MultiplyVector(cameraMovementDirection_Camera);
+            Vector3 cameraMovementDirection_World = Camera.main.transform.localToWorldMatrix.MultiplyVector(cameraMovementDirection_Camera);
 
             if (fixY)
             {
@@ -202,7 +225,8 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
             // Compute the 3D translation offset with magnitude.
             Vector3 cameraMovement_World = cameraMovementDirection_World * offset;
 
-            m_camera.transform.position = m_camera.transform.position + cameraMovement_World;
+            m_firstPersonController.gameObject.transform.position = m_firstPersonController.gameObject.transform.position + cameraMovement_World;
+            //Camera.main.transform.position = Camera.main.transform.position + cameraMovement_World;
         }
 
         private void TranslateY(
@@ -213,11 +237,12 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
                 return;
             }
 
-            var p = m_camera.transform.position;
+            var p = Camera.main.transform.position;
             p.y += offset;
-            m_camera.transform.position = p;
+            Camera.main.transform.position = p;
         }
 
+        /*
         protected void Rotate(Vector3 eulerOffset)
         {
             // Mouse drag over X axis = camera rotation around Y axis.
@@ -240,18 +265,6 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.TranslationControl
                 var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
                 m_camera.transform.rotation = rotation;
             }
-        }
-
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        }*/
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+using Assets.Scripts.WM.CameraNavigation.TranslationControl;
+
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStatePlay : ApplicationState

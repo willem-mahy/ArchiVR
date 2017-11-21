@@ -1,25 +1,44 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
-namespace Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl
+namespace Assets.Scripts.WM.CameraNavigation.RotationControl
 {
-    public class RotationCOntrolGyro : IRotationControl
+    public class RotationControlGyro : RotationControlBase
     {
+        public FirstPersonController m_firstPersonController;
+
+        public Camera m_camera = null;
+
         // TODO: comment
         public float m_offsetRotY = 0;
 
         // Use this for initialization
         public void Start()
         {
-            Debug.Log("RotationCOntrolGyro.Start()");
+            Debug.Log("RotationControlGyro.Start()");
 
             if (!SystemInfo.supportsGyroscope)
+            {
+                Debug.LogWarning("System does not support Gyroscope!");
                 return;
+            }
 
-            Input.gyro.enabled = true;
+            Input.gyro.enabled = true;            
         }
 
-        public void UpdateRotation(GameObject gameObject)
+        void OnDisable()
+        {
+            Debug.Log("RotationControlGyro.OnDisable()");
+        }
+
+        void OnEnable()
+        {
+            Debug.Log("RotationControlGyro.OnEnable()");
+            m_firstPersonController.m_UseGyro = true;
+        }
+        
+        override public void UpdateRotation(GameObject gameObject)
         {
             //Debug.Log("WMCameraRotateByGyro.UpdateCameraRotation()");
 

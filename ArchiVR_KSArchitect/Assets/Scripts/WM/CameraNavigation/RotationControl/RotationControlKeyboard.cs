@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl
+namespace Assets.Scripts.WM.CameraNavigation.RotationControl
 {
-    public class RotationControlGamepad : MonoBehaviour
+    public class RotationControlKeyboard : MonoBehaviour
     {
-
         // Use this for initialization
         void Start()
         {

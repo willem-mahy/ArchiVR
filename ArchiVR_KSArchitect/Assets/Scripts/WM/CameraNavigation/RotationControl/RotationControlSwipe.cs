@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl
+namespace Assets.Scripts.WM.CameraNavigation.RotationControl
 {
-    public class RotationControlSwipe : IRotationControl
+    public class RotationControlSwipe : RotationControlBase
     {
         private bool m_swiping = false;
         private Vector2 m_swipeStart = new Vector2(0, 0);
@@ -88,7 +88,7 @@ namespace Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl
 
         private Quaternion m_initialCameraRotation = new Quaternion();
 
-        public void UpdateRotation(GameObject gameObject)
+        override public void UpdateRotation(GameObject gameObject)
         {
             //Debug.Log("WMCameraRotateBySwipe.UpdateCameraRotation()");
 

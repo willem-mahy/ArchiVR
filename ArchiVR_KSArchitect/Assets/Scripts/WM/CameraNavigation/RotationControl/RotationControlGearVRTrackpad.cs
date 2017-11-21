@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl
+namespace Assets.Scripts.WM.CameraNavigation.RotationControl
 {
     public class RotationControlGearVRTrackpad : MonoBehaviour
     {

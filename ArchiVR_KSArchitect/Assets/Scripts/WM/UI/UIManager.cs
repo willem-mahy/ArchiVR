@@ -32,11 +32,7 @@ namespace Assets.Scripts.WM.UI
         //! Reference to the currently shown menu.
         private Menu m_menu;
 
-        public Widget m_widgetDebug = null;
-
-        public Widget m_widgetFPS = null;
-
-        public Widget m_widgetDPad = null;
+        public List<Widget> m_widgets = new List<Widget>();
 
         // The active UI mode.
         private UIMode m_uiMode = UIMode.NonVR;
@@ -67,6 +63,21 @@ namespace Assets.Scripts.WM.UI
 
             UpdateUIState();
         }
+
+        public Widget GetWidgetByName(string widgetName)
+        {
+            var widgets = gameObject.transform.Find("Widget");
+
+            var widget = widgets.transform.Find(widgetName);
+
+            if (widget == null)
+            {
+                return null;
+            }
+
+            return widget.GetComponent<Widget>();
+        }
+
 
         // Update is called once per frame
         void Update()
@@ -165,19 +176,17 @@ namespace Assets.Scripts.WM.UI
                 m_menu.UpdateUiControlsActiveState();
             }
 
-            if (m_widgetDebug)
-            {
-                m_widgetDebug.UpdateUiControlsActiveState();
-            }
+            var widgetList = gameObject.transform.Find("Widget");
 
-            if (m_widgetFPS)
+            if (null != widgetList)
             {
-                m_widgetFPS.UpdateUiControlsActiveState();
-            }
-
-            if (m_widgetDPad)
-            {
-                m_widgetDPad.UpdateUiControlsActiveState();
+                foreach (var widgetComponent in widgetList.transform.GetComponentsInChildren<Widget>())
+                {
+                    if (widgetComponent)
+                    {
+                        widgetComponent.UpdateUiControlsActiveState();
+                    }
+                }
             }
         }
 

@@ -98,7 +98,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 
             s.m_showFPS = !s.m_showFPS;
 
-            UIManager.GetInstance().m_widgetFPS.SetVisible(s.m_showFPS);
+            UIManager.GetInstance().GetWidgetByName("WidgetFPS").SetVisible(s.m_showFPS);
         }
     }
 }

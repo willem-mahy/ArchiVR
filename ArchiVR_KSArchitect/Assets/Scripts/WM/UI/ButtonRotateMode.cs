@@ -3,8 +3,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using Assets.Scripts.WM.CameraControl.CameraNavigation;
-using Assets.Scripts.WM.CameraControl.CameraNavigation.RotationControl;
+using Assets.Scripts.WM.CameraNavigation;
+using Assets.Scripts.WM.CameraNavigation.RotationControl;
 
 
 namespace Assets.Scripts.WM.UI
@@ -108,14 +108,11 @@ namespace Assets.Scripts.WM.UI
 
             var button1 = GetComponentInChildren<Button>();
             var button = button1.transform.Find("Image").GetComponentInChildren<Image>();
-            var controlMouseKB = m_camera.GetComponentInChildren<CameraFlyByMouseKB>();
-
+            
             var cameraNavigation = GameObject.Find("CameraNavigation");
-            var cameraNavigationComponent = cameraNavigation.GetComponent<CameraNavigation>();
+            var cameraNavigationComponent = cameraNavigation.GetComponent<CameraNavigation.CameraNavigation>();
 
-            //var controlCameraRotateByGyro = m_camera.GetComponentInChildren<CameraRotateByGyro>();
-            //var WMCameraRotateBySwipe = m_camera.GetComponentInChildren<CameraRotateBySwipe>();
-
+            
             switch (mode)
             {
                 case Modes.None:
@@ -124,7 +121,7 @@ namespace Assets.Scripts.WM.UI
 
                     SetTouchControlsActive(false);
 
-                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+                    cameraNavigationComponent.SetActiveRotationControlModeByName("RotationControlMouse");
 
                     /*
                     controlMouseKB.enabled = false;                    
@@ -138,7 +135,7 @@ namespace Assets.Scripts.WM.UI
 
                     SetTouchControlsActive(true);
 
-                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+                    cameraNavigationComponent.SetActiveRotationControlModeByName("RotationControlMouse");
 
                     /*
                     controlMouseKB.enabled = false;
@@ -152,7 +149,7 @@ namespace Assets.Scripts.WM.UI
 
                     SetTouchControlsActive(true);
 
-                    cameraNavigationComponent.m_rotationControl = new RotationControlSwipe();
+                    cameraNavigationComponent.SetActiveRotationControlModeByName("RotationControlSwipe");
 
                     /*
                     controlMouseKB.enabled = false;
@@ -166,7 +163,7 @@ namespace Assets.Scripts.WM.UI
 
                     SetTouchControlsActive(false);
 
-                    cameraNavigationComponent.m_rotationControl = new RotationControlMouse();
+                    cameraNavigationComponent.SetActiveRotationControlModeByName("RotationControlMouse");
 
                     /*
                     controlMouseKB.enabled = true;

@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -232,6 +234,8 @@
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\POISelection.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ProjectManager.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\SceneSelectionBase.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\SceneSelection.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\ConstructionLighting.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Menu\Home_MainMenu.cs" />
@@ -240,25 +244,18 @@
     <Compile Include="Assets\Scripts\WM\ArchiVR\Menu\MenuSettings.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\ProjectSelectButton.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\TimeBehavior.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraFlyBase.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraFlyByMouseKB.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\CameraNavigation.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\CameraNavigationBase.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\CameraNavigationManager.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\IRotationControl.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlGamepad.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlGearVRTrackpad.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlGyro.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlKeyboard.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlMouse.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\RotationControl\RotationControlSwipe.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\TranslationControl\ITranslationControl.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\TranslationControl\TranslationControlFly.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\TranslationControl\TranslationControlFPS.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraNavigation\TranslationControl\TranslationControlTeleport.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\CameraTranslateByButtons.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\ControlCameraFlyDPad.cs" />
-    <Compile Include="Assets\Scripts\WM\CameraControl\ControlCameraFlyGamePad.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\CameraNavigation.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlBase.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlGamepad.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlGearVRTrackpad.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlGyro.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlKeyboard.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlMouse.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlSwipe.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\TranslationControl\TranslationControlBase.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\TranslationControl\TranslationControlFly.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\TranslationControl\TranslationControlFPS.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\TranslationControl\TranslationControlTeleport.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\LightCelestialBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\SkyBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Rendering\ReflectionProbe.cs" />

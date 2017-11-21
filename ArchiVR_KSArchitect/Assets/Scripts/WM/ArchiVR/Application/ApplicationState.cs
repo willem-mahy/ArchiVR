@@ -42,9 +42,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
             {
-                if (UIManager.GetInstance().m_widgetDebug)
+                var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+
+                if (null != wd)
                 {
-                    UIManager.GetInstance().m_widgetDebug.ToggleVisible();
+                    wd.ToggleVisible();
                 }
             }
 
@@ -302,7 +304,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationState.DisableVR()");
             StartCoroutine(LoadDevice("", false));
-        }        
+        }
 
         static public void OpenProject(string sceneName)
         {
@@ -310,7 +312,15 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName = sceneName;
 
-            SceneManager.LoadScene(sceneName);
+            OpenProject();
+        }
+
+        static public void OpenProject()
+        {
+            Debug.Log("OpenProject()");
+
+            var projectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
+            SceneManager.LoadScene(projectName);
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);
         }
