@@ -263,6 +263,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
             string deviceName = invalidIndex ? "" : m_devices[viewMode];
 
+            SetViewMode(deviceName);
+        }
+
+        public void SetViewMode(string deviceName)
+        {
             // update UI visibility
             bool isViewModeVR = IsViewModeVR(deviceName);
 

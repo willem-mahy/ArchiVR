@@ -31,7 +31,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
                 string initialRotationMode = "RotationControlMouse";
                 UIManager.UIMode initialUIMode = UIManager.UIMode.NonVR;
-                int viewMode = 1;
+
+                string initialViewMode =
+                    null;
+                    //"split";
 
                 if (SystemInfo.supportsGyroscope)
                 {
@@ -56,7 +59,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 cameraNavigationComponent.SetActiveRotationControlModeByName(initialRotationMode);
 
                 UIManager.GetInstance().SetUIMode(initialUIMode);
-                SetViewMode(viewMode);
+
+                if (null != initialViewMode)
+                {
+                    SetViewMode(initialViewMode);
+                }
+
             }            
         }
 
