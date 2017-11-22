@@ -9,7 +9,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
     public class ApplicationStateHome : ApplicationState
     {
         public Text m_textStatus = null;
-
+        
         // Used to omit some actions upon re-entry from Play mode (eg Loading the application settings.
         static bool s_firstTime = true;
 

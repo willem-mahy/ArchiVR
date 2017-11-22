@@ -31,16 +31,5 @@ public class WMTextCameraLocation : MonoBehaviour {
         }
 
         guiText.text = "Pos:" + m_camera.transform.position.ToString() + " Rot:" + m_camera.transform.rotation.eulerAngles.ToString();
-
-        if (Input.GetKeyDown("p"))
-        {
-            var txt = guiText.text + Environment.NewLine;
-
-            if (m_TextPOIName)
-            {
-                txt = m_TextPOIName.text + ": " + txt;
-            }
-            System.IO.File.AppendAllText("c:\\ArchiVR\\poi.txt", txt);
-        }
     }
 }

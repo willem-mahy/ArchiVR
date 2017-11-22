@@ -1,11 +1,8 @@
-﻿using Assets.Scripts.WM.UI;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-using Assets.Scripts.WM.CameraNavigation.TranslationControl;
+using Assets.Scripts.WM.UI;
+using Assets.Scripts.WM.Settings;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
@@ -45,6 +42,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         override protected void Update()
         {
             base.Update();
+
+            // If user presses 'p', Write the current camera location as POI.
+            if (Input.GetKeyDown("p"))
+            {
+                WritePOI();
+            }
         }
 
         public void HomeButton_OnClick()
@@ -64,6 +67,26 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         public void OpenHomeMenu()
         {
             SceneManager.LoadScene("Home");
-        }        
+        }
+        
+        public void WritePOI()
+        {
+            var camera = Camera.main;
+            var name = GetComponent<POISelection>().GetActivePOI().name;
+            var position = camera.transform.position.ToString();
+            var rotation = camera.transform.rotation.eulerAngles.ToString();
+
+            var text =
+                System.Environment.NewLine +
+                "POI" +
+                " Name: " + name +
+                " Pos:" + position +
+                " Rot:" + rotation;
+
+            var projectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
+
+            var filePath = UnityEngine.Application.persistentDataPath + "\\poi_" + projectName + ".txt";
+            System.IO.File.AppendAllText(filePath, text);
+        }
     }
 }

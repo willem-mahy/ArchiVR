@@ -8,15 +8,6 @@ using Assets.Scripts.WM.CameraNavigation.RotationControl;
 
 namespace Assets.Scripts.WM
 {
-    /* A 'Point-Of-Interest' description.
-     * Projects can be viewed by jumping from POI to POI, using the POI controls.
-     */
-    public class POI
-    {
-        public Vector3 m_position;
-        public string m_name;
-    }
-
     public class POISelection : MonoBehaviour
     {
         public CameraNavigation.CameraNavigation m_cameraNavigation = null;
@@ -112,7 +103,7 @@ namespace Assets.Scripts.WM
             SyncWithActivePOI();
         }
 
-        Transform GetActivePOI()
+        public GameObject GetActivePOI()
         {
             if (null == m_poi)
             {
@@ -129,7 +120,7 @@ namespace Assets.Scripts.WM
                 return null;
             }
 
-            return m_poi.transform.GetChild(m_activePOIIndex);
+            return m_poi.transform.GetChild(m_activePOIIndex).gameObject;
         }
 
         void SyncWithActivePOI()
