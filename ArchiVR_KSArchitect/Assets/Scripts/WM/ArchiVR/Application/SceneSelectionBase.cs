@@ -19,14 +19,13 @@ namespace Assets.Scripts.WM
             //Debug.Log("SceneSelectionBase.Update()");        
             var s = ApplicationSettings.GetInstance().m_data.m_stateSettings;
 
-            var activeProject = m_projectManager.GetProjectByName(s.m_activeProjectName);
-
             if (null == m_projectManager)
             {
-                Debug.LogWarning("null == SceneSelectionBase.m_projectManager");
+                Debug.LogError("null == SceneSelectionBase.m_projectManager");
             }
             else
             {
+                var activeProject = m_projectManager.GetProjectByName(s.m_activeProjectName);
                 SetActiveProject(activeProject);
             }
         }

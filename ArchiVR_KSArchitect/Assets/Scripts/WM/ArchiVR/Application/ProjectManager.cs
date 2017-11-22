@@ -17,7 +17,17 @@ namespace Assets.Scripts.WM
     }
 
     public class ProjectManager : MonoBehaviour
-    {   
+    {
+        public static string GetProjectSceneFolderPath()
+        {
+            return "Assets/Scenes/Project/";
+        }
+
+        public static string GetProjectScenePath(string projectName)
+        {
+            return GetProjectSceneFolderPath() + projectName + ".unity";
+        }
+
         public List<Project> m_projects = new List<Project>();
 
         private void DynamicallyLoadProjects()
@@ -28,7 +38,7 @@ namespace Assets.Scripts.WM
             {
                 var sceneName = "Project" + StringUtil.Get3Digit(i);
 
-                var scenePath = "Assets/Scenes/" + sceneName + ".unity";
+                var scenePath = GetProjectScenePath(sceneName);
 
                 if (SceneUtility.GetBuildIndexByScenePath(scenePath) != -1)
                 {
@@ -63,7 +73,7 @@ namespace Assets.Scripts.WM
                 ++index;
             }
 
-            Debug.LogWarning("Unsupported camera roation control mode! (" + name + ")");
+            Debug.LogWarning("Unknown project! (" + projectName + ")");
             return -1;
         }
 
@@ -71,15 +81,7 @@ namespace Assets.Scripts.WM
         {
             int projectIndex = GetProjectIndexByName(projectName);
 
-            if (IsValidProjectIndex(projectIndex))
-            {
-                return m_projects[projectIndex];
-            }
-            else
-            {
-                Debug.LogWarning("Unknown project! (" + projectName + ")");
-                return null;
-            }
+            return (IsValidProjectIndex(projectIndex) ? m_projects[projectIndex] : null);
         }
 
         public int GetActiveProjectIndex()
@@ -97,13 +99,32 @@ namespace Assets.Scripts.WM
             SetActiveProject(GetActiveProjectIndex() - 1);
         }
 
-        virtual public void Awake()
+        public void Awake()
         {
             Debug.Log("ProjectManager.Awake()");
 
             DynamicallyLoadProjects();
-        }        
-        
+        }
+
+        public void Start()
+        {
+            Debug.Log("ProjectManager.Start()");
+
+            if (null == GetProjectByName(ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName))
+            {
+                // The active project in the Application settings is unknown.
+                if (m_projects.Count > 0)
+                {
+                    SetActiveProject(0);
+                }
+                else
+                {
+                    // There are no projects to activate.
+                    ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName = null;
+                }
+            }
+        }
+
         // Validate whether OK to activate given index (true), or not (false).
         bool IsValidProjectIndex(int index)
         {
@@ -154,6 +175,8 @@ namespace Assets.Scripts.WM
 
         void SetActiveProject(int index)
         {
+            Debug.Log("SetActiveProject(" + index + ")");
+
             int projectIndex = MakeValidProjectIndexCycle(index);
 
             var s = ApplicationSettings.GetInstance().m_data.m_stateSettings;

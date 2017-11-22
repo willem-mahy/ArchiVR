@@ -8,8 +8,6 @@ namespace Assets.Scripts.WM.CameraNavigation.RotationControl
     {
         public FirstPersonController m_firstPersonController;
 
-        public Camera m_camera = null;
-
         // TODO: comment
         public float m_offsetRotY = 0;
 
@@ -17,6 +15,18 @@ namespace Assets.Scripts.WM.CameraNavigation.RotationControl
         public void Start()
         {
             Debug.Log("RotationControlGyro.Start()");
+        }
+
+        void OnDisable()
+        {
+            Debug.Log("RotationControlGyro.OnDisable()");
+
+            Input.gyro.enabled = false;
+        }
+
+        void OnEnable()
+        {
+            Debug.Log("RotationControlGyro.OnEnable()");
 
             if (!SystemInfo.supportsGyroscope)
             {
@@ -24,26 +34,16 @@ namespace Assets.Scripts.WM.CameraNavigation.RotationControl
                 return;
             }
 
-            Input.gyro.enabled = true;            
-        }
+            Input.gyro.enabled = true;
 
-        void OnDisable()
-        {
-            Debug.Log("RotationControlGyro.OnDisable()");
-        }
-
-        void OnEnable()
-        {
-            Debug.Log("RotationControlGyro.OnEnable()");
             m_firstPersonController.m_UseGyro = true;
         }
         
         override public void UpdateRotation(GameObject gameObject)
         {
-            //Debug.Log("WMCameraRotateByGyro.UpdateCameraRotation()");
+            //Debug.Log("RotationControlGyro.UpdateRotation()");
 
-            Start(); // TODO: call once somewhere else...
-
+            /*
             if (!SystemInfo.supportsGyroscope)
             {
                 return;
@@ -58,6 +58,7 @@ namespace Assets.Scripts.WM.CameraNavigation.RotationControl
             }
 
             gameObject.transform.rotation = rotation;
+            */
         }
 
         public static Quaternion GetRotationFromGyro()

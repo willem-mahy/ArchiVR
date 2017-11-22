@@ -327,7 +327,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             var projectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
             SceneManager.LoadScene(projectName);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.LoadScene("ViewProject", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Play", LoadSceneMode.Additive);
         }
 
         static private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
@@ -342,7 +342,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (!sp.isLoaded)
                 return;
 
-            var svp = SceneManager.GetSceneByName("ViewProject");
+            var svp = SceneManager.GetSceneByName("Play");
 
             if (!svp.IsValid())
                 return;

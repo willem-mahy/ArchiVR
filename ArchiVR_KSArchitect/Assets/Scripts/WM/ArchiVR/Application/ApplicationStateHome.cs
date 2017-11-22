@@ -27,7 +27,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (s_firstTime)
             {
                 s_firstTime = false;
-                ApplicationSettings.GetInstance().Load();
+                //ApplicationSettings.GetInstance().Load();
 
                 string initialRotationMode = "RotationControlMouse";
                 UIManager.UIMode initialUIMode = UIManager.UIMode.NonVR;
@@ -64,8 +64,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 {
                     SetViewMode(initialViewMode);
                 }
-
-            }            
+            }
         }
 
         // Update is called once per frame

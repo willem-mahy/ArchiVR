@@ -63,14 +63,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public void OpenHomeMenu()
         {
-            if (ApplicationStatePlay.IsActiveViewModeVR())
-            {
-                SceneManager.LoadScene("MainMenu_VR");
-            }
-            else
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
+            SceneManager.LoadScene("Home");
         }        
     }
 }

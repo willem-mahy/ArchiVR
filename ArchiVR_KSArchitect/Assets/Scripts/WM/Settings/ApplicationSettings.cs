@@ -31,6 +31,7 @@ namespace Assets.Scripts.WM.Settings
             {
                 DontDestroyOnLoad(gameObject);
                 s_instance = this;
+                Load();
             }
             else if (s_instance != this)
             {
@@ -70,24 +71,61 @@ namespace Assets.Scripts.WM.Settings
         {
             Debug.Log("ApplicationSettings.Load(" + GetFilePath() + ")");
 
-            // First load the application settings.
+            // First see if there is a persistent file with ApplicationSettings present from an earlier application execution.
             var fp = GetFilePath();
             if (!File.Exists(fp))
             {
+                // No file present yet -> Create it by saving the default initial Application Settings.
                 Save();
                 return; // Nothing to load.
             }
+
+            // Then load the Application Settings from the file.
+            try
+            {
+                DoLoad();
+            }
+            catch (Exception ex0)
+            {
+                Debug.LogWarning("Failed to load ApplicationSettings.  Re-saving and trying to laod again... " + ex0.Message);
+                Save();
+
+                try
+                {
+                    DoLoad();
+                }
+                catch(Exception ex1)
+                {
+                    Debug.LogError("Failed to load ApplicationSettings after re-saving in most recent format! " + ex1.Message);
+                    throw ex1;
+                }
+            }
+
+            // Then push the application settings onto the application.
+            m_data.m_graphicSettings.Apply();
+        }
+
+        //! Might throw if the file format has changed.
+        private void DoLoad()
+        {
+            var fp = GetFilePath();
 
             //Opens file and deserializes the object from it.
             var stream = File.Open(fp, FileMode.Open);
             var formatter = new BinaryFormatter();
 
-            m_data = (ApplicationSettingsData)formatter.Deserialize(stream);
+            try
+            {
+                m_data = (ApplicationSettingsData)formatter.Deserialize(stream);
 
-            stream.Close();
+                stream.Close();
+            }
+            catch (Exception e)
+            {
+                stream.Close();
 
-            // Then push the application settings onto the application.
-            m_data.m_graphicSettings.Apply();            
+                throw (e);
+            }
         }
 
         public static ApplicationSettings GetInstance()
