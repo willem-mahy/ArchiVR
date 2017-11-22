@@ -221,6 +221,13 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.LogWarning("Unsupported camera rotation control mode! (" + name + ")");
         }
 
+        public void ActivateNextNavigationMode()
+        {
+            var nextMode = (m_activeNavigationModeIndex + 1) % m_navigationModeList.Count;
+
+            SetActiveNavigationMode(nextMode);
+        }
+
         public void Update()
         {
             // 'n' key: Toggle navigation mode

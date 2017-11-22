@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -7,6 +9,40 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [Serializable]
     public class MouseLook
     {
+        public static bool IsPointerOverUIObject(Vector2 position)
+        {
+            Debug.Log("InputUtil.IsPointerOverUIObject(" + position + ")");
+
+            // Referencing this code for GraphicRaycaster https://gist.github.com/stramit/ead7ca1f432f3c0f181f
+            // the ray cast appears to require only eventData.position.
+            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+            eventDataCurrentPosition.position = position;
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+            if (results.Count == 0)
+            {
+                Debug.Log("Not over UI Object.");
+                return false;
+            }
+
+            foreach (var result in results)
+            {
+                Debug.Log("Over UI Object '" + result.gameObject.name + "'.");
+            }
+
+            foreach (var result in results)
+            {
+                if (result.gameObject.tag != "VRMenu")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public float XSensitivity = 2f;
         public float YSensitivity = 2f;
         public bool clampVerticalRotation = true;
@@ -78,7 +114,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_cursorIsLocked = false;
             }
-            else if(Input.GetMouseButtonUp(0))
+            else if(Input.GetMouseButtonUp(0) && !IsPointerOverUIObject(Input.mousePosition))
             {
                 m_cursorIsLocked = true;
             }

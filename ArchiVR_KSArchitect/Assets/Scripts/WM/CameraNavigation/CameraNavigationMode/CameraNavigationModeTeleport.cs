@@ -5,37 +5,74 @@ using UnityStandardAssets.Characters.FirstPerson;
 namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigationModeTeleport : CameraNavigationModeBase
-    {        
+    {
+        public float m_rotateSpeedX = 100;
+        public float m_rotateSpeedY = 100;
+
+        public float m_rotationMinX = -89;
+        public float m_rotationMaxX = 89;
+        
+        private Camera m_camera = null;
+
+        public void Awake()
+        {
+            m_camera = GetCameraFromFirstPersonCharacter();
+        }
+
         override public void OnEnable()
         {
             Debug.Log("CameraNavigationModeTeleport.OnEnable()");
 
-            // We will use the FPS controller only for camera rotation.
-            m_firstPersonController.enabled = true;
-            
-            // Disable gravity effect on the FPS controller
-            m_firstPersonController.m_GravityMultiplier = 0;
-            m_firstPersonController.m_MoveDir.y = 0;
-            m_firstPersonController.m_enableJump = true;
-
-            // Disable translation
-            m_firstPersonController.m_WalkSpeed = 0;
-            m_firstPersonController.m_RunSpeed = 0;
-
-            // Disable jumping/crouching
-            //m_firstPersonController.m_jumpSpeed = 0;
-            m_firstPersonController.m_MouseLook.lockCursor = true;
-
-            m_firstPersonController.GetComponent<CharacterController>().enabled = true;
-            
-            // Position it.
-            m_firstPersonController.gameObject.transform.localPosition = Vector3.up;
-            m_firstPersonController.gameObject.transform.localRotation = Quaternion.identity;            
+            DisableCharacterController();
         }
 
         override public void OnDisable()
         {
             Debug.Log("CameraNavigationModeTeleport.OnDisable()");
+        }
+
+        public void Update()
+        {
+            UpdateRotation();
+        }
+
+        private void UpdateRotation()
+        {
+            var eulerOffset = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+
+            Rotate(eulerOffset);
+        }
+
+        protected void Rotate(Vector3 eulerOffset)
+        {
+            // Mouse drag over X axis = camera rotation around Y axis.
+            eulerOffset.x *= m_rotateSpeedX;
+            // Mouse drag over Y axis = camera rotation around X axis.
+            eulerOffset.y *= m_rotateSpeedY;
+
+            eulerOffset *= Time.deltaTime;
+
+            if (Input.GetMouseButton(0))
+            {
+                var cameraEulerAngles = m_camera.transform.eulerAngles;
+
+                // Mouse drag over X axis = camera rotation around Y axis.
+                cameraEulerAngles.x -= eulerOffset.x;
+                // Mouse drag over Y axis = camera rotation around X axis.
+                cameraEulerAngles.y += eulerOffset.y;
+
+                cameraEulerAngles.x = WM.Util.Math.FormatAngle180(cameraEulerAngles.x);
+                cameraEulerAngles.x = Mathf.Clamp(cameraEulerAngles.x, m_rotationMinX, m_rotationMaxX);
+
+                var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
+                m_camera.transform.rotation = rotation;
+            }
+        }
+
+        public override void PositionCamera(Vector3 translation, Quaternion rotation)
+        {
+            m_camera.transform.position = translation;
+            m_camera.transform.rotation = rotation;
         }
     }
 }

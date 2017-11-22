@@ -19,7 +19,7 @@ namespace Assets.Scripts.WM
 
     public class POISelection : MonoBehaviour
     {
-        public Camera m_camera = null;
+        public CameraNavigation.CameraNavigation m_cameraNavigation = null;
 
         public List<Button> m_PrevButtonArray = new List<Button>();
         public List<Button> m_NextButtonArray = new List<Button>();
@@ -139,50 +139,21 @@ namespace Assets.Scripts.WM
             var activePOI = GetActivePOI();
 
             // Update camera location to active POI location.
-            m_camera.transform.position = (activePOI ? activePOI.transform.position : Vector3.zero);
+            var nm = m_cameraNavigation.GetActiveNavigationMode();
 
-            if (null == activePOI)
+            if (null == nm)
+                return;
+            
+            var position = Vector3.zero;
+            var rotation = Quaternion.identity;
+
+            if (null != activePOI)
             {
-                m_camera.transform.rotation = Quaternion.identity;
+                position = activePOI.transform.position;
+                rotation = activePOI.transform.rotation;
             }
-            else
-            {
-                if (Application.isEditor)
-                {
-                    m_camera.transform.rotation = activePOI.transform.rotation;
-                }
-                else
-                {
-                    Quaternion cameraRotationFromGyro = RotationControlGyro.GetRotationFromGyro();
 
-                    GameObject temp = new GameObject();
-                    temp.transform.Rotate(cameraRotationFromGyro.eulerAngles);
-                    Vector3 forwardCameraFromGyro = temp.transform.forward;
-                    forwardCameraFromGyro.y = 0;
-
-                    Vector3 forwardPOI = activePOI.transform.forward;
-                    forwardPOI.y = 0;
-
-                    if ((forwardCameraFromGyro.sqrMagnitude != 0) &&
-                            (forwardPOI.sqrMagnitude != 0))
-                    {
-                        forwardCameraFromGyro.Normalize();
-                        forwardPOI.Normalize();
-
-                        //m_POINameText.text = "fCam:" + forwardCameraFromGyro.ToString() + " fPOI:" + forwardPOI.ToString();
-
-                        //TODO:
-                        /*
-                        CameraRotateByGyro.m_offsetRotY = (180.0f / Mathf.PI) * Mathf.Acos(Vector3.Dot(forwardPOI, forwardCameraFromGyro));
-
-                        if (Vector3.Cross(forwardPOI, forwardCameraFromGyro).y > 0)
-                        {
-                            CameraRotateByGyro.m_offsetRotY = -CameraRotateByGyro.m_offsetRotY;
-                        }
-                        */
-                    }
-                }
-            }
+            nm.PositionCamera(position, rotation);
 
             // Update active POI name in UI.
             var activePOIName = activePOI ? activePOI.name : "No POI selected";

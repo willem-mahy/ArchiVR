@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.WM.Util;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -27,36 +28,10 @@ namespace Assets.Scripts.WM.CameraNavigation.RotationControl
         private bool IsPointerOverUIObject(Touch t)
         {
             Debug.Log("RotationControlSwipe.IsPointerOverUIObject()");
+            var position = new Vector2(t.position.x, t.position.y);
 
-            // Referencing this code for GraphicRaycaster https://gist.github.com/stramit/ead7ca1f432f3c0f181f
-            // the ray cast appears to require only eventData.position.
-            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-            eventDataCurrentPosition.position = new Vector2(t.position.x, t.position.y);
-
-            List<RaycastResult> results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-
-            if (results.Count == 0)
-            {
-                Debug.Log("Not over UI Object.");
-                return false;
-            }
-
-            foreach (var result in results)
-            {
-                Debug.Log("Over UI Object '" + result.gameObject.name + "'.");
-            }
-
-            foreach (var result in results)
-            {
-                if (result.gameObject.tag != "VRMenu")
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
+            return InputUtil.IsPointerOverUIObject(position);
+        }        
 
         private int GetIndexOfTouchClosestToLastTouch()
         {

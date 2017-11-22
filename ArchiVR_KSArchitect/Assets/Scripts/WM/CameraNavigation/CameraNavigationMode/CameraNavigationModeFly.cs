@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -19,23 +20,16 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         private Camera m_camera = null;
 
+        public void Awake()
+        {
+            m_camera = GetCameraFromFirstPersonCharacter();
+        }
+
         override public void OnEnable()
         {
             Debug.Log("TranslationControlFly.OnEnable()");
 
-            // Disable the character controller.
-            m_firstPersonController.enabled = false;
-            m_firstPersonController.gameObject.GetComponent<CharacterController>().enabled = false;
-
-            // And reset the camera to its default position/orientation.
-            m_firstPersonController.gameObject.transform.localPosition = Vector3.zero;
-            m_firstPersonController.gameObject.transform.localRotation = Quaternion.identity;
-
-            var c = m_firstPersonController.transform.Find("FirstPersonCharacter");
-            c.transform.localPosition = Vector3.zero;
-            c.transform.localRotation = Quaternion.identity;
-
-            m_camera = c.GetComponent<Camera>();
+            DisableCharacterController();            
         }
 
         override public void OnDisable()
@@ -162,6 +156,44 @@ namespace Assets.Scripts.WM.CameraNavigation
                 var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
                 m_camera.transform.rotation = rotation;
             }
+        }
+
+        public override void PositionCamera(Vector3 translation, Quaternion rotation)
+        {
+            m_camera.transform.position = translation;
+            m_camera.transform.rotation = rotation;
+
+            // TODO? Offset Gyro orientation so that the 
+            /*
+            if (gyroEnabled)
+            {
+                Quaternion cameraRotationFromGyro = RotationControlGyro.GetRotationFromGyro();
+
+                GameObject temp = new GameObject();
+                temp.transform.Rotate(cameraRotationFromGyro.eulerAngles);
+                Vector3 forwardCameraFromGyro = temp.transform.forward;
+                forwardCameraFromGyro.y = 0;
+
+                Vector3 forwardPOI = activePOI.transform.forward;
+                forwardPOI.y = 0;
+
+                if ((forwardCameraFromGyro.sqrMagnitude != 0) &&
+                        (forwardPOI.sqrMagnitude != 0))
+                {
+                    forwardCameraFromGyro.Normalize();
+                    forwardPOI.Normalize();
+
+                    //m_POINameText.text = "fCam:" + forwardCameraFromGyro.ToString() + " fPOI:" + forwardPOI.ToString();
+
+                    CameraRotateByGyro.m_offsetRotY = (180.0f / Mathf.PI) * Mathf.Acos(Vector3.Dot(forwardPOI, forwardCameraFromGyro));
+
+                    if (Vector3.Cross(forwardPOI, forwardCameraFromGyro).y > 0)
+                    {
+                        CameraRotateByGyro.m_offsetRotY = -CameraRotateByGyro.m_offsetRotY;
+                    }              
+                }
+            }
+            */
         }
     }
 }

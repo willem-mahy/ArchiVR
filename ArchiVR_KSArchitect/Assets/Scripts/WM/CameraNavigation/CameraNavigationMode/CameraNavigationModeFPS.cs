@@ -26,8 +26,6 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             Debug.Log("CameraNavigationModeFPS.OnEnable()");
 
-            m_firstPersonController.enabled = true;
-
             m_firstPersonController.m_MouseLook.lockCursor = true;
 
             m_firstPersonController.m_WalkSpeed = 5;
@@ -37,12 +35,20 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             m_firstPersonController.m_MouseLook.lockCursor = true;
 
-            m_firstPersonController.GetComponent<CharacterController>().enabled = true;
+            EnableCharacterController();
         }
 
         override public void OnDisable()
         {
             Debug.Log("CameraNavigationModeFPS.OnDisable()");
+        }
+
+        public override void PositionCamera(Vector3 translation, Quaternion rotation)
+        {
+            m_firstPersonController.transform.position = new Vector3(translation.x, 0, translation.z);
+
+            var firstPersonCharacter = m_firstPersonController.transform.Find("FirstPersonCharacter");
+            firstPersonCharacter.transform.position = new Vector3(0, translation.y, 0);
         }
     }
 }

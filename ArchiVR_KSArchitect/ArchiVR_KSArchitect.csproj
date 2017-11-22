@@ -289,6 +289,7 @@
     <Compile Include="Assets\Scripts\WM\UI\VR\VRButton.cs" />
     <Compile Include="Assets\Scripts\WM\UI\Widget.cs" />
     <Compile Include="Assets\Scripts\WM\Util\DebugUtil.cs" />
+    <Compile Include="Assets\Scripts\WM\Util\InputUtil.cs" />
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
