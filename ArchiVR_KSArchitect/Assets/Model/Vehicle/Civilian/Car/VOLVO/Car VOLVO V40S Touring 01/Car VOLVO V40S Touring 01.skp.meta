@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 7e376a626efa99e47bb6615f6a8825e4
+timeCreated: 1511568078
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 9012de4484376e2fd09c80b73a130e35
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -4.7474995, y: 2.5883017, z: 6.344409}
+      lookAt: {x: -0.3621129, y: 0.39560845, z: 1.9590224}
+      up: {x: 0.23570226, y: 0.94280905, z: -0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: -4.6082954, y: 2.8820064, z: -1.121177}
+        lookAt: {x: -0.08022526, y: 0.18778737, z: 1.2905095}
+        up: {x: 0.41036996, y: 0.8853391, z: 0.21856633}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 1
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 3D_Object_
+    100002: 3D_Object_#1
+    100004: 3D_Object_#10
+    100006: 3D_Object_#11
+    100008: 3D_Object_#12
+    100010: 3D_Object_#14
+    100012: 3D_Object_#15
+    100014: 3D_Object_#16
+    100016: 3D_Object_#2
+    100018: 3D_Object_#20
+    100020: 3D_Object_#20 1
+    100022: 3D_Object_#20 2
+    100024: 3D_Object_#20 3
+    100026: 3D_Object_#3
+    100028: 3D_Object_#4
+    100030: 3D_Object_#5
+    100032: 3D_Object_#6
+    100034: 3D_Object_#7
+    100036: 3D_Object_#8
+    100038: 3D_Object_#9
+    100040: //RootNode
+    100042: Group 1
+    100044: Group 2
+    100046: Group 7
+    400000: 3D_Object_
+    400002: 3D_Object_#1
+    400004: 3D_Object_#10
+    400006: 3D_Object_#11
+    400008: 3D_Object_#12
+    400010: 3D_Object_#14
+    400012: 3D_Object_#15
+    400014: 3D_Object_#16
+    400016: 3D_Object_#2
+    400018: 3D_Object_#20
+    400020: 3D_Object_#20 1
+    400022: 3D_Object_#20 2
+    400024: 3D_Object_#20 3
+    400026: 3D_Object_#3
+    400028: 3D_Object_#4
+    400030: 3D_Object_#5
+    400032: 3D_Object_#6
+    400034: 3D_Object_#7
+    400036: 3D_Object_#8
+    400038: 3D_Object_#9
+    400040: //RootNode
+    400042: Group 1
+    400044: Group 2
+    400046: Group 7
+    2300000: 3D_Object_
+    2300002: 3D_Object_#1
+    2300004: 3D_Object_#10
+    2300006: 3D_Object_#11
+    2300008: 3D_Object_#12
+    2300010: 3D_Object_#14
+    2300012: 3D_Object_#15
+    2300014: 3D_Object_#16
+    2300016: 3D_Object_#2
+    2300018: 3D_Object_#20
+    2300020: 3D_Object_#20 1
+    2300022: 3D_Object_#20 2
+    2300024: 3D_Object_#20 3
+    2300026: 3D_Object_#3
+    2300028: 3D_Object_#4
+    2300030: 3D_Object_#5
+    2300032: 3D_Object_#6
+    2300034: 3D_Object_#7
+    2300036: 3D_Object_#8
+    2300038: 3D_Object_#9
+    3300000: 3D_Object_
+    3300002: 3D_Object_#1
+    3300004: 3D_Object_#10
+    3300006: 3D_Object_#11
+    3300008: 3D_Object_#12
+    3300010: 3D_Object_#14
+    3300012: 3D_Object_#15
+    3300014: 3D_Object_#16
+    3300016: 3D_Object_#2
+    3300018: 3D_Object_#20
+    3300020: 3D_Object_#20 1
+    3300022: 3D_Object_#20 2
+    3300024: 3D_Object_#20 3
+    3300026: 3D_Object_#3
+    3300028: 3D_Object_#4
+    3300030: 3D_Object_#5
+    3300032: 3D_Object_#6
+    3300034: 3D_Object_#7
+    3300036: 3D_Object_#8
+    3300038: 3D_Object_#9
+    4300000: Mesh 3D_Object_#20
+    4300002: Mesh 3D_Object_#14
+    4300004: Mesh 3D_Object_#15
+    4300006: Mesh 3D_Object_#16
+    4300008: Mesh 3D_Object_#1
+    4300010: Mesh 3D_Object_#2
+    4300012: Mesh 3D_Object_#3
+    4300014: Mesh 3D_Object_#4
+    4300016: Mesh 3D_Object_#5
+    4300018: Mesh 3D_Object_#6
+    4300020: Mesh 3D_Object_#7
+    4300022: Mesh 3D_Object_#8
+    4300024: Mesh 3D_Object_#9
+    4300026: Mesh 3D_Object_#10
+    4300028: Mesh 3D_Object_#11
+    4300030: Mesh 3D_Object_#12
+    4300032: Mesh 3D_Object_
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002
+    second: {fileID: 2100000, guid: 3f0fcd6fd0aa9cf43a5e93c93331d03f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_003
+    second: {fileID: 2100000, guid: de2e91280b93d8f43a29902a153138dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_008
+    second: {fileID: 2100000, guid: e896562b5e489554cbea0a167fa3572c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_009
+    second: {fileID: 2100000, guid: 222da546960720f4885d7818e8947a38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A01
+    second: {fileID: 2100000, guid: f1b0ca519fd6b174a913b2d9ddf4c885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B01
+    second: {fileID: 2100000, guid: ad09443bed9905344baf81d4aea4e41b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 8a6f04bf31e91c548a0fe46a82afa8ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Burnt Umber_1
+    second: {fileID: 2100000, guid: 1ab9fc79cf6be4e4a89686f80d0a19eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Charcoal_
+    second: {fileID: 2100000, guid: 82e05b4539158424d87ece3736b635b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _DimGray_
+    second: {fileID: 2100000, guid: a14e9798b9255d241ad128a546315206, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
