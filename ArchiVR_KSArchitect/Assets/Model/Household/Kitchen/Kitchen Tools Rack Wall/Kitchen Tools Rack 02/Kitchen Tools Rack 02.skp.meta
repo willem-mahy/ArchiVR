@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: e35a104e0f6ac0243980a9d168d245d1
+timeCreated: 1511607200
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f0000004000000041000000
+  assetHash:
+    serializedVersion: 2
+    Hash: a01a4ea78159ee4cf9727f34034c393c
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.69910264, y: 0.36667567, z: -0.26964182}
+      lookAt: {x: 0.32659844, y: 0.18042359, z: 0.10286239}
+      up: {x: -0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cabo 01
+    100002: Cabo 02
+    100004: Cabo 03
+    100006: Conteudo
+    100008: Conteudo 1
+    100010: Conteudo 2
+    100012: Conteudo 3
+    100014: Conteudo 4
+    100016: Espatula
+    100018: Espumadeira
+    100020: Gancho + argola
+    100022: Gancho + argola 1
+    100024: Gancho + argola 2
+    100026: Garfo
+    100028: Group 1
+    100030: //RootNode
+    100032: Pote
+    100034: Pote 1
+    100036: Pote 2
+    100038: Pote 3
+    100040: Pote 4
+    100042: Pote#3
+    100044: Pote#3 1
+    100046: Pote#3 2
+    100048: Pote#4
+    100050: Pote#5
+    100052: Suporte
+    100054: Suporte Parede
+    100056: Suporte Temperos
+    100058: Tampa
+    100060: Tampa 1
+    100062: Tampa 2
+    100064: Tampa 3
+    100066: Tampa 4
+    100068: Vidro
+    100070: Vidro 1
+    100072: Vidro 2
+    100074: Vidro 3
+    100076: Vidro 4
+    400000: Cabo 01
+    400002: Cabo 02
+    400004: Cabo 03
+    400006: Conteudo
+    400008: Conteudo 1
+    400010: Conteudo 2
+    400012: Conteudo 3
+    400014: Conteudo 4
+    400016: Espatula
+    400018: Espumadeira
+    400020: Gancho + argola
+    400022: Gancho + argola 1
+    400024: Gancho + argola 2
+    400026: Garfo
+    400028: Group 1
+    400030: //RootNode
+    400032: Pote
+    400034: Pote 1
+    400036: Pote 2
+    400038: Pote 3
+    400040: Pote 4
+    400042: Pote#3
+    400044: Pote#3 1
+    400046: Pote#3 2
+    400048: Pote#4
+    400050: Pote#5
+    400052: Suporte
+    400054: Suporte Parede
+    400056: Suporte Temperos
+    400058: Tampa
+    400060: Tampa 1
+    400062: Tampa 2
+    400064: Tampa 3
+    400066: Tampa 4
+    400068: Vidro
+    400070: Vidro 1
+    400072: Vidro 2
+    400074: Vidro 3
+    400076: Vidro 4
+    2300000: Cabo 01
+    2300002: Cabo 02
+    2300004: Cabo 03
+    2300006: Conteudo
+    2300008: Conteudo 1
+    2300010: Conteudo 2
+    2300012: Conteudo 3
+    2300014: Conteudo 4
+    2300016: Espatula
+    2300018: Espumadeira
+    2300020: Gancho + argola
+    2300022: Gancho + argola 1
+    2300024: Gancho + argola 2
+    2300026: Garfo
+    2300028: Pote
+    2300030: Pote 1
+    2300032: Pote 2
+    2300034: Pote 3
+    2300036: Pote 4
+    2300038: Suporte
+    2300040: Suporte Parede
+    2300042: Suporte Temperos
+    2300044: Tampa
+    2300046: Tampa 1
+    2300048: Tampa 2
+    2300050: Tampa 3
+    2300052: Tampa 4
+    3300000: Cabo 01
+    3300002: Cabo 02
+    3300004: Cabo 03
+    3300006: Conteudo
+    3300008: Conteudo 1
+    3300010: Conteudo 2
+    3300012: Conteudo 3
+    3300014: Conteudo 4
+    3300016: Espatula
+    3300018: Espumadeira
+    3300020: Gancho + argola
+    3300022: Gancho + argola 1
+    3300024: Gancho + argola 2
+    3300026: Garfo
+    3300028: Pote
+    3300030: Pote 1
+    3300032: Pote 2
+    3300034: Pote 3
+    3300036: Pote 4
+    3300038: Suporte
+    3300040: Suporte Parede
+    3300042: Suporte Temperos
+    3300044: Tampa
+    3300046: Tampa 1
+    3300048: Tampa 2
+    3300050: Tampa 3
+    3300052: Tampa 4
+    4300000: Mesh Cabo 01
+    4300002: Mesh Cabo 02
+    4300004: Mesh Cabo 03
+    4300006: Mesh Espumadeira
+    4300008: Mesh Espatula
+    4300010: Mesh Gancho + argola
+    4300012: Mesh Suporte Temperos
+    4300014: Mesh Suporte
+    4300016: Mesh Suporte Parede
+    4300018: Mesh Garfo
+    4300020: Mesh Conteudo
+    4300022: Mesh Pote
+    4300024: Mesh Tampa
+    4300026: Mesh Conteudo
+    4300028: Mesh Pote
+    4300030: Mesh Conteudo
+    4300032: Mesh Pote
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0003_DeepPink
+    second: {fileID: 2100000, guid: dda783963fd3ae948a031410fa70e144, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabo de Madeira
+    second: {fileID: 2100000, guid: 535145fb538e25141ab4d5d7d1977663, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A23
+    second: {fileID: 2100000, guid: fe0a66c50c9c60a44b470cabb8090465, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B18
+    second: {fileID: 2100000, guid: 16aacd2f31e69b54bb32aaff33fcca73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cromado
+    second: {fileID: 2100000, guid: 630ddaf0c5282e741abf859983ec303d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 3af660cea89ae714784f21939f918afe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 05fe844ce619a6c4f8e49123377c9c78, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
