@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 43a2bc00f557f8e42bc0aba42967e9aa
+timeCreated: 1511826201
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 3c1bc9ff7698a8f4304a1bd8f783d791
+  longitude: -46.643593
+  latitude: -23.545094
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -0.28553697, y: 0.22614552, z: 0.23470043}
+      lookAt: {x: -0.027199563, y: 0.116458416, z: 0.024552464}
+      up: {x: 0.24268587, y: 0.9498055, z: -0.19741601}
+      fov: 33.34044
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: -0.060120404, y: 0.20232926, z: -0.45565674}
+        lookAt: {x: -0.04859251, y: 0.09534263, z: -0.017801678}
+        up: {x: 0.0062450226, y: 0.9714408, z: 0.23719993}
+        fov: 33.34044
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 1
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Condicionador Garnier Fructis
+    100002: Group 10
+    100004: Group 12
+    100006: Group 3
+    100008: Meio Garnier Condicionador
+    100010: Meio Garnier Condicionador 1
+    100012: Meio Garnier Xampu
+    100014: Meio Garnier Xampu 1
+    100016: //RootNode
+    100018: Xampu Garnier Fructis
+    400000: Condicionador Garnier Fructis
+    400002: Group 10
+    400004: Group 12
+    400006: Group 3
+    400008: Meio Garnier Condicionador
+    400010: Meio Garnier Condicionador 1
+    400012: Meio Garnier Xampu
+    400014: Meio Garnier Xampu 1
+    400016: //RootNode
+    400018: Xampu Garnier Fructis
+    2300000: Condicionador Garnier Fructis
+    2300002: Group 10
+    2300004: Group 12
+    2300006: Group 3
+    2300008: Meio Garnier Condicionador
+    2300010: Meio Garnier Condicionador 1
+    2300012: Meio Garnier Xampu
+    2300014: Meio Garnier Xampu 1
+    3300000: Condicionador Garnier Fructis
+    3300002: Group 10
+    3300004: Group 12
+    3300006: Group 3
+    3300008: Meio Garnier Condicionador
+    3300010: Meio Garnier Condicionador 1
+    3300012: Meio Garnier Xampu
+    3300014: Meio Garnier Xampu 1
+    4300000: Mesh Condicionador Garnier Fructis
+    4300002: Mesh Group 3
+    4300004: Mesh Meio Garnier Condicionador
+    4300006: Mesh Group 10
+    4300008: Mesh Group 12
+    4300010: Mesh Meio Garnier Xampu
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0077_DarkGreen
+    second: {fileID: 2100000, guid: f75506258412f5d43af56ff1d52f201d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GarnierCondicionador
+    second: {fileID: 2100000, guid: 8a6b89d43a5547c429e4480a109820f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GarnierFructis1
+    second: {fileID: 2100000, guid: fe215573ba3a10446b2b90c11e73e369, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
