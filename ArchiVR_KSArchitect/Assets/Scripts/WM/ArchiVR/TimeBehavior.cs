@@ -10,7 +10,7 @@ namespace Assets.Scripts.WM.ArchiVR
 
         public int m_animationSpeed = 1;
 
-        public float m_time = 0; // in seconds;
+        public float m_time = 0; // in seconds.  This is the base for all other variables.
         public float m_delta = 0; // last delta time, in seconds
         public int m_hour = 0;
         public float m_fractionOfHour = 0;

@@ -36,6 +36,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     OpenProject(m_initialProjectSceneName);
                 }
             }
+
+            GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
         }
 
         // Update is called once per frame

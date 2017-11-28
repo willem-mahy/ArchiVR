@@ -48,12 +48,23 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             Debug.Log("CameraNavigationModeVuforiaAR.OnEnable()");
 
+            // Disable Recticle
+            var canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
+            canvasReticle.SetActive(false);
+
+            // Relocate world to AR anchor position.
             var world = GameObject.Find(m_worldName);
 
             if (null != world)
             {
                 m_oldWorldParentTransform = world.transform.parent;
 
+                var anchor = GameObject.Find("World/Anchor_AR");
+
+                if (null != anchor)
+                {
+                    world.transform.position = -anchor.transform.localPosition;
+                }
                 world.transform.parent = m_imageTarget.transform;
                 world.transform.localScale = m_rescaleFactor * world.transform.localScale;
             }
@@ -65,10 +76,17 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             Debug.Log("CameraNavigationModeVuforiaAR.OnDisable()");
 
+            // Enable Recticle
+            var canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
+            canvasReticle.SetActive(true);
+
+            // Relocate world to origin as root GO.
             var world = GameObject.Find("world");
 
             if (null != world)
             {
+                world.transform.position = Vector3.zero;
+
                 world.transform.parent = m_oldWorldParentTransform;
                 world.transform.localScale = 1/ m_rescaleFactor * world.transform.localScale;
             }

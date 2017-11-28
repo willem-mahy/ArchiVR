@@ -169,7 +169,10 @@ namespace Assets.Scripts.WM.CameraNavigation
                 activeNavigationMode.enabled = true;
             }
 
-            m_virtualGamePad.SetActive(activeNavigationMode ? activeNavigationMode.SupportsDPadInput() : false);
+            if (m_virtualGamePad)
+            {
+                m_virtualGamePad.SetActive(activeNavigationMode ? activeNavigationMode.SupportsDPadInput() : false);
+            }
         }
 
         public CameraNavigationModeBase GetActiveNavigationMode()
