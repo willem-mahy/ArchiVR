@@ -45,10 +45,22 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         public override void PositionCamera(Vector3 translation, Quaternion rotation)
         {
-            m_firstPersonController.transform.position = new Vector3(translation.x, 0, translation.z);
+            m_firstPersonController.transform.position = translation;
+
+            m_firstPersonController.transform.rotation = Quaternion.Euler(new Vector3(0, rotation.eulerAngles.y, 0));
 
             var firstPersonCharacter = m_firstPersonController.transform.Find("FirstPersonCharacter");
-            firstPersonCharacter.transform.position = new Vector3(0, translation.y, 0);
+            
+            if (null != m_firstPersonController.m_MouseLook)
+            {
+                m_firstPersonController.m_MouseLook.m_CharacterTargetRot.eulerAngles = new Vector3(0, rotation.eulerAngles.y, 0);
+                m_firstPersonController.m_MouseLook.m_CameraTargetRot.eulerAngles = new Vector3(rotation.eulerAngles.x, 0, 0);
+            }
+            else
+            {
+                m_firstPersonController.transform.rotation = Quaternion.Euler(new Vector3(0, rotation.eulerAngles.y, 0));
+                firstPersonCharacter.transform.rotation = Quaternion.Euler(new Vector3(rotation.eulerAngles.x, 0, 0));
+            }
         }
     }
 }
