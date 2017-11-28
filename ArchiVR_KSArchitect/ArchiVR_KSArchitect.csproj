@@ -249,6 +249,7 @@
     <Compile Include="Assets\Scripts\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeFPS.cs" />
     <Compile Include="Assets\Scripts\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTeleport.cs" />
     <Compile Include="Assets\Scripts\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTracked.cs" />
+    <Compile Include="Assets\Scripts\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeVuforiaAR.cs" />
     <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlBase.cs" />
     <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlGamepad.cs" />
     <Compile Include="Assets\Scripts\WM\CameraNavigation\RotationControl\RotationControlGearVRTrackpad.cs" />
@@ -349,8 +350,14 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
+    <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
+    <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
+    <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
+    <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
+    <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
     <None Include="Assets\Plugins\Android\Assets\oculussig_ce11160bbd4ac71303.txt" />
     <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
@@ -362,11 +369,19 @@
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
     <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
     <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
+    <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+    <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+    <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+    <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+    <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

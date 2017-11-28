@@ -1,51 +1,71 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Assets.Scripts.WM.UI;
 
 namespace Assets.Scripts.WM.ArchiVR
 {
-    public class ConstructionLighting : MonoBehaviour
+    public class ConstructionLightingModeBase
+    {
+        public string m_name = null;
+        public Sprite m_sprite = null;
+
+        // Reference to the root GameObject containing all construction lighting.
+        private GameObject m_gameObjectWorldConstructionLighting = null;
+
+        public ConstructionLightingModeBase(
+            string name, string spritePath)
+        {
+            m_name = name;
+            m_sprite = Resources.Load<Sprite>(spritePath);
+        }
+
+        public virtual void Start()
+        {
+        }
+
+        public virtual void Update()
+        {
+        }
+
+        // Get the root gameobject for construction lights.
+        public GameObject GetGameObject_WorldConstructionLighting()
+        {
+            if (null == m_gameObjectWorldConstructionLighting)
+            {
+                // Search the root gameobject for construction lights in the first scene,
+                // under the following path:
+                // World/Construction/Lighting
+                m_gameObjectWorldConstructionLighting = GameObject.Find("World/Construction/Lighting");
+            }
+
+            return m_gameObjectWorldConstructionLighting;
+        }
+    }
+
+    public class ConstructionLightingModeAuto : ConstructionLightingModeBase
     {
         // Reference to the 'Time' component.
         public TimeBehavior m_time = null;
 
-        // Reference to the root gameobject containing all construction lights.
-        public GameObject m_gameObjectWorldConstructionLighting = null;
-
-        // The list of toggle buttons that all control the construction lighting mode.
-        public List<ButtonConstructionLightingMode> m_buttonConstructionLightingModeList = new List<ButtonConstructionLightingMode>();
-
-        // The initial state.
-        public ConstructionLightingStates m_initialState = ConstructionLightingStates.On;
-
-        // The current state.
-        public ConstructionLightingStates m_state = ConstructionLightingStates.On;
-
-        public enum ConstructionLightingStates
+        public ConstructionLightingModeAuto() : base("Auto", "Menu/LightMode/Construction/Auto")
         {
-            Auto = 0,
-            On,
-            Off,
-        };
+        }
 
-        // Use this for initialization
-        void Start()
+        override public void Start()
         {
-            List<string> optionSpritePathList = new List<string>();
-            optionSpritePathList.Add("Menu/LightMode/Construction/Auto");
-            optionSpritePathList.Add("Menu/LightMode/Construction/On");
-            optionSpritePathList.Add("Menu/LightMode/Construction/Off");
+            m_time = GameObject.Find("Time").GetComponent<TimeBehavior>();
+        }
 
-            for (int i = 0; i < m_buttonConstructionLightingModeList.Count; ++i) // hack: are we in the 'Manager' scene?
+        override public void Update()
+        {
+            var gameObjectWorldConstructionLighting = GetGameObject_WorldConstructionLighting();
+
+            if (null == gameObjectWorldConstructionLighting)
             {
-                var buttonConstructionLightMode = m_buttonConstructionLightingModeList[i];
-
-                if (buttonConstructionLightMode)
-                {
-                    buttonConstructionLightMode.LoadOptions(null, optionSpritePathList);
-                }
+                return;
             }
+
+            gameObjectWorldConstructionLighting.SetActive(GetAutoLightStateFromTime());
         }
 
         bool GetAutoLightStateFromTime()
@@ -59,121 +79,16 @@ namespace Assets.Scripts.WM.ArchiVR
                 return true;
             }
         }
-
-        // Update is called once per frame
-        void Update()
+    }
+    
+    public class ConstructionLightingModeOff : ConstructionLightingModeBase
+    {
+        public ConstructionLightingModeOff() : base("Off", "Menu/LightMode/Construction/Off")
         {
-            if (ConstructionLightingStates.Auto == m_state)
-            {
-                var gameObjectWorldConstructionLighting = GetGameObject_WorldConstructionLighting();
-
-                if (null == gameObjectWorldConstructionLighting)
-                {
-                    return;
-                }
-
-                gameObjectWorldConstructionLighting.SetActive(GetAutoLightStateFromTime());
-            }
         }
 
-        public void OnButtonConstructionLightsClick(BaseEventData obj)
+        public override void Start()
         {
-            if (null == obj)
-            {
-                return; // Sanity -> NOOP
-            }
-
-            if (null == obj.selectedObject)
-            {
-                return; // Sanity -> NOOP
-            }
-
-            var buttonConstructionLightingMode = obj.selectedObject.GetComponent<ButtonConstructionLightingMode>();
-
-            if (null == buttonConstructionLightingMode)
-            {
-                return; // Sanity -> NOOP
-            }
-
-            // The construction lighting mode toggle buttons are set NOT to auto-toggle upon click,
-            // we have to select the next option from here.
-            var newOption = buttonConstructionLightingMode.SetNextOption();
-            var newState = (ConstructionLightingStates)newOption;
-
-            SetState(newState);
-        }
-
-        // Get the root gameobject for construction lights.
-        private GameObject GetGameObject_WorldConstructionLighting()
-        {
-            if (null == m_gameObjectWorldConstructionLighting)
-            {
-                // Search the root gameobject for construction lights in the first scene,
-                // under the following path:
-                // World/Construction/Lighting
-
-                if (true)
-                {
-                    // Search the root gameobject for construction lights _in any loaded scene_,
-                    // under the following path:
-                    // World/Construction/Lighting
-                    m_gameObjectWorldConstructionLighting = GameObject.Find("World/Construction/Lighting");
-                }
-                //else
-                //{
-                //    // WM: Deprecated?
-                //    // Search the root game object for construction lights _in the first scene only_,
-                //    // under the following path:
-                //    // World/Construction/Lighting
-
-                //    if (SceneManager.sceneCount < 1)
-                //    {
-                //        // There is no scene loaded -> NOOP
-                //        return;
-                //    }
-
-                //    var projectScene = SceneManager.GetSceneAt(0);
-
-                //    // Search for a root game object named 'World'.
-                //    GameObject gameObjectWorld = null;
-
-                //    GameObject[] gameObjects = projectScene.GetRootGameObjects();
-
-                //    for (int i = 0; i < gameObjects.Length; ++i)
-                //    {
-                //        var gameObject = gameObjects[i];
-
-                //        if (gameObject.name.Equals("World"))
-                //        {
-                //            gameObjectWorld = gameObject;
-                //            break;
-                //        }
-                //    }
-
-                //    if (null == gameObjectWorld)
-                //    {
-                //        return;
-                //    }
-
-                //    var gameObjectWorldConstruction = gameObjectWorld.transform.Find("Construction").gameObject;
-
-                //    if (null == gameObjectWorldConstruction)
-                //    {
-                //        return;
-                //    }
-
-                //    m_gameObjectWorldConstructionLighting = gameObjectWorldConstruction.transform.Find("Lighting").gameObject;
-                //}
-            }
-
-            return m_gameObjectWorldConstructionLighting;
-        }
-
-        public void SetState(ConstructionLightingStates state)
-        {
-            m_state = state;
-
-            // Update the state of the construction lighting in the scene.
             var gameObjectWorldConstructionLighting = GetGameObject_WorldConstructionLighting();
 
             if (null == gameObjectWorldConstructionLighting)
@@ -181,31 +96,93 @@ namespace Assets.Scripts.WM.ArchiVR
                 return;
             }
 
-            switch (m_state)
+            gameObjectWorldConstructionLighting.SetActive(false);
+        }
+    }
+
+    public class ConstructionLightingModeOn : ConstructionLightingModeBase
+    {
+        public ConstructionLightingModeOn() : base("On", "Menu/LightMode/Construction/On")
+        {
+        }
+
+        public override void Start()
+        {
+            var gameObjectWorldConstructionLighting = GetGameObject_WorldConstructionLighting();
+
+            if (null == gameObjectWorldConstructionLighting)
             {
-                case ConstructionLightingStates.Auto:
-                    gameObjectWorldConstructionLighting.SetActive(GetAutoLightStateFromTime());
-                    break;
-                case ConstructionLightingStates.On:
-                    // Disable the lights in the construction.
-                    gameObjectWorldConstructionLighting.SetActive(true);
-                    break;
-                case ConstructionLightingStates.Off:
-                    // Enable the lights in the construction.
-                    gameObjectWorldConstructionLighting.SetActive(false);
-                    break;
+                return;
             }
 
-            // Update the state of the buttons that control the construction lighting mode.
-            for (int i = 0; i < m_buttonConstructionLightingModeList.Count; ++i)
-            {
-                var buttonConstructionLightMode = m_buttonConstructionLightingModeList[i];
+            gameObjectWorldConstructionLighting.SetActive(true);
+        }
+    }
 
-                if (buttonConstructionLightMode)
-                {
-                    buttonConstructionLightMode.SelectOptionByIndex((int)m_state);
-                }
+    public class ConstructionLighting : MonoBehaviour
+    {
+        // The initial active lighting mode
+        public int m_initialActiveModeIndex = 0;
+        
+        // The list of construction lighting modes.
+        private List<ConstructionLightingModeBase> m_lightingModeList = new List<ConstructionLightingModeBase>();
+
+        // The current active lighting mode.
+        private int m_activeModeIndex = -1;
+
+        private void Awake()
+        {
+            m_lightingModeList.Add(new ConstructionLightingModeAuto());
+            m_lightingModeList.Add(new ConstructionLightingModeOn());
+            m_lightingModeList.Add(new ConstructionLightingModeOff());
+        }
+
+        // Use this for initialization
+        void Start()
+        {
+            ActivateLightingMode(m_initialActiveModeIndex);
+        }        
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (m_activeModeIndex >= 0)
+                m_lightingModeList[m_activeModeIndex].Update();
+        }
+
+        public void ActivateNextLightingMode()
+        {
+            ActivateLightingMode(m_activeModeIndex + 1);
+        }
+
+        public void ActivatePreviousLightingMode()
+        {
+            ActivateLightingMode(m_activeModeIndex - 1);
+        }
+
+        int MakeValidLightingMode(int newActiveLightingMode)
+        {
+            if (m_lightingModeList.Count == 0)
+            {
+                return -1;
             }
+
+            return newActiveLightingMode % m_lightingModeList.Count;
+        }
+
+        public void ActivateLightingMode(int newActiveLightingMode)
+        {
+            m_activeModeIndex = MakeValidLightingMode(newActiveLightingMode);
+
+            if (m_activeModeIndex >= 0)
+            {
+                m_lightingModeList[m_activeModeIndex].Start();
+            }
+        }
+
+        public ConstructionLightingModeBase GetActiveMode()
+        {
+            return (m_activeModeIndex < 0) ? null : m_lightingModeList[m_activeModeIndex];
         }
     }
 }

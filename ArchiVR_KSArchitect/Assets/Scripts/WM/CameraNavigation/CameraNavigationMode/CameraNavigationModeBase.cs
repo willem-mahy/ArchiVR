@@ -11,6 +11,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         abstract public void PositionCamera(Vector3 translation, Quaternion rotation);
 
+        abstract public bool SupportsDPadInput();
+
         abstract public void OnEnable();
 
         abstract public void OnDisable();

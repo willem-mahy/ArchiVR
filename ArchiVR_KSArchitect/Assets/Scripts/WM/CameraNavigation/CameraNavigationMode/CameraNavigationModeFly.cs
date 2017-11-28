@@ -195,5 +195,10 @@ namespace Assets.Scripts.WM.CameraNavigation
             }
             */
         }
+
+        public override bool SupportsDPadInput()
+        {
+            return true;
+        }
     }
 }

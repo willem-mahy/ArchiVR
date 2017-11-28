@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
+﻿
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Assets.Scripts.WM.CameraNavigation
 {
@@ -61,6 +57,11 @@ namespace Assets.Scripts.WM.CameraNavigation
                 m_firstPersonController.transform.rotation = Quaternion.Euler(new Vector3(0, rotation.eulerAngles.y, 0));
                 firstPersonCharacter.transform.rotation = Quaternion.Euler(new Vector3(rotation.eulerAngles.x, 0, 0));
             }
+        }
+
+        public override bool SupportsDPadInput()
+        {
+            return true;
         }
     }
 }

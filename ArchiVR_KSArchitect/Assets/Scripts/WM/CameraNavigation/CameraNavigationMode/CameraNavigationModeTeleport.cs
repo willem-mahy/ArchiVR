@@ -74,5 +74,10 @@ namespace Assets.Scripts.WM.CameraNavigation
             m_camera.transform.position = translation;
             m_camera.transform.rotation = rotation;
         }
+
+        public override bool SupportsDPadInput()
+        {
+            return true;
+        }
     }
 }

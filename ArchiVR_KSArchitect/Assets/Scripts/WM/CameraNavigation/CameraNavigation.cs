@@ -9,11 +9,13 @@ namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigation : MonoBehaviour
     {
-        // Navigation mode
+        // Name of the initial active navigation mode.
         public string m_initialActiveNavigationMode = null;
 
+        // Index of the current active navigation mode.
         private int m_activeNavigationModeIndex = -1;
 
+        // List of supported navigation modes.
         public List<CameraNavigationModeBase> m_navigationModeList = new List<CameraNavigationModeBase>();
 
         // Rotation mode
@@ -29,6 +31,8 @@ namespace Assets.Scripts.WM.CameraNavigation
         private int m_activeTranslationControlIndex = -1;
 
         public List<TranslationControlBase> m_translationControlModeList = new List<TranslationControlBase>();
+
+        public GameObject m_virtualGamePad = null;
 
         // Use this for initialization
         void Awake()
@@ -158,10 +162,14 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             m_activeNavigationModeIndex = modeIndex;
 
-            if (m_activeNavigationModeIndex >= 0)
+            var activeNavigationMode = GetActiveNavigationMode();
+
+            if (activeNavigationMode)
             {
-                m_navigationModeList[m_activeNavigationModeIndex].enabled = true;
+                activeNavigationMode.enabled = true;
             }
+
+            m_virtualGamePad.SetActive(activeNavigationMode ? activeNavigationMode.SupportsDPadInput() : false);
         }
 
         public CameraNavigationModeBase GetActiveNavigationMode()
