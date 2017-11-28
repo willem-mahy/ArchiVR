@@ -133,6 +133,26 @@ namespace Assets.Scripts.WM.Settings
             return s_instance;
         }
 
+        public int GetQualityLevelIndex(string qualityLevelName)
+        {
+            int i = 0;
+            foreach (var name in QualitySettings.names)
+            {
+                if (name == qualityLevelName)
+                    return i;
+
+                ++i;
+            }
+
+            return -1; // not found
+        }
+
+        public void SetNextGraphicSettingsQualityLevel()
+        {
+            int qualityLevel = (GetQualityLevelIndex(m_data.m_graphicSettings.m_qualityLevelName) + 1) % QualitySettings.names.Length;
+            SetGraphicSettingsQualityLevel(qualityLevel);
+        }
+
         public void SetGraphicSettingsQualityLevel(int qualityLevel)
         {
             Debug.Log("ApplicationSettings.SetGraphicSettingsQualityLevel()");

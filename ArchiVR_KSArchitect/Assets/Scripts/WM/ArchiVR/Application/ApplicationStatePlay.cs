@@ -48,6 +48,18 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 WritePOI();
             }
+
+            // If user presses 'c', toggle Construction Lighting Mode.
+            if (Input.GetKeyDown("c"))
+            {
+                GetComponent<ConstructionLighting>().ActivateNextLightingMode();
+            }
+
+            // If user presses 'Q', toggle Graphics Quality Mode.
+            if (Input.GetKeyDown("q"))
+            {
+                ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
+            }
         }
 
         public void HomeButton_OnClick()
