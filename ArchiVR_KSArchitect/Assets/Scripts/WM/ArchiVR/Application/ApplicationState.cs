@@ -273,6 +273,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
 
+            GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>().SetVirtualGamePadActive(isViewModeVR);
+
             /*
             if (null != m_textControlDebugViewMode)
             {

@@ -1,10 +1,7 @@
-﻿using System.Collections;
-
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-using Assets.Scripts.WM.CameraNavigation.RotationControl;
 
 namespace Assets.Scripts.WM
 {
@@ -82,7 +79,7 @@ namespace Assets.Scripts.WM
             ActivateNextPOI();
         }
 
-        void ActivateNextPOI()
+        public void ActivateNextPOI()
         {
             Debug.Log("ActivateNextPOI()");
 
@@ -129,29 +126,29 @@ namespace Assets.Scripts.WM
 
             var activePOI = GetActivePOI();
 
-            // Update camera location to active POI location.
-            var nm = m_cameraNavigation.GetActiveNavigationMode();
-
-            if (null == nm)
-                return;
-            
-            var position = Vector3.zero;
-            var rotation = Quaternion.identity;
-
-            if (null != activePOI)
-            {
-                position = activePOI.transform.position;
-                rotation = activePOI.transform.rotation;
-            }
-
-            nm.PositionCamera(position, rotation);
-
             // Update active POI name in UI.
             var activePOIName = activePOI ? activePOI.name : "No POI selected";
-                        
+
             foreach (var text in m_POINameTextArray)
             {
                 text.text = activePOIName;
+            }
+
+            // Update (via camera navigation mode) camera location to newly activated POI location.
+            var nm = m_cameraNavigation.GetActiveNavigationMode();
+
+            if (null != nm)
+            {
+                var position = Vector3.zero;
+                var rotation = Quaternion.identity;
+
+                if (null != activePOI)
+                {
+                    position = activePOI.transform.position;
+                    rotation = activePOI.transform.rotation;
+                }
+
+                nm.PositionCamera(position, rotation);
             }
         }
     }

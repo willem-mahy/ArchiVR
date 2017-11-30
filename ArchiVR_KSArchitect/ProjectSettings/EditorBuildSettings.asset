@@ -11,46 +11,46 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Play.unity
     guid: 679474b0ede467a4b80839260320b961
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project001.unity
     guid: 145733b5e34de094f84b4ccaa2e2fd58
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project002.unity
     guid: c4e408b72efd1ba41922459acddb45dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project003.unity
     guid: 7873bf32553dcf3448eac4642066e5a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project006.unity
     guid: 16a3d0eed934e0c40a41f031b0a75571
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project008.unity
     guid: b8d4ade9fdfeafd42be73e4ffe65c870
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project009.unity
     guid: 57d6848344f670846b1a587ef4c5b491
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project011.unity
     guid: f008a5ffa78cd674fb52172cacd3a86f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project016.unity
     guid: 34c2d95a907c1a84bbd2427be1a278ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project024.unity
     guid: 9da1f93e06838fe46be010fa66e63a6c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project025.unity
     guid: 8000e82f6a7aaa044ac9b3aad98fbf38
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project027.unity
     guid: 1c9ae0c643a49634ebcd8917a6313122
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project030.unity
     guid: 2f2ddcad22fc3fb47b9fc36114f82859
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project031.unity
     guid: 9feae57c831540848b8c7f2b25ea23d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Project/Project032.unity
     guid: 9ad1cce00290c8840a7c0eb61a9fcb2d
   - enabled: 1

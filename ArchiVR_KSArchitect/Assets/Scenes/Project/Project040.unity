@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74038784}
   m_Layer: 0
-  m_Name: L0
+  m_Name: Layer_Gelijkvloers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,6 +638,26 @@ Prefab:
     - target: {fileID: 100002, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
+      propertyPath: m_Name
+      value: Layer_Dak
+      objectReference: {fileID: 0}
+    - target: {fileID: 100056, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
+      propertyPath: m_Name
+      value: Layer_Gelijkvloers
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
+      propertyPath: m_Name
+      value: Layer_Gevels
+      objectReference: {fileID: 0}
+    - target: {fileID: 100098, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
+      propertyPath: m_Name
+      value: Layer_Terrein
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
+      propertyPath: m_Name
+      value: Layer_Verdieping
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d0f200222d2d484fa2c54e838639ff1, type: 3}
@@ -1906,7 +1926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443419983}
   m_Layer: 0
-  m_Name: Outdoor
+  m_Name: Layer_Terrein
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7500,7 +7520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866013834}
   m_Layer: 0
-  m_Name: L1
+  m_Name: Layer_Verdieping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

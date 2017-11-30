@@ -8,8 +8,10 @@ namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigationModeVuforiaAR : CameraNavigationModeBase
     {
-        public string m_worldName = "World_Test";
+        public string m_worldName = "World";
         public float m_rescaleFactor = 0.01f;
+        public float m_offsetFromAnchor = 5.0f;
+
         public GameObject m_vuforia = null;
         public GameObject m_ARCamera = null;
         public GameObject m_imageTarget = null;
@@ -38,38 +40,66 @@ namespace Assets.Scripts.WM.CameraNavigation
                 m_vuforia.SetActive(state);
             }
 
-            VuforiaBehaviour.Instance.enabled = state;
+            if (VuforiaBehaviour.Instance)
+            {
+                VuforiaBehaviour.Instance.enabled = state;
+            }
+            else
+            {
+                if (state)
+                {
+                    Debug.LogWarning("Trying to enable Vuforia failed! (VuforiaBehaviour.Instance == null)");
+                }
+            }
+
             //ImageTracker.enabled = false;
 
             VuforiaConfiguration.Instance.VideoBackground.VideoBackgroundEnabled = state;
         }
+
+        private GameObject m_canvasReticle = null;
+        private GameObject m_world = null;
 
         override public void OnEnable()
         {
             Debug.Log("CameraNavigationModeVuforiaAR.OnEnable()");
 
             // Disable Recticle
-            var canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
-            canvasReticle.SetActive(false);
+            m_canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
+
+            if (null != m_canvasReticle)
+                m_canvasReticle.SetActive(false);
 
             // Relocate world to AR anchor position.
-            var world = GameObject.Find(m_worldName);
+            m_world = GameObject.Find(m_worldName);
 
-            if (null != world)
+            if (null != m_world)
             {
-                m_oldWorldParentTransform = world.transform.parent;
+                m_oldWorldParentTransform = m_world.transform.parent;
 
-                var anchor = GameObject.Find("World/Anchor_AR");
+                UpdateOffsetFromAnchor();
 
-                if (null != anchor)
-                {
-                    world.transform.position = -anchor.transform.localPosition;
-                }
-                world.transform.parent = m_imageTarget.transform;
-                world.transform.localScale = m_rescaleFactor * world.transform.localScale;
+                m_world.transform.parent = m_imageTarget.transform;
+                m_world.transform.localScale = m_rescaleFactor * m_world.transform.localScale;
             }
 
             SetVuforiaActive(true);
+        }
+
+        public void UpdateOffsetFromAnchor()
+        {
+            var anchor = GameObject.Find(m_worldName + "/AR_Anchor");
+
+            if (null == anchor)
+            {
+                return;
+            }
+            
+            // Attach to the anchor...
+            m_world.transform.localPosition = -(m_rescaleFactor * anchor.transform.localPosition);
+            
+            // ... at a fixed offset along world +Y.
+            m_world.transform.localPosition += m_rescaleFactor * m_offsetFromAnchor * Vector3.up;
         }
 
         override public void OnDisable()
@@ -77,18 +107,16 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.Log("CameraNavigationModeVuforiaAR.OnDisable()");
 
             // Enable Recticle
-            var canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
-            canvasReticle.SetActive(true);
+            if (null != m_canvasReticle)
+                m_canvasReticle.SetActive(true);
 
             // Relocate world to origin as root GO.
-            var world = GameObject.Find("world");
-
-            if (null != world)
+            if (null != m_world)
             {
-                world.transform.position = Vector3.zero;
+                m_world.transform.position = Vector3.zero;
 
-                world.transform.parent = m_oldWorldParentTransform;
-                world.transform.localScale = 1/ m_rescaleFactor * world.transform.localScale;
+                m_world.transform.parent = m_oldWorldParentTransform;
+                m_world.transform.localScale = 1/ m_rescaleFactor * m_world.transform.localScale;
             }
 
             m_oldWorldParentTransform = null;
@@ -109,7 +137,7 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         public override void PositionCamera(Vector3 translation, Quaternion rotation)
         {
-            throw new NotImplementedException();
+            // NOOP: ALready taken care of by Vuforia, by moving detected markers.
         }
 
         public override bool SupportsDPadInput()

@@ -32,7 +32,13 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         public List<TranslationControlBase> m_translationControlModeList = new List<TranslationControlBase>();
 
+        public bool m_virtualGamePadActive = false;
         public GameObject m_virtualGamePad = null;
+
+        public void SetVirtualGamePadActive(bool active)
+        {
+            m_virtualGamePadActive = active;
+        }
 
         // Use this for initialization
         void Awake()
@@ -169,10 +175,21 @@ namespace Assets.Scripts.WM.CameraNavigation
                 activeNavigationMode.enabled = true;
             }
 
-            if (m_virtualGamePad)
+            UpdateVirtualGamePadState();
+        }
+
+        private void UpdateVirtualGamePadState()
+        {
+            if (null == m_virtualGamePad)
             {
-                m_virtualGamePad.SetActive(activeNavigationMode ? activeNavigationMode.SupportsDPadInput() : false);
+                return;
             }
+
+            var activeNavigationMode = GetActiveNavigationMode();
+
+            bool virtualGamePadSupportedByNavigation = (activeNavigationMode ? activeNavigationMode.SupportsDPadInput() : false);
+            bool state = m_virtualGamePadActive && virtualGamePadSupportedByNavigation;
+            m_virtualGamePad.SetActive(state);
         }
 
         public CameraNavigationModeBase GetActiveNavigationMode()

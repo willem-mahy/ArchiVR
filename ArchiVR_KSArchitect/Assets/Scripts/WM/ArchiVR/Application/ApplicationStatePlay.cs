@@ -38,6 +38,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
+
+            GetComponent<POISelection>().ActivateNextPOI();
         }
 
         // Update is called once per frame
@@ -76,6 +78,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             //UIManager.GetInstance().OpenMenu("MenuTime");
             UIManager.GetInstance().OpenMenu(GameObject.Find("MenuTime").GetComponent<Assets.Scripts.WM.UI.Menu>());
+        }
+
+        public void MenuLayerButton_OnClick()
+        {
+            Debug.Log("ApplicationStatePlay.MenuLayerButton_OnClick()");
+
+            //UIManager.GetInstance().OpenMenu("MenuLayer");
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuLayer").GetComponent<Assets.Scripts.WM.UI.Menu>());
         }
 
         public void OpenHomeMenu()

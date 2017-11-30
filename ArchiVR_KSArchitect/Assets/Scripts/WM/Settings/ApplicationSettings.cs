@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
+#if NON_UWP
 using System.Runtime.Serialization.Formatters.Binary;
+#endif
 
 using UnityEngine;
 
@@ -61,10 +63,13 @@ namespace Assets.Scripts.WM.Settings
 
             //Opens a file and serializes the object into it.
             var fp = GetFilePath();
+
+#if NON_UWP
             var stream = File.Open(fp, FileMode.Create);
             var formatter = new BinaryFormatter();
             formatter.Serialize(stream, m_data);
             stream.Close();
+#endif
         }
 
         public void Load()
@@ -110,12 +115,14 @@ namespace Assets.Scripts.WM.Settings
         {
             var fp = GetFilePath();
 
+#if NON_UWP
             //Opens file and deserializes the object from it.
             var stream = File.Open(fp, FileMode.Open);
-            var formatter = new BinaryFormatter();
 
             try
             {
+
+                var formatter = new BinaryFormatter();
                 m_data = (ApplicationSettingsData)formatter.Deserialize(stream);
 
                 stream.Close();
@@ -126,6 +133,7 @@ namespace Assets.Scripts.WM.Settings
 
                 throw (e);
             }
+#endif
         }
 
         public static ApplicationSettings GetInstance()
