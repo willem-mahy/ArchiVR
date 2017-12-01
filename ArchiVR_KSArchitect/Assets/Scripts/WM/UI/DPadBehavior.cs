@@ -42,7 +42,8 @@ namespace Assets.Scripts.WM.UI
         // Use this for initialization
         void Start()
         {
-            m_stickBasePosition.Set(m_stick.transform.position.x, m_stick.transform.position.y, m_stick.transform.position.z);
+            var initialPosition = m_stick.transform.localPosition;
+            m_stickBasePosition.Set(initialPosition.x, initialPosition.y, initialPosition.z);
         }
 
         // Update is called once per frame
@@ -94,11 +95,8 @@ namespace Assets.Scripts.WM.UI
             if (m_autoReturnToZero)
             {
                 Debug.Log("Returning stick to zero position.");
-
-                // WM: Foes not seem to work?!?
-                //m_stick.transform.position.Set(m_stickBasePosition.x, m_stickBasePosition.y, m_stickBasePosition.z);
-
-                m_stick.transform.position = m_stickBasePosition;
+                                
+                m_stick.transform.localPosition = m_stickBasePosition;
             }
         }
 
@@ -119,7 +117,7 @@ namespace Assets.Scripts.WM.UI
 
             m_isBeingManipulated = true;
 
-            m_stick.transform.position = ToVector3(pointerEventData.position);
+            m_stick.transform.position = Assets.Scripts.WM.Util.Math.ToVector3(pointerEventData.position);
         }
 
         //! Called upon 'Drag' event on Stick button.
@@ -137,17 +135,7 @@ namespace Assets.Scripts.WM.UI
 
             m_status = "Stick " + gameObject.name + " OnDrag:" + pointerEventData.position.ToString();
 
-            var newStickPosition = ToVector3(pointerEventData.position);
-
-            if (!IsAxisXEnabled())
-            {
-                newStickPosition.x = m_stickBasePosition.x;
-            }
-
-            if (!IsAxisYEnabled())
-            {
-                newStickPosition.y = m_stickBasePosition.y;
-            }
+            var newStickPosition = Assets.Scripts.WM.Util.Math.ToVector3(pointerEventData.position);
 
             if (m_stickArea != null)
             {
@@ -160,24 +148,26 @@ namespace Assets.Scripts.WM.UI
             }
 
             m_stick.transform.position = newStickPosition;
+
+            if (!IsAxisXEnabled())
+            {
+                var p = m_stick.transform.localPosition;
+                p.x = m_stickBasePosition.x;
+                m_stick.transform.localPosition = p;
+            }
+
+            if (!IsAxisYEnabled())
+            {
+                var p = m_stick.transform.localPosition;
+                p.x = m_stickBasePosition.y;
+                m_stick.transform.localPosition = p;
+            }
         }
 
         //! Get the offset from the DPad stick rest position, to the current stick posistion.
         public Vector2 GetStickOffset()
         {
-            return ToVector2(m_stick.transform.position - m_stickBasePosition);
-        }
-
-        //! Makes a Vector3 from the given Vector2 (z is set to 0)
-        public Vector3 ToVector3(Vector2 v)
-        {
-            return new Vector3(v.x, v.y);
-        }
-
-        //! Makes a Vector2 from the given Vector2 (z is omitted)
-        public Vector2 ToVector2(Vector3 v)
-        {
-            return new Vector2(v.x, v.y);
+            return Assets.Scripts.WM.Util.Math.ToVector2(m_stick.transform.localPosition - m_stickBasePosition);
         }
     }
 }

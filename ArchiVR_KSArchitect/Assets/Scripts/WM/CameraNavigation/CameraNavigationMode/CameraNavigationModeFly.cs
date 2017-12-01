@@ -54,13 +54,16 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             float leftRight = CrossPlatformInputManager.GetAxis("Horizontal");
             float forwardBackward = CrossPlatformInputManager.GetAxis("Vertical");
-            float upDown = 0;//TODO: CrossPlatformInputManager.GetAxis("UpDown");
+            float upDown = CrossPlatformInputManager.GetAxis("UpDown");
 
-            if (Input.GetKey(KeyCode.PageUp))
-                upDown += 1;
+            if (upDown == 0)
+            {
+                if (Input.GetKey(KeyCode.PageUp))
+                    upDown += 1;
 
-            if (Input.GetKey(KeyCode.PageDown))
-                upDown -= 1;
+                if (Input.GetKey(KeyCode.PageDown))
+                    upDown -= 1;
+            }
 
             Vector3 translationVector = new Vector3(leftRight, upDown, forwardBackward);
 

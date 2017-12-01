@@ -10,6 +10,8 @@ using UnityEngine.XR;
 using Assets.Scripts.WM.Settings;
 using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Util;
+using UnityStandardAssets.CrossPlatformInput;
+using System;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
@@ -34,6 +36,25 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             //SetActiveDebuggingType(0);
 
             AddSupportedXRDevices();
+
+            // Log joystick names to the console.
+            {
+                String text = "JoystickNames:";
+
+                foreach (String joystickName in Input.GetJoystickNames())
+                {
+                    text+= "\n- " + joystickName;
+                }
+
+                Debug.Log(text);
+            }
+
+#if UNITY_EDITOR
+
+            // When running in the Unity Editor (Debugging), enable mouse and KB input.
+            //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
+
+#endif
         }
 
         // Update is called once per frame
@@ -79,6 +100,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
             }
+
+            UpdateVirtualGamepadActiveState();
         }        
 
         protected abstract string GetName();        
@@ -252,18 +275,28 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public void SetViewMode(int viewMode)
         {
-            /*
-            for (int i = 0; i < m_toggleButtonsViewMode.Count; ++i)
-            {
-                var m_toggleButtonViewMode = m_toggleButtonsViewMode[i];
-                m_toggleButtonViewMode.SelectOptionByIndex(viewMode);
-            }
-            */
-
             bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
             string deviceName = invalidIndex ? "" : m_devices[viewMode];
 
             SetViewMode(deviceName);
+        }
+
+        private void UpdateVirtualGamepadActiveState()
+        {
+            var virtualGamepad = GameObject.Find("Panel_WidgetControlCameraFlyDPad");
+
+            if (null == virtualGamepad)
+            {
+                return;
+            }
+
+            var cameraNavigation = GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>();
+
+            bool isViewModeVR = UIManager.GetInstance().GetUIMode() == UIManager.UIMode.VR;
+            bool currentCameraNavigationSupportsGamepad = (null == cameraNavigation) ? true : cameraNavigation.GetActiveNavigationMode().SupportsDPadInput();
+            bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
+                        
+            virtualGamepad.SetActive(!isViewModeVR && !isPhysicalGamePadConnected && currentCameraNavigationSupportsGamepad);
         }
 
         public void SetViewMode(string deviceName)
@@ -272,15 +305,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool isViewModeVR = IsViewModeVR(deviceName);
 
             UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
-
-            GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>().SetVirtualGamePadActive(isViewModeVR);
-
-            /*
-            if (null != m_textControlDebugViewMode)
-            {
-                m_textControlDebugViewMode.text += "\nSet ViewMode device:" + deviceName;
-            }
-            */
 
             if (deviceName.CompareTo("") == 0)
             {

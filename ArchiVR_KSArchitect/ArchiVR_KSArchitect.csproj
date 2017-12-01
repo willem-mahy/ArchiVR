@@ -12,12 +12,15 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WSAPlayer:21</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -259,6 +262,7 @@
     <Compile Include="Assets\Scripts\WM\CameraNavigation\TranslationControl\TranslationControlTeleport.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\LightCelestialBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\Environment\SkyBehavior.cs" />
+    <Compile Include="Assets\Scripts\WM\PhysicalGamepad.cs" />
     <Compile Include="Assets\Scripts\WM\Rendering\ReflectionProbe.cs" />
     <Compile Include="Assets\Scripts\WM\Settings\ApplicationSettings.cs" />
     <Compile Include="Assets\Scripts\WM\Settings\ControlSettings.cs" />
@@ -290,6 +294,7 @@
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\WM\VirtualGamepad.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleRenderScale.cs" />

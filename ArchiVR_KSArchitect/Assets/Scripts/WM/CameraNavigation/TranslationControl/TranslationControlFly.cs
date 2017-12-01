@@ -132,7 +132,6 @@ namespace Assets.Scripts.WM.CameraNavigation.TranslationControl
 
         private void Awake()
         {
-            //m_input = new TranslationControl.TranslationControlFlyInputKB();
         }
                 
         void OnDisable()
@@ -158,19 +157,6 @@ namespace Assets.Scripts.WM.CameraNavigation.TranslationControl
             float upDown = 0;//TODO: CrossPlatformInputManager.GetAxis("UpDown");
             
             Vector3 translationVector = new Vector3(leftRight, upDown, forwardBackward);
-
-            /*
-            if (null == m_input)
-            {
-                Debug.LogWarning("m_input == null!");
-                m_input = new TranslationControlFlyInputKB();
-                return;
-            }
-            
-            Vector3 translationVector = m_input.GetTranslationVector();
-            */
-
-            //Vector2 translationVectorHorizontal = new Vector2(translationVector.x, translationVector.y);
 
             float speed = (
                 //m_input.IsFast()
@@ -226,7 +212,6 @@ namespace Assets.Scripts.WM.CameraNavigation.TranslationControl
             Vector3 cameraMovement_World = cameraMovementDirection_World * offset;
 
             m_firstPersonController.gameObject.transform.position = m_firstPersonController.gameObject.transform.position + cameraMovement_World;
-            //Camera.main.transform.position = Camera.main.transform.position + cameraMovement_World;
         }
 
         private void TranslateY(
@@ -241,30 +226,5 @@ namespace Assets.Scripts.WM.CameraNavigation.TranslationControl
             p.y += offset;
             Camera.main.transform.position = p;
         }
-
-        /*
-        protected void Rotate(Vector3 eulerOffset)
-        {
-            // Mouse drag over X axis = camera rotation around Y axis.
-            eulerOffset.x *= xSpeed * Time.deltaTime;
-            // Mouse drag over Y axis = camera rotation around X axis.
-            eulerOffset.y *= ySpeed * Time.deltaTime;
-
-            if (Input.GetMouseButton(0))
-            {
-                var cameraEulerAngles = m_camera.transform.eulerAngles;
-
-                // Mouse drag over X axis = camera rotation around Y axis.
-                cameraEulerAngles.x -= Input.GetAxis("Mouse Y") * xSpeed * Time.deltaTime;
-                // Mouse drag over Y axis = camera rotation around X axis.
-                cameraEulerAngles.y += Input.GetAxis("Mouse X") * ySpeed * Time.deltaTime;
-
-                cameraEulerAngles.x = Math.FormatAngle180(cameraEulerAngles.x);
-                cameraEulerAngles.x = Mathf.Clamp(cameraEulerAngles.x, xRotMin, xRotMax);
-
-                var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
-                m_camera.transform.rotation = rotation;
-            }
-        }*/
     }
 }
