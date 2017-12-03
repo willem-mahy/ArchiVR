@@ -12,15 +12,12 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WSAPlayer:21</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -293,8 +290,8 @@
     <Compile Include="Assets\Scripts\WM\Util\InputUtil.cs" />
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\WM\VirtualGamepad.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleRenderScale.cs" />
@@ -361,9 +358,9 @@
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
     <None Include="Assets\Plugins\Android\Assets\oculussig_ce11160bbd4ac71303.txt" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\SkyDome.shader" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\Sun.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\HorizonDome.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\SkyDome.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\Sun.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />

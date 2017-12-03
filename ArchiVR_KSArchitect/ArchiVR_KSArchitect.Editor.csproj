@@ -298,9 +298,9 @@
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
     <None Include="Assets\Plugins\Android\Assets\oculussig_ce11160bbd4ac71303.txt" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\HorizonDome.shader" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\SkyDome.shader" />
-    <None Include="Assets\Prefabs\WM\Ligting\Shader\Sun.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\HorizonDome.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\SkyDome.shader" />
+    <None Include="Assets\Prefabs\WM\Lighting\Shader\Sun.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
