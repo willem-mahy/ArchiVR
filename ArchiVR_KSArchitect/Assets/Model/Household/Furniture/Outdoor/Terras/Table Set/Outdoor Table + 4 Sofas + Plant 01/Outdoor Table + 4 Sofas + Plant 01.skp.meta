@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 4456d50df9fbae6409c462a6937649d5
+timeCreated: 1512327964
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000
+  assetHash:
+    serializedVersion: 2
+    Hash: be1f29ec1eafb6eda5d8693fcdb85ec7
+  longitude: -49.48206285383142
+  latitude: -28.930218588472712
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 5.635721, y: 2.7938876, z: -2.4232235}
+      lookAt: {x: 1.7380819, y: 0.84506786, z: 1.4744161}
+      up: {x: -0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: A
+    100002: A 1
+    100004: A 10
+    100006: A 11
+    100008: A 12
+    100010: A 13
+    100012: A 14
+    100014: A 15
+    100016: A 16
+    100018: A 17
+    100020: A 18
+    100022: A 19
+    100024: A 2
+    100026: A 20
+    100028: A 21
+    100030: A 22
+    100032: A 23
+    100034: A 24
+    100036: A 25
+    100038: A 26
+    100040: A 27
+    100042: A 28
+    100044: A 29
+    100046: A 3
+    100048: A 30
+    100050: A 31
+    100052: A 32
+    100054: A 33
+    100056: A 34
+    100058: A 35
+    100060: A 36
+    100062: A 37
+    100064: A 38
+    100066: A 39
+    100068: A 4
+    100070: A 40
+    100072: A 41
+    100074: A 42
+    100076: A 43
+    100078: A 44
+    100080: A 45
+    100082: A 46
+    100084: A 47
+    100086: A 48
+    100088: A 49
+    100090: A 5
+    100092: A 50
+    100094: A 51
+    100096: A 52
+    100098: A 53
+    100100: A 54
+    100102: A 55
+    100104: A 6
+    100106: A 7
+    100108: A 8
+    100110: A 9
+    100112: B
+    100114: B 1
+    100116: B 10
+    100118: B 2
+    100120: B 3
+    100122: B 4
+    100124: B 5
+    100126: B 6
+    100128: B 7
+    100130: B 8
+    100132: B 9
+    100134: Component#10
+    100136: Component#11
+    100138: Component#13
+    100140: Component#2
+    100142: Component#26
+    100144: Component#26 1
+    100146: Component#26 2
+    100148: Component#26 3
+    100150: Component#32
+    100152: Component#32 1
+    100154: Component#32 2
+    100156: Component#32 3
+    100158: Component#9
+    100160: Group 33
+    100162: Group 34
+    100164: Lounge Chair Lounge DEDON
+    100166: Lounge Chair Lounge DEDON 1
+    100168: Lounge Chair Lounge DEDON 2
+    100170: Lounge Chair Lounge DEDON 3
+    100172: Obj_000003#2
+    100174: Obj_000003#2 1
+    100176: Obj_000003#2 2
+    100178: Obj_000003#2 3
+    100180: Obj_000004#2
+    100182: Obj_000004#2 1
+    100184: Obj_000004#2 2
+    100186: Obj_000004#2 3
+    100188: Obj_000005#1
+    100190: Obj_000005#1 1
+    100192: Obj_000005#1 2
+    100194: Obj_000005#1 3
+    100196: Obj_000006#1
+    100198: Obj_000006#1 1
+    100200: Obj_000006#1 2
+    100202: Obj_000006#1 3
+    100204: //RootNode
+    100206: Sessel#1
+    100208: Sessel#1 1
+    100210: Sessel#1 2
+    100212: Sessel#1 3
+    400000: A
+    400002: A 1
+    400004: A 10
+    400006: A 11
+    400008: A 12
+    400010: A 13
+    400012: A 14
+    400014: A 15
+    400016: A 16
+    400018: A 17
+    400020: A 18
+    400022: A 19
+    400024: A 2
+    400026: A 20
+    400028: A 21
+    400030: A 22
+    400032: A 23
+    400034: A 24
+    400036: A 25
+    400038: A 26
+    400040: A 27
+    400042: A 28
+    400044: A 29
+    400046: A 3
+    400048: A 30
+    400050: A 31
+    400052: A 32
+    400054: A 33
+    400056: A 34
+    400058: A 35
+    400060: A 36
+    400062: A 37
+    400064: A 38
+    400066: A 39
+    400068: A 4
+    400070: A 40
+    400072: A 41
+    400074: A 42
+    400076: A 43
+    400078: A 44
+    400080: A 45
+    400082: A 46
+    400084: A 47
+    400086: A 48
+    400088: A 49
+    400090: A 5
+    400092: A 50
+    400094: A 51
+    400096: A 52
+    400098: A 53
+    400100: A 54
+    400102: A 55
+    400104: A 6
+    400106: A 7
+    400108: A 8
+    400110: A 9
+    400112: B
+    400114: B 1
+    400116: B 10
+    400118: B 2
+    400120: B 3
+    400122: B 4
+    400124: B 5
+    400126: B 6
+    400128: B 7
+    400130: B 8
+    400132: B 9
+    400134: Component#10
+    400136: Component#11
+    400138: Component#13
+    400140: Component#2
+    400142: Component#26
+    400144: Component#26 1
+    400146: Component#26 2
+    400148: Component#26 3
+    400150: Component#32
+    400152: Component#32 1
+    400154: Component#32 2
+    400156: Component#32 3
+    400158: Component#9
+    400160: Group 33
+    400162: Group 34
+    400164: Lounge Chair Lounge DEDON
+    400166: Lounge Chair Lounge DEDON 1
+    400168: Lounge Chair Lounge DEDON 2
+    400170: Lounge Chair Lounge DEDON 3
+    400172: Obj_000003#2
+    400174: Obj_000003#2 1
+    400176: Obj_000003#2 2
+    400178: Obj_000003#2 3
+    400180: Obj_000004#2
+    400182: Obj_000004#2 1
+    400184: Obj_000004#2 2
+    400186: Obj_000004#2 3
+    400188: Obj_000005#1
+    400190: Obj_000005#1 1
+    400192: Obj_000005#1 2
+    400194: Obj_000005#1 3
+    400196: Obj_000006#1
+    400198: Obj_000006#1 1
+    400200: Obj_000006#1 2
+    400202: Obj_000006#1 3
+    400204: //RootNode
+    400206: Sessel#1
+    400208: Sessel#1 1
+    400210: Sessel#1 2
+    400212: Sessel#1 3
+    2300000: A
+    2300002: A 1
+    2300004: A 10
+    2300006: A 11
+    2300008: A 12
+    2300010: A 13
+    2300012: A 14
+    2300014: A 15
+    2300016: A 16
+    2300018: A 17
+    2300020: A 18
+    2300022: A 19
+    2300024: A 2
+    2300026: A 20
+    2300028: A 21
+    2300030: A 22
+    2300032: A 23
+    2300034: A 24
+    2300036: A 25
+    2300038: A 26
+    2300040: A 27
+    2300042: A 28
+    2300044: A 29
+    2300046: A 3
+    2300048: A 30
+    2300050: A 31
+    2300052: A 32
+    2300054: A 33
+    2300056: A 34
+    2300058: A 35
+    2300060: A 36
+    2300062: A 37
+    2300064: A 38
+    2300066: A 39
+    2300068: A 4
+    2300070: A 40
+    2300072: A 41
+    2300074: A 42
+    2300076: A 43
+    2300078: A 44
+    2300080: A 45
+    2300082: A 46
+    2300084: A 47
+    2300086: A 48
+    2300088: A 49
+    2300090: A 5
+    2300092: A 50
+    2300094: A 51
+    2300096: A 52
+    2300098: A 53
+    2300100: A 54
+    2300102: A 55
+    2300104: A 6
+    2300106: A 7
+    2300108: A 8
+    2300110: A 9
+    2300112: B
+    2300114: B 1
+    2300116: B 10
+    2300118: B 2
+    2300120: B 3
+    2300122: B 4
+    2300124: B 5
+    2300126: B 6
+    2300128: B 7
+    2300130: B 8
+    2300132: B 9
+    2300134: Component#10
+    2300136: Component#11
+    2300138: Component#26
+    2300140: Component#26 1
+    2300142: Component#26 2
+    2300144: Component#26 3
+    2300146: Component#9
+    2300148: Group 34
+    2300150: Obj_000003#2
+    2300152: Obj_000003#2 1
+    2300154: Obj_000003#2 2
+    2300156: Obj_000003#2 3
+    2300158: Obj_000004#2
+    2300160: Obj_000004#2 1
+    2300162: Obj_000004#2 2
+    2300164: Obj_000004#2 3
+    2300166: Obj_000005#1
+    2300168: Obj_000005#1 1
+    2300170: Obj_000005#1 2
+    2300172: Obj_000005#1 3
+    2300174: Obj_000006#1
+    2300176: Obj_000006#1 1
+    2300178: Obj_000006#1 2
+    2300180: Obj_000006#1 3
+    2300182: Sessel#1
+    2300184: Sessel#1 1
+    2300186: Sessel#1 2
+    2300188: Sessel#1 3
+    3300000: A
+    3300002: A 1
+    3300004: A 10
+    3300006: A 11
+    3300008: A 12
+    3300010: A 13
+    3300012: A 14
+    3300014: A 15
+    3300016: A 16
+    3300018: A 17
+    3300020: A 18
+    3300022: A 19
+    3300024: A 2
+    3300026: A 20
+    3300028: A 21
+    3300030: A 22
+    3300032: A 23
+    3300034: A 24
+    3300036: A 25
+    3300038: A 26
+    3300040: A 27
+    3300042: A 28
+    3300044: A 29
+    3300046: A 3
+    3300048: A 30
+    3300050: A 31
+    3300052: A 32
+    3300054: A 33
+    3300056: A 34
+    3300058: A 35
+    3300060: A 36
+    3300062: A 37
+    3300064: A 38
+    3300066: A 39
+    3300068: A 4
+    3300070: A 40
+    3300072: A 41
+    3300074: A 42
+    3300076: A 43
+    3300078: A 44
+    3300080: A 45
+    3300082: A 46
+    3300084: A 47
+    3300086: A 48
+    3300088: A 49
+    3300090: A 5
+    3300092: A 50
+    3300094: A 51
+    3300096: A 52
+    3300098: A 53
+    3300100: A 54
+    3300102: A 55
+    3300104: A 6
+    3300106: A 7
+    3300108: A 8
+    3300110: A 9
+    3300112: B
+    3300114: B 1
+    3300116: B 10
+    3300118: B 2
+    3300120: B 3
+    3300122: B 4
+    3300124: B 5
+    3300126: B 6
+    3300128: B 7
+    3300130: B 8
+    3300132: B 9
+    3300134: Component#10
+    3300136: Component#11
+    3300138: Component#26
+    3300140: Component#26 1
+    3300142: Component#26 2
+    3300144: Component#26 3
+    3300146: Component#9
+    3300148: Group 34
+    3300150: Obj_000003#2
+    3300152: Obj_000003#2 1
+    3300154: Obj_000003#2 2
+    3300156: Obj_000003#2 3
+    3300158: Obj_000004#2
+    3300160: Obj_000004#2 1
+    3300162: Obj_000004#2 2
+    3300164: Obj_000004#2 3
+    3300166: Obj_000005#1
+    3300168: Obj_000005#1 1
+    3300170: Obj_000005#1 2
+    3300172: Obj_000005#1 3
+    3300174: Obj_000006#1
+    3300176: Obj_000006#1 1
+    3300178: Obj_000006#1 2
+    3300180: Obj_000006#1 3
+    3300182: Sessel#1
+    3300184: Sessel#1 1
+    3300186: Sessel#1 2
+    3300188: Sessel#1 3
+    4300000: Mesh Sessel#1
+    4300002: Mesh Obj_000005#1
+    4300004: Mesh Obj_000004#2
+    4300006: Mesh Obj_000006#1
+    4300008: Mesh Obj_000003#2
+    4300010: Mesh Component#26
+    4300012: Mesh Sessel#1
+    4300014: Mesh Obj_000005#1
+    4300016: Mesh Obj_000004#2
+    4300018: Mesh Obj_000006#1
+    4300020: Mesh Obj_000003#2
+    4300022: Mesh Component#26
+    4300024: Mesh Component#11
+    4300026: Mesh Group 34
+    4300028: Mesh A
+    4300030: Mesh B
+    4300032: Mesh Component#10
+    4300034: Mesh Component#9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Groundcover_Gravel_1inch
+    second: {fileID: 2100000, guid: 3f877747eb85a104189db8fccac43932, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vegetation_Bark_Ponderosa
+    second: {fileID: 2100000, guid: 52be3aaac0240e9479878ef457b43a6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Translucent_Glass_Gray]5'
+    second: {fileID: 2100000, guid: 16452061d3283634cb9b036fb624f92b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _11
+    second: {fileID: 2100000, guid: e9064ae4ed42cdd44bac3fe161585ae3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _13
+    second: {fileID: 2100000, guid: 54bc8231611302c49b84ca819dc830c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _14
+    second: {fileID: 2100000, guid: d262d986d6bf6cf43ace2567ba200d5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _15
+    second: {fileID: 2100000, guid: b219433ff27f7f54da525de12da2e20c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: da3faa02c99bdee4ca49d0b998f9a4eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bark_palm
+    second: {fileID: 2100000, guid: 5c4ecdc761396064db6de891924b46c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bark_palm4
+    second: {fileID: 2100000, guid: c2dcbd2cd5bd64f4cb7791ff9f7ed7e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: a9cb6942844140341aa7f1320033f598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leaf_brt
+    second: {fileID: 2100000, guid: 5c72e232393229747af9b5446fd56280, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
