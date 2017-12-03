@@ -35,10 +35,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 string initialViewMode =
                     null;
                     //"split";
-
+                
+                // If executing system has gyroscope support, startup with:
                 if (SystemInfo.supportsGyroscope)
                 {
+                    // ... GYRO rotation active
                     initialRotationMode = "RotationControlGyro";
+
+                    // ... and  VR mode On.
                     initialUIMode = UIManager.UIMode.VR;
                 }
 

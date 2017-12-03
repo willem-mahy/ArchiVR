@@ -28,6 +28,10 @@ namespace Assets.Scripts.WM
     {
         CrossPlatformInputManager.VirtualAxis m_horizontalVirtualAxis;
         CrossPlatformInputManager.VirtualAxis m_verticalVirtualAxis;
+
+        CrossPlatformInputManager.VirtualAxis m_horizontalRotationVirtualAxis;
+        CrossPlatformInputManager.VirtualAxis m_verticalRotationVirtualAxis;
+
         CrossPlatformInputManager.VirtualAxis m_upDownVirtualAxis;
         CrossPlatformInputManager.VirtualButton m_jumpVirtualButton;
         CrossPlatformInputManager.VirtualButton m_runVirtualButton;
@@ -36,6 +40,10 @@ namespace Assets.Scripts.WM
         {
             m_horizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Horizontal");
             m_verticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Vertical");
+
+            m_horizontalRotationVirtualAxis = new CrossPlatformInputManager.VirtualAxis("HorizontalRotation");
+            m_verticalRotationVirtualAxis = new CrossPlatformInputManager.VirtualAxis("VerticalRotation");
+
             m_upDownVirtualAxis = new CrossPlatformInputManager.VirtualAxis("UpDown");
             m_jumpVirtualButton = new CrossPlatformInputManager.VirtualButton("Jump");
             m_runVirtualButton = new CrossPlatformInputManager.VirtualButton("Run");
@@ -60,6 +68,22 @@ namespace Assets.Scripts.WM
                 CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalVirtualAxis.name);
             }
             CrossPlatformInputManager.RegisterVirtualAxis(m_verticalVirtualAxis);
+
+
+            // Horizontal Rotation Axis
+            if (CrossPlatformInputManager.AxisExists(m_horizontalRotationVirtualAxis.name))
+            {
+                CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalRotationVirtualAxis.name);
+            }
+            CrossPlatformInputManager.RegisterVirtualAxis(m_horizontalRotationVirtualAxis);
+
+            // Vertical Rotation Axis
+            if (CrossPlatformInputManager.AxisExists(m_verticalRotationVirtualAxis.name))
+            {
+                CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalRotationVirtualAxis.name);
+            }
+            CrossPlatformInputManager.RegisterVirtualAxis(m_verticalRotationVirtualAxis);
+
 
             // UpoDown Axis
             if (CrossPlatformInputManager.AxisExists(m_upDownVirtualAxis.name))
@@ -144,22 +168,28 @@ namespace Assets.Scripts.WM
         void Update()
         {
 
-            if (Input.GetKey("joystick button 0")) // X
+            if (Input.GetKey("joystick button 0")) // A
             {
             }
-            if (Input.GetKey("joystick button 1")) // Y
+            if (Input.GetKey("joystick button 1")) // B
             {
             }
-            if (Input.GetKey("joystick button 2")) // A
+            if (Input.GetKey("joystick button 2")) // X
             {
             }
-            if (Input.GetKey("joystick button 4")) // B
+            if (Input.GetKey("joystick button 4")) // Y
             {
             }
             if (Input.GetKey("joystick button 5")) // L1
             {
             }
             if (Input.GetKey("joystick button 6")) // R1
+            {
+            }
+            if (Input.GetKey("joystick button 7")) // L1
+            {
+            }
+            if (Input.GetKey("joystick button 8")) // R1
             {
             }
 
@@ -186,12 +216,40 @@ namespace Assets.Scripts.WM
             }
 
             {
+                float horizontal = Input.GetAxis("HorizontalRotation");
+
+                if (horizontal != 0)
+                {
+                    Debug.Log("Joystick HorizontalRotation: " + horizontal);
+                }
+
+                m_horizontalRotationVirtualAxis.Update(horizontal);
+            }
+
+            {
+                float verticalRotation = Input.GetAxis("VerticalRotation");
+
+                if (verticalRotation != 0)
+                {
+                    Debug.Log("Joystick VerticalRotation: " + verticalRotation);
+                }
+
+                //VerticalRotation -= 1;
+
+                m_verticalRotationVirtualAxis.Update(verticalRotation);
+            }
+
+            {
                 float upDown = Input.GetAxis("UpDown");
 
                 if (upDown != 0)
                 {
                     Debug.Log("Joystick UpDown: " + upDown);
                 }
+
+                //Debug.Log("upDown=" + upDown);
+                ////GUI.Label(new Rect(100, 100, 50, 50), "upDown=" + upDown);
+                //upDown -= 1;
 
                 m_upDownVirtualAxis.Update(upDown);
             }

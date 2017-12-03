@@ -6,37 +6,36 @@ namespace Assets.Scripts.WM.Settings
     public class ControlSettings
     {
         /*
-        public enum NavigationMode
+        NavigationMode: one of
+        - "CameraNavigationFPS"
+        - "CameraNavigationFly"
+        - "CameraNavigationVuforia"
+        - "CameraNavigationTrakingWM" (TODO)
+        - "CameraNavigationTrakingMicrosoftXR" (TODO)
+        
+        public static String s_RotationInputModes[] =
         {
-            FPS = 0,
-            Fly,
-            Teleport,
-            Tracked
+            "RotateByGyro",
+            "RotateByGravity",
+            "RotateByTouch",
+            "RotateByGamePad",
+            "RotateByMouse",
+            "RotateByKB"
         }
 
-        public enum RotateMode
+        public String TranslationInputModes[] =
         {
-            RotateByGyro = 0,
-            RotateByTouch,
-            RotateByMouseKB,
-            RotateByTrakingWM,
-            RotateByTrakingMicrosoftXR,
-        }
-
-        public enum TranslateMode
-        {
-            TranslateByMouseKB = 0,
-            TranslateByTeleport,
-            TranslateByGamepad,
-            TranslateByTrakingWM,
-            TranslateByTrakingMicrosoftXR,
+            "TranslateByKB",
+            "TranslateByMouse",
+            "TranslateByTeleport",
+            "TranslateByGamepad"
         }
         */
 
         public string m_navigationMode = null;
 
-        public string m_rotateMode = null;
+        public string m_rotationInputMode = null;
 
-        public string m_translateMode = null;
+        public string m_translationInputMode = null;
     }
 }

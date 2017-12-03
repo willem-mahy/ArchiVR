@@ -64,6 +64,31 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
             }
+
+            // If user presses 'W', next poi.
+            if (Input.GetKeyDown("f12"))
+            {
+                GetComponent<POISelection>().ActivateNextPOI();
+            }
+
+            // If user presses 'x', previous poi
+            if (Input.GetKeyDown("x"))
+            {
+                // TODO:GetComponent<POISelection>().ActivatePreviousPOI();
+            }
+
+            if (Input.GetKeyDown("joystick button 6")) // R1
+            {
+                GetComponent<POISelection>().ActivateNextPOI();
+            }
+            if (Input.GetKeyDown("joystick button 7")) // L1
+            {
+                OpenHomeMenu();
+            }
+            if (Input.GetKeyDown("joystick button 8")) // R1
+            {
+                GetComponent<POISelection>().ActivateNextPOI();
+            }
         }
 
         public void HomeButton_OnClick()

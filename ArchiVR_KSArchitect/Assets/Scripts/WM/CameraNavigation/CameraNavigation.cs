@@ -35,6 +35,20 @@ namespace Assets.Scripts.WM.CameraNavigation
         // Use this for initialization
         void Awake()
         {
+            // Remove 'Vuforia AR' navigation mode on non-supported platforms.
+            if (Application.platform == RuntimePlatform.WebGLPlayer || Application.platform == RuntimePlatform.WindowsPlayer)
+            {
+                for (int i = 0; i < m_navigationModeList.Count; ++i)
+                {
+                    var nm = m_navigationModeList[i];
+
+                    if (nm.name == "CameraNavigationModeVuforiaAR")
+                    {
+                        m_navigationModeList.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
         }
 
         public void Start()
@@ -81,7 +95,7 @@ namespace Assets.Scripts.WM.CameraNavigation
             }
             else
             {
-                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_translateMode;
+                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_translationInputMode;
 
                 if (null != m)
                 {
@@ -100,7 +114,7 @@ namespace Assets.Scripts.WM.CameraNavigation
             }
             else
             {
-                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_rotateMode;
+                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_rotationInputMode;
                 
                 if (null != m)
                 {

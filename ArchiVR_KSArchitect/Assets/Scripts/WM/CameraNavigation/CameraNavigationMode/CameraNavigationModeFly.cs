@@ -29,7 +29,12 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             Debug.Log("TranslationControlFly.OnEnable()");
 
-            DisableCharacterController();            
+            DisableCharacterController();
+
+            if (SystemInfo.supportsGyroscope)
+            {
+                m_firstPersonController.m_UseGyro = true;
+            }
         }
 
         override public void OnDisable()
@@ -52,9 +57,11 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         private void UpdateTranslation()
         {
+            // Translation
             float leftRight = CrossPlatformInputManager.GetAxis("Horizontal");
             float forwardBackward = CrossPlatformInputManager.GetAxis("Vertical");
-            float upDown = CrossPlatformInputManager.GetAxis("UpDown");
+            float upDown = CrossPlatformInputManager.GetAxis("UpDown");          
+                        
 
             if (upDown == 0)
             {
@@ -79,6 +86,15 @@ namespace Assets.Scripts.WM.CameraNavigation
             TranslateXZ(translationVectorXZ, offset, true);
 
             TranslateY(translationVector.y);
+
+            // Rotation
+            float horizontalRotation = CrossPlatformInputManager.GetAxis("HorizontalRotation");
+            float verticalRotation = CrossPlatformInputManager.GetAxis("VerticalRotation");
+
+            //for now disable vertical rotation (over X axis).  Right DPad on GameSir Returns erronous values resulting in camera orientation drift.
+            //Rotate(new Vector3(verticalRotation, 0, 0));
+
+            Rotate(new Vector3(0, horizontalRotation, 0));
         }
 
         /*
@@ -144,7 +160,7 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             eulerOffset *= Time.deltaTime;
 
-            if (Input.GetMouseButton(0))
+            //if (Input.GetMouseButton(0))
             {
                 var cameraEulerAngles = m_camera.transform.eulerAngles;
 
