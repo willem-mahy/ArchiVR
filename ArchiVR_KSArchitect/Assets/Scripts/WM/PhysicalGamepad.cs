@@ -38,6 +38,8 @@ namespace Assets.Scripts.WM
 
         void Awake()
         {
+            Debug.Log("PhysicalGamepad.Awake()");
+
             m_horizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Horizontal");
             m_verticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Vertical");
 
@@ -51,10 +53,14 @@ namespace Assets.Scripts.WM
 
         void Start()
         {
+            Debug.Log("PhysicalGamepad.Start()");
         }
 
         private void OnEnable()
         {
+            Debug.Log("PhysicalGamepad.OnEnable()");
+
+            /*
             // Horizontal Axis
             if (CrossPlatformInputManager.AxisExists(m_horizontalVirtualAxis.name))
             {
@@ -68,7 +74,7 @@ namespace Assets.Scripts.WM
                 CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalVirtualAxis.name);
             }
             CrossPlatformInputManager.RegisterVirtualAxis(m_verticalVirtualAxis);
-
+            */
 
             // Horizontal Rotation Axis
             if (CrossPlatformInputManager.AxisExists(m_horizontalRotationVirtualAxis.name))
@@ -83,7 +89,7 @@ namespace Assets.Scripts.WM
                 CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalRotationVirtualAxis.name);
             }
             CrossPlatformInputManager.RegisterVirtualAxis(m_verticalRotationVirtualAxis);
-
+            
 
             // UpoDown Axis
             if (CrossPlatformInputManager.AxisExists(m_upDownVirtualAxis.name))
@@ -111,6 +117,8 @@ namespace Assets.Scripts.WM
 
         private void OnDisable()
         {
+            Debug.Log("PhysicalGamepad.OnDisable()");
+
             /*
             CrossPlatformInputManager.UnRegisterVirtualAxis("Horizontal");
             CrossPlatformInputManager.UnRegisterVirtualAxis("Vertical");

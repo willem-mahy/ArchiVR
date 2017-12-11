@@ -30,11 +30,6 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.Log("TranslationControlFly.OnEnable()");
 
             DisableCharacterController();
-
-            if (SystemInfo.supportsGyroscope)
-            {
-                m_firstPersonController.m_UseGyro = true;
-            }
         }
 
         override public void OnDisable()

@@ -31,6 +31,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             m_firstPersonController.m_MouseLook.lockCursor = true;
 
+            m_firstPersonController.m_UseGyro = SystemInfo.supportsGyroscope;
+
             EnableCharacterController();
         }
 

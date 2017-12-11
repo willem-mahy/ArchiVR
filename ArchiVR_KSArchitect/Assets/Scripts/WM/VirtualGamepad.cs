@@ -18,6 +18,7 @@ public class VirtualGamepad : MonoBehaviour {
     CrossPlatformInputManager.VirtualButton m_runVirtualButton;     // Reference to the run button in the cross platform input
 
     void Awake() {
+        Debug.Log("VirtualGamepad.Awake()");
         m_horizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Horizontal");        
         m_verticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Vertical");
         m_jumpVirtualButton = new CrossPlatformInputManager.VirtualButton("Jump");
@@ -26,10 +27,13 @@ public class VirtualGamepad : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log("VirtualGamepad.Start()");
     }
 
     private void OnEnable()
     {
+        Debug.Log("VirtualGamepad.OnEnable()");
+
         if (CrossPlatformInputManager.AxisExists(m_horizontalVirtualAxis.name))
         {
             CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalVirtualAxis.name);
@@ -73,6 +77,7 @@ public class VirtualGamepad : MonoBehaviour {
 
     private void OnDisable()
     {
+        Debug.Log("VirtualGamepad.OnDisable()");
         /*
         CrossPlatformInputManager.UnRegisterVirtualAxis("Horizontal");
         CrossPlatformInputManager.UnRegisterVirtualAxis("Vertical");
