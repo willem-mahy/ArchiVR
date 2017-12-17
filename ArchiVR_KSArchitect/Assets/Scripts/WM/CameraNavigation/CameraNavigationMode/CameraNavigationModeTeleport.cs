@@ -23,7 +23,7 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             Debug.Log("CameraNavigationModeTeleport.OnEnable()");
 
-            DisableCharacterController();
+            DisableCharacterController();            
         }
 
         override public void OnDisable()

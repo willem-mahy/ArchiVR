@@ -301,10 +301,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public void SetViewMode(string deviceName)
         {
-            // update UI visibility
+            // Update UI mode to VR or non-vr, depending of view mode.
             bool isViewModeVR = IsViewModeVR(deviceName);
 
-            UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
+            //UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
 
             if (deviceName.CompareTo("") == 0)
             {

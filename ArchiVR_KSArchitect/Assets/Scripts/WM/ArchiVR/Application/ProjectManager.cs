@@ -62,8 +62,12 @@ namespace Assets.Scripts.WM
 
         public int GetProjectIndexByName(string projectName)
         {
-            int index = 0;
+            if (projectName == null || projectName == "")
+            {
+                return -1;
+            }
 
+            int index = 0;
             foreach (var project in m_projects)
             {
                 if (project.m_name == projectName)

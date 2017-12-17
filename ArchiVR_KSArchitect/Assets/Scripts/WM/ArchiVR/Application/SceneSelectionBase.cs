@@ -26,6 +26,7 @@ namespace Assets.Scripts.WM
             else
             {
                 var activeProject = m_projectManager.GetProjectByName(s.m_activeProjectName);
+
                 SetActiveProject(activeProject);
             }
         }
