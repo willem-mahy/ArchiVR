@@ -35,7 +35,9 @@ namespace Assets.Scripts.WM.UI
         public List<Widget> m_widgets = new List<Widget>();
 
         // The active UI mode.
-        private UIMode m_uiMode = UIMode.ScreenSpace;
+        // This must be a static variable because its setting must be persistent in between application states.
+        // This can be a static variable as long as there is only one UIManager per application state.
+        private static UIMode s_uiMode = UIMode.ScreenSpace;
 
         // The 'ui visible' state.
         private bool m_uiVisible = true;
@@ -201,7 +203,7 @@ namespace Assets.Scripts.WM.UI
         {
             Debug.Log("UIManager.SetUIMode(" + uiMode + ")");
 
-            m_uiMode = uiMode;
+            s_uiMode = uiMode;
 
             UpdateUIState();
         }
@@ -210,7 +212,7 @@ namespace Assets.Scripts.WM.UI
         {
             //Debug.Log("UIManager.GetUIMode() = " + m_uiMode);
 
-            return m_uiMode;
+            return s_uiMode;
         }
 
         public void OpenMenu(string menuName)

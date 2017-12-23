@@ -65,7 +65,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
             }
 
-            // If user presses 'W', next poi.
+            // If user presses 'F12', next poi.
             if (Input.GetKeyDown("f12"))
             {
                 GetComponent<POISelection>().ActivateNextPOI();

@@ -6,6 +6,26 @@ namespace Assets.Scripts.WM.Util
 {
     class DebugUtil
     {
+        static public string GetSystemInfoString()
+        {
+            string textSystemInfo = "";
+            textSystemInfo += "[System Info]";
+            textSystemInfo += "\n";
+            textSystemInfo += "\nXR Device";
+            textSystemInfo += "\n    present: " + (XRDevice.isPresent ? "yes" : "no");
+            textSystemInfo += "\n    loaded device name: " + XRSettings.loadedDeviceName;
+            textSystemInfo += "\n";
+            textSystemInfo += "\nGyroscope support: " + (SystemInfo.supportsGyroscope ? "yes" : "no");
+            textSystemInfo += "\n";
+            textSystemInfo += "\nTouch support: " + (Input.touchSupported ? "yes" : "no"); ;
+            textSystemInfo += "\n";
+            textSystemInfo += "\n#Gamepad present: " + Input.GetJoystickNames().Length.ToString();
+            textSystemInfo += "\n";
+            textSystemInfo += "\nMouse present: " + (Input.mousePresent ? "yes" : "no"); ; ;
+            return textSystemInfo;
+        }
+
+            
         // Log all supported XR devices that are supported on the system.
         static public void LogJoystickNames()
         {

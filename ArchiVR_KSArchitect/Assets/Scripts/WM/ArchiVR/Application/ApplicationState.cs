@@ -18,7 +18,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
     public abstract class ApplicationState : MonoBehaviour
     {
         // For debugging purposes.
-        private static bool s_debugInitialSetup = true;
+        static private bool s_debugInitialSetup = true;
         
         // For debugging purposes.
         static public bool s_initialModeForce = true;
@@ -29,9 +29,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // For debugging purposes.
         static public string s_initialXRDevice = "split";
 
-
         //! Indicates whether or not the application has already performed initial setup during startup.
-        private static bool s_initialized = false;
+        static private bool s_initialized = false;
+
+        // puclic: must be settable from Unity Editor
+        public Assets.Scripts.WM.UI.TabView m_debugView_SS = null;
+
+        // puclic: must be settable from Unity Editor
+        public Assets.Scripts.WM.UI.TabView m_debugView_WS = null;
 
         // List of names of supported XR devices.
         // This is the list of all possible XR devices that are supported by the current application build, on supporting systems.
@@ -60,17 +65,52 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationState.Start()");
 
+            // 1) Perform (if not yet done) initial setup after application startup.
             PerformInitialSetup();
+
+            // 2) Perform initial setup necessary upon each application state entry.
+
+            // 2a) Add the Controls info to the first tab of the debug view.
+            var textControlsInfo =
+            "[Controls]" +
+            "\nGeneral" +
+            "\n     X: Toggle XR Device" +
+            "\n     N: Toggle Navigation mode" +
+            "\n     M: Toggle Menu visible" +
+            "\n     Q: Toggle graphic quality level" +
+            "\nMovement" +
+            "\n     Arrows: Move F/B/L/R" +
+            "\n     Space: Jump" +
+            "\n     U,D: Move Up/Down" +
+            "\n     Space: Jump" +
+            "\n     Hold Ctrl: Fast Move Mode" +
+            "\nScene" +
+            "\n     C: Toggle construction lights" +
+            "\n     L: Show layer menu" + 
+            "\n     B,S,F: ++Backward/Stop/++Forward animation speed" +            
+            "\nAdvanced" +
+            "\n     S: Screen Capture" +
+            "\n     P: Export POI" +
+            "\n     F1-F12: Show Debug Pane";
+
+            m_debugView_SS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
+            m_debugView_WS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
+
+            // 2b) Add the System info to the first tab of the debug view.
+
+            //TODO: put in : AddSystemInfoToDebugView();
+            var textSystemInfo = DebugUtil.GetSystemInfoString();
+            m_debugView_SS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
+            m_debugView_WS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
+
+            // 2c) Make sure that UI Mode is in accordance to the active XR device.
+            OnSetActiveXRDevice(XRSettings.loadedDeviceName);
         }
 
         private void PerformInitialSetup()
         {
             if (s_initialized)
-            {
-                // Make sure that UI Mode is in accordance to the active XR device.
-                OnSetActiveXRDevice(XRSettings.loadedDeviceName);
-
-                return; // Already performed initial setup during startup of application.
+            {   return; // Already performed initial setup during startup of application.
             }
 
             // Set the flag to indicate that we already performed initial setup.
@@ -152,6 +192,16 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // Update is called once per frame
         protected virtual void Update()
         {
+            var camera = Camera.main;
+
+            var cameraText =
+                "[Camera]\n" +
+                "Pos:" + camera.transform.position.ToString() + "\n" +
+                "Fwd:" + camera.transform.forward.ToString() + "\n" +
+                "Up:" + camera.transform.up.ToString() + "\n";
+            m_debugView_SS.m_tabPanes[2].GetComponent<Text>().text = cameraText;
+            m_debugView_WS.m_tabPanes[2].GetComponent<Text>().text = cameraText;
+
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
             {
@@ -169,17 +219,16 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 MakeScreenCapture();
             }
 
-            /*
             // 'f1' to 'f9' keys: Select active debugging type.
-            for (int debugType = 0; debugType < m_uiControlDebug.Count; ++debugType)
+            for (int debugType = 0; debugType < m_debugView_SS.GetNumTabs(); ++debugType)
             {
                 if (Input.GetKeyUp("f" + (debugType + 1)))
                 {
-                    SetActiveDebuggingType(debugType);
+                    m_debugView_SS.SetActiveTab(debugType);
+                    m_debugView_WS.SetActiveTab(debugType);
                     break;
                 }
             }
-            */
 
             // 'v' key: Toggle View Mode.
             if (Input.GetKeyUp("v"))
@@ -391,20 +440,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             SetupAvailableXRDeviceList();
         }
 
-        /*
         void SetActiveDebuggingType(int toActivate)
         {
-            for (int i = 0; i < m_uiControlDebug.Count; ++i)
-            {
-                if (m_uiControlDebug[i] == null)
-                {
-                    continue;
-                }
-
-                m_uiControlDebug[i].SetActive(i == toActivate);
-            }
+            m_debugView_SS.SetActiveTab(toActivate);
+            m_debugView_WS.SetActiveTab(toActivate);
         }
-        */
 
         public static bool IsActiveXRDeviceStereoscopic()
         {
