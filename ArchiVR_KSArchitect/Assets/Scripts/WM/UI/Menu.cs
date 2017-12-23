@@ -99,9 +99,9 @@ namespace Assets.Scripts.WM.UI
 
             switch (uiMode)
             {
-                case UIManager.UIMode.NonVR:
+                case UIMode.ScreenSpace:
                     return m_uiControlNonVR;
-                case UIManager.UIMode.VR:
+                case UIMode.WorldSpace:
                     return m_uiControlVR;
                 default:
                     Debug.LogWarning("Unsupported UI Mode! (" + uiMode + ")");
@@ -115,9 +115,9 @@ namespace Assets.Scripts.WM.UI
 
             switch (uiMode)
             {
-                case UIManager.UIMode.NonVR:
+                case UIMode.ScreenSpace:
                     return m_uiControlVR;
-                case UIManager.UIMode.VR:
+                case UIMode.WorldSpace:
                     return m_uiControlNonVR;
                 default:
                     Debug.LogWarning("Unsupported UI Mode! (" + uiMode + ")");

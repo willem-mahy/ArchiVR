@@ -7,19 +7,32 @@ namespace Assets.Scripts.WM.Util
     class DebugUtil
     {
         // Log all supported XR devices that are supported on the system.
+        static public void LogJoystickNames()
+        {
+            String text = "Input.GetJoystickNames():";
+
+            foreach (String joystickName in Input.GetJoystickNames())
+            {
+                text += "\n- " + joystickName;
+            }
+
+            Debug.Log(text);
+        }
+
+
+        // Log all supported XR devices that are supported on the system.
         static public void LogSupportedXRDevices()
         {
-            var text = "XRSettings.supportedDevices:\n";
+            var text = "XRSettings.supportedDevices:";
 
             foreach (var deviceName in XRSettings.supportedDevices)
             {
-                text += deviceName;
+                text += "\n- " + deviceName;
 
                 if (deviceName == XRSettings.loadedDeviceName)
                 {
                     text += " (loaded)";
                 }
-                text+= "\n";
             }
 
             Debug.Log(text);
@@ -54,17 +67,15 @@ namespace Assets.Scripts.WM.Util
             var activeName = names[QualitySettings.GetQualityLevel()];
 
             // Debug Log the QualitySettings
-            var text = "QualitySettings:\n";
+            var text = "QualitySettings:";
             foreach (var name in names)
             {
-                text += name;
+                text += "\n- " + name;
 
                 if (name == activeName)
                 {
                     text += " (active)";
                 }
-
-                text += "\n";
             }
             Debug.Log(text);
         }

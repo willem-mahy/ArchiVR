@@ -17,9 +17,37 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public abstract class ApplicationState : MonoBehaviour
     {
-        int m_viewMode = 0;
+        // For debugging purposes.
+        private static bool s_debugInitialSetup = true;
+        
+        // For debugging purposes.
+        static public bool s_initialModeForce = true;
 
-        public List<string> m_devices = null;
+        // For debugging purposes.
+        static public UIMode s_initialUIMode = UIMode.WorldSpace;
+
+        // For debugging purposes.
+        static public string s_initialXRDevice = "split";
+
+
+        //! Indicates whether or not the application has already performed initial setup during startup.
+        private static bool s_initialized = false;
+
+        // List of names of supported XR devices.
+        // This is the list of all possible XR devices that are supported by the current application build, on supporting systems.
+        // Names in this list are all lower-case.
+        // Shared by all application states.
+        private static List<string> s_supportedDeviceNameList = new List<string>();
+
+        // List of names of available XR devices.
+        // This is the list of supported XR devices that are supported by the current systems.
+        // Names in this list are all lower-case.
+        // Shared by all application states.
+        List<string> s_availableDeviceSpritePathList = new List<string>();
+        
+        // List of paths to the sprites to represent each available XR device.
+        // Shared by all application states.
+        private static List<string> s_availableDeviceNameList = new List<string>();
 
         // Use this for initialization
         protected virtual void Awake()
@@ -30,23 +58,87 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // Use this for initialization
         protected virtual void Start()
         {
-            Debug.Log("ApplicationState.Start()"); 
+            Debug.Log("ApplicationState.Start()");
+
+            PerformInitialSetup();
+        }
+
+        private void PerformInitialSetup()
+        {
+            if (s_initialized)
+            {
+                // Make sure that UI Mode is in accordance to the active XR device.
+                OnSetActiveXRDevice(XRSettings.loadedDeviceName);
+
+                return; // Already performed initial setup during startup of application.
+            }
+
+            // Set the flag to indicate that we already performed initial setup.
+            s_initialized = true;
+
+            //DebugUtil::LogJoystickNames();
 
             // Set the initial active debug logging type to the first one.
             //SetActiveDebuggingType(0);
 
-            AddSupportedXRDevices();
+            // Setup lists of supported and available XR devices.
+            SetupXRDevices();
 
-            // Log joystick names to the console.
+            // Setup initial XR device, UI Mode, Navigation mode, etc...
+            var cameraNavigation = GameObject.Find("CameraNavigation");
+
+            if (null == cameraNavigation)
             {
-                String text = "JoystickNames:";
+                Debug.LogWarning("GameObject 'CameraNavigation' not found in scene!");
+            }
 
-                foreach (String joystickName in Input.GetJoystickNames())
+            var cameraNavigationComponent = cameraNavigation.GetComponent<CameraNavigation.CameraNavigation>();
+
+            if (null == cameraNavigationComponent)
+            {
+                Debug.LogWarning("GameObject 'CameraNavigation' has no 'CameraNavigation' component!");
+            }
+
+            if (s_initialModeForce)
+            {
+                // For debugging purposes, we are forcing an initial UI Mode and XR Device.
+                
+                // First set the requested UI Mode
+                UIManager.GetInstance().SetUIMode(s_initialUIMode);
+
+                // Then activate the requested XR device.
+                // This might change the UI mode if incompatible with the XR device.
+                SetActiveXRDevice(s_initialXRDevice);
+            }
+            else
+            {
+                // Make sure that UI Mode is in accordance to the active XR device.
+                OnSetActiveXRDevice(XRSettings.loadedDeviceName);
+
+                bool gamepadIsConnected = (Input.GetJoystickNames().Length > 0);
+
+                // 1) Figure out initial UI mode
+
+                if (XRDevice.isPresent)
                 {
-                    text+= "\n- " + joystickName;
+                    // When running on a head-mounted XR device, UI mode is always World-space.
+                    UIManager.GetInstance().SetUIMode(UIMode.WorldSpace);
                 }
+                else
+                {
+                    // When running on a non-head-mounted XR device, UI mode is World-space if gyroscope is present, else Screen-space.
+                    UIManager.GetInstance().SetUIMode(SystemInfo.supportsGyroscope ? UIMode.WorldSpace : UIMode.ScreenSpace);
+                }               
 
-                Debug.Log(text);
+                // 2) Figure out initial rotation mode
+
+                // If gyroscope is present, use it for rotational navigation.
+                string initialRotationMode = (SystemInfo.supportsGyroscope ? "RotationControlMouse" : "RotationControlGyro");
+                
+                cameraNavigationComponent.SetActiveRotationControlModeByName(initialRotationMode);
+
+                // 2) Figure out initial rotation mode
+                
             }
 
 #if UNITY_EDITOR
@@ -92,7 +184,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // 'v' key: Toggle View Mode.
             if (Input.GetKeyUp("v"))
             {
-                SetNextViewMode();
+                ActivateNextXRDevice();
             }
 
             // 'q' key: Toggle Quality Level.
@@ -151,89 +243,152 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             UnityEngine.Application.Quit();
         }
-
-        //! Add devices from the given list, to the list of selectable devices, if they are supported by the system.
-        void AddSupportedXRDevices(List<string> deviceNames)
+        
+        public void ButtonXRDevice_OnClick()
         {
-            var text = "XRSettings selectable devices:\n";
+            ActivateNextXRDevice();
+        }
 
-            foreach (var deviceName in deviceNames)
+        public int GetActiveXRDeviceIndex()
+        {
+            for (int i = 0; i < s_availableDeviceNameList.Count; ++i)
             {
-                foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
+                var deviceName = s_availableDeviceNameList[i];
+
+                if (deviceName == XRSettings.loadedDeviceName)
                 {
-                    if (supportedDeviceName.ToLower().Equals(deviceName.ToLower()))
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        public void ActivateNextXRDevice()
+        {
+            if (s_availableDeviceNameList.Count == 1)
+            {
+                return;
+            }
+
+            int current = GetActiveXRDeviceIndex();
+            int next = (current + 1) % s_availableDeviceNameList.Count;
+
+            SetActiveXRDevice(s_availableDeviceNameList[next]);
+        }
+
+        /*! Setup the list of supported devices.
+         */
+        private void SetupSupportedXRDeviceList()
+        {
+            bool loadDynamic = true;
+
+            if (loadDynamic)
+            {
+                foreach (var deviceName in UnityEngine.XR.XRSettings.supportedDevices)
+                {
+                    var dn = deviceName.ToLower();
+
+                    // Detect duplicates which are for some reason present in XRSettings.supportedDevices.
+                    bool isDuplicate = false;
+                    foreach (var alreadyAddedSupportedDeviceName in s_supportedDeviceNameList)
                     {
-                        text += deviceName;
-
-                        if (deviceName == XRSettings.loadedDeviceName)
+                        if (alreadyAddedSupportedDeviceName.CompareTo(dn) == 0)
                         {
-                            text += " (loaded)";
+                            isDuplicate = true;
+                            break;
                         }
+                    }
 
-                        text += "\n";
-
-                        m_devices.Add(deviceName);
-                        break;
+                    if (!isDuplicate)
+                    {
+                        s_supportedDeviceNameList.Add(dn);
                     }
                 }
             }
-
-            Debug.Log(text);
-        }
-        
-        public void ButtonViewMode_OnClick()
-        {            
-            SetNextViewMode();
-        }
-
-        public void SetNextViewMode()
-        {
-            SetViewMode(++m_viewMode % m_devices.Count);
-        }
-
-        void AddSupportedXRDevices()
-        {
-            DebugUtil.LogSupportedXRDevices();
-
-            // List supported XR devices in debug window
-            /*
-            if (m_textControlDebugViewMode != null)
+            else
             {
-                m_textControlDebugViewMode.text += "\nSupported VR devices:";
+                s_supportedDeviceNameList.Add("none");        // No VR: Regular full-screen mono rendering.
+                s_supportedDeviceNameList.Add("stereo");      // Regular split screen H
+                s_supportedDeviceNameList.Add("split");       // X Eye Split screen H
+                s_supportedDeviceNameList.Add("oculus");      // Oculus And GearVR
+                s_supportedDeviceNameList.Add("cardboard");   // Google cardboard
+            }
 
-                foreach (var supportedDeviceName in UnityEngine.XR.XRSettings.supportedDevices)
+            if (s_debugInitialSetup)
+            {
+                var text = "Supported XR devices:";
+
+                foreach (var deviceName in s_supportedDeviceNameList)
                 {
-                    m_textControlDebugViewMode.text += "\n -" + supportedDeviceName;
+                    text += "\n- " + deviceName;
+
+                    if (deviceName == XRSettings.loadedDeviceName.ToLower())
+                    {
+                        text += " (loaded)";
+                    }
+                }
+
+                Debug.Log(text);
+            }
+        }
+
+        /*! Setup the list of available devices.
+         *  Available devices are supported (by the application) devices that are also supported by the current system.
+         */
+        void SetupAvailableXRDeviceList()
+        {
+            var text = "Available XR devices:\n";
+
+            if (UnityEngine.XR.XRDevice.isPresent)
+            {
+                s_availableDeviceNameList.Add(XRSettings.loadedDeviceName.ToLower());
+            }
+            else
+            {
+                foreach (var deviceName in s_supportedDeviceNameList)
+                {
+                    if (deviceName.Equals("oculus"))
+                    {
+                        continue;  // Switching to oculus is not supported.
+                    }
+
+                    s_availableDeviceNameList.Add(deviceName);
                 }
             }
-            */
-
-            List<string> deviceNames = new List<string>();
-            deviceNames.Add("none");        // No VR: Regular full-screen mono rendering.
-            deviceNames.Add("stereo");      // Regular split screen H
-            deviceNames.Add("split");       // X Eye Split screen H
-            deviceNames.Add("oculus");      // Oculus And GearVR
-            deviceNames.Add("cardboard");   // Google cardboard
-
-            AddSupportedXRDevices(deviceNames); 
-
+            
             // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
-            List<string> optionSpritePathList = new List<string>();
-
-            foreach (var deviceName in m_devices)
+            foreach (var deviceName in s_availableDeviceNameList)
             {
-                optionSpritePathList.Add("Menu/ViewMode/" + deviceName);
+                s_availableDeviceSpritePathList.Add("Menu/ViewMode/" + deviceName);
             }
 
-            /*
-            // Initialize 'View Mode' toggle buttons.
-            foreach (var toggleButtonViewMode in  m_toggleButtonsViewMode)
+            if (s_debugInitialSetup)
             {
-                toggleButtonViewMode.LoadOptions(null, optionSpritePathList);
+                foreach (var deviceName in s_availableDeviceNameList)
+                {
+                    if (text != "")
+                    {
+                        text += "\n";
+                    }
 
-                toggleButtonViewMode.GetComponent<Button>().onClick.AddListener(toggleButtonViewMode_OnClick);
+                    text += deviceName;
+
+                    if (deviceName == XRSettings.loadedDeviceName)
+                    {
+                        text += " (loaded)";
+                    }
+                }
+
+                Debug.Log(text);
             }
-            */
+        }
+
+        //! Setup the supported and available XR device lists.
+        void SetupXRDevices()
+        {
+            SetupSupportedXRDeviceList();
+            SetupAvailableXRDeviceList();
         }
 
         /*
@@ -251,14 +406,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         }
         */
 
-        public static bool IsActiveViewModeVR()
+        public static bool IsActiveXRDeviceStereoscopic()
         {
-            var loadedDeviceName = XRSettings.loadedDeviceName;
-
-            return IsViewModeVR(loadedDeviceName);
+            return IsXRDeviceStereoscopic(XRSettings.loadedDeviceName.ToLower());
         }
 
-        public static bool IsViewModeVR(string deviceName)
+        public static bool IsXRDeviceStereoscopic(string deviceName)
         {
             if (deviceName.CompareTo("") == 0)
             {
@@ -273,12 +426,55 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             return true;
         }
 
-        public void SetViewMode(int viewMode)
+        public void SetActiveXRDeviceByIndex(int viewMode)
         {
-            bool invalidIndex = (viewMode < 0 || viewMode >= m_devices.Count);
-            string deviceName = invalidIndex ? "" : m_devices[viewMode];
+            bool invalidIndex = (viewMode < 0 || viewMode >= s_availableDeviceNameList.Count);
+            string deviceName = invalidIndex ? "" : s_availableDeviceNameList[viewMode];
 
-            SetViewMode(deviceName);
+            SetActiveXRDevice(deviceName);
+        }
+
+        public void SetActiveXRDevice(string deviceName)
+        {
+            // Sanity check: Can only switch to available XR devices.
+            //TODO
+
+            // Sanity check: Cannot switch from Oculus to other XR device.
+            if (UnityEngine.XR.XRSettings.loadedDeviceName.ToLower().CompareTo("oculus") == 0)
+            {
+                return;
+            }
+
+            DoSetActiveXRDevice(deviceName);
+
+            OnSetActiveXRDevice(deviceName);
+        }
+
+        private void OnSetActiveXRDevice(string deviceName)
+        {
+            // Force UI mode to world-space UI mode, when setting a stereoscopic XRDevice.
+            if (IsXRDeviceStereoscopic(deviceName))
+            {
+                UIManager.GetInstance().SetUIMode(UIMode.WorldSpace);
+            }
+        }
+
+        IEnumerator LoadDevice(string deviceName, bool enable)
+        {
+            XRSettings.enabled = enable;
+            yield return new WaitForEndOfFrame();
+            XRSettings.LoadDeviceByName(deviceName);
+            yield return new WaitForEndOfFrame();
+            XRSettings.enabled = enable;
+        }
+
+        void DoSetActiveXRDevice(string deviceName)
+        {
+            Debug.Log("ApplicationState.SetActiveXRDevice(" + deviceName + ")");
+
+            bool enableXR = (deviceName != null) && (deviceName != "");
+
+            StartCoroutine(LoadDevice(deviceName, enableXR));
         }
 
         private void UpdateVirtualGamepadActiveState()
@@ -292,49 +488,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             var cameraNavigation = GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>();
 
-            bool isViewModeVR = UIManager.GetInstance().GetUIMode() == UIManager.UIMode.VR;
+            bool isUIModeWorldSpace = UIManager.GetInstance().GetUIMode() == UIMode.WorldSpace;
             bool currentCameraNavigationSupportsGamepad = (null == cameraNavigation) ? true : cameraNavigation.GetActiveNavigationMode().SupportsDPadInput();
             bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
-                        
-            virtualGamepad.SetActive(!isViewModeVR && !isPhysicalGamePadConnected && currentCameraNavigationSupportsGamepad);
-        }
 
-        public void SetViewMode(string deviceName)
-        {
-            // Update UI mode to VR or non-vr, depending of view mode.
-            bool isViewModeVR = IsViewModeVR(deviceName);
-
-            //UIManager.GetInstance().SetUIMode(isViewModeVR ? UIManager.UIMode.VR : UIManager.UIMode.NonVR);
-
-            if (deviceName.CompareTo("") == 0)
-            {
-                DisableVR();
-            }
-            else
-            {
-                EnableVR(deviceName);
-            }
-        }
-
-        IEnumerator LoadDevice(string deviceName, bool enable)
-        {
-            XRSettings.enabled = enable;
-            yield return new WaitForEndOfFrame();
-            XRSettings.LoadDeviceByName(deviceName);
-            yield return new WaitForEndOfFrame();
-            XRSettings.enabled = enable;
-        }
-
-        void EnableVR(string deviceName)
-        {
-            Debug.Log("ApplicationState.EnableVR(" + deviceName + ")");
-            StartCoroutine(LoadDevice(deviceName, true));
-        }
-
-        void DisableVR()
-        {
-            Debug.Log("ApplicationState.DisableVR()");
-            StartCoroutine(LoadDevice("", false));
+            virtualGamepad.SetActive(!isUIModeWorldSpace && !isPhysicalGamePadConnected && currentCameraNavigationSupportsGamepad);
         }
 
         static public void OpenProject(string sceneName)

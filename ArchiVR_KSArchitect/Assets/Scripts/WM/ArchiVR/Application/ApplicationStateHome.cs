@@ -10,14 +10,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
     public class ApplicationStateHome : ApplicationState
     {
         public Text m_textStatus = null;
-
-        public bool m_initialModeForce = false;
-        public UIManager.UIMode m_initialModeVR = UIManager.UIMode.VR;
-        public string m_initialViewMode = "split";
-
-        // Used to omit some actions upon re-entry from Play mode (eg Loading the application settings.
-        static bool s_firstTime = true;
-
+        
         override protected string GetName()
         {
             return "Home";
@@ -28,13 +21,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationStateHome.Start()");
             base.Start();
-
-            if (s_firstTime)
-            {
-                s_firstTime = false;
-
-                InitializeApplication();
-            }
         }
 
         // Update is called once per frame
@@ -83,79 +69,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 cameraText;
 
             textDebugVRComponent.text = text;
-        }
-
-        private void InitializeApplication()
-        {
-            //ApplicationSettings.GetInstance().Load();
-
-            if (m_initialModeForce)
-            {
-                UIManager.GetInstance().SetUIMode(m_initialModeVR);
-                SetViewMode(m_initialViewMode);
-            }
-            else
-            {
-                if (XRDevice.isPresent)
-                {
-                    // When running on a Mixed Reality device, UI mode is always VR.                
-                    UIManager.UIMode initialUIMode = UIManager.UIMode.VR;
-                    UIManager.GetInstance().SetUIMode(initialUIMode);
-
-                    if (XRSettings.loadedDeviceName == "oculus")
-                    {
-                        // ViewMode is covered automatically by GearVR initialization.
-                        // Rotation is covered automatically by GearVR rotational tracking, so no navigation mode necessary.
-                    }
-                    else if (XRSettings.loadedDeviceName == "microsoft XR")
-                    {
-                        // ViewMode is covered automatically by Microsoft Mixed Reality initialization.
-                        // Rotation is covered automatically by Microsoft Mixed Reality rotational tracking, so no navigation mode necessary.
-                    }
-                }
-                else
-                {
-                    string initialRotationMode = "RotationControlMouse";
-                    UIManager.UIMode initialUIMode = UIManager.UIMode.NonVR;
-
-                    string initialViewMode =
-                        null;
-                    //"split";
-
-                    // If executing system has gyroscope support, startup with:
-                    if (SystemInfo.supportsGyroscope)
-                    {
-                        // ... GYRO rotation active
-                        initialRotationMode = "RotationControlGyro";
-
-                        // ... and  VR mode On.
-                        initialUIMode = UIManager.UIMode.VR;
-                    }
-
-                    var cameraNavigation = GameObject.Find("CameraNavigation");
-
-                    if (null == cameraNavigation)
-                    {
-                        Debug.LogWarning("GameObject 'CameraNavigation' not found in scene!");
-                    }
-
-                    var cameraNavigationComponent = cameraNavigation.GetComponent<CameraNavigation.CameraNavigation>();
-
-                    if (null == cameraNavigationComponent)
-                    {
-                        Debug.LogWarning("GameObject 'CameraNavigation' has no 'CameraNavigation' component!");
-                    }
-
-                    cameraNavigationComponent.SetActiveRotationControlModeByName(initialRotationMode);
-
-                    UIManager.GetInstance().SetUIMode(initialUIMode);
-
-                    if (null != initialViewMode)
-                    {
-                        SetViewMode(initialViewMode);
-                    }
-                }
-            }
         }
 
         public void QuitButton_OnClick()

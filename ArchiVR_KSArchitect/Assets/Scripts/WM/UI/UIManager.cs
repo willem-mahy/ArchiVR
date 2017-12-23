@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.WM.UI
 {
+    public enum UIMode
+    {
+        ScreenSpace = 0,
+        WorldSpace
+    }
+
     public class UIManager : MonoBehaviour
     {
-        public enum UIMode
-        {
-            NonVR = 0,
-            VR
-        }
-
         //! Reference to the singleton instance.
         private static UIManager s_instance = null;
 
@@ -35,7 +35,7 @@ namespace Assets.Scripts.WM.UI
         public List<Widget> m_widgets = new List<Widget>();
 
         // The active UI mode.
-        private UIMode m_uiMode = UIMode.NonVR;
+        private UIMode m_uiMode = UIMode.ScreenSpace;
 
         // The 'ui visible' state.
         private bool m_uiVisible = true;

@@ -9,8 +9,8 @@ namespace Assets.Scripts.WM.UI
     {
         public bool m_visible = true;
 
-        public GameObject m_uiControlNonVR = null;
-        public GameObject m_uiControlVR = null;
+        public GameObject m_uiControlScreenSpace = null;
+        public GameObject m_uiControlWorldSpace = null;
 
         // Use this for initialization
         public bool ToggleVisible()
@@ -55,10 +55,10 @@ namespace Assets.Scripts.WM.UI
 
             switch (uiMode)
             {
-                case UIManager.UIMode.NonVR:
-                    return m_uiControlNonVR;
-                case UIManager.UIMode.VR:
-                    return m_uiControlVR;
+                case UIMode.ScreenSpace:
+                    return m_uiControlScreenSpace;
+                case UIMode.WorldSpace:
+                    return m_uiControlWorldSpace;
                 default:
                     Debug.LogWarning("Unsupported UI Mode! (" + uiMode + ")");
                     return null;
@@ -71,10 +71,10 @@ namespace Assets.Scripts.WM.UI
 
             switch (uiMode)
             {
-                case UIManager.UIMode.NonVR:
-                    return m_uiControlVR;
-                case UIManager.UIMode.VR:
-                    return m_uiControlNonVR;
+                case UIMode.ScreenSpace:
+                    return m_uiControlWorldSpace;
+                case UIMode.WorldSpace:
+                    return m_uiControlScreenSpace;
                 default:
                     Debug.LogWarning("Unsupported UI Mode! (" + uiMode + ")");
                     return null;

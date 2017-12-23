@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Project/Project025.unity
     guid: 8000e82f6a7aaa044ac9b3aad98fbf38
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Project/Project027.unity
     guid: 1c9ae0c643a49634ebcd8917a6313122
   - enabled: 0
