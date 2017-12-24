@@ -24,9 +24,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // Use this for initialization
         override protected void Start()
         {
-            base.Start();
-
-            // For debugging purposes: enables to open an initial project (defined by 'm_initialProjectSceneName') when starting the application in 'Play' mode.
+            // For debugging purposes:
+            // enables to open an initial project (defined by 'm_initialProjectSceneName')
+            // when starting the application directly in 'Play' mode from the Unity editor.
             if (s_firstTime)
             {
                 s_firstTime = false;
@@ -35,7 +35,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 {
                     OpenProject(m_initialProjectSceneName);
                 }
+                return;
             }
+
+            base.Start();
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
 
