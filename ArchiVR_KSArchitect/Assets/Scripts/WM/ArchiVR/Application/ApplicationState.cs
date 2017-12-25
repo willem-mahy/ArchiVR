@@ -71,6 +71,23 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // 2) Perform initial setup necessary upon each application state entry.
 
             // 2a) Add the Controls info to the first tab of the debug view.
+            var textControlsInfo = GetTextControlsInfo();
+            m_debugView_SS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
+            m_debugView_WS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
+
+            // 2b) Add the System info to the first tab of the debug view.
+
+            //TODO: put in : AddSystemInfoToDebugView();
+            var textSystemInfo = DebugUtil.GetSystemInfoString();
+            m_debugView_SS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
+            m_debugView_WS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
+
+            // 2c) Make sure that UI Mode is in accordance to the active XR device.
+            OnSetActiveXRDevice(XRSettings.loadedDeviceName);
+        }
+
+        public static string GetTextControlsInfo()
+        {
             var textControlsInfo =
             "[Controls]" +
             "\nGeneral" +
@@ -86,25 +103,15 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             "\n     Hold Ctrl: Fast Move Mode" +
             "\nScene" +
             "\n     C: Toggle construction lights" +
-            "\n     L: Show layer menu" + 
-            "\n     B,S,F: ++Backward/Stop/++Forward animation speed" +            
+            "\n     L: Show layer menu" +
+            "\n     B,S,F: ++Backward/Stop/++Forward animation speed" +
             "\nAdvanced" +
+            "\n     L: Toggle Debug window visible" +
             "\n     S: Screen Capture" +
             "\n     P: Export POI" +
             "\n     F1-F12: Show Debug Pane";
 
-            m_debugView_SS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
-            m_debugView_WS.m_tabPanes[0].GetComponent<Text>().text = textControlsInfo;
-
-            // 2b) Add the System info to the first tab of the debug view.
-
-            //TODO: put in : AddSystemInfoToDebugView();
-            var textSystemInfo = DebugUtil.GetSystemInfoString();
-            m_debugView_SS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
-            m_debugView_WS.m_tabPanes[1].GetComponent<Text>().text = textSystemInfo;
-
-            // 2c) Make sure that UI Mode is in accordance to the active XR device.
-            OnSetActiveXRDevice(XRSettings.loadedDeviceName);
+            return textControlsInfo;
         }
 
         private void PerformInitialSetup()
@@ -327,6 +334,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         }
 
         /*! Setup the list of supported devices.
+         *  A supported device is a XR device that is supported by the application on compatible systems,
+         *  but not necessarily on the current system.
          */
         private void SetupSupportedXRDeviceList()
         {
@@ -384,26 +393,30 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         /*! Setup the list of available devices.
          *  Available devices are supported (by the application) devices that are also supported by the current system.
+         *
+         * \pre 'SetupSupportedXRDeviceList' has been executed priorly to setup the list of supported XR devices.
          */
         void SetupAvailableXRDeviceList()
         {
-            var text = "Available XR devices:\n";
-
             if (UnityEngine.XR.XRDevice.isPresent)
             {
-                s_availableDeviceNameList.Add(XRSettings.loadedDeviceName.ToLower());
-            }
-            else
-            {
-                foreach (var deviceName in s_supportedDeviceNameList)
-                {
-                    if (deviceName.Equals("oculus"))
-                    {
-                        continue;  // Switching to oculus is not supported.
-                    }
+                var loadedXRDeviceName = XRSettings.loadedDeviceName.ToLower();
 
-                    s_availableDeviceNameList.Add(deviceName);
+                if (!AllowSetActiveXRDevice(loadedXRDeviceName))
+                {
+                    s_availableDeviceNameList.Add(loadedXRDeviceName);
+                    return;
                 }
+            }
+
+            foreach (var deviceName in s_supportedDeviceNameList)
+            {
+                if (!AllowSetActiveXRDevice(deviceName))
+                {
+                    continue;  // Switching to/from this supported XR device at runtime is not supported.
+                }
+
+                s_availableDeviceNameList.Add(deviceName);
             }
             
             // Compose the list of option sprites to initialize the 'View Mode' toggle buttons with.
@@ -414,14 +427,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             if (s_debugInitialSetup)
             {
+                var text = "Available XR devices:";
+
                 foreach (var deviceName in s_availableDeviceNameList)
                 {
-                    if (text != "")
-                    {
-                        text += "\n";
-                    }
-
-                    text += deviceName;
+                    text += "\n- " + deviceName;
 
                     if (deviceName == XRSettings.loadedDeviceName)
                     {
@@ -474,13 +484,30 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             SetActiveXRDevice(deviceName);
         }
 
+        /*! Query whether switching to/from the given XR device at runtime is supported.
+         *
+         * \param[in] deviceName    The XR device name.
+         */
+        static public bool AllowSetActiveXRDevice(string deviceNameIn)
+        {
+            var deviceName = deviceNameIn.ToLower();
+
+            // Cannot switch to/from Oculus from/to other XR device.
+            if (deviceName.CompareTo("oculus") == 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void SetActiveXRDevice(string deviceName)
         {
             // Sanity check: Can only switch to available XR devices.
             //TODO
 
             // Sanity check: Cannot switch from Oculus to other XR device.
-            if (UnityEngine.XR.XRSettings.loadedDeviceName.ToLower().CompareTo("oculus") == 0)
+            if (XRSettings.loadedDeviceName.ToLower().CompareTo("oculus") == 0)
             {
                 return;
             }
