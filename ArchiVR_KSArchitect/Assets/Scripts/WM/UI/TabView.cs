@@ -6,18 +6,22 @@ namespace Assets.Scripts.WM.UI
 {
     public class TabView : MonoBehaviour
     {
+        public int m_initialActiveTab = 0;
+
         public List<GameObject> m_tabPanes = new List<GameObject>();
 
         // Use this for initialization
         void Start()
         {
-
+            if (GetNumTabs() > 0)
+            {
+                SetActiveTab(Mathf.Min(GetNumTabs(), m_initialActiveTab));
+            }
         }
-
+        
         // Update is called once per frame
         void Update()
         {
-
         }
 
         public int GetNumTabs()
