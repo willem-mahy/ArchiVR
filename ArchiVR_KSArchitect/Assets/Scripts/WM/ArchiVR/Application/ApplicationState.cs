@@ -614,18 +614,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (svp.isLoaded == false)
                 return;
 
-            var textProjectName = GameObject.Find("TextProjectName");
-
-            if (textProjectName)
-            {
-                var text = textProjectName.GetComponent<Text>();
-
-                if (text)
-                {
-                    text.text = projectName;
-                }
-            }
-
             var gameObjects = sp.GetRootGameObjects();
 
             var gameObjectWorld = gameObjects[0];
@@ -636,6 +624,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 SceneManager.SetActiveScene(svp);
                 SceneManager.UnloadSceneAsync(sp);
             }
+
+            LayerManager.GetInstance().DynamicallyCreateLayers();
         }
 
         public void MakeScreenCapture()
