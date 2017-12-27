@@ -8,7 +8,6 @@ namespace Assets.Scripts.WM.UI.VR
 {
     public class TimedGazeItem : MonoBehaviour
     {
-
         public Button m_button = null;
 
         private bool m_isGazing = false;
@@ -56,6 +55,11 @@ namespace Assets.Scripts.WM.UI.VR
         //Handle the Over event
         private void OnOver()
         {
+            if (!m_button.IsInteractable())
+            {
+                return;
+            }
+
             m_isGazing = true;
         }
 

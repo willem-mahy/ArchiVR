@@ -48,7 +48,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // This is the list of supported XR devices that are supported by the current systems.
         // Names in this list are all lower-case.
         // Shared by all application states.
-        List<string> s_availableDeviceSpritePathList = new List<string>();
+        private List<string> s_availableDeviceSpritePathList = new List<string>();
         
         // List of paths to the sprites to represent each available XR device.
         // Shared by all application states.
@@ -105,9 +105,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             "\nMovement" +
             "\n     Arrows: Move F/B/L/R" +
             "\n     Space: Jump" +
-            "\n     U,D: Move Up/Down" +
+            "\n     PgUp,PgDn: Move Up/Down" +
             "\n     Space: Jump" +
-            "\n     Hold Ctrl: Fast Move Mode" +
+            "\n     Hold Shift: Fast Move Mode" +
+            "\n     F11,F12: Previous/Next POI" +
             "\nScene" +
             "\n     C: Toggle construction lights" +
             "\n     L: Show layer menu" +
@@ -116,7 +117,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             "\n     L: Toggle Debug window visible" +
             "\n     S: Screen Capture" +
             "\n     P: Export POI" +
-            "\n     F1-F12: Show Debug Pane";
+            "\n     F1-F10: Show Debug Pane";
 
             return textControlsInfo;
         }
@@ -325,6 +326,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }
 
             return -1;
+        }
+
+        public List<string> GetAvailableXRDeviceNameList()
+        {
+            return s_availableDeviceNameList;
         }
 
         public void ActivateNextXRDevice()

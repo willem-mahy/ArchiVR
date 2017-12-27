@@ -74,10 +74,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 GetComponent<POISelection>().ActivateNextPOI();
             }
 
-            // If user presses 'x', previous poi
-            if (Input.GetKeyDown("x"))
+            // If user presses 'F11', previous poi
+            if (Input.GetKeyDown("f11"))
             {
-                // TODO:GetComponent<POISelection>().ActivatePreviousPOI();
+                GetComponent<POISelection>().ActivatePrevPOI();
             }
 
             if (Input.GetKeyDown("joystick button 6")) // R1

@@ -49,7 +49,7 @@ namespace Assets.Scripts.WM
             ActivatePrevPOI();
         }
 
-        void ActivatePrevPOI()
+        public void ActivatePrevPOI()
         {
             Debug.Log("ActivatePrevPOI()");
 
