@@ -8,9 +8,7 @@ namespace Assets.Scripts.WM
     // TODO: Rename class LayerButton into LayerOption
     public class LayerButton : MonoBehaviour
     {
-        public string m_layerName = null;
-
-        public List<GameObject> m_layerGameObjectList = null;
+        private Layer m_layer = null;
 
         // Use this for initialization
         void Start()
@@ -39,43 +37,81 @@ namespace Assets.Scripts.WM
         void Update()
         {
             string activeStateText = "?";
+            string layerName = "?";
 
-            if (m_layerGameObjectList != null)
+            if (null != m_layer)
             {
-                if (m_layerGameObjectList.Count > 0)
-                {
-                    var active = m_layerGameObjectList[0].activeSelf;
-
-                    activeStateText = (active ? "V" : "X");
-                }
+                activeStateText = (m_layer.IsVisible() ? "V" : "X");
+                layerName = m_layer.GetName();
             }
 
             var textComponent = gameObject.GetComponentInChildren<Text>();
 
             if (null != textComponent)
             {
-                textComponent.text = activeStateText + " " + m_layerName;
+                textComponent.text = activeStateText + " " + layerName;
             }
         }
 
         public void OnClick()
         {
-            if (m_layerGameObjectList == null)
+            if (null == m_layer)
             {
                 return;
             }
 
-            if (m_layerGameObjectList.Count == 0)
+            m_layer.ToggleVisible();
+        }
+
+        public void SetLayer(Layer layer)
+        {
+            m_layer = layer;
+
+            var button = transform.Find("LayerOptionButton");
+
+            if (null == button)
             {
+                Debug.LogError("button = null");
                 return;
             }
 
-            var activate = !m_layerGameObjectList[0].activeSelf;
+            var text = transform.Find("LayerOptionText");
 
-            foreach (var go in m_layerGameObjectList)
+            if (null == text)
             {
-                go.SetActive(activate);
+                Debug.LogError("text = null");
+                return;
             }
+
+            var textRectTransform = text.GetComponent<RectTransform>();
+
+            if (null != textRectTransform)
+            {
+                textRectTransform.offsetMax = textRectTransform.offsetMax;
+                textRectTransform.offsetMin = textRectTransform.offsetMin;
+            }
+
+            // Set button caption.
+            //  This implementation assumes the following:
+            //  'button' has child with text as first gameobject.
+            //  This is the default behavior for Buttons created in editor from GameObject->UI->Button            
+            var buttonComponent = button.GetComponent<Button>();
+
+            if (null == buttonComponent)
+            {
+                Debug.LogError("buttonComponent == null");
+                return;
+            }
+
+            var textComponent = text.GetComponentInChildren<Text>();
+
+            if (null == textComponent)
+            {
+                Debug.LogError("textComponent == null");
+                return;
+            }
+
+            textComponent.text = layer.GetName();
         }
     }
 }

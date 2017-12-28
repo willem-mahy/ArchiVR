@@ -37,77 +37,60 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             UIManager.GetInstance().CloseMenu();
         }
 
+        void ShowAllButton_OnClick()
+        {
+            Debug.Log("MenuLayer.ShowAllButton_OnClick()");
+
+            LayerManager.GetInstance().SetAllLayersVisible(true);
+        }
+
         private void DynamicallyAddLayerButtons()
         {
-            var m_layers = LayerManager.GetInstance().GetLayers();
+            var layers = LayerManager.GetInstance().GetLayers();
 
-            float x = 100;
-            float y = -100;
-            float yStep = -250;
+            float y = 0;
 
-            LayerButton layerButtonComponent = null;
+            // Y spacing between successive layer option UI controls.
+            float ySpacing = 20;
 
-            foreach (var layerEntry in m_layers)
+            // Get the height of a layer option UI control.
+            float yOptionHeight = m_layerOptionPrefab.GetComponent<RectTransform>().rect.height;
+
+            // Y step between successive layer option UI controls.
+            float yStep = yOptionHeight + ySpacing;
+
+            // Generate a layer option for all layers.
+            foreach (var layer in layers)
             {
-                GameObject option = DynamicallyAddButton(m_layerButtonPanel, layerEntry.Key, layerEntry.Value);
-
-                if (null == option)
-                {
-                    Debug.LogError("option == null");
-                    continue;
-                }
-
-                option.transform.localPosition = new Vector3(x, y, 0);
-
+                // Adds a layer option for the given layer to m_layerButtonPanel at local position Vector3.zero.
+                GameObject layerOption = DynamicallyAddButton(layer, y);               
+                
                 y += yStep;
-
-                //if (false)
-                //{
-                //    var button = option.transform.Find("LayerOptionButton");
-
-                //    if (null == button)
-                //    {
-                //        Debug.LogError("button == null");
-                //        continue;
-                //    }
-
-                //    layerButtonComponent = button.GetComponent<LayerButton>();
-                //}
-                //else
-                //{
-                //    var c = option.transform.GetComponentsInChildren<LayerButton>();
-
-                //    if (0 == c.Length)
-                //    {
-                //        Debug.LogError("layerButtonComponent not found");
-                //        continue;
-                //    }
-
-                //    layerButtonComponent = c[0];
-
-                //    if (null == layerButtonComponent)
-                //    {
-                //        Debug.LogError("button == null");
-                //        continue;
-                //    }
-                //}
-
-                if (null != layerButtonComponent)
-                {
-                    layerButtonComponent.m_layerName = layerEntry.Key;
-                    layerButtonComponent.m_layerGameObjectList = layerEntry.Value;                
-
-                }
             }
         }
 
         private GameObject DynamicallyAddButton(
-            GameObject buttonParent,
-            string layerName,
-            List<GameObject> gameObjectList)
+            Layer layer,
+            float yOffset)
         {
+            //var text = m_layerOptionPrefab.transform.Find("LayerOptionText");
+
+            //if (null == text)
+            //{
+            //    Debug.LogError("text = null");
+            //    return null; ;
+            //}
+
+            //var textRectTransform = text.GetComponent<RectTransform>();
+
+            //if (null != textRectTransform)
+            //{
+            //    textRectTransform.offsetMax = Vector2.zero;
+            //    textRectTransform.offsetMin = Vector2.zero;
+            //}
+
             var option = (GameObject)Instantiate(m_layerOptionPrefab);
-                        
+            
             if (null == option)
             {
                 Debug.LogError("option = null");
@@ -115,60 +98,36 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             }
 
             option.SetActive(true);
-            option.name = "LayerOption_" + layerName;
+            option.name = "LayerOption_" + layer.GetName();
 
-            var button = option.transform.Find("LayerOptionButton");
+            // Set the rect transform top offset for the layer option UI control.
+            var rectTransform = option.GetComponent<RectTransform>();
 
-            if (null == button)
+            if (null != rectTransform)
             {
-                Debug.LogError("button = null");
-                return null;
+                // rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x, rectTransform.offsetMax.y - yOffset);
+                var pos = rectTransform.localPosition;
+                pos.y -= yOffset;
+                rectTransform.localPosition = pos;
             }
 
-            var text = option.transform.Find("LayerOptionText");
+            // Add layer option UI Control to its parent UI control.
+            option.transform.SetParent(m_layerButtonPanel.transform, false);
 
-            if (null == text)
+            // Initialize layer option UI control local scale, rotation and offset.
+            //option.transform.localScale = Vector3.one;
+            //option.transform.localRotation = Quaternion.identity;            
+
+            var layerOptionComponent = option.GetComponent<LayerButton>();
+
+            if (null == layerOptionComponent)
             {
-                Debug.LogError("text = null");
+                Debug.LogError("layerOptionComponent == null");
                 return null;
-            }
-
-            // Set button parent
-            option.transform.SetParent(buttonParent.transform);
-            option.transform.localScale = new Vector3(1, 1, 1);
-
-            // Set button caption.
-            //  This implementation assumes the following:
-            //  'button' has child with text as first gameobject.
-            //  This is the default behavior for Buttons created in editor from GameObject->UI->Button            
-            var buttonComponent = button.GetComponent<Button>();
-
-            if (null == buttonComponent)
-            {
-                Debug.LogError("buttonComponent == null");
-                return null;
-            }
-
-            var textComponent = text.GetComponentInChildren<Text>();
-
-            if (null == textComponent)
-            {
-                Debug.LogError("textComponent == null");
-                return null;
-            }
-
-            textComponent.text = layerName;
-
-            var layerButtonComponent = option.GetComponent<LayerButton>();
-
-            if (null == layerButtonComponent)
-            {
-                Debug.LogError("layerButtonComponent == null");
             }
             else
             {
-                layerButtonComponent.m_layerName = layerName;
-                layerButtonComponent.m_layerGameObjectList = gameObjectList;
+                layerOptionComponent.SetLayer(layer);
             }
 
             return option;
