@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.WM
 {
+    // TODO: Rename class LayerButton into LayerOption
     public class LayerButton : MonoBehaviour
     {
         public string m_layerName = null;
@@ -14,8 +15,16 @@ namespace Assets.Scripts.WM
         // Use this for initialization
         void Start()
         {
-            var buttonComponent = gameObject.GetComponent<Button>();
+            var button = gameObject.transform.Find("LayerOptionButton");
 
+            if (null == button)
+            {
+                Debug.LogError("button = null");
+                return;
+            }
+
+            var buttonComponent = button.GetComponent<Button>();
+            
             if (null == buttonComponent)
             {
                 Debug.LogError("buttonComponent == null");

@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts.WM.UI;
+using System.Collections.Generic;
 
 namespace Assets.Scripts.WM.ArchiVR.Menu
 {
@@ -9,7 +10,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
     {
         public GameObject m_layerButtonPanel = null;
 
-        public GameObject m_layerButtonPrefab = null;
+        public GameObject m_layerOptionPrefab = null;
 
         //! The button to close this menu.
         //public Button m_exitButton = null;
@@ -42,40 +43,81 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 
             float x = 100;
             float y = -100;
-            float yStep = -150;
+            float yStep = -250;
+
+            LayerButton layerButtonComponent = null;
 
             foreach (var layerEntry in m_layers)
             {
-                GameObject button = DynamicallyAddButton(m_layerButtonPanel, layerEntry.Key);
+                GameObject option = DynamicallyAddButton(m_layerButtonPanel, layerEntry.Key, layerEntry.Value);
 
-                if (null == button)
+                if (null == option)
                 {
-                    Debug.LogError("button == null");
+                    Debug.LogError("option == null");
                     continue;
                 }
 
-                button.transform.localPosition = new Vector3(x, y, 0);
+                option.transform.localPosition = new Vector3(x, y, 0);
 
                 y += yStep;
 
-                var layerButtonComponent = button.GetComponent<LayerButton>();
+                //if (false)
+                //{
+                //    var button = option.transform.Find("LayerOptionButton");
 
-                if (null == layerButtonComponent)
+                //    if (null == button)
+                //    {
+                //        Debug.LogError("button == null");
+                //        continue;
+                //    }
+
+                //    layerButtonComponent = button.GetComponent<LayerButton>();
+                //}
+                //else
+                //{
+                //    var c = option.transform.GetComponentsInChildren<LayerButton>();
+
+                //    if (0 == c.Length)
+                //    {
+                //        Debug.LogError("layerButtonComponent not found");
+                //        continue;
+                //    }
+
+                //    layerButtonComponent = c[0];
+
+                //    if (null == layerButtonComponent)
+                //    {
+                //        Debug.LogError("button == null");
+                //        continue;
+                //    }
+                //}
+
+                if (null != layerButtonComponent)
                 {
-                    Debug.LogError("button == null");
-                    continue;
-                }
+                    layerButtonComponent.m_layerName = layerEntry.Key;
+                    layerButtonComponent.m_layerGameObjectList = layerEntry.Value;                
 
-                layerButtonComponent.m_layerName = layerEntry.Key;
-                layerButtonComponent.m_layerGameObjectList = layerEntry.Value;                
+                }
             }
         }
 
         private GameObject DynamicallyAddButton(
             GameObject buttonParent,
-            string layerName)
+            string layerName,
+            List<GameObject> gameObjectList)
         {
-            var button = (GameObject)Instantiate(m_layerButtonPrefab);
+            var option = (GameObject)Instantiate(m_layerOptionPrefab);
+                        
+            if (null == option)
+            {
+                Debug.LogError("option = null");
+                return null;
+            }
+
+            option.SetActive(true);
+            option.name = "LayerOption_" + layerName;
+
+            var button = option.transform.Find("LayerOptionButton");
 
             if (null == button)
             {
@@ -83,11 +125,17 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
                 return null;
             }
 
-            button.name = "LayerButton_" + layerName;
+            var text = option.transform.Find("LayerOptionText");
+
+            if (null == text)
+            {
+                Debug.LogError("text = null");
+                return null;
+            }
 
             // Set button parent
-            button.transform.SetParent(buttonParent.transform);
-            button.transform.localScale = new Vector3(1, 1, 1);
+            option.transform.SetParent(buttonParent.transform);
+            option.transform.localScale = new Vector3(1, 1, 1);
 
             // Set button caption.
             //  This implementation assumes the following:
@@ -101,7 +149,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
                 return null;
             }
 
-            var textComponent = buttonComponent.GetComponentInChildren<Text>();
+            var textComponent = text.GetComponentInChildren<Text>();
 
             if (null == textComponent)
             {
@@ -111,7 +159,19 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 
             textComponent.text = layerName;
 
-            return button;
+            var layerButtonComponent = option.GetComponent<LayerButton>();
+
+            if (null == layerButtonComponent)
+            {
+                Debug.LogError("layerButtonComponent == null");
+            }
+            else
+            {
+                layerButtonComponent.m_layerName = layerName;
+                layerButtonComponent.m_layerGameObjectList = gameObjectList;
+            }
+
+            return option;
         }
     }
 }
