@@ -22,7 +22,17 @@ namespace Assets.Scripts.WM
     // 5th Axis = Right Analog Y Axis Joystick Axis
     // 6th Axis = Left/Right on D-Pad Joystick Axis
     // 7th Axis = Up/Down on D-Pad Joystick Axis
-
+    class GamepadXBox
+    {
+        static public string A = "joystick button 0";
+        static public string B = "joystick button 1";
+        static public string X = "joystick button 2";
+        static public string Y = "joystick button 3";
+        static public string L1 = "joystick button 4";
+        static public string R1 = "joystick button 5";
+        static public string Select = "joystick button 6";
+        static public string Start = "joystick button 7";
+    }
 
     class PhysicalGamepad : MonoBehaviour
     {

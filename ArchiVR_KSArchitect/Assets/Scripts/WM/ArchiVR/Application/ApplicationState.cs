@@ -204,6 +204,17 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 #endif
         }
 
+        static bool ActiveXRDevice_SupportsUIMode(UIMode newMode)
+        {
+            if ((UIMode.ScreenSpace == newMode) && XRDevice.isPresent)
+            {
+                // Head-mounted dedicated devices do not support Screen-space UI.
+                return false;
+            }
+
+            return true;
+        }
+
         // Update is called once per frame
         protected virtual void Update()
         {
@@ -245,16 +256,40 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
-            // 'v' key: Toggle View Mode.
-            if (Input.GetKeyUp("v"))
+            if (Input.GetKeyDown("x"))
             {
-                ActivateNextXRDevice();
+                var prev = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+
+                if (prev)
+                {
+                    ActivatePreviousXRDevice();
+                }
+                else
+                {
+                    ActivateNextXRDevice();
+                }
             }
 
             // 'q' key: Toggle Quality Level.
             if (Input.GetKeyUp("q"))
             {
                 ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel((QualitySettings.GetQualityLevel() + 1) % QualitySettings.names.Length);
+            }
+
+            // 'u' key: Toggle world/screen space UI.
+            if (Input.GetKeyUp("u"))
+            {
+                var s = ApplicationSettings.GetInstance().m_data.m_stateSettings;
+
+                var newMode = (UIMode.ScreenSpace == s.m_uiMode)
+                                ? UIMode.WorldSpace
+                                : UIMode.ScreenSpace;
+
+                if (ActiveXRDevice_SupportsUIMode(newMode))
+                {
+                    s.m_uiMode = newMode;
+                    UIManager.GetInstance().SetUIMode(newMode);
+                }
             }
 
             UpdateVirtualGamepadActiveState();
@@ -315,11 +350,18 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public int GetActiveXRDeviceIndex()
         {
+            var activeDeviceName = XRSettings.loadedDeviceName;
+
+            if ("" == activeDeviceName)
+            {
+                activeDeviceName = "none";
+            }
+
             for (int i = 0; i < s_availableDeviceNameList.Count; ++i)
             {
-                var deviceName = s_availableDeviceNameList[i];
+                var availableDeviceName = s_availableDeviceNameList[i];                
 
-                if (deviceName == XRSettings.loadedDeviceName)
+                if (availableDeviceName == activeDeviceName)
                 {
                     return i;
                 }
@@ -331,6 +373,22 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         public List<string> GetAvailableXRDeviceNameList()
         {
             return s_availableDeviceNameList;
+        }
+
+        public void ActivatePreviousXRDevice()
+        {
+            if (s_availableDeviceNameList.Count == 1)
+            {
+                return;
+            }
+
+            int current = GetActiveXRDeviceIndex();
+            int next = (current - 1);
+
+            if (next < 0)
+                next = s_availableDeviceNameList.Count - 1;
+
+            SetActiveXRDevice(s_availableDeviceNameList[next]);
         }
 
         public void ActivateNextXRDevice()

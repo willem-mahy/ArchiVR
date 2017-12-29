@@ -35,6 +35,26 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.Log("CameraNavigationModeVuforiaAR.Awake()");
         }
 
+        static public void enableAll(GameObject root)
+        {
+            for (int i = 0; i < root.transform.childCount; ++i)
+            {
+                var go = root.transform.GetChild(i).gameObject;
+
+                var meshComponent = go.GetComponent<MeshRenderer>();
+
+                if (meshComponent)
+                    meshComponent.enabled = true;
+
+                var colliderComponent = go.GetComponent<Collider>();
+
+                if (colliderComponent)
+                    colliderComponent.enabled = true;
+
+                enableAll(go);
+            }
+        }
+
         private void SetVuforiaActive(bool state)
         {
             if (state)
@@ -50,9 +70,11 @@ namespace Assets.Scripts.WM.CameraNavigation
                 m_vuforia.SetActive(state);
             }
 
-            if (VuforiaBehaviour.Instance)
+            var vuforia = VuforiaBehaviour.Instance;
+
+            if (vuforia)
             {
-                VuforiaBehaviour.Instance.enabled = state;
+                vuforia.enabled = state;
             }
             else
             {
@@ -139,6 +161,9 @@ namespace Assets.Scripts.WM.CameraNavigation
             }           
 
             SetVuforiaActive(false);
+
+            // Vuforia disables mesh renderers and colliders so re-enable.
+            enableAll(m_world);
         }
 
         // Use this for initialization
@@ -158,6 +183,11 @@ namespace Assets.Scripts.WM.CameraNavigation
         }
 
         public override bool SupportsDPadInput()
+        {
+            return false;
+        }
+
+        public override bool SupportsNavigationViaPOI()
         {
             return false;
         }

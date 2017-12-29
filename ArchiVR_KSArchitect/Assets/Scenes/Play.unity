@@ -2508,6 +2508,54 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!1 &225572886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 225572887}
+  - component: {fileID: 225572888}
+  m_Layer: 5
+  m_Name: WidgetMenuPOI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &225572887
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 225572886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 671465070}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &225572888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 225572886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002496991dbf74148ae2d008a8155a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_visible: 1
+  m_uiControlScreenSpace: {fileID: 1297480758}
+  m_uiControlWorldSpace: {fileID: 1053289139}
 --- !u!1 &227980436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6803,6 +6851,7 @@ RectTransform:
   - {fileID: 948707159}
   - {fileID: 1637175767}
   - {fileID: 271934470}
+  - {fileID: 225572887}
   m_Father: {fileID: 866029273}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12554,6 +12603,7 @@ MonoBehaviour:
     m_stateSettings:
       m_uiMode: 0
       m_activeProjectName: 
+      m_enableVirtualGamepad: 1
     m_graphicSettings:
       m_enableDynamicGrass: 0
       m_showFPS: 0
@@ -13488,6 +13538,8 @@ MonoBehaviour:
   m_buttonConstructionLightingMode: {fileID: 564143979}
   m_buttonXRDevice: {fileID: 1945458126}
   m_applicationState: {fileID: 432992903}
+  m_widgetVirtualGamepad: {fileID: 271934471}
+  m_widgetMenuPOI: {fileID: 225572888}
 --- !u!1 &1350485939
 GameObject:
   m_ObjectHideFlags: 0
@@ -21293,6 +21345,8 @@ MonoBehaviour:
   m_buttonConstructionLightingMode: {fileID: 1375719992}
   m_buttonXRDevice: {fileID: 8254679}
   m_applicationState: {fileID: 432992903}
+  m_widgetVirtualGamepad: {fileID: 271934471}
+  m_widgetMenuPOI: {fileID: 225572888}
 --- !u!1 &2140865563
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,12 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         abstract public void PositionCamera(Vector3 translation, Quaternion rotation);
 
+        // Obsolete: to remove.
+        // we've come to the conclusion that:
+        // ALL camera navigation modes have use for SOME form of Gamepad Input.
         abstract public bool SupportsDPadInput();
+
+        abstract public bool SupportsNavigationViaPOI();
 
         abstract public void OnEnable();
 

@@ -34,5 +34,10 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             return false;
         }
+
+        public override bool SupportsNavigationViaPOI()
+        {
+            return true;
+        }
     }
 }

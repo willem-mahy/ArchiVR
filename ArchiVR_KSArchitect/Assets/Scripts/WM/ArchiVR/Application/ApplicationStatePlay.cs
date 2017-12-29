@@ -48,7 +48,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // Update is called once per frame
         override protected void Update()
         {
-            base.Update();
+            base.Update();            
 
             // If user presses 'p', Write the current camera location as POI.
             if (Input.GetKeyDown("p"))
@@ -84,13 +84,25 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 GetComponent<POIManager>().ActivateNextPOI();
             }
-            if (Input.GetKeyDown("joystick button 7")) // L1
+
+            if (Input.GetKeyDown(GamepadXBox.L1))
+            {
+                GetComponent<POIManager>().ActivateNextPOI();
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.R1))
+            {
+                GetComponent<POIManager>().ActivateNextPOI();
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.Start))
             {
                 OpenHomeMenu();
             }
-            if (Input.GetKeyDown("joystick button 8")) // R1
+
+            if (Input.GetKeyDown(GamepadXBox.Select))
             {
-                GetComponent<POIManager>().ActivateNextPOI();
+                UIManager.GetInstance().OpenMenu("MenuSettings");
             }
         }
 
