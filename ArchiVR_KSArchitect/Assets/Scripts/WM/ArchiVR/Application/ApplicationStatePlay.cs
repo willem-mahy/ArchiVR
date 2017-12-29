@@ -42,7 +42,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
 
-            GetComponent<POISelection>().ActivateNextPOI();
+            GetComponent<POIManager>().ActivateNextPOI();
         }
 
         // Update is called once per frame
@@ -71,18 +71,18 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // If user presses 'F12', next poi.
             if (Input.GetKeyDown("f12"))
             {
-                GetComponent<POISelection>().ActivateNextPOI();
+                GetComponent<POIManager>().ActivateNextPOI();
             }
 
             // If user presses 'F11', previous poi
             if (Input.GetKeyDown("f11"))
             {
-                GetComponent<POISelection>().ActivatePrevPOI();
+                GetComponent<POIManager>().ActivatePrevPOI();
             }
 
             if (Input.GetKeyDown("joystick button 6")) // R1
             {
-                GetComponent<POISelection>().ActivateNextPOI();
+                GetComponent<POIManager>().ActivateNextPOI();
             }
             if (Input.GetKeyDown("joystick button 7")) // L1
             {
@@ -90,7 +90,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }
             if (Input.GetKeyDown("joystick button 8")) // R1
             {
-                GetComponent<POISelection>().ActivateNextPOI();
+                GetComponent<POIManager>().ActivateNextPOI();
             }
         }
 
@@ -124,7 +124,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         public void WritePOI()
         {
             var camera = Camera.main;
-            var name = GetComponent<POISelection>().GetActivePOI().name;
+            var name = GetComponent<POIManager>().GetActivePOI().name;
             var position = camera.transform.position.ToString();
             var rotation = camera.transform.rotation.eulerAngles.ToString();
 

@@ -1,52 +1,41 @@
-﻿
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.WM
 {
-    public class POISelection : MonoBehaviour
+    public class POIManager : MonoBehaviour
     {
+        static private POIManager s_instance = null;
+
+        static public POIManager GetInstance()
+        {
+            return s_instance;
+        }
+
         public CameraNavigation.CameraNavigation m_cameraNavigation = null;
-
-        public List<Button> m_PrevButtonArray = new List<Button>();
-        public List<Button> m_NextButtonArray = new List<Button>();
-        public List<Text> m_POINameTextArray = new List<Text>();
-
+                
         public int m_activePOIIndex = -1;
 
-        public GameObject m_poi = null;
-
-        void Start()
+        //! The POI list GameObject.
+        //  The POI list GameObject defines the list of currently available POI's.
+        //  POI's are inactive Camera objects and have to be direct childs of this root GameObject.containing the  
+        private GameObject m_poi = null;
+        
+        void Awake()
         {
-            foreach (var button in m_PrevButtonArray)
-            {
-                var buttonComponent = button.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(PrevButton_OnClick);
-            }
-
-            foreach (var button in m_NextButtonArray)
-            {
-                var buttonComponent = button.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(NextButton_OnClick);
-            }
+            s_instance = this;
 
             if (m_poi == null)
             {
                 m_poi = GameObject.Find("POI.Default");
             }
+        }
 
+        void Start()
+        {
             // Activate first POI
             m_activePOIIndex = 0;
 
             SyncWithActivePOI();
-        }
-
-        void PrevButton_OnClick()
-        {
-            Debug.Log("PrevButton_OnClick()");
-
-            ActivatePrevPOI();
         }
 
         public void ActivatePrevPOI()
@@ -71,14 +60,7 @@ namespace Assets.Scripts.WM
 
             SyncWithActivePOI();
         }
-
-        void NextButton_OnClick()
-        {
-            Debug.Log("NextButton_OnClick()");
-
-            ActivateNextPOI();
-        }
-
+        
         public void ActivateNextPOI()
         {
             Debug.Log("ActivateNextPOI()");
@@ -125,14 +107,6 @@ namespace Assets.Scripts.WM
             Debug.Log("SyncWithActivePOI()");
 
             var activePOI = GetActivePOI();
-
-            // Update active POI name in UI.
-            var activePOIName = activePOI ? activePOI.name : "No POI selected";
-
-            foreach (var text in m_POINameTextArray)
-            {
-                text.text = activePOIName;
-            }
 
             // Update (via camera navigation mode) camera location to newly activated POI location.
             var nm = m_cameraNavigation.GetActiveNavigationMode();

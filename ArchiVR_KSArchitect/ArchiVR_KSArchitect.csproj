@@ -308,7 +308,7 @@
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\LayerButton.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\LayerManager.cs" />
-    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\POISelection.cs" />
+    <Compile Include="Assets\Scripts\WM\ArchiVR\Application\POIManager.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ProjectManager.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\SceneSelection.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\SceneSelectionBase.cs" />
@@ -375,7 +375,6 @@
     <Compile Include="Assets\Scripts\WM\Util\Math.cs" />
     <Compile Include="Assets\Scripts\WM\Util\StringUtil.cs" />
     <Compile Include="Assets\Scripts\WM\VirtualGamepad.cs" />
-    <Compile Include="Assets\TextActiveProjectName.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
@@ -435,6 +434,8 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
+    <Compile Include="Assets\WM\UI\Script\POIMenu.cs" />
+    <Compile Include="Assets\WM\UI\Script\TextActiveProjectName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
