@@ -188,9 +188,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 // 2) Figure out initial rotation mode
 
                 // If gyroscope is present, use it for rotational navigation.
-                string initialRotationMode = (SystemInfo.supportsGyroscope ? "RotationControlMouse" : "RotationControlGyro");
+                //string initialRotationMode = (SystemInfo.supportsGyroscope ? "RotationControlMouse" : "RotationControlGyro");
                 
-                cameraNavigationComponent.SetActiveRotationControlModeByName(initialRotationMode);
+                //cameraNavigationComponent.SetActiveRotationControlModeByName(initialRotationMode);
 
                 // 2) Figure out initial rotation mode
                 

@@ -82,6 +82,7 @@ namespace Assets.Scripts.WM
 
         static private LayerManager s_instance = null;
 
+        //! Get a reference to the singleton instance.
         static public LayerManager GetInstance()
         {
             return s_instance;

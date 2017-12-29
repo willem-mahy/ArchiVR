@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.WM.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,17 +9,26 @@ namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigationModeVuforiaAR : CameraNavigationModeBase
     {
+        //
         public string m_worldName = "World";
+
+        //
         public float m_rescaleFactor = 0.01f;
+
+        // The offset distance along the Y axis, that the world model is attached to the marker by.
         public float m_offsetFromAnchor = 5.0f;
 
+        //
         public GameObject m_vuforia = null;
+
+        //
         public GameObject m_ARCamera = null;
+
+        //
         public GameObject m_imageTarget = null;
 
+        //! The parent transform for the World GO, when not in Vuforia AR state.
         private Transform m_oldWorldParentTransform = null;
-
-        private Camera m_oldMainCamera = null;
 
         public void Awake()
         {
@@ -75,6 +85,7 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             if (null != m_world)
             {
+                // Store the parent transform for the World GO, when not in Vuforia AR state.
                 m_oldWorldParentTransform = m_world.transform.parent;
 
                 UpdateOffsetFromAnchor();
@@ -84,6 +95,10 @@ namespace Assets.Scripts.WM.CameraNavigation
             }
 
             SetVuforiaActive(true);
+
+            // Until world-scale UI is supported properly in AR mode,
+            // we forcibly and automatically switch UI mode to Screen space.
+            UIManager.GetInstance().SetUIMode(UIMode.ScreenSpace);
         }
 
         public void UpdateOffsetFromAnchor()
@@ -109,17 +124,19 @@ namespace Assets.Scripts.WM.CameraNavigation
             // Enable Recticle
             if (null != m_canvasReticle)
                 m_canvasReticle.SetActive(true);
-
-            // Relocate world to origin as root GO.
+                        
             if (null != m_world)
             {
-                m_world.transform.position = Vector3.zero;
+                // Restore the parent transform for the World GO,
+                // when not in Vuforia AR state.
+                m_world.transform.SetParent(m_oldWorldParentTransform, false);
+                m_oldWorldParentTransform = null;
 
-                m_world.transform.parent = m_oldWorldParentTransform;
-                m_world.transform.localScale = 1/ m_rescaleFactor * m_world.transform.localScale;
-            }
-
-            m_oldWorldParentTransform = null;
+                // Then restore the World GO local position, rotation,and scale to their defaults.
+                m_world.transform.localScale = Vector3.one;
+                m_world.transform.localPosition = Vector3.zero;
+                m_world.transform.localRotation = Quaternion.identity;
+            }           
 
             SetVuforiaActive(false);
         }

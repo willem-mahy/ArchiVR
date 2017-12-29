@@ -1414,6 +1414,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1499144284401214, guid: 9347a02533c91fe43b76842fee386cf6, type: 2}
+      propertyPath: m_Name
+      value: ButtonNavigationMode
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114605418307082590, guid: 9347a02533c91fe43b76842fee386cf6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9347a02533c91fe43b76842fee386cf6, type: 2}
@@ -2282,9 +2286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6fcf6f500592e4584a9d0eefd221c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_camera: {fileID: 1813516681}
-  m_touchControls:
-  - {fileID: 738213425}
 --- !u!1 &203733725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5013,6 +5014,7 @@ GameObject:
   - component: {fileID: 517127327}
   - component: {fileID: 517127326}
   - component: {fileID: 517127325}
+  - component: {fileID: 517127334}
   m_Layer: 12
   m_Name: ButtonNavigationMode_WS
   m_TagString: Untagged
@@ -5194,6 +5196,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517127323}
+--- !u!114 &517127334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517127323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6fcf6f500592e4584a9d0eefd221c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &522200121
 GameObject:
   m_ObjectHideFlags: 0
@@ -14248,6 +14261,7 @@ GameObject:
   - component: {fileID: 1388488722}
   - component: {fileID: 1388488721}
   - component: {fileID: 1388488720}
+  - component: {fileID: 1388488723}
   m_Layer: 5
   m_Name: ButtonCameraNavigationMode
   m_TagString: Untagged
@@ -14359,6 +14373,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388488718}
+--- !u!114 &1388488723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388488718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6fcf6f500592e4584a9d0eefd221c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1389661736 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114813652410753618, guid: 62d6e1c4172c9374fa4199dc56e53247,

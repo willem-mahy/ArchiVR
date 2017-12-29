@@ -21,11 +21,6 @@ public class Play_MenuMain : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        // Update 'Camera Navigation Mode' button.
-        {
-            var sprite = Resources.Load<Sprite>(m_cameraNavigation.GetActiveNavigationMode().m_spritePath);
-            m_buttonCameraNavigationMode.transform.Find("Image").GetComponent<Image>().sprite = sprite;
-        }
 
         // Update 'Construction Lighting Mode' button.
         {

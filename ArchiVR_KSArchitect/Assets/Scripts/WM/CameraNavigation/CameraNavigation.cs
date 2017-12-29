@@ -9,6 +9,14 @@ namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigation : MonoBehaviour
     {
+        static private CameraNavigation s_instance = null;
+
+        //! Get a reference to the singleton instance.
+        static public CameraNavigation GetInstance()
+        {
+            return s_instance;
+        }
+
         // Name of the initial active navigation mode.
         public string m_initialActiveNavigationMode = null;
 
@@ -18,23 +26,25 @@ namespace Assets.Scripts.WM.CameraNavigation
         // List of supported navigation modes.
         public List<CameraNavigationModeBase> m_navigationModeList = new List<CameraNavigationModeBase>();
 
-        // Rotation mode
-        public string m_initialActiveRotationMode = null;
+        //// Rotation mode
+        //public string m_initialActiveRotationMode = null;
 
-        private int m_activeRotationControlIndex = -1;
+        //private int m_activeRotationControlIndex = -1;
         
-        public List<RotationControlBase> m_rotationControlModeList = new List<RotationControlBase>();
+        //public List<RotationControlBase> m_rotationControlModeList = new List<RotationControlBase>();
 
-        // Rotation mode
-        public string m_initialActiveTranslationMode = null;
+        //// Rotation mode
+        //public string m_initialActiveTranslationMode = null;
 
-        private int m_activeTranslationControlIndex = -1;
+        //private int m_activeTranslationControlIndex = -1;
 
-        public List<TranslationControlBase> m_translationControlModeList = new List<TranslationControlBase>();
+        //public List<TranslationControlBase> m_translationControlModeList = new List<TranslationControlBase>();
 
         // Use this for initialization
         void Awake()
         {
+            s_instance = this;
+
             // Remove 'Vuforia AR' navigation mode on non-supported platforms.
             if (Application.platform == RuntimePlatform.WebGLPlayer || Application.platform == RuntimePlatform.WindowsPlayer)
             {
@@ -59,109 +69,142 @@ namespace Assets.Scripts.WM.CameraNavigation
                 mode.enabled = false;
             }
 
-            foreach (var mode in m_translationControlModeList)
-            {
-                mode.enabled = false;
-            }
+            //foreach (var mode in m_translationControlModeList)
+            //{
+            //    mode.enabled = false;
+            //}
 
-            foreach (var mode in m_rotationControlModeList)
-            {
-                mode.enabled = false;
-            }
+            //foreach (var mode in m_rotationControlModeList)
+            //{
+            //    mode.enabled = false;
+            //}
 
             // Enable navigation mode.
-            if (null != m_initialActiveNavigationMode)
+            var navigationModeName = m_initialActiveNavigationMode;
+
+            if ((null == m_initialActiveNavigationMode) || ("" == m_initialActiveNavigationMode))
+            {
+                navigationModeName = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_navigationMode;
+            }
+
+            if ((null == m_initialActiveNavigationMode) || ("" == m_initialActiveNavigationMode))
+            {
+                SetActiveNavigationMode(0);
+            }
+            else
             {
                 SetActiveNavigationModeByName(m_initialActiveNavigationMode);
             }
-            else
-            {
-                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_navigationMode;
-
-                if (null != m)
-                {
-                    SetActiveNavigationModeByName(m);
-                }
-                else
-                {
-                    SetActiveNavigationMode(0);
-                }
-            }
             
             // Enable translation mode
-            if (null != m_initialActiveTranslationMode)
-            {
-                SetActiveTranslationControlModeByName(m_initialActiveTranslationMode);
-            }
-            else
-            {
-                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_translationInputMode;
+            //if (null != m_initialActiveTranslationMode)
+            //{
+            //    SetActiveTranslationControlModeByName(m_initialActiveTranslationMode);
+            //}
+            //else
+            //{
+            //    var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_translationInputMode;
 
-                if (null != m)
-                {
-                    SetActiveTranslationControlModeByName(m);
-                }
-                else
-                {
-                    SetActiveTranslationControlMode(0);
-                }
-            }
+            //    if (null != m)
+            //    {
+            //        SetActiveTranslationControlModeByName(m);
+            //    }
+            //    else
+            //    {
+            //        SetActiveTranslationControlMode(0);
+            //    }
+            //}
 
             // Enable rotation mode            
-            if (null != m_initialActiveRotationMode)
-            {
-                SetActiveRotationControlModeByName(m_initialActiveRotationMode);
-            }
-            else
-            {
-                var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_rotationInputMode;
+            //if (null != m_initialActiveRotationMode)
+            //{
+            //    SetActiveRotationControlModeByName(m_initialActiveRotationMode);
+            //}
+            //else
+            //{
+            //    var m = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_rotationInputMode;
                 
-                if (null != m)
-                {
-                    SetActiveRotationControlModeByName(m);
-                }
-                else
-                {
-                    SetActiveRotationControlMode(0);
-                }
-            }
+            //    if (null != m)
+            //    {
+            //        SetActiveRotationControlModeByName(m);
+            //    }
+            //    else
+            //    {
+            //        SetActiveRotationControlMode(0);
+            //    }
+            //}
         }
 
-        private void SetActiveTranslationControlMode(int translationModeIndex)
-        {
-            Debug.Log("SetActiveTranslationControlMode(" + translationModeIndex + ")");
+        //private void SetActiveTranslationControlMode(int translationModeIndex)
+        //{
+        //    Debug.Log("SetActiveTranslationControlMode(" + translationModeIndex + ")");
 
-            if (m_activeTranslationControlIndex >= 0)
-            {
-                m_translationControlModeList[m_activeTranslationControlIndex].enabled = false;
-            }
+        //    if (m_activeTranslationControlIndex >= 0)
+        //    {
+        //        m_translationControlModeList[m_activeTranslationControlIndex].enabled = false;
+        //    }
 
-            m_activeTranslationControlIndex = translationModeIndex;
+        //    m_activeTranslationControlIndex = translationModeIndex;
 
-            if (m_activeTranslationControlIndex >= 0)
-            {
-                m_translationControlModeList[m_activeTranslationControlIndex].enabled = true;
-            }
-        }
+        //    if (m_activeTranslationControlIndex >= 0)
+        //    {
+        //        m_translationControlModeList[m_activeTranslationControlIndex].enabled = true;
+        //    }
+        //}
 
-        public void SetActiveTranslationControlModeByName(string name)
-        {
-            Debug.Log("SetActiveTranslationControlModeByName(" + name + ")");
+        //public void SetActiveTranslationControlModeByName(string name)
+        //{
+        //    Debug.Log("SetActiveTranslationControlModeByName(" + name + ")");
 
-            int modeIndex = 0;
-            foreach (var mode in m_translationControlModeList)
-            {
-                if (mode.name == name)
-                {
-                    SetActiveNavigationMode(modeIndex);
-                    return;
-                }
-                ++modeIndex;
-            }
+        //    int modeIndex = 0;
+        //    foreach (var mode in m_translationControlModeList)
+        //    {
+        //        if (mode.name == name)
+        //        {
+        //            SetActiveTranslationControlMode(modeIndex);
+        //            return;
+        //        }
+        //        ++modeIndex;
+        //    }
 
-            Debug.LogWarning("Unsupported camera translation control mode! (" + name + ")");
-        }
-        
+        //    Debug.LogWarning("Unsupported camera translation control mode! (" + name + ")");
+        //}
+
+
+        //private void SetActiveRotationControlMode(int modeIndex)
+        //{
+        //    Debug.Log("SetActiveRotationControlMode(" + modeIndex + ")");
+
+        //    if (m_activeRotationControlIndex >= 0)
+        //    {
+        //        m_rotationControlModeList[m_activeRotationControlIndex].enabled = false;
+        //    }
+
+        //    m_activeRotationControlIndex = modeIndex;
+
+        //    if (m_activeRotationControlIndex >= 0)
+        //    {
+        //        m_rotationControlModeList[m_activeRotationControlIndex].enabled = true;
+        //    }
+        //}
+
+        //public void SetActiveRotationControlModeByName(string name)
+        //{
+        //    Debug.Log("SetActiveRotationControlModeByName(" + name + ")");
+        //    int modeIndex = 0;
+        //    foreach (var mode in m_rotationControlModeList)
+        //    {
+        //        if (mode.name == name)
+        //        {
+        //            SetActiveRotationControlMode(modeIndex);
+        //            return;
+        //        }
+        //        ++modeIndex;
+        //    }
+
+        //    Debug.LogWarning("Unsupported camera rotation control mode! (" + name + ")");
+        //}
+
         private void SetActiveNavigationMode(int modeIndex)
         {
             Debug.Log("SetActiveNavigationMode(" + modeIndex + ")");
@@ -204,40 +247,6 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.LogWarning("Unsupported camera navigation mode! (" + name + ")");
         }
 
-        private void SetActiveRotationControlMode(int modeIndex)
-        {
-            Debug.Log("SetActiveRotationControlMode(" + modeIndex + ")");
-
-            if (m_activeRotationControlIndex >= 0)
-            {
-                m_rotationControlModeList[m_activeRotationControlIndex].enabled = false;
-            }
-
-            m_activeRotationControlIndex = modeIndex;
-
-            if (m_activeRotationControlIndex >= 0)
-            {
-                m_rotationControlModeList[m_activeRotationControlIndex].enabled = true;
-            }
-        }
-
-        public void SetActiveRotationControlModeByName(string name)
-        {
-            Debug.Log("SetActiveRotationControlModeByName(" + name + ")");
-            int modeIndex = 0;
-            foreach (var mode in m_rotationControlModeList)
-            {
-                if (mode.name == name)
-                {
-                    SetActiveRotationControlMode(modeIndex);
-                    return;
-                }
-                ++modeIndex;
-            }
-
-            Debug.LogWarning("Unsupported camera rotation control mode! (" + name + ")");
-        }
-
         public void ActivateNextNavigationMode()
         {
             var nextMode = (m_activeNavigationModeIndex + 1) % m_navigationModeList.Count;
@@ -255,31 +264,31 @@ namespace Assets.Scripts.WM.CameraNavigation
                 SetActiveNavigationMode(nm);
             }
 
-            // 'r' key: Toggle rotation mode
-            if (Input.GetKeyUp("r"))
-            {
-                var rcm = (m_activeRotationControlIndex + 1) % m_rotationControlModeList.Count;
+            //// 'r' key: Toggle rotation mode
+            //if (Input.GetKeyUp("r"))
+            //{
+            //    var rcm = (m_activeRotationControlIndex + 1) % m_rotationControlModeList.Count;
 
-                SetActiveRotationControlMode(rcm);
-            }
+            //    SetActiveRotationControlMode(rcm);
+            //}
 
-            // 't' key: Toggle translation mode
-            if (Input.GetKeyUp("t"))
-            {
-                var tcm = (m_activeTranslationControlIndex + 1) % m_translationControlModeList.Count;
+            //// 't' key: Toggle translation mode
+            //if (Input.GetKeyUp("t"))
+            //{
+            //    var tcm = (m_activeTranslationControlIndex + 1) % m_translationControlModeList.Count;
 
-                SetActiveTranslationControlMode(tcm);
-            }
+            //    SetActiveTranslationControlMode(tcm);
+            //}
 
-            if (m_activeRotationControlIndex >= 0)
-            {
-                m_rotationControlModeList[m_activeRotationControlIndex].UpdateRotation(null);
-            }
+            //if (m_activeRotationControlIndex >= 0)
+            //{
+            //    m_rotationControlModeList[m_activeRotationControlIndex].UpdateRotation(null);
+            //}
 
-            if (m_activeTranslationControlIndex >= 0)
-            {
-                m_translationControlModeList[m_activeTranslationControlIndex].UpdateTranslation(null);
-            }
+            //if (m_activeTranslationControlIndex >= 0)
+            //{
+            //    m_translationControlModeList[m_activeTranslationControlIndex].UpdateTranslation(null);
+            //}
         }
     }
 }
