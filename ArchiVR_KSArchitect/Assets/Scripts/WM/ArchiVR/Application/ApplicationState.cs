@@ -204,17 +204,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 #endif
         }
 
-        static bool ActiveXRDevice_SupportsUIMode(UIMode newMode)
-        {
-            if ((UIMode.ScreenSpace == newMode) && XRDevice.isPresent)
-            {
-                // Head-mounted dedicated devices do not support Screen-space UI.
-                return false;
-            }
-
-            return true;
-        }
-
         // Update is called once per frame
         protected virtual void Update()
         {
@@ -285,7 +274,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                                 ? UIMode.WorldSpace
                                 : UIMode.ScreenSpace;
 
-                if (ActiveXRDevice_SupportsUIMode(newMode))
+                if (ActiveXRDeviceSupportsUIMode(newMode))
                 {
                     s.m_uiMode = newMode;
                     UIManager.GetInstance().SetUIMode(newMode);
@@ -471,7 +460,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             if (UnityEngine.XR.XRDevice.isPresent)
             {
-                var loadedXRDeviceName = XRSettings.loadedDeviceName.ToLower();
+                var loadedXRDeviceName = GetActiveXRDeviceName();
 
                 if (!AllowSetActiveXRDevice(loadedXRDeviceName))
                 {
@@ -532,19 +521,73 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             return IsXRDeviceStereoscopic(XRSettings.loadedDeviceName.ToLower());
         }
 
-        public static bool IsXRDeviceStereoscopic(string deviceName)
+        public static bool IsXRDeviceStereoscopic(string deviceNameIn)
         {
+            var deviceName = deviceNameIn.ToLower();
+
             if (deviceName.CompareTo("") == 0)
             {
                 return false;
             }
 
-            if (deviceName.ToLower().CompareTo("none") == 0)
+            if (deviceName.CompareTo("none") == 0)
             {
                 return false;
             }
 
             return true;
+        }
+
+        static public string GetActiveXRDeviceName()
+        {
+            var deviceName = "";
+
+            if (XRDevice.isPresent)
+            {
+                deviceName = XRSettings.loadedDeviceName.ToLower();
+            }
+
+            if (deviceName == "")
+            {
+                deviceName = "none";
+            }
+
+            return deviceName;
+        }
+
+        static protected bool XRDeviceSupportsUIMode(
+            string deviceNameIn,
+            UIMode uiMode)
+        {
+            var deviceName = deviceNameIn.ToLower();
+
+            switch (uiMode)
+            {
+                case UIMode.ScreenSpace:
+                    {
+                        // Screen-space UI not supported stereoscopic devices, like ao.
+                        // - Oculus Rift
+                        // - Gear VR
+                        // - Google Cardboard
+                        if (IsXRDeviceStereoscopic(deviceName))
+                        {
+                            return false;
+                        }
+                    }
+                    break;
+                case UIMode.WorldSpace:
+                    {
+                        // World-space UI supported for all XR devices.
+                    }
+                    break;
+            }
+
+            return true;
+        }
+
+        static protected bool ActiveXRDeviceSupportsUIMode(UIMode uiMode)
+        {
+            return XRDeviceSupportsUIMode(GetActiveXRDeviceName(), uiMode);
         }
 
         public void SetActiveXRDeviceByIndex(int viewMode)
@@ -574,12 +617,25 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         public void SetActiveXRDevice(string deviceName)
         {
-            // Sanity check: Can only switch to available XR devices.
-            //TODO
-
-            // Sanity check: Cannot switch from Oculus to other XR device.
-            if (XRSettings.loadedDeviceName.ToLower().CompareTo("oculus") == 0)
+            if (!AllowSetActiveXRDevice(deviceName))
             {
+                Debug.LogError(
+                    "Sanity check: Trying to switch to non-supported XR device(" + deviceName + ")!");
+                return;
+            }
+            
+            if (!AllowSetActiveXRDevice(deviceName))
+            {
+                Debug.LogError(
+                    "Sanity check: Trying to switch to an XR device(" + deviceName + ") that does not support at-runtime activation!");
+                return;
+            }
+
+            if (!AllowSetActiveXRDevice(GetActiveXRDeviceName()))
+            {
+                Debug.LogError(
+                    "Sanity check: Trying to switch from an XR device(" + GetActiveXRDeviceName() + ") that does not support at-runtile deactivation.");
+
                 return;
             }
 
@@ -591,9 +647,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         private void OnSetActiveXRDevice(string deviceName)
         {
             // Force UI mode to world-space UI mode, when setting a stereoscopic XRDevice.
-            if (IsXRDeviceStereoscopic(deviceName))
+            if (!XRDeviceSupportsUIMode(deviceName, UIManager.GetInstance().GetUIMode()))
             {
-                UIManager.GetInstance().SetUIMode(UIMode.WorldSpace);
+                UIManager.GetInstance().SetUIMode(1 - UIManager.GetInstance().GetUIMode());
             }
         }
 

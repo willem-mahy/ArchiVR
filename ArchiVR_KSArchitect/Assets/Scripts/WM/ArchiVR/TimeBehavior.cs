@@ -59,22 +59,22 @@ namespace Assets.Scripts.WM.ArchiVR
             }
         }
 
-        public void buttonTimeMidnight_OnButtonClick(BaseEventData obj)
+        public void ButtonTimeMidnight_OnButtonClick()
         {
             m_time = 0;
         }
 
-        public void buttonTimeSunset_OnButtonClick(BaseEventData obj)
+        public void ButtonTimeSunset_OnButtonClick()
         {
             m_time = 3600 * 6;
         }
 
-        public void buttonTimeSunDawn_OnButtonClick(BaseEventData obj)
+        public void ButtonTimeSunDawn_OnButtonClick()
         {
             m_time = 3600 * 18;
         }
 
-        public void buttonTimeNoon_OnButtonClick(BaseEventData obj)
+        public void ButtonTimeNoon_OnButtonClick()
         {
             m_time = 3600 * 12;
         }

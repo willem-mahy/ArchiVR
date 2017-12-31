@@ -19,16 +19,7 @@ public class Play_MenuMain : MonoBehaviour {
 
     public Button m_buttonXRDevice = null;
 
-    public ApplicationState m_applicationState = null;
-
-    public Widget m_widgetVirtualGamepad = null;
-
-    public Widget m_widgetMenuPOI = null;
-
-    public bool ActiveXRDevice_IsOnScreenUISupported()
-    {
-        return (!UnityEngine.XR.XRDevice.isPresent);
-    }
+    public ApplicationState m_applicationState = null;   
 
     // Update is called once per frame
     void Update () {
@@ -56,31 +47,6 @@ public class Play_MenuMain : MonoBehaviour {
             var spritePath = "Menu/ViewMode/" + loadedXRDeviceName;
             var sprite = Resources.Load<Sprite>(spritePath);
             m_buttonXRDevice.transform.Find("Image").GetComponent<Image>().sprite = sprite;
-        }
-
-        // Update POI Menu visibility.
-        var enablePOI = false;
-
-        var cn = CameraNavigation.GetInstance();
-
-        var cnm = (cn ? cn.GetActiveNavigationMode() : null);
-
-        if (cnm)
-        {
-            var cnmSupportsPOI = cnm ? cnm.SupportsNavigationViaPOI() : false;
-
-            enablePOI = cnmSupportsPOI;
-        }
-
-        //TODO:
-        m_widgetMenuPOI.SetVisible(enablePOI);
-
-        var asd = ApplicationSettings.GetInstance().m_data;
-
-        var enableVirtualGamepad =
-            ActiveXRDevice_IsOnScreenUISupported()
-            && asd.m_stateSettings.m_enableVirtualGamepad;
-
-        m_widgetVirtualGamepad.SetVisible(enableVirtualGamepad);
+        }        
     }
 }

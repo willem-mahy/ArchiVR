@@ -16,6 +16,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         // with the project designated in 'm_initialProjectSceneName'.
         public string m_initialProjectSceneName = "";
 
+        public Widget m_widgetVirtualGamepad = null;
+
+        public Widget m_widgetMenuPOI = null;
+
         override protected string GetName()
         {
             return "Play";
@@ -104,6 +108,31 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 UIManager.GetInstance().OpenMenu("MenuSettings");
             }
+
+            // Update POI Menu visibility.
+            var enablePOI = false;
+
+            var cn = CameraNavigation.CameraNavigation.GetInstance();
+
+            var cnm = (cn ? cn.GetActiveNavigationMode() : null);
+
+            if (cnm)
+            {
+                var cnmSupportsPOI = cnm ? cnm.SupportsNavigationViaPOI() : false;
+
+                enablePOI = cnmSupportsPOI;
+            }
+
+            //TODO:
+            m_widgetMenuPOI.SetVisible(enablePOI);
+
+            var asd = ApplicationSettings.GetInstance().m_data;
+
+            var enableVirtualGamepad =
+                ActiveXRDeviceSupportsUIMode(UIMode.ScreenSpace)
+                && asd.m_stateSettings.m_enableVirtualGamepad;
+
+            m_widgetVirtualGamepad.SetVisible(enableVirtualGamepad);
         }
 
         public void HomeButton_OnClick()
