@@ -122,7 +122,7 @@ namespace Assets.Scripts.WM
             }
             CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
 
-            CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
+            //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
         }
 
         private void OnDisable()
@@ -185,31 +185,32 @@ namespace Assets.Scripts.WM
     
         void Update()
         {
-
-            if (Input.GetKey("joystick button 0")) // A
+            if (Input.GetKey(GamepadXBox.A))
             {
             }
-            if (Input.GetKey("joystick button 1")) // B
+            if (Input.GetKey(GamepadXBox.B))
             {
             }
-            if (Input.GetKey("joystick button 2")) // X
+            if (Input.GetKey(GamepadXBox.X))
             {
             }
-            if (Input.GetKey("joystick button 4")) // Y
+            if (Input.GetKey(GamepadXBox.Y))
             {
             }
-            if (Input.GetKey("joystick button 5")) // L1
+            if (Input.GetKey(GamepadXBox.L1))
             {
             }
-            if (Input.GetKey("joystick button 6")) // R1
+            if (Input.GetKey(GamepadXBox.R1))
             {
             }
-            if (Input.GetKey("joystick button 7")) // L1
+            /*
+            if (Input.GetKey(GamepadXBox.L2))
             {
             }
-            if (Input.GetKey("joystick button 8")) // R1
+            if (Input.GetKey(GamepadXBox.R2))
             {
             }
+            */
 
             {
                 float horizontal = Input.GetAxis("Horizontal");

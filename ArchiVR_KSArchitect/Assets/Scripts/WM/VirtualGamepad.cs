@@ -34,16 +34,20 @@ public class VirtualGamepad : MonoBehaviour {
     {
         Debug.Log("VirtualGamepad.OnEnable()");
 
+        /*
         if (CrossPlatformInputManager.AxisExists(m_horizontalVirtualAxis.name))
         {
             CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalVirtualAxis.name);
         }
+        */
         CrossPlatformInputManager.RegisterVirtualAxis(m_horizontalVirtualAxis);
 
+        /*
         if (CrossPlatformInputManager.AxisExists(m_verticalVirtualAxis.name))
         {
             CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalVirtualAxis.name);
         }
+        */
         CrossPlatformInputManager.RegisterVirtualAxis(m_verticalVirtualAxis);
 
         if (CrossPlatformInputManager.ButtonExists(m_jumpVirtualButton.name))
@@ -72,7 +76,7 @@ public class VirtualGamepad : MonoBehaviour {
         }
         */
 
-        CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Touch);
+        //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Touch);
     }
 
     private void OnDisable()

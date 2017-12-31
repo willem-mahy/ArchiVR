@@ -20,6 +20,12 @@ namespace Assets.Scripts.WM.Util
             textSystemInfo += "\nTouch support: " + (Input.touchSupported ? "yes" : "no"); ;
             textSystemInfo += "\n";
             textSystemInfo += "\n#Gamepad present: " + Input.GetJoystickNames().Length.ToString();
+
+            foreach (String joystickName in Input.GetJoystickNames())
+            {
+                textSystemInfo += "\n- " + joystickName;
+            }
+
             textSystemInfo += "\n";
             textSystemInfo += "\nMouse present: " + (Input.mousePresent ? "yes" : "no"); ; ;
             return textSystemInfo;

@@ -204,18 +204,50 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 #endif
         }
 
-        // Update is called once per frame
-        protected virtual void Update()
+        private void UpdateDebugInfoCamera()
         {
             var camera = Camera.main;
 
-            var cameraText =
-                "[Camera]\n" +
-                "Pos:" + camera.transform.position.ToString() + "\n" +
-                "Fwd:" + camera.transform.forward.ToString() + "\n" +
-                "Up:" + camera.transform.up.ToString() + "\n";
-            m_debugView_SS.m_tabPanes[2].GetComponent<Text>().text = cameraText;
-            m_debugView_WS.m_tabPanes[2].GetComponent<Text>().text = cameraText;
+            var text = "[Camera]";
+            text += "\nPos:" + camera.transform.position.ToString();
+            text += "\nFwd:" + camera.transform.forward.ToString();
+            text += "\nUp:" + camera.transform.up.ToString();
+
+            m_debugView_SS.m_tabPanes[2].GetComponent<Text>().text = text;
+            m_debugView_WS.m_tabPanes[2].GetComponent<Text>().text = text;
+        }
+
+        private void UpdateDebugInfoGamepadInput()
+        {
+            var text = "[Gamepad]";
+
+            text += "\nA: " + (Input.GetKey(GamepadXBox.A) ? "pressed" : "not pressed");
+            text += "\nB: " + (Input.GetKey(GamepadXBox.B) ? "pressed" : "not pressed");
+            text += "\nX: " + (Input.GetKey(GamepadXBox.X) ? "pressed" : "not pressed");
+            text += "\nY: " + (Input.GetKey(GamepadXBox.Y) ? "pressed" : "not pressed");
+
+            text += "\nL1: " + (Input.GetKey(GamepadXBox.L1) ? "pressed" : "not pressed");
+            text += "\nR1: " + (Input.GetKey(GamepadXBox.R1) ? "pressed" : "not pressed");
+
+            text += "\nLeft analog stick: ";
+            text += "\n-horizontal: " + Input.GetAxis("Horizontal");
+            text += "\n-vertical: " + Input.GetAxis("Vertical");
+
+            text += "\nRight analog stick: ";
+            text += "\n-horizontal: " + Input.GetAxis("HorizontalRotation");
+            text += "\n-vertical: " + Input.GetAxis("VerticalRotation");
+
+            m_debugView_SS.m_tabPanes[3].GetComponent<Text>().text = text;
+            m_debugView_WS.m_tabPanes[3].GetComponent<Text>().text = text;
+        }
+
+        // Update is called once per frame
+        protected virtual void Update()
+        {
+            // Update debug info.
+            UpdateDebugInfoCamera();
+
+            UpdateDebugInfoGamepadInput();
 
             // 'l' key: Show/hide debugging info
             if (Input.GetKeyUp("l"))
@@ -685,7 +717,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool isUIModeWorldSpace = UIManager.GetInstance().GetUIMode() == UIMode.WorldSpace;
             bool currentCameraNavigationSupportsGamepad = (null == cameraNavigation) ? true : cameraNavigation.GetActiveNavigationMode().SupportsDPadInput();
             bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
-
+                        
             virtualGamepad.SetActive(!isUIModeWorldSpace && !isPhysicalGamePadConnected && currentCameraNavigationSupportsGamepad);
         }
 

@@ -91,7 +91,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             if (Input.GetKeyDown(GamepadXBox.L1))
             {
-                GetComponent<POIManager>().ActivateNextPOI();
+                GetComponent<POIManager>().ActivatePrevPOI();
             }
 
             if (Input.GetKeyDown(GamepadXBox.R1))
