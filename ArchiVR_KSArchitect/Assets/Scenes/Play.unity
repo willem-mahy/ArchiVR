@@ -8185,7 +8185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84ddba021fdc84a815e63d339a37e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_virtualDPadLeft: {fileID: 1255615346}
+  m_virtualDPadLeft: {fileID: 1759689457}
   m_virtualDPadRight: {fileID: 1255615346}
   m_jumpButton: {fileID: 0}
   m_runButton: {fileID: 0}
@@ -18992,6 +18992,12 @@ MonoBehaviour:
   m_timedColorsSky1: []
   m_timedColorsSky2: []
   m_light: {fileID: 1904562509}
+--- !u!114 &1759689457 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114446681591855116, guid: a48b8cd66f5cbe641b13f574079c5f3c,
+    type: 2}
+  m_PrefabInternal: {fileID: 738213423}
+  m_Script: {fileID: 11500000, guid: 3c112a6b3c32ab94abd643939d3100f0, type: 3}
 --- !u!1 &1760144371
 GameObject:
   m_ObjectHideFlags: 0

@@ -123,9 +123,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 enablePOI = cnmSupportsPOI;
             }
 
-            //TODO:
             m_widgetMenuPOI.SetVisible(enablePOI);
 
+            // Update Virtual Gamepad visibility.
             var asd = ApplicationSettings.GetInstance().m_data;
 
             var enableVirtualGamepad =

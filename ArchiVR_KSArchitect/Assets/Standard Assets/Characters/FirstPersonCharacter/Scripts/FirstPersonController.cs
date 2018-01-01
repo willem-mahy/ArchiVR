@@ -214,7 +214,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+
+            if (CrossPlatformInputManager.AxisExists("VirtualGamePad_RightStick_Horizontal"))
+            {
+                if (0 == horizontal)
+                {
+                    horizontal = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePad_RightStick_Horizontal").GetValue;
+                }
+            }
+
+
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+
+            if (CrossPlatformInputManager.AxisExists("VirtualGamePad_RightStick_Vertical"))
+            {
+                if (0 == vertical)
+                {
+                    vertical = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePad_RightStick_Vertical").GetValue;
+                }
+            }
+
 
             bool waswalking = m_IsWalking;
 

@@ -7,22 +7,46 @@ using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class VirtualGamepad : MonoBehaviour {
+
+    static public string LeftStickVertical = "VirtualGamePad_LeftStick_Vertical";
+    static public string RightStickVertical = "VirtualGamePad_RightStick_Vertical";
+    static public string RightStickHorizontal = "VirtualGamePad_RightStick_Horizontal";
+    static public string Jump = "VirtualGamePad_Jump";
+    static public string FastMove = "VirtualGamePad_FastMove";
+
     public DPadBehavior m_virtualDPadLeft = null;
     public DPadBehavior m_virtualDPadRight = null;
     public Button m_jumpButton = null;
     public Button m_runButton = null;
 
-    CrossPlatformInputManager.VirtualAxis m_horizontalVirtualAxis;  // Reference to the joystick in the cross platform input
-    CrossPlatformInputManager.VirtualAxis m_verticalVirtualAxis;    // Reference to the joystick in the cross platform input
+    //CrossPlatformInputManager.VirtualAxis m_oldHorizontalVirtualAxis;  // Reference to the joystick in the cross platform input
+    //CrossPlatformInputManager.VirtualAxis m_oldVerticalVirtualAxis;    // Reference to the joystick in the cross platform input
+    //CrossPlatformInputManager.VirtualButton m_oldJumpVirtualButton;    // Reference to the jump button in the cross platform input
+    //CrossPlatformInputManager.VirtualButton m_oldRunVirtualButton;     // Reference to the run button in the cross platform input
+
+    CrossPlatformInputManager.VirtualAxis m_rightStickHorizontalVirtualAxis;  // Reference to the joystick in the cross platform input
+    CrossPlatformInputManager.VirtualAxis m_rightStickVerticalVirtualAxis;    // Reference to the joystick in the cross platform input
+    CrossPlatformInputManager.VirtualAxis m_leftStickVerticalVirtualAxis;    // Reference to the joystick in the cross platform input
     CrossPlatformInputManager.VirtualButton m_jumpVirtualButton;    // Reference to the jump button in the cross platform input
     CrossPlatformInputManager.VirtualButton m_runVirtualButton;     // Reference to the run button in the cross platform input
 
     void Awake() {
         Debug.Log("VirtualGamepad.Awake()");
-        m_horizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Horizontal");        
-        m_verticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis("Vertical");
-        m_jumpVirtualButton = new CrossPlatformInputManager.VirtualButton("Jump");
-        m_runVirtualButton = new CrossPlatformInputManager.VirtualButton("Run");
+        
+        // Left stick
+        m_leftStickVerticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad.LeftStickVertical);
+
+        // Right stick
+        m_rightStickHorizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad.RightStickHorizontal);
+        m_rightStickHorizontalVirtualAxis.Update(0);
+        m_rightStickVerticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad.RightStickVertical);
+        m_rightStickVerticalVirtualAxis.Update(0);
+
+        // Jump button
+        m_jumpVirtualButton = new CrossPlatformInputManager.VirtualButton(VirtualGamepad.Jump);
+
+        // Run button
+        m_runVirtualButton = new CrossPlatformInputManager.VirtualButton(VirtualGamepad.FastMove);
     }
 
     void Start()
@@ -34,21 +58,40 @@ public class VirtualGamepad : MonoBehaviour {
     {
         Debug.Log("VirtualGamepad.OnEnable()");
 
-        /*
-        if (CrossPlatformInputManager.AxisExists(m_horizontalVirtualAxis.name))
-        {
-            CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalVirtualAxis.name);
-        }
-        */
-        CrossPlatformInputManager.RegisterVirtualAxis(m_horizontalVirtualAxis);
 
-        /*
-        if (CrossPlatformInputManager.AxisExists(m_verticalVirtualAxis.name))
+
+        //CrossPlatformInputManager.SwitchActiveInputMethod(
+        //    CrossPlatformInputManager.ActiveInputMethod.Touch);
+
+
+        if (CrossPlatformInputManager.AxisExists(m_leftStickVerticalVirtualAxis.name))
         {
-            CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalVirtualAxis.name);
+            CrossPlatformInputManager.UnRegisterVirtualAxis(m_leftStickVerticalVirtualAxis.name);
         }
-        */
-        CrossPlatformInputManager.RegisterVirtualAxis(m_verticalVirtualAxis);
+
+        CrossPlatformInputManager.RegisterVirtualAxis(m_leftStickVerticalVirtualAxis);
+        m_leftStickVerticalVirtualAxis.Update(0);
+
+
+        if (CrossPlatformInputManager.AxisExists(m_rightStickHorizontalVirtualAxis.name))
+        {
+            //m_oldHorizontalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
+            //    m_horizontalVirtualAxis.name);
+            CrossPlatformInputManager.UnRegisterVirtualAxis(m_rightStickHorizontalVirtualAxis.name);
+        }
+        
+        CrossPlatformInputManager.RegisterVirtualAxis(m_rightStickHorizontalVirtualAxis);
+        m_rightStickHorizontalVirtualAxis.Update(0);
+        
+        if (CrossPlatformInputManager.AxisExists(m_rightStickVerticalVirtualAxis.name))
+        {
+            //m_oldVerticalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
+            //    m_verticalVirtualAxis.name);
+            CrossPlatformInputManager.UnRegisterVirtualAxis(m_rightStickVerticalVirtualAxis.name);
+        }
+        
+        CrossPlatformInputManager.RegisterVirtualAxis(m_rightStickVerticalVirtualAxis);
+        m_rightStickVerticalVirtualAxis.Update(0);
 
         if (CrossPlatformInputManager.ButtonExists(m_jumpVirtualButton.name))
         {
@@ -61,7 +104,7 @@ public class VirtualGamepad : MonoBehaviour {
             CrossPlatformInputManager.UnRegisterVirtualButton(m_runVirtualButton.name);
         }        
         CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
-
+        
         /*
         if (m_jumpButton)
         {
@@ -75,27 +118,48 @@ public class VirtualGamepad : MonoBehaviour {
             m_runButton.OnPointerUp += RunButton_OnPointerUp;
         }
         */
-
-        //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Touch);
     }
 
     private void OnDisable()
     {
         Debug.Log("VirtualGamepad.OnDisable()");
-        /*
-        CrossPlatformInputManager.UnRegisterVirtualAxis("Horizontal");
-        CrossPlatformInputManager.UnRegisterVirtualAxis("Vertical");
-        CrossPlatformInputManager.UnRegisterVirtualButton("Jump");
-        CrossPlatformInputManager.UnRegisterVirtualButton("Run");
-        */
+        
+        CrossPlatformInputManager.UnRegisterVirtualAxis(m_rightStickHorizontalVirtualAxis.name);
+        CrossPlatformInputManager.UnRegisterVirtualAxis(m_rightStickVerticalVirtualAxis.name);
 
-        // TODO: re-register old inputs???
-        /*
-        CrossPlatformInputManager.RegisterVirtualAxis(m_oldHorizontalVirtualAxis);
-        CrossPlatformInputManager.RegisterVirtualAxis(m_oldVerticalVirtualAxis);
-        CrossPlatformInputManager.RegisterVirtualButton(m_oldJumpVirtualButton);
-        CrossPlatformInputManager.RegisterVirtualButton(m_oldRunVirtualButton);
-        */
+        if (null != m_jumpButton)
+        {
+            CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpButton.name);
+        }
+
+        if (null != m_runButton)
+        {
+            CrossPlatformInputManager.UnRegisterVirtualButton(m_runButton.name);
+        }
+
+        // Re-register old input axes.
+        //if (null != m_oldHorizontalVirtualAxis)
+        //{
+        //    CrossPlatformInputManager.RegisterVirtualAxis(m_oldHorizontalVirtualAxis);
+        //}
+
+        //if (null != m_oldVerticalVirtualAxis)
+        //{
+        //    CrossPlatformInputManager.RegisterVirtualAxis(m_oldVerticalVirtualAxis);
+        //}
+
+
+        //if (null != m_oldJumpVirtualButton)
+        //{
+        //    CrossPlatformInputManager.RegisterVirtualButton(m_oldJumpVirtualButton);
+        //}
+
+
+        //if (null != m_oldRunVirtualButton)
+        //{
+        //    CrossPlatformInputManager.RegisterVirtualButton(m_oldRunVirtualButton);
+        //}
+
 
         /*
         if (m_jumpButton)
@@ -135,16 +199,44 @@ public class VirtualGamepad : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        var stickOffset = m_virtualDPadLeft.GetStickOffset();
+        var stickOffsetLeft = m_virtualDPadLeft.GetStickOffset();
 
         {
-            var horizontal = stickOffset.x;
-            m_horizontalVirtualAxis.Update(horizontal);
+            var horizontal = stickOffsetLeft.x;
+
+            //if (null != m_horizontalVirtualAxis)
+            //{
+            //    m_horizontalVirtualAxis.Update(horizontal);
+            //}
         }
 
         {
-            var vertical = stickOffset.y;
-            m_verticalVirtualAxis.Update(vertical);
-        }        
+            var vertical = stickOffsetLeft.y / 100;
+
+            if (null != m_leftStickVerticalVirtualAxis)
+            {
+                m_leftStickVerticalVirtualAxis.Update(vertical);
+            }
+        }
+
+        var stickOffsetRight = m_virtualDPadRight.GetStickOffset();
+
+        {
+            var horizontal = stickOffsetRight.x;
+
+            if (null != m_rightStickHorizontalVirtualAxis)
+            {
+                m_rightStickHorizontalVirtualAxis.Update(horizontal);
+            }
+        }
+
+        {
+            var vertical = stickOffsetRight.y;
+
+            if (null != m_rightStickVerticalVirtualAxis)
+            {
+                m_rightStickVerticalVirtualAxis.Update(vertical);
+            }
+        }
     }
 }

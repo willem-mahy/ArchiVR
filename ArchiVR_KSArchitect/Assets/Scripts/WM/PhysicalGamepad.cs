@@ -32,12 +32,22 @@ namespace Assets.Scripts.WM
         static public string R1 = "joystick button 5";
         static public string Select = "joystick button 6";
         static public string Start = "joystick button 7";
+
+
+        static public string LeftAnalogHorizontal = "Joystick_XAxis";
+        static public string LeftAnalogVertical = "Joystick_YAxis";
+
+        static public string RightAnalogHorizontal = "Joystick_4thAxis";
+        static public string RightAnalogVertical = "Joystick_5thAxis";
+
     }
 
     class PhysicalGamepad : MonoBehaviour
     {
         CrossPlatformInputManager.VirtualAxis m_horizontalVirtualAxis;
         CrossPlatformInputManager.VirtualAxis m_verticalVirtualAxis;
+
+        CrossPlatformInputManager.VirtualAxis m_leftStickVerticalVirtualAxis;
 
         CrossPlatformInputManager.VirtualAxis m_horizontalRotationVirtualAxis;
         CrossPlatformInputManager.VirtualAxis m_verticalRotationVirtualAxis;
@@ -122,7 +132,7 @@ namespace Assets.Scripts.WM
             }
             CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
 
-            //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
+            CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
         }
 
         private void OnDisable()

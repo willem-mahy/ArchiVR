@@ -54,9 +54,34 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             // Translation
             float leftRight = CrossPlatformInputManager.GetAxis("Horizontal");
+            
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.RightStickHorizontal))
+            {
+                if (0 == leftRight)
+                {
+                    leftRight = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.RightStickHorizontal).GetValue;
+                }
+            }
+
             float forwardBackward = CrossPlatformInputManager.GetAxis("Vertical");
-            float upDown = CrossPlatformInputManager.GetAxis("UpDown");          
-                        
+
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.RightStickVertical))
+            {
+                if (0 == forwardBackward)
+                {
+                    forwardBackward = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.RightStickVertical).GetValue;
+                }
+            }
+
+            float upDown = CrossPlatformInputManager.GetAxis("UpDown");
+
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.LeftStickVertical))
+            {
+                if (0 == upDown)
+                {
+                    upDown = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.LeftStickVertical).GetValue;
+                }
+            }
 
             if (upDown == 0)
             {

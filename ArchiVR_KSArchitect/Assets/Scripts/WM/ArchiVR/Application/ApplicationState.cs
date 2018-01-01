@@ -221,6 +221,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             var text = "[Gamepad]";
 
+            var ls = new Vector2(CrossPlatformInputManager.GetAxis(GamepadXBox.LeftAnalogHorizontal), CrossPlatformInputManager.GetAxis(GamepadXBox.LeftAnalogVertical));
+            text += "\nLeft analog stick: " +  ls.ToString();
+
+            var rs = new Vector2(CrossPlatformInputManager.GetAxis(GamepadXBox.RightAnalogHorizontal), CrossPlatformInputManager.GetAxis(GamepadXBox.RightAnalogVertical));
+            text += "\nRight analog stick: " + rs.ToString();
+
             text += "\nA: " + (Input.GetKey(GamepadXBox.A) ? "pressed" : "not pressed");
             text += "\nB: " + (Input.GetKey(GamepadXBox.B) ? "pressed" : "not pressed");
             text += "\nX: " + (Input.GetKey(GamepadXBox.X) ? "pressed" : "not pressed");
