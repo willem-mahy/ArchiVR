@@ -434,8 +434,12 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
-    <Compile Include="Assets\WM\UI\Script\POIMenu.cs" />
-    <Compile Include="Assets\WM\UI\Script\TextActiveProjectName.cs" />
+    <Compile Include="Assets\WM\Script\UI\POIMenu.cs" />
+    <Compile Include="Assets\WM\Script\UI\TextActiveProjectName.cs" />
+    <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_AR.cs" />
+    <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_Fly.cs" />
+    <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_FPS.cs" />
+    <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_Teleport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />

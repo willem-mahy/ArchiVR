@@ -215,22 +215,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
 
-            if (CrossPlatformInputManager.AxisExists("VirtualGamePad_RightStick_Horizontal"))
+            if (CrossPlatformInputManager.AxisExists("VirtualGamePadFPS_LeftRight"))
             {
                 if (0 == horizontal)
                 {
-                    horizontal = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePad_RightStick_Horizontal").GetValue;
+                    horizontal = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePadFPS_LeftRight").GetValue;
                 }
             }
 
 
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
-            if (CrossPlatformInputManager.AxisExists("VirtualGamePad_RightStick_Vertical"))
+            if (CrossPlatformInputManager.AxisExists("VirtualGamePadFPS_ForwardBackward"))
             {
                 if (0 == vertical)
                 {
-                    vertical = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePad_RightStick_Vertical").GetValue;
+                    vertical = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePadFPS_ForwardBackward").GetValue;
                 }
             }
 

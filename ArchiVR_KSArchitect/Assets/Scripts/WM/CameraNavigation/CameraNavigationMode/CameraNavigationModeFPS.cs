@@ -12,7 +12,7 @@ namespace Assets.Scripts.WM.CameraNavigation
             abstract public bool GetJump();
             abstract public bool GetFastMovement();
         }
-
+                
         // Use this for initialization
         void Start()
         {
@@ -20,6 +20,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnEnable()
         {
+            base.OnEnable();
+
             Debug.Log("CameraNavigationModeFPS.OnEnable()");
 
             m_firstPersonController.m_MouseLook.lockCursor = true;
@@ -38,6 +40,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnDisable()
         {
+            base.OnDisable();
+
             Debug.Log("CameraNavigationModeFPS.OnDisable()");
         }
 

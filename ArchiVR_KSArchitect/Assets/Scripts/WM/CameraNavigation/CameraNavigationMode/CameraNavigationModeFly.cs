@@ -1,8 +1,4 @@
-﻿
-using System;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace Assets.Scripts.WM.CameraNavigation
@@ -27,6 +23,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnEnable()
         {
+            base.OnEnable();
+
             Debug.Log("TranslationControlFly.OnEnable()");
 
             DisableCharacterController();
@@ -34,6 +32,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnDisable()
         {
+            base.OnDisable();
+
             Debug.Log("TranslationControlFly.OnDisable()");
         }
 

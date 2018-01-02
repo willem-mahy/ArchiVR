@@ -94,6 +94,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnEnable()
         {
+            base.OnEnable();
+
             Debug.Log("CameraNavigationModeVuforiaAR.OnEnable()");
 
             // Disable Recticle
@@ -141,6 +143,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         override public void OnDisable()
         {
+            base.OnDisable();
+
             Debug.Log("CameraNavigationModeVuforiaAR.OnDisable()");
 
             // Enable Recticle

@@ -9,6 +9,8 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         public FirstPersonController m_firstPersonController;
 
+        public GameObject m_virtualGamepad = null;
+
         abstract public void PositionCamera(Vector3 translation, Quaternion rotation);
 
         // Obsolete: to remove.
@@ -18,9 +20,25 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         abstract public bool SupportsNavigationViaPOI();
 
-        abstract public void OnEnable();
+        virtual public void OnEnable()
+        {
+            Debug.Log("CameraNavigationModeBase.OnEnable()");
 
-        abstract public void OnDisable();
+            if (m_virtualGamepad)
+            {
+                m_virtualGamepad.SetActive(true);
+            }
+        }
+
+        virtual public void OnDisable()
+        {
+            Debug.Log("CameraNavigationModeBase.OnDisable()");
+
+            if (m_virtualGamepad)
+            {
+                m_virtualGamepad.SetActive(false);
+            }
+        }
 
         protected void DisableCharacterController()
         {
