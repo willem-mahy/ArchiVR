@@ -204,10 +204,10 @@ namespace Assets.Scripts.WM.CameraNavigation
                 if (0 == translate)
                 {
                     translate = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_AR.TranslateModel).GetValue;
-                }
-            }
 
-            translate *= 0.001f;
+                    translate *= 0.001f;
+                }
+            }            
 
             m_modelTranslation.transform.localPosition = m_modelTranslation.transform.localPosition + translate * Vector3.up;
 
@@ -219,12 +219,30 @@ namespace Assets.Scripts.WM.CameraNavigation
                 if (0 == rotate)
                 {
                     rotate = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_AR.RotateModel).GetValue;
-                }
-            }
 
-            rotate *= 0.01f;
+                    rotate *= 0.01f;
+                }                
+            }           
 
             m_modelRotation.transform.localRotation = m_modelRotation.transform.localRotation * Quaternion.Euler(0, rotate, 0);
+
+            // 
+            if (Input.GetKeyDown(GamepadXBox.X))
+            {
+                DecreaseModelScale();
+            }
+
+            // 
+            if (Input.GetKeyDown(GamepadXBox.B))
+            {
+                IncreaseModelScale();
+            }
+
+            // 
+            if (Input.GetKeyDown(GamepadXBox.Y))
+            {
+                Reset();
+            }
         }
 
         public override void PositionCamera(Vector3 translation, Quaternion rotation)
