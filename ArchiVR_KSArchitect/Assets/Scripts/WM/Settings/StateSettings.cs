@@ -8,7 +8,5 @@ namespace Assets.Scripts.WM.Settings
         public Assets.Scripts.WM.UI.UIMode m_uiMode = Assets.Scripts.WM.UI.UIMode.ScreenSpace;
 
         public string m_activeProjectName = "";
-
-        public bool m_enableVirtualGamepad = true;
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+using Assets.Scripts.WM.Settings;
 using UnityEngine;
 
 namespace Assets.Scripts.WM.CameraNavigation
@@ -31,7 +32,12 @@ namespace Assets.Scripts.WM.CameraNavigation
             m_firstPersonController.m_GravityMultiplier = 2;
             m_firstPersonController.m_enableJump = true;
 
-            m_firstPersonController.m_MouseLook.lockCursor = true;
+            // When entering first-person Camera navigation,
+            // Do not lock the mouse cursor when Virtual Gamepad is shown.
+            // Locking the mouse cursor makes Virtual gamepad behavior act jerky.
+            var enableVirtualGamepad = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_enableVirtualGamepad;
+
+            m_firstPersonController.m_MouseLook.lockCursor = !enableVirtualGamepad;
 
             m_firstPersonController.m_UseGyro = SystemInfo.supportsGyroscope;
 

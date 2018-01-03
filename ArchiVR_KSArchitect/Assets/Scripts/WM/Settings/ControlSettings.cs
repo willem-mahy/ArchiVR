@@ -32,6 +32,8 @@ namespace Assets.Scripts.WM.Settings
         }
         */
 
+        public bool m_enableVirtualGamepad = true;
+
         public string m_navigationMode = null;
 
         public string m_rotationInputMode = null;

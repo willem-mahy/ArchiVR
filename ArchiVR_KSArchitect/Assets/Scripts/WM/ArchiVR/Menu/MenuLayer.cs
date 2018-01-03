@@ -8,6 +8,8 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 {
     public class MenuLayer : MonoBehaviour
     {
+        public Button m_showAllButton = null;
+
         public GameObject m_layerButtonPanel = null;
 
         public GameObject m_layerOptionPrefab = null;
@@ -29,15 +31,10 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         // Update is called once per frame
         void Update()
         {
-        }
+            m_showAllButton.interactable = !LayerManager.GetInstance().AreAllLayersVisible();
+        }        
 
-        void ExitButton_OnClick()
-        {
-            Debug.Log("MenuLayer.ExitButton_OnClick()");
-            UIManager.GetInstance().CloseMenu();
-        }
-
-        void ShowAllButton_OnClick()
+        public void ShowAllButton_OnClick()
         {
             Debug.Log("MenuLayer.ShowAllButton_OnClick()");
 

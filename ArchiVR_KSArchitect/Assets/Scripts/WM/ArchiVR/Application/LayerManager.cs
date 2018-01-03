@@ -103,7 +103,7 @@ namespace Assets.Scripts.WM
         // Update is called once per frame
         void Update()
         {
-        }
+        }        
 
         public void SetLayerVisible(
             string layerName,
@@ -155,13 +155,26 @@ namespace Assets.Scripts.WM
         {
             return m_layers.Values;
         }
-
+                
         public void SetAllLayersVisible(bool visible)
         {
             foreach (var layer in GetLayers())
             {
                 layer.SetVisible(true);
             }
+        }
+
+        public bool AreAllLayersVisible()
+        {
+            foreach (var layer in GetLayers())
+            {
+                if (!layer.IsVisible())
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
         // puclic: must be settable from Unity Editor
         public Assets.Scripts.WM.UI.TabView m_debugView_WS = null;
-
+                
         // List of names of supported XR devices.
         // This is the list of all possible XR devices that are supported by the current application build, on supporting systems.
         // Names in this list are all lower-case.
@@ -317,9 +317,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     s.m_uiMode = newMode;
                     UIManager.GetInstance().SetUIMode(newMode);
                 }
-            }
-
-            UpdateVirtualGamepadActiveState();
+            }            
         }        
 
         protected abstract string GetName();        
@@ -707,24 +705,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool enableXR = (deviceName != null) && (deviceName != "");
 
             StartCoroutine(LoadDevice(deviceName, enableXR));
-        }
-
-        private void UpdateVirtualGamepadActiveState()
-        {
-            var virtualGamepad = GameObject.Find("Panel_WidgetControlCameraFlyDPad");
-
-            if (null == virtualGamepad)
-            {
-                return;
-            }
-
-            var cameraNavigation = GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>();
-
-            bool isUIModeWorldSpace = UIManager.GetInstance().GetUIMode() == UIMode.WorldSpace;
-            bool currentCameraNavigationSupportsGamepad = (null == cameraNavigation) ? true : cameraNavigation.GetActiveNavigationMode().SupportsDPadInput();
-            bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
-                        
-            virtualGamepad.SetActive(!isUIModeWorldSpace && !isPhysicalGamePadConnected && currentCameraNavigationSupportsGamepad);
         }
 
         static public void OpenProject(string sceneName)

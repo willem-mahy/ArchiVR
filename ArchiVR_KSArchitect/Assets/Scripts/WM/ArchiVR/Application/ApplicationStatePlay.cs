@@ -109,7 +109,18 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 UIManager.GetInstance().OpenMenu("MenuSettings");
             }
 
-            // Update POI Menu visibility.
+            UpdatePOIMenuVisibility();
+
+            UpdateVirtualGamepadWidgetVisibility();
+        }
+
+        private void UpdatePOIMenuVisibility()
+        {
+            if (!m_widgetMenuPOI)
+            {
+                return;
+            }
+
             var enablePOI = false;
 
             var cn = CameraNavigation.CameraNavigation.GetInstance();
@@ -124,15 +135,37 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }
 
             m_widgetMenuPOI.SetVisible(enablePOI);
+        }
+
+        private void UpdateVirtualGamepadWidgetVisibility()
+        {
+            if (!m_widgetVirtualGamepad)
+            {
+                return;
+            }
 
             // Update Virtual Gamepad visibility.
             var asd = ApplicationSettings.GetInstance().m_data;
+            var cameraNavigation = GameObject.Find("CameraNavigation").GetComponent<CameraNavigation.CameraNavigation>();
+            var uiManager = UIManager.GetInstance();
 
-            var enableVirtualGamepad =
-                ActiveXRDeviceSupportsUIMode(UIMode.ScreenSpace)
-                && asd.m_stateSettings.m_enableVirtualGamepad;
+            bool userEnabledVirtualGamepad = asd.m_controlSettings.m_enableVirtualGamepad;
+            bool isUIModeScreenSpace = uiManager.GetUIMode() == UIMode.ScreenSpace;
+            bool currentCameraNavigationSupportsGamepad = (null == cameraNavigation) ? true : cameraNavigation.GetActiveNavigationMode().SupportsDPadInput();
+            bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
+
+            var menu = uiManager.GetCurrentMenu();
+            bool isShowingMainMenu = menu && menu.name == "MenuMain";
+
+            bool enableVirtualGamepad =
+                isShowingMainMenu
+                && isUIModeScreenSpace
+                && !isPhysicalGamePadConnected
+                && currentCameraNavigationSupportsGamepad
+                && userEnabledVirtualGamepad;
 
             m_widgetVirtualGamepad.SetVisible(enableVirtualGamepad);
+
         }
 
         public void HomeButton_OnClick()

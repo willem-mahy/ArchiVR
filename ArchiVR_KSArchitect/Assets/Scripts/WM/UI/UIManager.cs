@@ -247,13 +247,18 @@ namespace Assets.Scripts.WM.UI
             }
 
             var parentMenu = m_menu.Close();
-            
+
             m_menu = parentMenu;
 
             if (m_menu)
             {
                 m_menu.Open();
             }
+        }
+
+        public Menu GetCurrentMenu()
+        {
+            return m_menu;
         }
     }
 }
