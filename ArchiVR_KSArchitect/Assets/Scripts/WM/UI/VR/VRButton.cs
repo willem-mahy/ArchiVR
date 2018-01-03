@@ -24,7 +24,6 @@ namespace Assets.Scripts.WM.UI.VR {
         {        
         }
 
-
         private void OnEnable()
         {        
         }
@@ -36,29 +35,25 @@ namespace Assets.Scripts.WM.UI.VR {
             m_InteractiveItem.OnClick -= HandleClick;
             m_InteractiveItem.OnDoubleClick -= HandleDoubleClick;
         }
-
-
+        
         //Handle the Over event
         private void HandleOver()
         {
             Debug.Log("HandleOver");
         }
-
-
+        
         //Handle the Out event
         private void HandleOut()
         {
             Debug.Log("HandleOut");
         }
-
-
+        
         //Handle the Click event
         private void HandleClick()
         {
             Debug.Log("HandleClick");
         }
-
-
+        
         //Handle the DoubleClick event
         private void HandleDoubleClick()
         {

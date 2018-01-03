@@ -63,7 +63,7 @@ namespace Assets.Scripts.WM.UI.VR
             m_isGazing = true;
         }
 
-        //Handle the Over event
+        //Handle the Out event
         private void OnOut()
         {
             m_timeGazed = 0;
