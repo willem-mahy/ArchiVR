@@ -762,7 +762,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             if (poiManager)
             {
-                var poiCollection = GameObject.Find("/World/Construction/Phase Final/POI/Fly");
+                var poiCollection = GameObject.Find("/World/Construction/Phases/Final/POI/Fly");
                 poiManager.SetPOICollection(poiCollection);
             }
         }

@@ -850,7 +850,7 @@ RectTransform:
   - {fileID: 35701121}
   - {fileID: 1715212665}
   - {fileID: 1616281483}
-  m_Father: {fileID: 339601200}
+  m_Father: {fileID: 1850544704}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4841,14 +4841,23 @@ Prefab:
       propertyPath: m_Center.z
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 224011300919770652, guid: 6d60d388f7507eb4e81be60196efc4f8,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114117715602427750, guid: 6d60d388f7507eb4e81be60196efc4f8,
+        type: 2}
+      propertyPath: m_fixationArea
+      value: 
+      objectReference: {fileID: 1850544703}
+    - target: {fileID: 1499416540568676, guid: 6d60d388f7507eb4e81be60196efc4f8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d60d388f7507eb4e81be60196efc4f8, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &339601200 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224011300919770652, guid: 6d60d388f7507eb4e81be60196efc4f8,
-    type: 2}
-  m_PrefabInternal: {fileID: 339601199}
 --- !u!1 &344507957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,7 +6254,7 @@ RectTransform:
   m_Children:
   - {fileID: 74570210}
   - {fileID: 852389815}
-  m_Father: {fileID: 339601200}
+  m_Father: {fileID: 1850544704}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9701,7 +9710,7 @@ RectTransform:
   - {fileID: 836191282}
   - {fileID: 1696822}
   - {fileID: 10354473}
-  m_Father: {fileID: 339601200}
+  m_Father: {fileID: 1850544704}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14673,7 +14682,7 @@ RectTransform:
   - {fileID: 283404797}
   - {fileID: 439175153}
   - {fileID: 1299187393}
-  m_Father: {fileID: 339601200}
+  m_Father: {fileID: 1850544704}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16487,7 +16496,7 @@ RectTransform:
   - {fileID: 1159334089}
   - {fileID: 1730761011}
   - {fileID: 271590709}
-  m_Father: {fileID: 339601200}
+  m_Father: {fileID: 1850544704}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -20668,7 +20677,7 @@ Prefab:
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
@@ -21319,7 +21328,7 @@ Prefab:
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
@@ -22463,7 +22472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965503
+      value: 4294961407
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_UseGravity
@@ -22869,6 +22878,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837307745}
+--- !u!1 &1850544703 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1732924042912062, guid: 6d60d388f7507eb4e81be60196efc4f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 339601199}
+--- !u!224 &1850544704 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224951758440449972, guid: 6d60d388f7507eb4e81be60196efc4f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 339601199}
+--- !u!65 &1850544705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850544703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2000, y: 2000, z: 100}
+  m_Center: {x: 0, y: 0, z: 55}
 --- !u!1 &1850614769
 GameObject:
   m_ObjectHideFlags: 0

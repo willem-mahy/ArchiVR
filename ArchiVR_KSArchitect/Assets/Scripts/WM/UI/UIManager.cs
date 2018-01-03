@@ -65,22 +65,7 @@ namespace Assets.Scripts.WM.UI
 
             UpdateUIState();
         }
-
-        public Widget GetWidgetByName(string widgetName)
-        {
-            var widgets = gameObject.transform.Find("Widget");
-
-            var widget = widgets.transform.Find(widgetName);
-
-            if (widget == null)
-            {
-                return null;
-            }
-
-            return widget.GetComponent<Widget>();
-        }
-
-
+                
         // Update is called once per frame
         void Update()
         {
@@ -95,6 +80,20 @@ namespace Assets.Scripts.WM.UI
             HandleTouches();
         }
 
+        public Widget GetWidgetByName(string widgetName)
+        {
+            var widgets = gameObject.transform.Find("Widget");
+
+            var widget = widgets.transform.Find(widgetName);
+
+            if (widget == null)
+            {
+                return null;
+            }
+
+            return widget.GetComponent<Widget>();
+        }
+        
         /// <summary>
         /// Cast a ray to test if Input.mousePosition is over any UI object in EventSystem.current.
         /// This is a replacement for IsPointerOverGameObject(),
@@ -109,6 +108,7 @@ namespace Assets.Scripts.WM.UI
 
             var results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
             return results.Count > 0;
         }
 

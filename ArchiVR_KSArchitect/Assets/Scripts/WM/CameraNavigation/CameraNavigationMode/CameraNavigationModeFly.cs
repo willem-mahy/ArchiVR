@@ -34,7 +34,7 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             if (poiManager)
             {
-                var poiCollection = GameObject.Find("/World/Construction/Phase Final/POI/Fly");
+                var poiCollection = GameObject.Find("/World/Construction/Phases/Final/POI/Fly");
                 poiManager.SetPOICollection(poiCollection);
             }
         }

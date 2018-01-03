@@ -35,7 +35,7 @@ namespace Assets.Scripts.WM.ArchiVR
                 // Search the root gameobject for construction lights in the first scene,
                 // under the following path:
                 // World/Construction/Lighting
-                m_gameObjectWorldConstructionLighting = GameObject.Find("World/Construction/Lighting");
+                m_gameObjectWorldConstructionLighting = GameObject.Find("World/Construction/Phases/Final/Lighting");
             }
 
             return m_gameObjectWorldConstructionLighting;
