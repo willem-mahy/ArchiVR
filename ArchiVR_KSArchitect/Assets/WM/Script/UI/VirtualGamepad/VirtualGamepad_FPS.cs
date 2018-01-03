@@ -9,8 +9,8 @@ namespace Assets.WM.Script.UI.VirtualGamepad
     public class VirtualGamepad_FPS : MonoBehaviour
     {
         // Virtual Axis/Button names.
-        static public string RightStickVertical = "VirtualGamePadFPS_ForwardBackward";
-        static public string RightStickHorizontal = "VirtualGamePadFPS_LeftRight";
+        static public string ForwardBackward = "VirtualGamePadFPS_ForwardBackward";
+        static public string LeftRight = "VirtualGamePadFPS_LeftRight";
         static public string Jump = "VirtualGamePadFPS_Jump";
         static public string FastMove = "VirtualGamePadFPS_FastMove";
 
@@ -28,9 +28,9 @@ namespace Assets.WM.Script.UI.VirtualGamepad
             Debug.Log("VirtualGamepad_FPS.Awake()");
             
             // Right stick
-            m_leftRightVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad_FPS.RightStickHorizontal);
+            m_leftRightVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad_FPS.LeftRight);
             m_leftRightVirtualAxis.Update(0);
-            m_forwardBackwardVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad_FPS.RightStickVertical);
+            m_forwardBackwardVirtualAxis = new CrossPlatformInputManager.VirtualAxis(VirtualGamepad_FPS.ForwardBackward);
             m_forwardBackwardVirtualAxis.Update(0);
 
             // Jump button

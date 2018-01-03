@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.WM.Script.UI.VirtualGamepad;
+using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace Assets.Scripts.WM.CameraNavigation
@@ -55,31 +56,31 @@ namespace Assets.Scripts.WM.CameraNavigation
             // Translation
             float leftRight = CrossPlatformInputManager.GetAxis("Horizontal");
             
-            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.RightStickHorizontal))
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad_Fly.LeftRight))
             {
                 if (0 == leftRight)
                 {
-                    leftRight = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.RightStickHorizontal).GetValue;
+                    leftRight = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_Fly.LeftRight).GetValue;
                 }
             }
 
             float forwardBackward = CrossPlatformInputManager.GetAxis("Vertical");
 
-            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.RightStickVertical))
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad_Fly.ForwardBackward))
             {
                 if (0 == forwardBackward)
                 {
-                    forwardBackward = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.RightStickVertical).GetValue;
+                    forwardBackward = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_Fly.ForwardBackward).GetValue;
                 }
             }
 
             float upDown = CrossPlatformInputManager.GetAxis("UpDown");
 
-            if (CrossPlatformInputManager.AxisExists(VirtualGamepad.LeftStickVertical))
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad_Fly.UpDown))
             {
                 if (0 == upDown)
                 {
-                    upDown = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad.LeftStickVertical).GetValue;
+                    upDown = 0.01f * CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_Fly.UpDown).GetValue;
                 }
             }
 

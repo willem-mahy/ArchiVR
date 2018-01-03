@@ -170,7 +170,7 @@ namespace Assets.Scripts.WM.UI
             if (!IsAxisYEnabled())
             {
                 var p = m_stick.transform.localPosition;
-                p.x = m_stickBasePosition.y;
+                p.y = m_stickBasePosition.y;
                 m_stick.transform.localPosition = p;
             }
         }

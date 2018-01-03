@@ -1,8 +1,7 @@
 ﻿using Assets.Scripts.WM.UI;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Assets.WM.Script.UI.VirtualGamepad;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 using Vuforia;
 
 namespace Assets.Scripts.WM.CameraNavigation
@@ -13,11 +12,11 @@ namespace Assets.Scripts.WM.CameraNavigation
         public string m_worldName = "World";
 
         //
-        public float m_rescaleFactor = 0.01f;
+        static public float s_defaultModelScaleFactor = 0.01f;
 
-        // The offset distance along the Y axis, that the world model is attached to the marker by.
-        public float m_offsetFromAnchor = 5.0f;
-
+        //
+        public float m_modelScaleFactor = s_defaultModelScaleFactor;
+                
         //
         public GameObject m_vuforia = null;
 
@@ -26,6 +25,18 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         //
         public GameObject m_imageTarget = null;
+
+        //
+        public GameObject m_modelRescale = null;
+
+        //
+        public GameObject m_modelAnchor = null;
+
+        //
+        public GameObject m_modelTranslation = null;
+
+        //
+        public GameObject m_modelRotation = null;
 
         //! The parent transform for the World GO, when not in Vuforia AR state.
         private Transform m_oldWorldParentTransform = null;
@@ -98,25 +109,19 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             Debug.Log("CameraNavigationModeVuforiaAR.OnEnable()");
 
+            SetModelScale(s_defaultModelScaleFactor);
+
             // Disable Recticle
             m_canvasReticle = GameObject.Find("FPSController/FirstPersonCharacter/CanvasReticle");
 
             if (null != m_canvasReticle)
                 m_canvasReticle.SetActive(false);
 
-            // Relocate world to AR anchor position.
-            m_world = GameObject.Find(m_worldName);
+            var defaultAnchor = GameObject.Find(m_worldName + "/AR_Anchor");
 
-            if (null != m_world)
-            {
-                // Store the parent transform for the World GO, when not in Vuforia AR state.
-                m_oldWorldParentTransform = m_world.transform.parent;
+            SetAnchor(defaultAnchor);
 
-                UpdateOffsetFromAnchor();
-
-                m_world.transform.parent = m_imageTarget.transform;
-                m_world.transform.localScale = m_rescaleFactor * m_world.transform.localScale;
-            }
+            RelocateWorldToAnchor();
 
             SetVuforiaActive(true);
 
@@ -125,20 +130,33 @@ namespace Assets.Scripts.WM.CameraNavigation
             UIManager.GetInstance().SetUIMode(UIMode.ScreenSpace);
         }
 
-        public void UpdateOffsetFromAnchor()
-        {
-            var anchor = GameObject.Find(m_worldName + "/AR_Anchor");
-
+        private void SetAnchor(GameObject anchor)
+        {            
             if (null == anchor)
             {
                 return;
             }
             
-            // Attach to the anchor...
-            m_world.transform.localPosition = -(m_rescaleFactor * anchor.transform.localPosition);
-            
-            // ... at a fixed offset along world +Y.
-            m_world.transform.localPosition += m_rescaleFactor * m_offsetFromAnchor * Vector3.up;
+            // Adjust the Vuforio Marker Anchor GO position,
+            // in order to line up the Model Anchor position to the Image Marker. 
+            m_modelAnchor.transform.localPosition = -anchor.transform.localPosition;
+        }
+
+        private void RelocateWorldToAnchor()
+        {
+            m_oldWorldParentTransform = null;
+
+            m_world = GameObject.Find(m_worldName);
+
+            if (null == m_world)
+            {
+                return;
+            }
+
+            // Store the parent transform for the World GO, when not in Vuforia AR state.
+            m_oldWorldParentTransform = m_world.transform.parent;
+
+            m_world.transform.SetParent(m_modelAnchor.transform, false);
         }
 
         override public void OnDisable()
@@ -178,7 +196,35 @@ namespace Assets.Scripts.WM.CameraNavigation
         // Update is called once per frame
         void Update()
         {
+            // 
+            float translate = CrossPlatformInputManager.GetAxis("Vertical");
 
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad_AR.TranslateModel))
+            {
+                if (0 == translate)
+                {
+                    translate = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_AR.TranslateModel).GetValue;
+                }
+            }
+
+            translate *= 0.001f;
+
+            m_modelTranslation.transform.localPosition = m_modelTranslation.transform.localPosition + translate * Vector3.up;
+
+            // 
+            float rotate = CrossPlatformInputManager.GetAxis("Horizontal");
+
+            if (CrossPlatformInputManager.AxisExists(VirtualGamepad_AR.RotateModel))
+            {
+                if (0 == rotate)
+                {
+                    rotate = CrossPlatformInputManager.VirtualAxisReference(VirtualGamepad_AR.RotateModel).GetValue;
+                }
+            }
+
+            rotate *= 0.01f;
+
+            m_modelRotation.transform.localRotation = m_modelRotation.transform.localRotation * Quaternion.Euler(0, rotate, 0);
         }
 
         public override void PositionCamera(Vector3 translation, Quaternion rotation)
@@ -188,12 +234,40 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         public override bool SupportsDPadInput()
         {
-            return false;
+            return true;
         }
 
         public override bool SupportsNavigationViaPOI()
         {
             return false;
+        }
+
+        public void IncreaseModelScale()
+        {
+            SetModelScale(2.0f * m_modelScaleFactor);
+        }
+
+        public void DecreaseModelScale()
+        {
+            SetModelScale(0.5f * m_modelScaleFactor);
+        }
+
+        public void Reset()
+        {
+            // Reset scale
+            SetModelScale(s_defaultModelScaleFactor);
+
+            // Reset translation
+            m_modelTranslation.transform.localPosition = Vector3.zero;
+
+            // Reset rotation
+            m_modelRotation.transform.localRotation = Quaternion.identity;
+        }
+
+        private void SetModelScale(float modelScaleFacor)
+        {
+            m_modelScaleFactor = modelScaleFacor;
+            m_modelRescale.transform.localScale = m_modelScaleFactor * Vector3.one;
         }
     }
 }
