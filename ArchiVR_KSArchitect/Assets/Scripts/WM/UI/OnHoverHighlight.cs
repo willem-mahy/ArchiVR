@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class OnHoverHighlight : MonoBehaviour {
 
@@ -23,6 +22,17 @@ public class OnHoverHighlight : MonoBehaviour {
     private void HandleOver()
     {
         Debug.Log("HandleOver");
+
+        var buttonComponent = gameObject.GetComponent<Button>();
+        
+        if (buttonComponent)
+        {
+            if (!buttonComponent.IsInteractable())
+            {
+                return;
+            }
+        }
+
         gameObject.transform.localScale = 1.1f * Vector3.one;
     }
 
