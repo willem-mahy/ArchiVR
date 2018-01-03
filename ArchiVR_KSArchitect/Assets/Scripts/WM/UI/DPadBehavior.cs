@@ -135,17 +135,28 @@ namespace Assets.Scripts.WM.UI
 
             m_status = "Stick " + gameObject.name + " OnDrag:" + pointerEventData.position.ToString();
 
-            var newStickPosition = Assets.Scripts.WM.Util.Math.ToVector3(pointerEventData.position);
+            var touchPosition = Assets.Scripts.WM.Util.Math.ToVector3(pointerEventData.position);
+
+            var newStickPosition = new Vector3();
+            newStickPosition.Set(touchPosition.x, touchPosition.y, touchPosition.z);
 
             if (m_stickArea != null)
             {
-                var stickAreaTransform = (RectTransform)m_stickArea.transform;
-                newStickPosition.x = Math.Min(stickAreaTransform.position.x + stickAreaTransform.rect.xMax, newStickPosition.x);
-                newStickPosition.y = Math.Min(stickAreaTransform.position.y + stickAreaTransform.rect.yMax, newStickPosition.y);
+                float s = gameObject.GetComponentInParent<Canvas>().scaleFactor;
 
-                newStickPosition.x = Math.Max(stickAreaTransform.position.x + stickAreaTransform.rect.xMin, newStickPosition.x);
-                newStickPosition.y = Math.Max(stickAreaTransform.position.y + stickAreaTransform.rect.yMin, newStickPosition.y);
-            }
+                var stickAreaTransform = (RectTransform)m_stickArea.transform;
+                var stickAreaRect = stickAreaTransform.rect;
+
+                newStickPosition.x = Math.Min(stickAreaTransform.position.x + s * stickAreaRect.xMax, newStickPosition.x);
+                newStickPosition.y = Math.Min(stickAreaTransform.position.y + s * stickAreaRect.yMax, newStickPosition.y);
+
+                newStickPosition.x = Math.Max(stickAreaTransform.position.x + s * stickAreaRect.xMin, newStickPosition.x);
+                newStickPosition.y = Math.Max(stickAreaTransform.position.y + s * stickAreaRect.yMin, newStickPosition.y);
+
+                if (!touchPosition.Equals(newStickPosition))
+                {                    
+                }
+            }            
 
             m_stick.transform.position = newStickPosition;
 
