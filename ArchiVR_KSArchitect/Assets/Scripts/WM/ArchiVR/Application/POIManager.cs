@@ -12,29 +12,35 @@ namespace Assets.Scripts.WM
         }
 
         public CameraNavigation.CameraNavigation m_cameraNavigation = null;
-                
+        
+        //! The POI Collection GameObject.
+        //  The POI Collection GameObject defines the list of currently available POI's.
+        //  POI's are inactive Camera objects and have to be direct childs of this root GameObject.containing the  
+        private GameObject m_poiCollection = null;
+
+        //! The index of the currently active POI in the POI collection.
         public int m_activePOIIndex = -1;
 
-        //! The POI list GameObject.
-        //  The POI list GameObject defines the list of currently available POI's.
-        //  POI's are inactive Camera objects and have to be direct childs of this root GameObject.containing the  
-        private GameObject m_poi = null;
-        
         void Awake()
         {
             s_instance = this;
-
-            if (m_poi == null)
-            {
-                m_poi = GameObject.Find("POI.Default");
-            }
         }
 
         void Start()
         {
-            // Activate first POI
-            m_activePOIIndex = 0;
+        }
 
+        public void SetPOICollection(GameObject collection)
+        {
+            m_poiCollection = collection;
+
+            // If there are POI's in the collection, activate the first POI.
+            SetActivePOI((GetNumPOIs() > 0) ? 0 : -1);
+        }
+
+        private void SetActivePOI(int index)
+        {
+            m_activePOIIndex = index;
             SyncWithActivePOI();
         }
 
@@ -42,49 +48,42 @@ namespace Assets.Scripts.WM
         {
             Debug.Log("ActivatePrevPOI()");
 
-            if (m_poi == null)
-                m_poi = GameObject.Find("POI.Default");
+            var numPOIs = GetNumPOIs();
 
-            if (m_poi == null || m_poi.transform.childCount == 0)
+            if (numPOIs == 0)
             {
-                m_activePOIIndex = -1;
+                SetActivePOI(-1);
             }
             else
             {
-                --m_activePOIIndex;
-
-                // Cycle from end.
-                if (m_activePOIIndex < 0)
-                    m_activePOIIndex = m_poi.transform.childCount - 1;
+                SetActivePOI((m_activePOIIndex == 0) ? 
+                    numPOIs - 1 : 
+                    --m_activePOIIndex);
             }
-
-            SyncWithActivePOI();
         }
         
         public void ActivateNextPOI()
         {
             Debug.Log("ActivateNextPOI()");
 
-            if (m_poi == null)
+            var numPOIs = GetNumPOIs();
+
+            SetActivePOI(numPOIs > 0 ? (++m_activePOIIndex % numPOIs) : -1);
+        }
+
+        public int GetNumPOIs()
+        {
+            if (m_poiCollection == null)
             {
-                m_poi = GameObject.Find("POI.Default");
+                return 0;
             }
 
-            if (m_poi == null || m_poi.transform.childCount == 0)
-            {
-                m_activePOIIndex = -1;
-            }
-            else
-            {
-                m_activePOIIndex = (++m_activePOIIndex % m_poi.transform.childCount);
-            }
-
-            SyncWithActivePOI();
+            return m_poiCollection.transform.childCount;
         }
 
         public GameObject GetActivePOI()
         {
-            if (null == m_poi)
+            if (null == m_poiCollection)
             {
                 return null;
             }
@@ -94,12 +93,12 @@ namespace Assets.Scripts.WM
                 return null;
             }
 
-            if (m_activePOIIndex >= m_poi.transform.childCount)
+            if (m_activePOIIndex >= m_poiCollection.transform.childCount)
             {
                 return null;
             }
 
-            return m_poi.transform.GetChild(m_activePOIIndex).gameObject;
+            return m_poiCollection.transform.GetChild(m_activePOIIndex).gameObject;
         }
 
         void SyncWithActivePOI()

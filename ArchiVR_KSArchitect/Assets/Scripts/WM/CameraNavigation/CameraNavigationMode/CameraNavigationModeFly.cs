@@ -29,6 +29,14 @@ namespace Assets.Scripts.WM.CameraNavigation
             Debug.Log("TranslationControlFly.OnEnable()");
 
             DisableCharacterController();
+
+            var poiManager = POIManager.GetInstance();
+
+            if (poiManager)
+            {
+                var poiCollection = GameObject.Find("/World/Construction/Phase Final/POI/Fly");
+                poiManager.SetPOICollection(poiCollection);
+            }
         }
 
         override public void OnDisable()
@@ -42,7 +50,7 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
             UpdateTranslation();
             UpdateRotation();
-        }
+        }        
 
         private void UpdateRotation()
         {

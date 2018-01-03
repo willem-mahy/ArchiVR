@@ -758,6 +758,13 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }
 
             LayerManager.GetInstance().DynamicallyCreateLayers();
+            var poiManager = POIManager.GetInstance();
+
+            if (poiManager)
+            {
+                var poiCollection = GameObject.Find("/World/Construction/Phase Final/POI/Fly");
+                poiManager.SetPOICollection(poiCollection);
+            }
         }
 
         public void MakeScreenCapture()

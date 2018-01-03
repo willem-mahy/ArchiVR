@@ -42,6 +42,14 @@ namespace Assets.Scripts.WM.CameraNavigation
             m_firstPersonController.m_UseGyro = SystemInfo.supportsGyroscope;
 
             EnableCharacterController();
+
+            var poiManager = POIManager.GetInstance();
+
+            if (poiManager)
+            {
+                var poiCollection = GameObject.Find("/World/Construction/Phase Final/POI/FPS");
+                poiManager.SetPOICollection(poiCollection);
+            }
         }
 
         override public void OnDisable()

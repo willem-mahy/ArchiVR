@@ -175,11 +175,6 @@ namespace Assets.Scripts.WM.CameraNavigation
                 // when not in Vuforia AR state.
                 m_world.transform.SetParent(m_oldWorldParentTransform, false);
                 m_oldWorldParentTransform = null;
-
-                // Then restore the World GO local position, rotation,and scale to their defaults.
-                m_world.transform.localScale = Vector3.one;
-                m_world.transform.localPosition = Vector3.zero;
-                m_world.transform.localRotation = Quaternion.identity;
             }           
 
             SetVuforiaActive(false);

@@ -62,6 +62,23 @@ namespace Assets.Scripts.WM.CameraNavigation
             m_firstPersonController.GetComponent<CharacterController>().enabled = true;
         }
 
+        protected void PositionCameraToActivePOI()
+        {
+            var poiManager = POIManager.GetInstance();
+            var activePOI = poiManager.GetActivePOI();
+
+            if (!activePOI)
+            {
+                return;
+            }
+
+            var t = activePOI.transform;
+
+            PositionCamera(
+                t.position,
+                t.rotation);
+        }
+
         protected Camera GetCameraFromFirstPersonCharacter()
         {
             var firstPersonCharacter = m_firstPersonController.transform.Find("FirstPersonCharacter");

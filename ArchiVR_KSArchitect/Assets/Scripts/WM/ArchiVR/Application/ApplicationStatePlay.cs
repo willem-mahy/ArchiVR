@@ -45,9 +45,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             base.Start();
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
-
-            GetComponent<POIManager>().ActivateNextPOI();
-        }
+      }
 
         // Update is called once per frame
         override protected void Update()
@@ -160,7 +158,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool enableVirtualGamepad =
                 isShowingMainMenu
                 && isUIModeScreenSpace
-                && !isPhysicalGamePadConnected
+                //&& !isPhysicalGamePadConnected
                 && currentCameraNavigationSupportsGamepad
                 && userEnabledVirtualGamepad;
 
