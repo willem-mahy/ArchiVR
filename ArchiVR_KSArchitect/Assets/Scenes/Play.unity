@@ -19869,6 +19869,16 @@ Prefab:
       propertyPath: m_Name
       value: Panel_POIMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 224872988233465516, guid: 109e5f11c7b51054b948371193eb0d9e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224872988233465516, guid: 109e5f11c7b51054b948371193eb0d9e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114414053494198342, guid: 109e5f11c7b51054b948371193eb0d9e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 109e5f11c7b51054b948371193eb0d9e, type: 2}

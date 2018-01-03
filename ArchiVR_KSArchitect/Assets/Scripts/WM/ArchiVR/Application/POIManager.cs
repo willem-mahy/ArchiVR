@@ -58,7 +58,7 @@ namespace Assets.Scripts.WM
             {
                 SetActivePOI((m_activePOIIndex == 0) ? 
                     numPOIs - 1 : 
-                    --m_activePOIIndex);
+                    m_activePOIIndex - 1);
             }
         }
         
