@@ -36,6 +36,12 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             m_showAllButton.interactable = !LayerManager.GetInstance().AreAllLayersVisible();
         }
 
+        private float GetLayerScrollStep()
+        {
+            int numSteps = 2;
+            return 1.0f / numSteps;
+        }
+
         public void ShowAllButton_OnClick()
         {
             Debug.Log("MenuLayer.ShowAllButton_OnClick()");
@@ -46,10 +52,10 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         public void ScrollUpButton_OnClick()
         {
             Debug.Log("MenuLayer.ScrollUpButton_OnClick()");
-
+                        
             var np = m_scrollView.verticalNormalizedPosition;
             np = Mathf.Min(
-                np + 0.1f,
+                np + GetLayerScrollStep(),
                 1.0f);
 
             m_scrollView.verticalNormalizedPosition = np;
@@ -61,7 +67,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 
             var np = m_scrollView.verticalNormalizedPosition;
             np = Mathf.Max(
-                np - 0.1f,
+                np - GetLayerScrollStep(),
                 0.0f);
 
             m_scrollView.verticalNormalizedPosition = np;
@@ -71,10 +77,8 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         {
             var layers = LayerManager.GetInstance().GetLayers();
 
-            float y = 0;
-
             // Y spacing between successive layer option UI controls.
-            float ySpacing = 20;
+            float ySpacing = 20;            
 
             // Get the height of a layer option UI control.
             float yOptionHeight = m_layerOptionPrefab.GetComponent<RectTransform>().rect.height;
@@ -82,7 +86,14 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             // Y step between successive layer option UI controls.
             float yStep = yOptionHeight + ySpacing;
 
-            // Generate a layer option for all layers.
+            // Spacing on top
+            float y = 0;
+
+            // Start with a spacing above the first layer option (=top-level option in the list).
+            y = ySpacing;
+
+            // From top to bottom, 
+            // generate a list option for all layers.
             foreach (var layer in layers)
             {
                 // Adds a layer option for the given layer to m_layerButtonPanel at local position Vector3.zero.
@@ -96,7 +107,7 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
             
             var contentSize = contentRectTransform.sizeDelta;
 
-            contentSize.y = y + yStep;
+            contentSize.y = y + 20;
 
             contentRectTransform.sizeDelta = contentSize;
 
