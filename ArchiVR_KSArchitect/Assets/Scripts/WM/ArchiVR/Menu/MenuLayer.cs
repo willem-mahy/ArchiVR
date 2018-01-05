@@ -8,6 +8,8 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
 {
     public class MenuLayer : MonoBehaviour
     {
+        public ScrollRect m_scrollView = null;
+
         public Button m_showAllButton = null;
 
         public GameObject m_layerButtonPanel = null;
@@ -32,13 +34,37 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         void Update()
         {
             m_showAllButton.interactable = !LayerManager.GetInstance().AreAllLayersVisible();
-        }        
+        }
 
         public void ShowAllButton_OnClick()
         {
             Debug.Log("MenuLayer.ShowAllButton_OnClick()");
 
             LayerManager.GetInstance().SetAllLayersVisible(true);
+        }
+
+        public void ScrollUpButton_OnClick()
+        {
+            Debug.Log("MenuLayer.ScrollUpButton_OnClick()");
+
+            var np = m_scrollView.verticalNormalizedPosition;
+            np = Mathf.Min(
+                np + 0.1f,
+                1.0f);
+
+            m_scrollView.verticalNormalizedPosition = np;
+        }
+
+        public void ScrollDownButton_OnClick()
+        {
+            Debug.Log("MenuLayer.ScrollDownButton_OnClick()");
+
+            var np = m_scrollView.verticalNormalizedPosition;
+            np = Mathf.Max(
+                np - 0.1f,
+                0.0f);
+
+            m_scrollView.verticalNormalizedPosition = np;
         }
 
         private void DynamicallyAddLayerButtons()
@@ -64,6 +90,17 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
                 
                 y += yStep;
             }
+
+
+            var contentRectTransform = m_scrollView.content.GetComponent<RectTransform>();
+            
+            var contentSize = contentRectTransform.sizeDelta;
+
+            contentSize.y = y + yStep;
+
+            contentRectTransform.sizeDelta = contentSize;
+
+            //m_scrollView.content.set.rect.height = y + yStep;
         }
 
         private GameObject DynamicallyAddButton(
