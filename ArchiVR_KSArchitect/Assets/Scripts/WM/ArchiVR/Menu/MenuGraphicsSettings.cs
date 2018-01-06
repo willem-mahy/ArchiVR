@@ -17,6 +17,9 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         //! The 'Enable Dynamic Grass' button.
         public Button m_enableDynamicGrassButton = null;
 
+        //! The 'Enable Dynamic Grass' button.
+        public Button m_enableCloudsButton = null;
+
         //! The 'Show FPS' button.
         public Button m_showFPSButton = null;
 
@@ -39,8 +42,12 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         {
             var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
 
-            m_enableDynamicGrassButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableDynamicGrass);
             m_showFPSButton.GetComponent<CheckBox>().SetCheckedState(s.m_showFPS);
+
+            m_enableDynamicGrassButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableDynamicGrass);
+
+            m_enableCloudsButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableClouds);
+
             m_qualityButton.SelectOptionByText(s.m_qualityLevelName);        
         }
 
@@ -87,9 +94,23 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         void EnableDynamicGrassButton_OnClick()
         {
             Debug.Log("MenuGraphicsSettings.EnableDynamicGrassButton_OnClick()");
-            ApplicationSettings.GetInstance().m_data.m_graphicSettings.m_enableDynamicGrass = !ApplicationSettings.GetInstance().m_data.m_graphicSettings.m_enableDynamicGrass;
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
+            s.m_enableDynamicGrass = !s.m_enableDynamicGrass;
         }
 
+        void EnableCloudsButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.EnableCloudsButton_OnClick()");
+
+            CloudManager.GetInstance().ToggleEnableClouds();
+        }
+
+        public void EditCloudsButton_OnClick()
+        {
+            Debug.Log("MenuGraphicsSettings.EditCloudsButton_OnClick()");
+
+            UIManager.GetInstance().OpenMenu("MenuClouds");
+        }
         void ShowFPSButton_OnClick()
         {
             Debug.Log("MenuGraphicsSettings.ShowFPSButton_OnClick()");

@@ -8,6 +8,12 @@ namespace Assets.Scripts.WM.Settings
     {
         public bool m_enableDynamicGrass = true;
 
+        public bool m_enableClouds = true;
+
+        public CloudManager.Mode m_cloudsMode = CloudManager.Mode.Auto;
+
+        public float m_fixedCloudIntensity = 1;
+
         public bool m_showFPS = false;
 
         public string m_qualityLevelName = null;
