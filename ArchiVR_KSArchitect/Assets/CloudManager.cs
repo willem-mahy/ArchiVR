@@ -29,8 +29,10 @@ public class CloudManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
+
+        s.m_cloudsMode = Mode.Fixed; //Debugging: force clouds mode to a hardcoded option (override application setting)
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -10,7 +10,7 @@ namespace Assets.Scripts.WM.Settings
 
         public bool m_enableClouds = true;
 
-        public CloudManager.Mode m_cloudsMode = CloudManager.Mode.Auto;
+        public CloudManager.Mode m_cloudsMode = CloudManager.Mode.Fixed;
 
         public float m_fixedCloudIntensity = 1;
 
