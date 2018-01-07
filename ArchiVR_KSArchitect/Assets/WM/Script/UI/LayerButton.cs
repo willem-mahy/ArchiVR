@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.WM.Script.Entity;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.WM
+namespace Assets.WM.Script.UI
 {
     // TODO: Rename class LayerButton into LayerOption
     public class LayerButton : MonoBehaviour

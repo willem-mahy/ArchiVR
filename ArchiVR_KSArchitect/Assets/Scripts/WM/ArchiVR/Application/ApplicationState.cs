@@ -12,6 +12,7 @@ using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Util;
 using UnityStandardAssets.CrossPlatformInput;
 using System;
+using Assets.WM.Script;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {

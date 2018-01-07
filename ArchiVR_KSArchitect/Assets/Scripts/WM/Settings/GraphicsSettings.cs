@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.WM.Script.Manager;
+using System;
 using UnityEngine;
 
 namespace Assets.Scripts.WM.Settings

@@ -6,8 +6,9 @@ using UnityEngine.UI;
 using Assets.Scripts.WM.Settings;
 using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Util;
+using Assets.WM.Script.Manager;
 
-namespace Assets.Scripts.WM.ArchiVR.Menu
+namespace Assets.WM.Script.UI.Menu
 {
     public class MenuGraphicsSettings : MonoBehaviour
     {

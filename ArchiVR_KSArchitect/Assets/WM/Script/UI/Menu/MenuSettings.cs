@@ -1,10 +1,8 @@
 ﻿using Assets.Scripts.WM.UI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.WM.ArchiVR.Menu
+namespace Assets.WM.Script.UI.Menu
 {
     public class MenuSettings : MonoBehaviour
     {

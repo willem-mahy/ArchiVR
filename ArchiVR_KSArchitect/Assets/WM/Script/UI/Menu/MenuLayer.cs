@@ -1,10 +1,10 @@
 ﻿
+using Assets.Scripts.WM;
+using Assets.WM.Script.Entity;
 using UnityEngine;
 using UnityEngine.UI;
-using Assets.Scripts.WM.UI;
-using System.Collections.Generic;
 
-namespace Assets.Scripts.WM.ArchiVR.Menu
+namespace Assets.WM.Script.UI.Menu
 {
     public class MenuLayer : MonoBehaviour
     {
@@ -15,9 +15,6 @@ namespace Assets.Scripts.WM.ArchiVR.Menu
         public GameObject m_layerButtonPanel = null;
 
         public GameObject m_layerOptionPrefab = null;
-
-        //! The button to close this menu.
-        //public Button m_exitButton = null;
 
         // Use this for initialization
         void Start()
