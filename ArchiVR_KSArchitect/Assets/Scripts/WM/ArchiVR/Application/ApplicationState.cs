@@ -24,7 +24,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         static public bool s_initialModeForce = true;
 
         // For debugging purposes.
-        static public UIMode s_initialUIMode = UIMode.WorldSpace;
+        static public UIMode s_initialUIMode = UIMode.ScreenSpace;
 
         // For debugging purposes.
         static public string s_initialXRDevice = "split";

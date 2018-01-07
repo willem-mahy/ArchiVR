@@ -1203,6 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1d9ea7805d72c46b0249154de413c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_initialActiveTab: 0
   m_tabPanes:
   - {fileID: 1877496267}
   - {fileID: 382926483}
@@ -1249,9 +1250,13 @@ MonoBehaviour:
       m_activeProjectName: 
     m_graphicSettings:
       m_enableDynamicGrass: 1
+      m_enableClouds: 1
+      m_cloudsMode: 1
+      m_fixedCloudIntensity: 1
       m_showFPS: 0
       m_qualityLevelName: 
     m_controlSettings:
+      m_enableVirtualGamepad: 1
       m_navigationMode: 
       m_rotationInputMode: 
       m_translationInputMode: 
@@ -2805,6 +2810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_exitButton: {fileID: 681843373}
   m_enableDynamicGrassButton: {fileID: 1617206021}
+  m_enableCloudsButton: {fileID: 0}
   m_showFPSButton: {fileID: 299175336}
   m_qualityButton: {fileID: 1739593913}
 --- !u!1 &392804793
@@ -5304,7 +5310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &749481472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7684,6 +7690,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1742488255453514, guid: 61ab91eef1154b54fabf5c6d70b0873c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ab91eef1154b54fabf5c6d70b0873c, type: 2}
   m_IsPrefabParent: 0
@@ -7799,7 +7809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1103472588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10569,7 +10579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559258265
 RectTransform:
   m_ObjectHideFlags: 0

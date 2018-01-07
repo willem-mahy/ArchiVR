@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
-using Assets.Scripts.WM.Settings;
-using Assets.Scripts.WM.UI;
 using UnityEngine.XR;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStateHome : ApplicationState
     {
-        public Text m_textStatus = null;
-        
         override protected string GetName()
         {
             return "Home";
