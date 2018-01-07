@@ -349,7 +349,16 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             }            
         }        
 
-        protected abstract string GetName();        
+        protected abstract string GetName();
+
+        public void ToggleOnScreenGamepadEnabled()
+        {
+            Debug.Log("ApplicationState.ToggleOnScreenGamepadEnabled()");
+
+            var cs = ApplicationSettings.GetInstance().m_data.m_controlSettings;
+
+            cs.m_enableVirtualGamepad = !cs.m_enableVirtualGamepad;
+        }
 
         public void MenuSettingsButton_OnClick()
         {

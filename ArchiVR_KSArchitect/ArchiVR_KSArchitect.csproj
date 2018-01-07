@@ -305,6 +305,7 @@
   <ItemGroup>
     <Compile Include="Assets\CloudManager.cs" />
     <Compile Include="Assets\MenuClouds.cs" />
+    <Compile Include="Assets\MenuControlsSettings.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
