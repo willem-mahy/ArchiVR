@@ -27,7 +27,7 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             m_firstPersonController.m_MouseLook.lockCursor = true;
 
-            m_firstPersonController.m_WalkSpeed = 5;
+            m_firstPersonController.m_WalkSpeed = 1;
             m_firstPersonController.m_RunSpeed = 10;
             m_firstPersonController.m_GravityMultiplier = 2;
             m_firstPersonController.m_enableJump = true;

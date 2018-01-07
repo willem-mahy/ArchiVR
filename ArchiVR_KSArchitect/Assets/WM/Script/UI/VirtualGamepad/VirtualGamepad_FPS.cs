@@ -18,10 +18,10 @@ namespace Assets.WM.Script.UI.VirtualGamepad
         public Button m_jumpButton = null;
         public Button m_runButton = null;
 
-        CrossPlatformInputManager.VirtualAxis m_leftRightVirtualAxis;  // Reference to the joystick in the cross platform input
-        CrossPlatformInputManager.VirtualAxis m_forwardBackwardVirtualAxis;    // Reference to the joystick in the cross platform input
-        CrossPlatformInputManager.VirtualButton m_jumpVirtualButton;    // Reference to the jump button in the cross platform input
-        CrossPlatformInputManager.VirtualButton m_runVirtualButton;     // Reference to the run button in the cross platform input
+        CrossPlatformInputManager.VirtualAxis m_leftRightVirtualAxis = null;  // Reference to the joystick in the cross platform input
+        CrossPlatformInputManager.VirtualAxis m_forwardBackwardVirtualAxis = null;    // Reference to the joystick in the cross platform input
+        CrossPlatformInputManager.VirtualButton m_jumpVirtualButton = null;    // Reference to the jump button in the cross platform input
+        CrossPlatformInputManager.VirtualButton m_runVirtualButton = null;     // Reference to the run button in the cross platform input
 
         void Awake()
         {
@@ -76,26 +76,88 @@ namespace Assets.WM.Script.UI.VirtualGamepad
             {
                 CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpVirtualButton.name);
             }
+            
             CrossPlatformInputManager.RegisterVirtualButton(m_jumpVirtualButton);
-
+            
             if (m_jumpButton)
             {
-                //m_jumpButton.OnPointerDown+= JumpButton_OnPointerDown;
-                //m_jumpButton.OnPointerUp += JumpButton_OnPointerUp;
+                EventTrigger trigger = m_jumpButton.gameObject.AddComponent<EventTrigger>();
+
+                {
+                    var pointerDown = new EventTrigger.Entry();
+                    pointerDown.eventID = EventTriggerType.PointerDown;
+
+                    UnityEngine.Events.UnityAction<BaseEventData> call = new UnityEngine.Events.UnityAction<BaseEventData>(JumpButton_OnPointerDown);
+
+                    pointerDown.callback.AddListener(call);
+                    trigger.triggers.Add(pointerDown);
+                }
+
+                {
+                    var pointerUp = new EventTrigger.Entry();
+                    pointerUp.eventID = EventTriggerType.PointerUp;
+                    UnityEngine.Events.UnityAction<BaseEventData> call = new UnityEngine.Events.UnityAction<BaseEventData>(JumpButton_OnPointerUp);
+
+                    pointerUp.callback.AddListener(call);
+                    trigger.triggers.Add(pointerUp);
+                }
             }
+
+            m_jumpVirtualButton.Released();
 
             // Run
             if (CrossPlatformInputManager.ButtonExists(m_runVirtualButton.name))
             {
                 CrossPlatformInputManager.UnRegisterVirtualButton(m_runVirtualButton.name);
             }
+
             CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
-                       
+                        
             if (m_runButton)
             {
-                //m_runButton.OnPointerDown += RunButton_OnPointerDown;
-                //m_runButton.OnPointerUp += RunButton_OnPointerUp;
+                EventTrigger trigger = m_runButton.gameObject.AddComponent<EventTrigger>();
+
+                {
+                    var pointerDown = new EventTrigger.Entry();
+                    pointerDown.eventID = EventTriggerType.PointerDown;
+
+                    UnityEngine.Events.UnityAction<BaseEventData> call = new UnityEngine.Events.UnityAction<BaseEventData>(RunButton_OnPointerDown);
+
+                    pointerDown.callback.AddListener(call);
+                    trigger.triggers.Add(pointerDown);
+                }
+
+                {
+                    var pointerUp = new EventTrigger.Entry();
+                    pointerUp.eventID = EventTriggerType.PointerUp;
+                    UnityEngine.Events.UnityAction<BaseEventData> call = new UnityEngine.Events.UnityAction<BaseEventData>(RunButton_OnPointerUp);
+
+                    pointerUp.callback.AddListener(call);
+                    trigger.triggers.Add(pointerUp);
+                }
             }
+
+            m_runVirtualButton.Released();
+        }
+
+        public void RunButton_OnPointerDown(BaseEventData ped)
+        {
+            m_runVirtualButton.Pressed();
+        }
+
+        public void RunButton_OnPointerUp(BaseEventData ped)
+        {
+            m_runVirtualButton.Released();
+        }
+
+        public void JumpButton_OnPointerDown(BaseEventData ped)
+        {
+            m_jumpVirtualButton.Pressed();
+        }
+
+        public void JumpButton_OnPointerUp(BaseEventData ped)
+        {
+            m_jumpVirtualButton.Released();
         }
 
         private void OnDisable()

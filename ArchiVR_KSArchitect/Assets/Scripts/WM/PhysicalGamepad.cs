@@ -132,7 +132,7 @@ namespace Assets.Scripts.WM
             }
             CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
 
-            CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
+            //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
         }
 
         private void OnDisable()
