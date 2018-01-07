@@ -15,23 +15,47 @@ using System;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
+    // For debugging purposes:
+    // Override stored ApplicationSettings when launching the Application during debugging.
+    public class ApplicationStartupSettings
+    {
+        private UIMode m_UIMode = UIMode.ScreenSpace;
+
+        private string m_XRDevice = "none";
+
+        public ApplicationStartupSettings(
+            string XRDevice,
+            UIMode UIMode)
+        {
+            m_UIMode = UIMode;
+            m_XRDevice = XRDevice;
+        }
+
+        public string GetXRDevice()
+        {
+            return m_XRDevice;
+        }
+
+        public UIMode GetUIMode()
+        {
+            return m_UIMode;
+        }
+    }
+
     public abstract class ApplicationState : MonoBehaviour
     {
         // For debugging purposes.
         static private bool s_debugInitialSetup = true;
         
-        // For debugging purposes.
-        static public bool s_initialModeForce = true;
+        // Flags whether the application has been initialized already.
+        static public bool s_initialized = false;
 
         // For debugging purposes.
-        static public UIMode s_initialUIMode = UIMode.ScreenSpace;
-
-        // For debugging purposes.
-        static public string s_initialXRDevice = "split";
-
-        //! Indicates whether or not the application has already performed initial setup during startup.
-        static private bool s_initialized = false;
-
+        static public ApplicationStartupSettings s_startupSettings =
+            //null;
+            new ApplicationStartupSettings("none", UIMode.ScreenSpace);
+            //new ApplicationStartupSettings("split", UIMode.WorldSpace);
+        
         // puclic: must be settable from Unity Editor
         public Assets.Scripts.WM.UI.TabView m_debugView_SS = null;
 
@@ -154,16 +178,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 Debug.LogWarning("GameObject 'CameraNavigation' has no 'CameraNavigation' component!");
             }
 
-            if (s_initialModeForce)
+            var uiManager = UIManager.GetInstance();
+
+            if (null != s_startupSettings)
             {
                 // For debugging purposes, we are forcing an initial UI Mode and XR Device.
                 
                 // First set the requested UI Mode
-                UIManager.GetInstance().SetUIMode(s_initialUIMode);
+                uiManager.SetUIMode(s_startupSettings.GetUIMode());
 
                 // Then activate the requested XR device.
                 // This might change the UI mode if incompatible with the XR device.
-                SetActiveXRDevice(s_initialXRDevice);
+                SetActiveXRDevice(s_startupSettings.GetXRDevice());
+
+                // Delete the startup settings, since we only use them once.
+                s_startupSettings = null;
             }
             else
             {
@@ -177,12 +206,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 if (XRDevice.isPresent)
                 {
                     // When running on a head-mounted XR device, UI mode is always World-space.
-                    UIManager.GetInstance().SetUIMode(UIMode.WorldSpace);
+                    uiManager.SetUIMode(UIMode.WorldSpace);
                 }
                 else
                 {
                     // When running on a non-head-mounted XR device, UI mode is World-space if gyroscope is present, else Screen-space.
-                    UIManager.GetInstance().SetUIMode(SystemInfo.supportsGyroscope ? UIMode.WorldSpace : UIMode.ScreenSpace);
+                    uiManager.SetUIMode(SystemInfo.supportsGyroscope ? UIMode.WorldSpace : UIMode.ScreenSpace);
                 }               
 
                 // 2) Figure out initial rotation mode
