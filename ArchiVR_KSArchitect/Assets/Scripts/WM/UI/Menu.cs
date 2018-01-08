@@ -7,7 +7,6 @@ namespace Assets.Scripts.WM.UI
 {
     public class Menu : MonoBehaviour
     {
-
         private Menu m_parentMenu;
 
         public GameObject m_uiControlNonVR = null;

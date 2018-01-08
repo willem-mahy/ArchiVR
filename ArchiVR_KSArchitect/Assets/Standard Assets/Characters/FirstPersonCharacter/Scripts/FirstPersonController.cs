@@ -71,6 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 
+                    #if MOBILE_INPUT
                     try
                     {
                         var n = "VirtualGamePadFPS_Jump";
@@ -82,6 +83,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     catch (UnityException exc)
                     {
                     }
+#endif
                 }
             }
             else
@@ -227,6 +229,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
 
+
             if (CrossPlatformInputManager.AxisExists("VirtualGamePadFPS_LeftRight"))
             {
                 if (0 == horizontal)
@@ -234,7 +237,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     horizontal = CrossPlatformInputManager.VirtualAxisReference("VirtualGamePadFPS_LeftRight").GetValue;
                 }
             }
-
 
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
@@ -255,7 +257,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             fastMove = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-//#endif
+            //#endif
+
+#if MOBILE_INPUT
             try
             {
                 var n = "VirtualGamePadFPS_FastMove";
@@ -270,6 +274,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             catch (UnityException exc)
             {
             }
+#endif
 
             m_IsWalking = !fastMove;
 
