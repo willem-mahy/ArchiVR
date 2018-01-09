@@ -69,21 +69,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (!m_Jump)
                 {
+                    // Physical GamePad or Keyboard.
                     m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 
-                    #if MOBILE_INPUT
+//#if MOBILE_INPUT
+                    // Virtual GamePad.
                     try
                     {
                         var n = "VirtualGamePadFPS_Jump";
                         if (CrossPlatformInputManager.ButtonExists(n))
                         {
-                            m_Jump |= CrossPlatformInputManager.GetButtonDown(n);
+                            m_Jump |=
+                                //CrossPlatformInputManager.GetButtonDown(n);
+                                CrossPlatformInputManager.VirtualButtonReference(n).GetButtonDown;
                         }
                     }
                     catch (UnityException exc)
                     {
                     }
-#endif
+//#endif
                 }
             }
             else
@@ -259,13 +263,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             fastMove = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
             //#endif
 
-#if MOBILE_INPUT
+//#if MOBILE_INPUT
             try
             {
                 var n = "VirtualGamePadFPS_FastMove";
                 if (CrossPlatformInputManager.ButtonExists(n))
                 {
-                    if (CrossPlatformInputManager.GetButton(n))
+                    if (CrossPlatformInputManager.
+                        //GetButton(n)
+                        VirtualButtonReference(n).GetButton)
                     {
                         fastMove = true;
                     }
@@ -274,7 +280,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             catch (UnityException exc)
             {
             }
-#endif
+//#endif
 
             m_IsWalking = !fastMove;
 
