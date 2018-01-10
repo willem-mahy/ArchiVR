@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -437,6 +439,7 @@
     <Compile Include="Assets\WM\Script\UI\Menu\MenuLayer.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\MenuSettings.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\Play_MenuMain.cs" />
+    <Compile Include="Assets\WM\Script\UI\Menu\WMMenu.cs" />
     <Compile Include="Assets\WM\Script\UI\POIMenu.cs" />
     <Compile Include="Assets\WM\Script\UI\TextActiveProjectName.cs" />
     <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_AR.cs" />

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace Assets.Scripts.WM
@@ -97,16 +98,27 @@ namespace Assets.Scripts.WM
             */
 
             // Horizontal Rotation Axis
-            if (CrossPlatformInputManager.AxisExists(m_horizontalRotationVirtualAxis.name))
+            try
             {
-                CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalRotationVirtualAxis.name);
+                if (CrossPlatformInputManager.AxisExists(m_horizontalRotationVirtualAxis.name))
+                {
+                    CrossPlatformInputManager.UnRegisterVirtualAxis(m_horizontalRotationVirtualAxis.name);
+                }
+            }
+            catch (Exception e)
+            {
             }
             CrossPlatformInputManager.RegisterVirtualAxis(m_horizontalRotationVirtualAxis);
 
             // Vertical Rotation Axis
+            try {
             if (CrossPlatformInputManager.AxisExists(m_verticalRotationVirtualAxis.name))
             {
                 CrossPlatformInputManager.UnRegisterVirtualAxis(m_verticalRotationVirtualAxis.name);
+            }
+            }
+            catch (Exception e)
+            {
             }
             CrossPlatformInputManager.RegisterVirtualAxis(m_verticalRotationVirtualAxis);
             

@@ -10,7 +10,7 @@ using Assets.WM.Script.Manager;
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class MenuGraphicsSettings : MonoBehaviour
+    public class MenuGraphicsSettings : WMMenu
     {
         //! The button to close this menu.
         public Button m_exitButton = null;
@@ -36,6 +36,9 @@ namespace Assets.WM.Script.UI.Menu
             m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
 
             InitQualityButton();
+
+            // Set UI Focus to 'Graphics Settings' button when opening the menu.
+            SetSelected(m_enableDynamicGrassButton);
         }
 
         // Use this for initialization

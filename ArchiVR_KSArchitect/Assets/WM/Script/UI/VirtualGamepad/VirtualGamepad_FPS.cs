@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.WM.UI;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -48,35 +49,49 @@ namespace Assets.WM.Script.UI.VirtualGamepad
         private void OnEnable()
         {
             Debug.Log("VirtualGamepad_FPS.OnEnable()");
-            
+
             // LeftRight
-            if (CrossPlatformInputManager.AxisExists(m_leftRightVirtualAxis.name))
+            try
             {
-                //m_oldHorizontalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
-                //    m_horizontalVirtualAxis.name);
-                CrossPlatformInputManager.UnRegisterVirtualAxis(m_leftRightVirtualAxis.name);
-            }
+                if (CrossPlatformInputManager.AxisExists(m_leftRightVirtualAxis.name))
+                {
+                    //m_oldHorizontalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
+                    //    m_horizontalVirtualAxis.name);
+                    CrossPlatformInputManager.UnRegisterVirtualAxis(m_leftRightVirtualAxis.name);
+                }
+            } catch (Exception e)
+            { }
 
             // ForwardBackward
             CrossPlatformInputManager.RegisterVirtualAxis(m_leftRightVirtualAxis);
             m_leftRightVirtualAxis.Update(0);
 
-            if (CrossPlatformInputManager.AxisExists(m_forwardBackwardVirtualAxis.name))
+            try
             {
-                //m_oldVerticalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
-                //    m_verticalVirtualAxis.name);
-                CrossPlatformInputManager.UnRegisterVirtualAxis(m_forwardBackwardVirtualAxis.name);
+                if (CrossPlatformInputManager.AxisExists(m_forwardBackwardVirtualAxis.name))
+                {
+                    //m_oldVerticalVirtualAxis = CrossPlatformInputManager.VirtualAxisReference(
+                    //    m_verticalVirtualAxis.name);
+                    CrossPlatformInputManager.UnRegisterVirtualAxis(m_forwardBackwardVirtualAxis.name);
+                }
             }
+            catch (Exception e)
+            { }
 
             CrossPlatformInputManager.RegisterVirtualAxis(m_forwardBackwardVirtualAxis);
             m_forwardBackwardVirtualAxis.Update(0);
 
             // Jump
-            if (CrossPlatformInputManager.ButtonExists(m_jumpVirtualButton.name))
+            try
             {
-                CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpVirtualButton.name);
+                if (CrossPlatformInputManager.ButtonExists(m_jumpVirtualButton.name))
+                {
+                    CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpVirtualButton.name);
+                }
             }
-            
+            catch (Exception e)
+            { }
+
             CrossPlatformInputManager.RegisterVirtualButton(m_jumpVirtualButton);
             
             if (m_jumpButton)
@@ -106,13 +121,17 @@ namespace Assets.WM.Script.UI.VirtualGamepad
             m_jumpVirtualButton.Released();
 
             // Run
-            if (CrossPlatformInputManager.ButtonExists(m_runVirtualButton.name))
-            {
-                CrossPlatformInputManager.UnRegisterVirtualButton(m_runVirtualButton.name);
+            try {
+                if (CrossPlatformInputManager.ButtonExists(m_runVirtualButton.name))
+                {
+                    CrossPlatformInputManager.UnRegisterVirtualButton(m_runVirtualButton.name);
+                }
             }
+            catch (Exception e)
+            { }
 
             CrossPlatformInputManager.RegisterVirtualButton(m_runVirtualButton);
-                        
+            
             if (m_runButton)
             {
                 EventTrigger trigger = m_runButton.gameObject.AddComponent<EventTrigger>();
@@ -164,27 +183,51 @@ namespace Assets.WM.Script.UI.VirtualGamepad
         {
             Debug.Log("VirtualGamepad_FPS.OnDisable()");
 
-            CrossPlatformInputManager.UnRegisterVirtualAxis(m_leftRightVirtualAxis.name);
-            CrossPlatformInputManager.UnRegisterVirtualAxis(m_forwardBackwardVirtualAxis.name);
+            try
+            {
+                CrossPlatformInputManager.UnRegisterVirtualAxis(m_leftRightVirtualAxis.name);
+            }
+            catch (Exception e)
+            {
+            }
+
+            try {
+                CrossPlatformInputManager.UnRegisterVirtualAxis(m_forwardBackwardVirtualAxis.name);
+            }
+            catch (Exception e)
+            {
+            }
 
             if (m_jumpButton)
             {
-                CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpButton.name);
+                try
+                {
+                    CrossPlatformInputManager.UnRegisterVirtualButton(m_jumpButton.name);
 
-                /*
-                m_jumpButton.OnPointerDown -= JumpButton_OnPointerDown;
-                m_jumpButton.OnPointerUp -= JumpButton_OnPointerUp;
-                */
+                    /*
+                    m_jumpButton.OnPointerDown -= JumpButton_OnPointerDown;
+                    m_jumpButton.OnPointerUp -= JumpButton_OnPointerUp;
+                    */
+                }
+                catch (Exception e)
+                {
+                }
             }
 
             if (m_runButton)
             {
+                try
+                {
                 CrossPlatformInputManager.UnRegisterVirtualButton(m_runButton.name);
-            
-                /*
-                m_runButton.OnPointerDown -= RunButton_OnPointerDown;
-                m_runButton.OnPointerUp -= RunButton_OnPointerUp;
-                */
+
+                    /*
+                    m_runButton.OnPointerDown -= RunButton_OnPointerDown;
+                    m_runButton.OnPointerUp -= RunButton_OnPointerUp;
+                    */
+                }
+                catch (Exception e)
+                {
+                }
             }
         }
 

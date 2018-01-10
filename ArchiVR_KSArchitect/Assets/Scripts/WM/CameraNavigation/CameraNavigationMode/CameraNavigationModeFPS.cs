@@ -35,7 +35,13 @@ namespace Assets.Scripts.WM.CameraNavigation
             // When entering first-person Camera navigation,
             // Do not lock the mouse cursor when Virtual Gamepad is shown.
             // Locking the mouse cursor makes Virtual gamepad behavior act jerky.
-            var enableVirtualGamepad = ApplicationSettings.GetInstance().m_data.m_controlSettings.m_enableVirtualGamepad;
+            var enableVirtualGamepad = false;
+
+            var appset = ApplicationSettings.GetInstance();
+            if (appset)
+            {
+                enableVirtualGamepad = appset.m_data.m_controlSettings.m_enableVirtualGamepad;
+            }
 
             m_firstPersonController.m_MouseLook.lockCursor = !enableVirtualGamepad;
 
