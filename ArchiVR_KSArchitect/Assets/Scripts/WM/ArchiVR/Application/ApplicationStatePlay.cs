@@ -45,7 +45,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             base.Start();
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().m_time = 60 * 60 * 12;
-      }
+        }
 
         // Update is called once per frame
         override protected void Update()
@@ -153,10 +153,13 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             bool isPhysicalGamePadConnected = (Input.GetJoystickNames().Length > 0);
 
             var menu = uiManager.GetCurrentMenu();
+
+            bool isShowingPlayMenu = menu && menu.name == "MenuPlay";
             bool isShowingMainMenu = menu && menu.name == "MenuMain";
 
             bool enableVirtualGamepad =
-                isShowingMainMenu
+                isShowingPlayMenu
+                //isShowingMainMenu
                 && isUIModeScreenSpace
                 //&& !isPhysicalGamePadConnected
                 && currentCameraNavigationSupportsGamepad
@@ -184,7 +187,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationStatePlay.MenuLayerButton_OnClick()");
 
-            //UIManager.GetInstance().OpenMenu("MenuLayer");
             UIManager.GetInstance().OpenMenu(GameObject.Find("MenuLayer").GetComponent<Assets.Scripts.WM.UI.Menu>());
         }
 
@@ -192,7 +194,14 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             SceneManager.LoadScene("Home");
         }
-        
+
+        public void OpenMainMenu()
+        {
+            Debug.Log("ApplicationStatePlay.OpenMainMenu()");
+
+            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuMain").GetComponent<Assets.Scripts.WM.UI.Menu>());
+        }
+
         public void WritePOI()
         {
             var camera = Camera.main;

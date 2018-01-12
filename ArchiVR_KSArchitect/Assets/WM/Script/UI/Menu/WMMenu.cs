@@ -41,6 +41,11 @@ namespace Assets.WM.Script.UI.Menu
 
         protected void SetSelected(Button s)
         {
+            if (null == s)
+            {
+                return;
+            }
+
             s.interactable = true;
             s.Select();
             EventSystem.current.SetSelectedGameObject(s.gameObject, null);
