@@ -38,12 +38,14 @@ namespace Assets.WM.Script.UI.Menu
             InitQualityButton();
 
             // Set UI Focus to 'Graphics Settings' button when opening the menu.
-            SetSelected(m_enableDynamicGrassButton);
+            SetSelected(m_enableCloudsButton);
         }
 
         // Use this for initialization
         void Update()
         {
+            base.Update();
+
             var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
 
             m_showFPSButton.GetComponent<CheckBox>().SetCheckedState(s.m_showFPS);

@@ -5,12 +5,45 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Assets.WM.Script.UI.Menu
 {
     public class WMMenu : MonoBehaviour
     {
         public FocusableItem m_focusedItem;
+
+        public FirstPersonController m_firstPersonController = null;
+
+        private void OnEnable()
+        {
+            EnableFPS(false);
+            //EnablePOIMenu(false);
+        }
+
+        private void OnDisable()
+        {
+            EnableFPS(true);
+            //EnablePOIMenu(true);
+        }
+
+        protected void Update()
+        {
+            bool e =
+                Input.GetKey(KeyCode.RightControl)
+                || Input.GetKey(KeyCode.LeftControl);
+            EnableFPS(e);
+        }
+
+        private void EnableFPS(bool state)
+        {
+            if (null == m_firstPersonController)
+            {
+                return;
+            }
+
+            m_firstPersonController.enabled = state;
+        }
 
         public void SetFocusedItem(FocusableItem item)
         {

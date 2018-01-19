@@ -11,10 +11,11 @@ using Assets.Scripts.WM.Settings;
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class Play_MenuMain : MonoBehaviour
+    public class Play_MenuMain : WMMenu
     {
-
         public CameraNavigation m_cameraNavigation = null;
+
+        public Button m_buttonHome = null;
 
         public Button m_buttonCameraNavigationMode = null;
 
@@ -23,6 +24,13 @@ namespace Assets.WM.Script.UI.Menu
         public Button m_buttonXRDevice = null;
 
         public ApplicationState m_applicationState = null;
+
+        // Use this for initialization
+        void Start()
+        {
+            // Set UI Focus to 'Graphics Settings' button when opening the menu.
+            SetSelected(m_buttonHome);
+        }
 
         // Update is called once per frame
         void Update()
