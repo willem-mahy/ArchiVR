@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Assets.Scripts.WM.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,31 +8,40 @@ namespace Assets.WM.Script.UI.Menu
 {
     public class WMMenu : MonoBehaviour
     {
-        public FocusableItem m_focusedItem;
-
         public FirstPersonController m_firstPersonController = null;
 
-        private void OnEnable()
+        // The UI control that will receive UI focus when opening the menu.
+        public Selectable m_defaultSelectedItem = null;
+
+        public void OnEnable()
         {
-            EnableFPS(false);
-            //EnablePOIMenu(false);
+            EnableCameraNavigationInputMouseKB(false);
+
+            // Set UI focus to the 'default selected item' when opening the menu.
+            if (null != m_defaultSelectedItem)
+            {
+                SetSelected(m_defaultSelectedItem);
+            }
         }
 
-        private void OnDisable()
+        public void OnDisable()
         {
-            EnableFPS(true);
-            //EnablePOIMenu(true);
+            EnableCameraNavigationInputMouseKB(true);
         }
 
-        protected void Update()
+        public void Update()
         {
             bool e =
                 Input.GetKey(KeyCode.RightControl)
                 || Input.GetKey(KeyCode.LeftControl);
-            EnableFPS(e);
+            EnableCameraNavigationInputMouseKB(e);
         }
 
-        private void EnableFPS(bool state)
+        //! Enable or disable the FPS controller.
+        // (TODO: disable amera navigation as a whole!)
+        // Used to prevent player from moving around
+        // while navigating through menus using the arrow keys.
+        private void EnableCameraNavigationInputMouseKB(bool state)
         {
             if (null == m_firstPersonController)
             {
@@ -45,34 +51,8 @@ namespace Assets.WM.Script.UI.Menu
             m_firstPersonController.enabled = state;
         }
 
-        public void SetFocusedItem(FocusableItem item)
-        {
-            if (m_focusedItem)
-                m_focusedItem.LoseFocus();
-
-            m_focusedItem = item;
-
-            if (m_focusedItem)
-                m_focusedItem.GainFocus();
-        }
-
-        public void FocusNeightbour(FocusableItem.NeighbourDirection nd)
-        {
-            if (null == m_focusedItem)
-            {
-                return;
-            }
-
-            var n = m_focusedItem.GetNeighbour(nd);
-            if (null == n)
-            {
-                return;
-            }
-
-            SetFocusedItem(n);
-        }
-
-        protected void SetSelected(Button s)
+        //! Set UI focus to the given selectable.
+        protected void SetSelected(Selectable s)
         {
             if (null == s)
             {

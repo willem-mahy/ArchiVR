@@ -1,12 +1,10 @@
-﻿
-using Assets.Scripts.WM;
-using Assets.WM.Script.Entity;
+﻿using Assets.WM.Script.Entity;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class MenuLayer : MonoBehaviour
+    public class MenuLayer : WMMenu
     {
         public ScrollRect m_scrollView = null;
 

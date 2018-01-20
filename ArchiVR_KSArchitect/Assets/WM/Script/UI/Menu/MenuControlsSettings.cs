@@ -5,24 +5,19 @@ using UnityEngine.UI;
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class MenuControlsSettings : MonoBehaviour
+    public class MenuControlsSettings : WMMenu
     {
         //! The 'Enable Onscreen Gamepad' button.
         public Button m_enableOnscreenGamepadButton = null;
-
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
+        
         // Update is called once per frame
-        void Update()
+        public new void Update()
         {
+            base.Update();
+
             var s = ApplicationSettings.GetInstance().m_data.m_controlSettings;
 
             m_enableOnscreenGamepadButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableVirtualGamepad);
-
         }
     }
 }

@@ -132,6 +132,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 enablePOI = cnmSupportsPOI;
             }
 
+            var uiManager = UIManager.GetInstance();
+
+            if (uiManager)
+            {
+                var menu = uiManager.GetCurrentMenu();
+
+                if (menu)
+                {
+                    if (menu.name != "MenuPlay")
+                    {
+                        enablePOI = false;
+                    }
+                }
+            }
+
             m_widgetMenuPOI.SetVisible(enablePOI);
         }
 

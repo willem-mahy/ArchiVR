@@ -25,16 +25,10 @@ namespace Assets.WM.Script.UI.Menu
 
         public ApplicationState m_applicationState = null;
 
-        // Use this for initialization
-        void Start()
-        {
-            // Set UI Focus to 'Graphics Settings' button when opening the menu.
-            SetSelected(m_buttonHome);
-        }
-
         // Update is called once per frame
-        void Update()
+        public new void Update()
         {
+            base.Update();
 
             // Update 'Construction Lighting Mode' button.
             {

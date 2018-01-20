@@ -28,7 +28,7 @@ namespace Assets.WM.Script.UI.Menu
         public ToggleButton m_qualityButton = null;
 
         // Use this for initialization
-        void Start()
+        public void Start()
         {
             m_exitButton.onClick.AddListener(ExitButton_OnClick);
             m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
@@ -36,13 +36,10 @@ namespace Assets.WM.Script.UI.Menu
             m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
 
             InitQualityButton();
-
-            // Set UI Focus to 'Graphics Settings' button when opening the menu.
-            SetSelected(m_enableCloudsButton);
         }
 
         // Use this for initialization
-        void Update()
+        public new void Update()
         {
             base.Update();
 
@@ -54,7 +51,15 @@ namespace Assets.WM.Script.UI.Menu
 
             m_enableCloudsButton.GetComponent<CheckBox>().SetCheckedState(s.m_enableClouds);
 
-            m_qualityButton.SelectOptionByText(s.m_qualityLevelName);        
+            UpdateQualityButton();
+        }
+
+        private void UpdateQualityButton()
+        {
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
+            
+            // Set the currently active Quality setting as selected on the toggle button.
+            m_qualityButton.SelectOptionByText(s.m_qualityLevelName);
         }
 
         private void InitQualityButton()
@@ -69,7 +74,6 @@ namespace Assets.WM.Script.UI.Menu
             // Get the currently active Quality setting name.
             var activeName = names[QualitySettings.GetQualityLevel()];
 
-
             // Initialize the options on the toggle button.
             List<string> qualityOptions = new List<string>();
             foreach (var name in names)
@@ -79,8 +83,7 @@ namespace Assets.WM.Script.UI.Menu
 
             m_qualityButton.LoadOptions(qualityOptions, null);
 
-            // Set the currently active Quality setting as selected on the toggle button.
-            m_qualityButton.SelectOptionByText(activeName);
+            UpdateQualityButton();
         }
 
         void QualityButton_OnClick()
@@ -117,6 +120,7 @@ namespace Assets.WM.Script.UI.Menu
 
             UIManager.GetInstance().OpenMenu("MenuClouds");
         }
+
         void ShowFPSButton_OnClick()
         {
             Debug.Log("MenuGraphicsSettings.ShowFPSButton_OnClick()");

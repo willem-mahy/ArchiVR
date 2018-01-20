@@ -305,6 +305,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MenuPlay.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
@@ -441,6 +442,7 @@
     <Compile Include="Assets\WM\Script\UI\Menu\Play_MenuMain.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\WMMenu.cs" />
     <Compile Include="Assets\WM\Script\UI\POIMenu.cs" />
+    <Compile Include="Assets\WM\Script\UI\TextActivePOIName.cs" />
     <Compile Include="Assets\WM\Script\UI\TextActiveProjectName.cs" />
     <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_AR.cs" />
     <Compile Include="Assets\WM\Script\UI\VirtualGamepad\VirtualGamepad_Fly.cs" />

@@ -1,7 +1,5 @@
 ﻿
 using Assets.Scripts.WM;
-using Assets.Scripts.WM.CameraNavigation;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,17 +28,6 @@ namespace Assets.WM.UI.Script
             {
                 var buttonComponent = m_activateNextPOIButton.GetComponent<Button>();
                 buttonComponent.onClick.AddListener(NextButton_OnClick);
-            }
-        }
-
-        private void Update()
-        {
-            if (m_activePOINameText)
-            {
-                var activePOI = POIManager.GetInstance().GetActivePOI();
-                var activePOIName = (activePOI ? activePOI.name : "No POI active.");
-
-                m_activePOINameText.text = activePOIName;
             }
         }
 
