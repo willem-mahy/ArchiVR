@@ -15,8 +15,10 @@ namespace Assets.WM.Script.UI.Menu
         public GameObject m_layerOptionPrefab = null;
 
         // Use this for initialization
-        void Start()
+        public new void Start()
         {
+            base.Start();
+
             if (null == m_layerButtonPanel)
             {
                 m_layerButtonPanel = gameObject;
@@ -26,8 +28,10 @@ namespace Assets.WM.Script.UI.Menu
         }
 
         // Update is called once per frame
-        void Update()
+        public new void Update()
         {
+            base.Update();
+
             m_showAllButton.interactable = !LayerManager.GetInstance().AreAllLayersVisible();
         }
 

@@ -1734,6 +1734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 0}
   m_defaultSelectedItem: {fileID: 0}
+  m_exitButton: {fileID: 0}
   m_buttonMenuMain: {fileID: 153597892}
 --- !u!114 &40514772
 MonoBehaviour:
@@ -3592,6 +3593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 208296934}
   m_defaultSelectedItem: {fileID: 1567960763}
+  m_exitButton: {fileID: 1672707335}
   m_scrollView: {fileID: 321742709}
   m_showAllButton: {fileID: 1567960763}
   m_layerButtonPanel: {fileID: 933662657}
@@ -4288,7 +4290,6 @@ GameObject:
   - component: {fileID: 212468905}
   - component: {fileID: 212468904}
   - component: {fileID: 212468903}
-  - component: {fileID: 212468906}
   m_Layer: 5
   m_Name: ButtonSunset
   m_TagString: Untagged
@@ -4389,36 +4390,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 212468901}
---- !u!114 &212468906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 212468901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 552090057}
-          m_MethodName: buttonTimeSunset_OnButtonClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &215842642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,7 +5496,6 @@ GameObject:
   - component: {fileID: 321674724}
   - component: {fileID: 321674723}
   - component: {fileID: 321674722}
-  - component: {fileID: 321674725}
   m_Layer: 5
   m_Name: ButtonMidnight
   m_TagString: Untagged
@@ -5626,36 +5596,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321674720}
---- !u!114 &321674725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 321674720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 552090057}
-          m_MethodName: buttonTimeMidnight_OnButtonClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &321742705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,7 +6439,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 81, y: -572}
-  m_SizeDelta: {x: 1700, y: 200}
+  m_SizeDelta: {x: 250, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &350429457
 MonoBehaviour:
@@ -6951,10 +6891,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 200
+    m_FontSize: 150
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7901,7 +7841,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &406797031
 MonoBehaviour:
@@ -7941,18 +7881,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 406797032}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &406797032
@@ -9846,7 +9775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_timeText: {fileID: 0}
   m_animationSpeed: 1
-  m_time: 0
   m_delta: 0
   m_hour: 0
   m_fractionOfHour: 0
@@ -10133,7 +10061,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
   m_Children: []
   m_Father: {fileID: 1082564012}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -15833,7 +15761,7 @@ Prefab:
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
@@ -17481,7 +17409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1082564012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17499,10 +17427,10 @@ RectTransform:
   - {fileID: 1958060718}
   - {fileID: 321674721}
   - {fileID: 350429456}
-  - {fileID: 1816222780}
   - {fileID: 961927910}
-  - {fileID: 480346209}
   - {fileID: 563294590}
+  - {fileID: 1816222780}
+  - {fileID: 480346209}
   - {fileID: 330425390}
   m_Father: {fileID: 1576071921}
   m_RootOrder: 4
@@ -17520,17 +17448,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082564011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b09fb2247bd66324a813acf335c6b648, type: 3}
+  m_Script: {fileID: 11500000, guid: 6363f144ebeb55a45b74d2b9484c2b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstPersonController: {fileID: 0}
-  m_defaultSelectedItem: {fileID: 0}
-  m_time: {fileID: 552090057}
+  m_firstPersonController: {fileID: 208296934}
+  m_defaultSelectedItem: {fileID: 212468903}
   m_exitButton: {fileID: 2114985622}
+  m_time: {fileID: 552090057}
+  m_maxAnimationSpeed: 3600
   m_textTime: {fileID: 563294591}
   m_textAnimationSpeed: {fileID: 330425391}
   m_dpadAnimation: {fileID: 1389661736}
   m_dpadTime: {fileID: 78383554}
+  m_buttonSunset: {fileID: 212468903}
+  m_buttonNoon: {fileID: 1749296608}
+  m_buttonSundawn: {fileID: 1958060719}
+  m_buttonMidnight: {fileID: 321674722}
 --- !u!114 &1082564014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21304,18 +21237,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1262263307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1262263307
@@ -22506,6 +22428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 0}
   m_defaultSelectedItem: {fileID: 0}
+  m_exitButton: {fileID: 0}
   m_scrollView: {fileID: 0}
   m_showAllButton: {fileID: 0}
   m_layerButtonPanel: {fileID: 0}
@@ -23154,6 +23077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 0}
   m_defaultSelectedItem: {fileID: 0}
+  m_exitButton: {fileID: 0}
 --- !u!114 &1375991393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23232,7 +23156,7 @@ Prefab:
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224777127857281258, guid: 62d6e1c4172c9374fa4199dc56e53247,
         type: 2}
@@ -24790,6 +24714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 208296934}
   m_defaultSelectedItem: {fileID: 1838541045}
+  m_exitButton: {fileID: 1262263306}
 --- !u!114 &1477669108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28505,18 +28430,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672707336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1672707336
@@ -29597,7 +29511,7 @@ GameObject:
   - component: {fileID: 1715344199}
   - component: {fileID: 1715344198}
   m_Layer: 5
-  m_Name: ButtonClose
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29660,18 +29574,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1715344199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1715344199
@@ -30728,7 +30631,6 @@ GameObject:
   - component: {fileID: 1749296610}
   - component: {fileID: 1749296609}
   - component: {fileID: 1749296608}
-  - component: {fileID: 1749296611}
   m_Layer: 5
   m_Name: ButtonNoon
   m_TagString: Untagged
@@ -30829,36 +30731,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1749296606}
---- !u!114 &1749296611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1749296606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 552090057}
-          m_MethodName: buttonTimeNoon_OnButtonClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &1751383965
 GameObject:
   m_ObjectHideFlags: 0
@@ -31282,6 +31154,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1576071921}
     m_Modifications:
+    - target: {fileID: 114551615748605312, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224613880626706838, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -31446,12 +31323,12 @@ Prefab:
     - target: {fileID: 224905704475605656, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -20.004272
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 224905704475605656, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20.004517
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 114619587368745800, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
         type: 2}
@@ -31499,6 +31376,26 @@ Prefab:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114551615748605312, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551615748605312, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551615748605312, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619587368745800, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+        type: 2}
+      propertyPath: m_exitButton
+      value: 
+      objectReference: {fileID: 1912699925}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bc5157ad4cb59c4ab8de4fd453f1636, type: 2}
   m_IsPrefabParent: 0
@@ -32518,12 +32415,12 @@ RectTransform:
   m_LocalScale: {x: 0.99999744, y: 0.99999744, z: 0.99999744}
   m_Children: []
   m_Father: {fileID: 1082564012}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 81.000046, y: -905}
-  m_SizeDelta: {x: 1700, y: 200}
+  m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1816222781
 MonoBehaviour:
@@ -34351,6 +34248,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1376373026}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1912699925 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114551615748605312, guid: 5bc5157ad4cb59c4ab8de4fd453f1636,
+    type: 2}
+  m_PrefabInternal: {fileID: 1780241916}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1915808856
 GameObject:
   m_ObjectHideFlags: 0
@@ -35176,7 +35079,6 @@ GameObject:
   - component: {fileID: 1958060721}
   - component: {fileID: 1958060720}
   - component: {fileID: 1958060719}
-  - component: {fileID: 1958060722}
   m_Layer: 5
   m_Name: ButtonSunDawn
   m_TagString: Untagged
@@ -35277,36 +35179,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958060717}
---- !u!114 &1958060722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1958060717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 552090057}
-          m_MethodName: buttonTimeSunDawn_OnButtonClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &1959596579
 GameObject:
   m_ObjectHideFlags: 0
@@ -35858,10 +35730,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 200
+    m_FontSize: 150
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -36489,7 +36361,7 @@ GameObject:
   - component: {fileID: 2041798416}
   - component: {fileID: 2041798415}
   m_Layer: 5
-  m_Name: ButtonExit_WS
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36534,18 +36406,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041798414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2041798414
@@ -37540,7 +37401,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2114985622
 MonoBehaviour:
@@ -37580,18 +37441,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2114985623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: MenuClose_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2114985623
@@ -37720,6 +37570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstPersonController: {fileID: 208296934}
   m_defaultSelectedItem: {fileID: 46305334}
+  m_exitButton: {fileID: 406797031}
   m_cameraNavigation: {fileID: 1384936961}
   m_buttonHome: {fileID: 46305334}
   m_buttonCameraNavigationMode: {fileID: 1388488720}

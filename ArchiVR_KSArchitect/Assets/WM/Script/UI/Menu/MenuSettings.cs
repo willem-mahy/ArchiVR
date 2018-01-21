@@ -7,20 +7,11 @@ namespace Assets.WM.Script.UI.Menu
 {
     public class MenuSettings : WMMenu
     {
-        //! The button to close this menu.
-        public Button m_exitButton = null;
-
         //! The button to open the 'Graphics Settings' submenu.
         public Button m_graphicsSettingsButton = null;
 
         //! The button to open the 'Controls Settings' submenu.
         public Button m_controlsSettingsButton = null;
-
-        void ExitButton_OnClick()
-        {
-            Debug.Log("MenuSettings.ExitButton_OnClick()");
-            UIManager.GetInstance().CloseMenu();
-        }
 
         void GraphicsSettingsButton_OnClick()
         {

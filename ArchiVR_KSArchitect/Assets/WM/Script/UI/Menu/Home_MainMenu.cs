@@ -2,12 +2,7 @@
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class Home_MainMenu : MonoBehaviour
+    public class Home_MainMenu : WMMenu
     {
-
-        // Use this for initialization
-        void Start()
-        {
-        }
     }
 }

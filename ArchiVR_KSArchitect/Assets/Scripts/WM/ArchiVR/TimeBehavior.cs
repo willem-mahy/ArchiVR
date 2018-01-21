@@ -10,8 +10,10 @@ namespace Assets.Scripts.WM.ArchiVR
 
         public int m_animationSpeed = 1;
 
-        public float m_time = 0; // in seconds.  This is the base for all other variables.
+        private float m_time = 0; // in seconds.  This is the base for all other variables.
+
         public float m_delta = 0; // last delta time, in seconds
+
         public int m_hour = 0;
         public float m_fractionOfHour = 0;
         public int m_nextHour = 1;
@@ -59,24 +61,12 @@ namespace Assets.Scripts.WM.ArchiVR
             }
         }
 
-        public void ButtonTimeMidnight_OnButtonClick()
+        public void SetTime(int hour, int min, int sec)
         {
-            m_time = 0;
-        }
-
-        public void ButtonTimeSunset_OnButtonClick()
-        {
-            m_time = 3600 * 6;
-        }
-
-        public void ButtonTimeSunDawn_OnButtonClick()
-        {
-            m_time = 3600 * 18;
-        }
-
-        public void ButtonTimeNoon_OnButtonClick()
-        {
-            m_time = 3600 * 12;
+            m_time =
+                hour * 3600 +
+                min * 60 +
+                sec;
         }
 
         void UpdateAnimatioSpeedFromKeyboard()

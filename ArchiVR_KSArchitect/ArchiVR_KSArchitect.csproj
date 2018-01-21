@@ -352,7 +352,6 @@
     <Compile Include="Assets\Scripts\WM\UI\DPadBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\InputSwipe.cs" />
     <Compile Include="Assets\Scripts\WM\UI\Menu.cs" />
-    <Compile Include="Assets\Scripts\WM\UI\MenuSetTimeBehavior.cs" />
     <Compile Include="Assets\Scripts\WM\UI\OnHoverHighlight.cs" />
     <Compile Include="Assets\Scripts\WM\UI\TabView.cs" />
     <Compile Include="Assets\Scripts\WM\UI\TextCameraLocation.cs" />
@@ -439,6 +438,7 @@
     <Compile Include="Assets\WM\Script\UI\Menu\MenuGraphicsSettings.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\MenuLayer.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\MenuSettings.cs" />
+    <Compile Include="Assets\WM\Script\UI\Menu\MenuTime.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\Play_MenuMain.cs" />
     <Compile Include="Assets\WM\Script\UI\Menu\WMMenu.cs" />
     <Compile Include="Assets\WM\Script\UI\POIMenu.cs" />

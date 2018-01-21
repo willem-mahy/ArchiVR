@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.WM.UI;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -11,6 +12,25 @@ namespace Assets.WM.Script.UI.Menu
 
         // The UI control that will receive UI focus when opening the menu.
         public Selectable m_defaultSelectedItem = null;
+
+        //! The button to close this menu.
+        public Button m_exitButton = null;
+
+        public void Start()
+        {
+            EnableCameraNavigationInputMouseKB(false);
+
+            if (null != m_exitButton)
+            {
+                m_exitButton.onClick.AddListener(ExitButton_OnClick);
+            }
+
+            // Set UI focus to the 'default selected item' when opening the menu.
+            if (null != m_defaultSelectedItem)
+            {
+                SetSelected(m_defaultSelectedItem);
+            }
+        }
 
         public void OnEnable()
         {
@@ -34,6 +54,12 @@ namespace Assets.WM.Script.UI.Menu
                 Input.GetKey(KeyCode.RightControl)
                 || Input.GetKey(KeyCode.LeftControl);
             EnableCameraNavigationInputMouseKB(e);
+        }
+
+        void ExitButton_OnClick()
+        {
+            Debug.Log("WMMenu(" + gameObject.name + ").ExitButton_OnClick()");
+            UIManager.GetInstance().CloseMenu();
         }
 
         //! Enable or disable the FPS controller.

@@ -12,9 +12,6 @@ namespace Assets.WM.Script.UI.Menu
 {
     public class MenuGraphicsSettings : WMMenu
     {
-        //! The button to close this menu.
-        public Button m_exitButton = null;
-
         //! The 'Enable Dynamic Grass' button.
         public Button m_enableDynamicGrassButton = null;
 
@@ -28,9 +25,10 @@ namespace Assets.WM.Script.UI.Menu
         public ToggleButton m_qualityButton = null;
 
         // Use this for initialization
-        public void Start()
+        public new void Start()
         {
-            m_exitButton.onClick.AddListener(ExitButton_OnClick);
+            base.Start();
+
             m_enableDynamicGrassButton.onClick.AddListener(EnableDynamicGrassButton_OnClick);
             m_showFPSButton.onClick.AddListener(ShowFPSButton_OnClick);
             m_qualityButton.gameObject.GetComponent<Button>().onClick.AddListener(QualityButton_OnClick);
@@ -92,13 +90,7 @@ namespace Assets.WM.Script.UI.Menu
             var qualityLevel = m_qualityButton.SetNextOption();
 
             ApplicationSettings.GetInstance().SetGraphicSettingsQualityLevel(qualityLevel);                
-        }
-
-        void ExitButton_OnClick()
-        {
-            Debug.Log("MenuGraphicsSettings.ExitButton_OnClick()");
-            UIManager.GetInstance().CloseMenu();
-        }
+        }        
 
         void EnableDynamicGrassButton_OnClick()
         {
