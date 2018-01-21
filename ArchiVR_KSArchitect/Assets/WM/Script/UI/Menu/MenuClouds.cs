@@ -4,19 +4,7 @@ using UnityEngine;
 
 namespace Assets.WM.Script.UI.Menu
 {
-    public class MenuClouds : MonoBehaviour
+    public class MenuClouds : WMMenu
     {
-
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

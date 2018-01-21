@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.WM.UI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;

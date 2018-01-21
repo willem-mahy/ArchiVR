@@ -81,6 +81,8 @@ namespace Assets.Scripts.WM.ArchiVR
 
         void UpdateAnimatioSpeedFromKeyboard()
         {
+            int factor = 10;
+
             if (Input.GetKeyUp("b")) // backward speed
             {
                 switch (m_animationSpeed)
@@ -91,9 +93,9 @@ namespace Assets.Scripts.WM.ArchiVR
                         break;
                     default:
                         if (m_animationSpeed < 0)
-                            m_animationSpeed = m_animationSpeed * 2;
+                            m_animationSpeed = m_animationSpeed * factor;
                         else
-                            m_animationSpeed = m_animationSpeed / 2;
+                            m_animationSpeed = m_animationSpeed / factor;
                         break;
                 }
             }
@@ -108,9 +110,9 @@ namespace Assets.Scripts.WM.ArchiVR
                         break;
                     default:
                         if (m_animationSpeed > 0)
-                            m_animationSpeed = m_animationSpeed * 2;
+                            m_animationSpeed = m_animationSpeed * factor;
                         else
-                            m_animationSpeed = m_animationSpeed / 2;
+                            m_animationSpeed = m_animationSpeed / factor;
                         break;
                 }
             }

@@ -16,6 +16,12 @@ namespace Assets.Scripts.WM.UI
             XY = 3
         }
 
+        public float normalizedRangeMinX = -1.0f;
+        public float normalizedRangeMaxX =  1.0f;
+
+        public float normalizedRangeMinY = -1.0f;
+        public float normalizedRangeMaxY =  1.0f;
+
         // The axis or axes along which the stick can be moved.
         public Axes m_axes = Axes.XY;
 
@@ -179,6 +185,45 @@ namespace Assets.Scripts.WM.UI
         public Vector2 GetStickOffset()
         {
             return Assets.Scripts.WM.Util.Math.ToVector2(m_stick.transform.localPosition - m_stickBasePosition);
+        }
+
+        //! Get the offset from the DPad stick rest position, to the current stick posistion.
+        public void SetStickOffsetNormalized(Vector2 offset, float scale)
+        {
+            Debug.Log("SetStickOffsetNormalized(" + offset.ToString() + ", " + scale + ")");
+
+            if (!IsAxisXEnabled())
+            {
+                offset.x = 0.5f;
+            }
+
+            if (!IsAxisYEnabled())
+            {
+                offset.y = 0.5f;
+            }
+
+            var stickAreaTransform = (RectTransform)m_stickArea.transform;
+            var stickAreaRect = stickAreaTransform.rect;
+            
+            var min = new Vector3(
+                m_stickArea.transform.position.x - (scale * 0.5f * stickAreaRect.width),
+                m_stickArea.transform.position.y - (scale * 0.5f * stickAreaRect.height),
+                0);
+
+            var max = new Vector3(
+                m_stickArea.transform.position.x + (scale * 0.5f * stickAreaRect.width),
+                m_stickArea.transform.position.y + (scale * 0.5f * stickAreaRect.height),
+                0);
+
+            var rangeoffset = new Vector3();
+            rangeoffset = (max - min);
+
+            var pos = new Vector3(
+                min.x + offset.x * rangeoffset.x,
+                min.y + offset.y * rangeoffset.y,
+                0);
+
+            m_stick.transform.position = pos;
         }
     }
 }

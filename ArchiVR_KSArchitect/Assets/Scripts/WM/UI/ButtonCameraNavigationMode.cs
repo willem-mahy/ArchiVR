@@ -4,13 +4,7 @@ using UnityEngine.UI;
 namespace Assets.Scripts.WM.UI
 {
     public class ButtonCameraNavigationMode : MonoBehaviour
-    {        
-        private Button m_button = null;
-
-        void Start()
-        {     
-        }
-
+    {
         // Update is called once per frame
         void Update()
         {
