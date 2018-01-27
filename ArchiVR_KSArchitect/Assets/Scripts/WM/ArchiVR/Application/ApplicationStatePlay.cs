@@ -69,6 +69,20 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
             }
+            
+            // If user presses 'l', show 'Main' menu.
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if (UIManager.GetInstance().GetCurrentMenu().name == "MenuPlay")
+                    OpenMainMenu();
+            }
+
+            // If user presses 'l', show 'Main' menu.
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (UIManager.GetInstance().GetCurrentMenu().name != "MenuPlay")
+                    MenuClose_OnClick();
+            }
 
             // If user presses 'F12', next poi.
             if (Input.GetKeyDown("f12"))
