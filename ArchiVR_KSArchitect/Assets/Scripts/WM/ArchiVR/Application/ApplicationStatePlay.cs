@@ -68,21 +68,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (Input.GetKeyDown("q"))
             {
                 ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
-            }
-            
-            // If user presses 'l', show 'Main' menu.
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                if (UIManager.GetInstance().GetCurrentMenu().name == "MenuPlay")
-                    OpenMainMenu();
-            }
-
-            // If user presses 'l', show 'Main' menu.
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (UIManager.GetInstance().GetCurrentMenu().name != "MenuPlay")
-                    MenuClose_OnClick();
-            }
+            }           
 
             // If user presses 'F12', next poi.
             if (Input.GetKeyDown("f12"))
@@ -222,13 +208,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         public void OpenHomeMenu()
         {
             SceneManager.LoadScene("Home");
-        }
-
-        public void OpenMainMenu()
-        {
-            Debug.Log("ApplicationStatePlay.OpenMainMenu()");
-
-            UIManager.GetInstance().OpenMenu(GameObject.Find("MenuMain").GetComponent<Assets.Scripts.WM.UI.Menu>());
         }
 
         public void WritePOI()

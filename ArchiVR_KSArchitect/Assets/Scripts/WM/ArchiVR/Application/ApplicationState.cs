@@ -390,13 +390,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             UIManager.GetInstance().ToggleUIVisible();
         }
 
-        public void MenuClose_OnClick()
-        {
-            Debug.Log("ApplicationState.MenuClose_OnClick()");
-
-            UIManager.GetInstance().CloseMenu();
-        }
-
         //! Quit the application.
         protected void QuitApplication()
         {

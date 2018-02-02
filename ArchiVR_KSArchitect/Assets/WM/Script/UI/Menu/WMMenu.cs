@@ -54,6 +54,24 @@ namespace Assets.WM.Script.UI.Menu
                 Input.GetKey(KeyCode.RightControl)
                 || Input.GetKey(KeyCode.LeftControl);
             EnableCameraNavigationInputMouseKB(e);
+
+            ProcessInput();
+        }
+
+        virtual protected void ProcessInput()
+        {
+            // If user presses 'escape' key, close menu.
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                CloseMenu();
+            }
+        }
+
+        public void CloseMenu()
+        {
+            Debug.Log("WMMenu.CloseMenu()");
+
+            UIManager.GetInstance().CloseMenu();
         }
 
         void ExitButton_OnClick()

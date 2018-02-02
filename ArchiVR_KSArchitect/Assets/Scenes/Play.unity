@@ -898,7 +898,7 @@ Prefab:
     - target: {fileID: 114729837774493198, guid: 9347a02533c91fe43b76842fee386cf6,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonViewMode_OnClick
+      value: ActivateNextXRDevice
       objectReference: {fileID: 0}
     - target: {fileID: 114729837774493198, guid: 9347a02533c91fe43b76842fee386cf6,
         type: 2}
@@ -1279,14 +1279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09fb2247bd66324a813acf335c6b648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstPersonController: {fileID: 0}
-  m_defaultSelectedItem: {fileID: 0}
-  m_time: {fileID: 552090057}
-  m_exitButton: {fileID: 858854050}
-  m_textTime: {fileID: 0}
-  m_textAnimationSpeed: {fileID: 0}
-  m_dpadAnimation: {fileID: 144916888}
-  m_dpadTime: {fileID: 315659389}
 --- !u!114 &29260649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,12 +3296,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 142530860}
---- !u!114 &144916888 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114813652410753618, guid: 62d6e1c4172c9374fa4199dc56e53247,
-    type: 2}
-  m_PrefabInternal: {fileID: 1616281482}
-  m_Script: {fileID: 11500000, guid: 3c112a6b3c32ab94abd643939d3100f0, type: 3}
 --- !u!1 &146667344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,18 +3922,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 153597893}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 432992903}
-        m_MethodName: OpenMainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &153597893
@@ -5479,12 +5454,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311803884}
---- !u!114 &315659389 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114813652410753618, guid: 62d6e1c4172c9374fa4199dc56e53247,
-    type: 2}
-  m_PrefabInternal: {fileID: 1715212664}
-  m_Script: {fileID: 11500000, guid: 3c112a6b3c32ab94abd643939d3100f0, type: 3}
 --- !u!1 &321674720
 GameObject:
   m_ObjectHideFlags: 0
@@ -8450,7 +8419,7 @@ Prefab:
     - target: {fileID: 224703369283016636, guid: de5031259497321428ac02255f56d21b,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 240
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 224703369283016636, guid: de5031259497321428ac02255f56d21b,
         type: 2}
@@ -8495,7 +8464,7 @@ Prefab:
     - target: {fileID: 224490928639870258, guid: de5031259497321428ac02255f56d21b,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 240
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 224490928639870258, guid: de5031259497321428ac02255f56d21b,
         type: 2}
@@ -8532,6 +8501,41 @@ Prefab:
     - target: {fileID: 1708235467086292, guid: de5031259497321428ac02255f56d21b, type: 2}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565614560995714, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558462188856184, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558462188856184, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558462188856184, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558462188856184, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114252792249044482, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114252792249044482, guid: de5031259497321428ac02255f56d21b,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de5031259497321428ac02255f56d21b, type: 2}

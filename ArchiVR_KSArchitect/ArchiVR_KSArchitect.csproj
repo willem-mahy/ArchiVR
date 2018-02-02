@@ -305,7 +305,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MenuPlay.cs" />
+    <Compile Include="Assets\WM\Script\UI\Menu\MenuPlay.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStatePlay.cs" />
