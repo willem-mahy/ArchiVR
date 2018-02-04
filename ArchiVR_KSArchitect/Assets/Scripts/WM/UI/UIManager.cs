@@ -1,4 +1,5 @@
 ﻿
+using Assets.Scripts.WM.Settings;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -205,6 +206,12 @@ namespace Assets.Scripts.WM.UI
 
             s_uiMode = uiMode;
 
+            /*
+            // Update application setting 'UI Mode'
+            var s = ApplicationSettings.GetInstance().m_data.m_stateSettings;
+
+            s.m_uiMode = uiMode;
+            */
             UpdateUIState();
         }
 

@@ -3,7 +3,10 @@ using System.Collections;
 
 namespace Assets.Scripts.WM.UI
 {  
-    //! Attach to a Text.
+    /*! Displays the current Frames-Per-Second (FPS) in a Text.
+     * 
+     * \usage Attach as a 'Script' component to a Text.
+     */
     public class DisplayFPS : MonoBehaviour
     {
         float deltaTime = 0.0f;

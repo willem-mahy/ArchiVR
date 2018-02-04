@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2adfba0bc21d3942ba0522fa3d59770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiControlNonVR: {fileID: 0}
+  m_uiControlNonVR: {fileID: 1708871373}
   m_uiControlVR: {fileID: 1126078000}
 --- !u!1001 &752318588
 Prefab:
@@ -11207,6 +11207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04be34b1c4c6f984b8dbe261e96808e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_firstPersonController: {fileID: 0}
+  m_defaultSelectedItem: {fileID: 0}
+  m_exitButton: {fileID: 0}
   m_enableOnscreenGamepadButton: {fileID: 1930814805}
 --- !u!1 &1708871373
 GameObject:
