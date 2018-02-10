@@ -1,4 +1,6 @@
-﻿using Assets.Scripts.WM.UI;
+﻿using Assets.Scripts.WM;
+using Assets.Scripts.WM.CameraNavigation;
+using Assets.Scripts.WM.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,6 +17,8 @@ namespace Assets.WM.Script.UI.Menu
 
         //! The button to close this menu.
         public Button m_exitButton = null;
+
+        protected bool m_enableTranslation = false;
 
         public void Start()
         {
@@ -50,21 +54,37 @@ namespace Assets.WM.Script.UI.Menu
 
         public void Update()
         {
-            bool e =
-                Input.GetKey(KeyCode.RightControl)
-                || Input.GetKey(KeyCode.LeftControl);
-            EnableCameraNavigationInputMouseKB(e);
-
             ProcessInput();
         }
 
         virtual protected void ProcessInput()
         {
-            // If user presses 'escape' key, close menu.
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(GamepadXBox.X))
+            {
+                
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.B))
+            {
+                
+            }
+
+            // If user presses 'gamepad button Y' or 'escape' key, close menu.
+            if (Input.GetKeyDown(GamepadXBox.Y) || Input.GetKeyDown(KeyCode.Escape))
             {
                 CloseMenu();
             }
+
+            bool e =
+                Input.GetKey(KeyCode.RightControl)
+                || Input.GetKey(KeyCode.LeftControl);
+
+            if (m_enableTranslation)
+            {
+                e = true;
+            }
+
+            EnableCameraNavigationInputMouseKB(e);
         }
 
         public void CloseMenu()
@@ -91,7 +111,10 @@ namespace Assets.WM.Script.UI.Menu
                 return;
             }
 
-            m_firstPersonController.enabled = state;
+            //m_firstPersonController.enabled = state;
+
+            var cameraNavigation = CameraNavigation.GetInstance();
+            cameraNavigation.EnableTranslation(false);
         }
 
         //! Set UI focus to the given selectable.

@@ -82,7 +82,12 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 GetComponent<POIManager>().ActivatePrevPOI();
             }
 
-            if (Input.GetKeyDown("joystick button 6")) // R1
+            if (Input.GetKeyDown(GamepadXBox.X))
+            {
+                GetComponent<POIManager>().ActivateNextPOI();
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.B))
             {
                 GetComponent<POIManager>().ActivateNextPOI();
             }
@@ -104,7 +109,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             if (Input.GetKeyDown(GamepadXBox.Select))
             {
-                UIManager.GetInstance().OpenMenu("MenuSettings");
+                UIManager.GetInstance().OpenMenu("MenuMain");
             }
 
             UpdatePOIMenuVisibility();

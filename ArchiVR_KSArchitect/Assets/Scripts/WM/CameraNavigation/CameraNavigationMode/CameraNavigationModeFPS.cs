@@ -19,6 +19,20 @@ namespace Assets.Scripts.WM.CameraNavigation
         {
         }
 
+        // Use this for initialization
+        void Update()
+        {
+            var cn = CameraNavigation.GetInstance();
+
+            if (cn)
+            {
+                if (m_firstPersonController)
+                {
+                    m_firstPersonController.m_enableTranslation = cn.m_enableTranslation;
+                }
+            }
+        }
+
         override public void OnEnable()
         {
             base.OnEnable();

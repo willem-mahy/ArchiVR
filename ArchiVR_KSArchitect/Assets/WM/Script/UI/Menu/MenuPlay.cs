@@ -15,6 +15,8 @@ namespace Assets.WM.Script.UI.Menu
             base.Start();
 
             m_buttonMenuMain.onClick.AddListener(ButtonMenuMain_OnClick);
+
+            m_enableTranslation = true;
         }
 
         // Update is called once per frame

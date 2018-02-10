@@ -11291,7 +11291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97583a6430b873429224163060ef1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstPersonController: {fileID: 0}
+  m_firstPersonController: {fileID: 208296934}
   m_defaultSelectedItem: {fileID: 1989616506}
   m_exitButton: {fileID: 0}
   m_buttonMenuMain: {fileID: 1989616506}
@@ -18182,6 +18182,7 @@ GameObject:
   - component: {fileID: 1097339097}
   - component: {fileID: 1097339096}
   - component: {fileID: 1097339095}
+  - component: {fileID: 1097339098}
   m_Layer: 12
   m_Name: Panel_MainMenu_WS
   m_TagString: Untagged
@@ -18263,6 +18264,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097339093}
+--- !u!114 &1097339098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097339093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ebe24da8a331943a282cf15d424255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_firstPersonController: {fileID: 208296934}
+  m_defaultSelectedItem: {fileID: 1322385261}
+  m_exitButton: {fileID: 1586306185}
+  m_cameraNavigation: {fileID: 1384936961}
+  m_buttonHome: {fileID: 256930179}
+  m_buttonCameraNavigationMode: {fileID: 1322385261}
+  m_buttonConstructionLightingMode: {fileID: 7696512}
+  m_buttonXRDevice: {fileID: 1196636741}
+  m_applicationState: {fileID: 432992903}
 --- !u!1 &1103900979
 GameObject:
   m_ObjectHideFlags: 0

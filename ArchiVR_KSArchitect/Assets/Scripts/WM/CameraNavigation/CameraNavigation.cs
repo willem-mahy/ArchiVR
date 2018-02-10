@@ -11,6 +11,13 @@ namespace Assets.Scripts.WM.CameraNavigation
     {
         static private CameraNavigation s_instance = null;
 
+        public bool m_enableTranslation = true;
+       
+        public void EnableTranslation(bool state)
+        {
+            m_enableTranslation = false;
+        }
+
         //! Get a reference to the singleton instance.
         static public CameraNavigation GetInstance()
         {

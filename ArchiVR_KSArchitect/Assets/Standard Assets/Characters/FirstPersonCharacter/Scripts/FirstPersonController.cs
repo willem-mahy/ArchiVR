@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        [SerializeField] public bool m_enableTranslation = true;
         [SerializeField] public bool m_enableJump = true;
         [SerializeField] public bool m_UseGyro;
         [SerializeField] private bool m_IsWalking;
@@ -123,6 +124,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             float speed;
             GetInput(out speed);
+
+            //var cameraNavigation = CameraNavigation.GetInstance();
+            
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
 
@@ -152,7 +156,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+
+            if (m_enableTranslation)
+            {
+                m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
+            }
 
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
