@@ -18,6 +18,11 @@ namespace Assets.Scripts.WM
 
     public class ProjectManager : MonoBehaviour
     {
+        public List<Project> GetProjects()
+        {
+            return m_projects;
+        }
+
         public static string GetProjectSceneFolderPath()
         {
             return "Assets/Scenes/Project/";

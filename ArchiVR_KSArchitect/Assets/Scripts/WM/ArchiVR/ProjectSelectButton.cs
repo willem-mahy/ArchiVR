@@ -11,6 +11,22 @@ public class ProjectSelectButton : MonoBehaviour {
 	void Start () {
         gameObject.GetComponent<Button>().onClick.AddListener(OnClick);
 
+        Init();
+    }
+
+    void OnClick()
+    {
+        ApplicationState.OpenProject(m_projectName);
+    }
+
+    public void SetProject(Project project)
+    {
+        m_projectName = project.m_name;
+        Init();
+    }
+
+    private void Init()
+    {
         var scenePath = ProjectManager.GetProjectScenePath(m_projectName);
 
         // Verify that the project exists.
@@ -23,7 +39,7 @@ public class ProjectSelectButton : MonoBehaviour {
 
         // Load the 'project preview' Sprite from project Reosources ('Assets/Resources')
         var spriteProjectPreviewResourcePath = "ProjectPreview/" + m_projectName;
-                
+
         var spriteProjectPreview = Resources.Load<Sprite>(spriteProjectPreviewResourcePath);
 
         if (null == spriteProjectPreview)
@@ -37,9 +53,4 @@ public class ProjectSelectButton : MonoBehaviour {
 
         buttonImageComponent.sprite = spriteProjectPreview;
     }
-
-    void OnClick()
-    {
-        ApplicationState.OpenProject(m_projectName);
-    }    
 }
