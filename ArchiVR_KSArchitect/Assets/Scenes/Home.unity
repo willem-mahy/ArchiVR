@@ -3034,9 +3034,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 439782134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b4036a073d0ab4da361f713f28a742, type: 3}
+  m_Script: {fileID: 11500000, guid: f74650c7e6f01e947b3a20aa049ed186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_firstPersonController: {fileID: 744278268}
+  m_defaultSelectedItem: {fileID: 466519544}
+  m_exitButton: {fileID: 166664750}
+  m_graphicsSettingsButton: {fileID: 466519544}
+  m_controlsSettingsButton: {fileID: 302406787}
 --- !u!1 &459087485
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,7 +3866,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571562552}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347395}
+        m_MethodName: ActivateNextXRDevice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &571562552
@@ -5893,7 +5909,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 182897933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347395}
+        m_MethodName: MenuSettingsButton_OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &816183955
@@ -6118,7 +6145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_camera: {fileID: 1032023898}
   m_fixationArea: {fileID: 1126078000}
-  m_offsetFromCamera: {x: 0, y: -2, z: 0}
+  m_offsetFromCamera: {x: 0, y: -1.6, z: 0}
 --- !u!1 &941843589
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,7 +6623,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1378012648}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347395}
+        m_MethodName: QuitButton_OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &983331089
