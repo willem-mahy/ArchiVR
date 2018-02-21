@@ -8,11 +8,7 @@ namespace Assets.Scripts.WM.UI.VR {
         public VRStandardAssets.Utils.VRInteractiveItem m_InteractiveItem = null;
 
         // Use this for initialization
-        void Start () {
-            m_InteractiveItem.OnOver += HandleOver;
-            m_InteractiveItem.OnOut += HandleOut;
-            m_InteractiveItem.OnClick += HandleClick;
-            m_InteractiveItem.OnDoubleClick += HandleDoubleClick;
+        void Start () {            
         }
 	
 	    // Update is called once per frame
@@ -25,7 +21,11 @@ namespace Assets.Scripts.WM.UI.VR {
         }
 
         private void OnEnable()
-        {        
+        {
+            m_InteractiveItem.OnOver += HandleOver;
+            m_InteractiveItem.OnOut += HandleOut;
+            m_InteractiveItem.OnClick += HandleClick;
+            m_InteractiveItem.OnDoubleClick += HandleDoubleClick;
         }
 
         private void OnDisable()

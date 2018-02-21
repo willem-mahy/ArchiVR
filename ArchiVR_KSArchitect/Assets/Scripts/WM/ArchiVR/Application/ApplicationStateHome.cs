@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.WM.UI;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
 
@@ -30,6 +31,17 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             if (Input.GetKey("escape"))
             {
                 QuitApplication();
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftAlt))
+            {
+                var uiManager = UIManager.GetInstance();
+
+                var currentMenuName = uiManager.GetCurrentMenu().name;
+                if (currentMenuName.CompareTo("MenuMain") == 0)
+                {
+                    uiManager.OpenMenu("MenuSettings");
+                }
             }
         }
 

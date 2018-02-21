@@ -114,7 +114,11 @@ namespace Assets.WM.Script.UI.Menu
             //m_firstPersonController.enabled = state;
 
             var cameraNavigation = CameraNavigation.GetInstance();
-            cameraNavigation.EnableTranslation(false);
+
+            if (null != cameraNavigation)
+            {
+                cameraNavigation.EnableTranslation(false);
+            }
         }
 
         //! Set UI focus to the given selectable.

@@ -1,8 +1,12 @@
 ﻿using Assets.Scripts.WM;
+using Assets.Scripts.WM.UI;
+using Assets.Scripts.WM.UI.VR;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using VRStandardAssets.Utils;
 
 public class MenuSceneSelectionVR : MonoBehaviour {
 
@@ -33,7 +37,10 @@ public class MenuSceneSelectionVR : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        var uiManager = UIManager.GetInstance();
+
+        var currentMenuName = uiManager.GetCurrentMenu().name;
+        setButtonsEnabled(currentMenuName.CompareTo("MenuMain")==0);
 	}
 
     private void DynamicallyAddProjectButtons()
@@ -125,7 +132,7 @@ public class MenuSceneSelectionVR : MonoBehaviour {
         }
 
         button.SetActive(true);
-        button.name = "ProjectButton<WS_" + project.m_name;
+        button.name = "ProjectButtonWS_" + project.m_name;
 
         // Set the rect transform top offset for the layer option UI control.
         var bsp = button.GetComponent<ButtonSelectProjectWS>();
@@ -146,6 +153,8 @@ public class MenuSceneSelectionVR : MonoBehaviour {
         // Add layer option UI Control to its parent UI control.
         button.transform.SetParent(m_projectButtonPrefab.transform.parent, false);
 
+        m_projectButtons.Add(button);
+
         // Initialize layer option UI control local scale, rotation and offset.
         //option.transform.localScale = Vector3.one;
         //option.transform.localRotation = Quaternion.identity;            
@@ -163,5 +172,58 @@ public class MenuSceneSelectionVR : MonoBehaviour {
         }
 
         return button;
+    }
+
+    void setButtonsEnabled(bool state)
+    {       
+        Debug.Log("MenuSceneSelectionVR.setButtonsEnabled(" + state + ")");
+
+        foreach (var button in m_projectButtons)
+        {
+            Debug.Log("UpdateButton(" + button.name + ")");
+
+            // Set the rect transform top offset for the layer option UI control.
+            var b = button.transform.GetComponentInChildren<Button>();
+
+            if (null == b)
+            {
+                Debug.LogError("b == null");
+                continue;
+            }
+
+            var vii = button.transform.GetComponentInChildren<VRInteractiveItem>();
+
+            if (null == vii)
+            {
+                Debug.LogError("vii == null");
+                continue;
+            }
+
+            var vrb = button.transform.GetComponentInChildren<VRButton>();
+
+            if (null == vrb)
+            {
+                Debug.LogError("vrb == null");
+                continue;
+            }
+
+            var bc = button.transform.GetComponentInChildren<BoxCollider>();
+
+            if (null == bc)
+            {
+                Debug.LogError("bc == null");
+                continue;
+            }
+
+            Debug.Log("setButtonEnabled(" + state + ")");
+
+            bc.enabled = state;
+
+            vrb.enabled = state;
+
+            b.enabled = state;
+
+            vii.enabled = state;
+        }
     }
 }

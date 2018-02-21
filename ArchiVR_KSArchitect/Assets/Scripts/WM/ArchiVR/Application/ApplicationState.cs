@@ -55,8 +55,11 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         static public ApplicationStartupSettings s_startupSettings =
             //null;
             //new ApplicationStartupSettings("none", UIMode.ScreenSpace);
-            new ApplicationStartupSettings("split", UIMode.WorldSpace);
-        
+            //new ApplicationStartupSettings("split", UIMode.WorldSpace);
+            new ApplicationStartupSettings("mono", UIMode.WorldSpace);
+            //new ApplicationStartupSettings("stereo", UIMode.WorldSpace);
+            //new ApplicationStartupSettings("cardboard", UIMode.WorldSpace);
+
         // puclic: must be settable from Unity Editor
         public Assets.Scripts.WM.UI.TabView m_debugView_SS = null;
 

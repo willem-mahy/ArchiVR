@@ -13,6 +13,14 @@ namespace Assets.WM.Script.UI.Menu
         //! The button to open the 'Controls Settings' submenu.
         public Button m_controlsSettingsButton = null;
 
+        public new void Start()
+        {
+            base.Start();
+
+            m_controlsSettingsButton.onClick.AddListener(ControlsSettingsButton_OnClick);
+            m_graphicsSettingsButton.onClick.AddListener(GraphicsSettingsButton_OnClick);
+        }
+
         void GraphicsSettingsButton_OnClick()
         {
             Debug.Log("MenuSettings.GraphicsSettingsButton_OnClick()");
