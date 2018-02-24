@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.WM.Settings;
+using UnityEngine;
 
 namespace Assets.Scripts.WM
 {
@@ -123,6 +124,28 @@ namespace Assets.Scripts.WM
 
                 nm.PositionCamera(position, rotation);
             }
+        }
+
+        public void WriteCurrentCameraLocationToFilePOI()
+        {
+            var camera = Camera.main;
+            var name = GetActivePOI().name;
+            var position = camera.transform.position.ToString();
+            var rotation = camera.transform.rotation.eulerAngles.ToString();
+
+            var text =
+                System.Environment.NewLine +
+                "POI" +
+                " Name: " + name +
+                " Pos:" + position +
+                " Rot:" + rotation;
+
+            var appSettings = ApplicationSettings.GetInstance();
+
+            var projectName = appSettings.m_data.m_stateSettings.m_activeProjectName;
+
+            var filePath = UnityEngine.Application.persistentDataPath + "\\poi_" + projectName + ".txt";
+            System.IO.File.AppendAllText(filePath, text);
         }
     }
  }

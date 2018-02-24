@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 224912417261780572}
   - component: {fileID: 222218033570419800}
   - component: {fileID: 114479882386670196}
-  - component: {fileID: 114159345103842398}
+  - component: {fileID: 114786112861088760}
   m_Layer: 12
   m_Name: Panel_MenuGraphicsSettings
   m_TagString: Untagged
@@ -700,22 +700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea6f8eea666334aaf9869ad8f7bcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114159345103842398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143075249748324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426e6ea09a031b14a85c8ee34049d1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_exitButton: {fileID: 114733628535042178}
-  m_enableDynamicGrassButton: {fileID: 114676229922092164}
-  m_enableCloudsButton: {fileID: 114641327718953186}
-  m_showFPSButton: {fileID: 114521115028843432}
-  m_qualityButton: {fileID: 114720148402886470}
 --- !u!114 &114193915674417894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1027,7 +1011,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114159345103842398}
+      - m_Target: {fileID: 0}
         m_MethodName: EditCloudsButton_OnClick
         m_Mode: 1
         m_Arguments:
@@ -1710,6 +1694,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 114217870037927198}
+--- !u!114 &114786112861088760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143075249748324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48841d26966967e46bc6c976281eb294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_firstPersonController: {fileID: 0}
+  m_defaultSelectedItem: {fileID: 0}
+  m_exitButton: {fileID: 0}
+  m_enableDynamicGrassButton: {fileID: 0}
+  m_enableCloudsButton: {fileID: 0}
+  m_showFPSButton: {fileID: 0}
+  m_qualityButton: {fileID: 0}
 --- !u!114 &114793285551093562
 MonoBehaviour:
   m_ObjectHideFlags: 1

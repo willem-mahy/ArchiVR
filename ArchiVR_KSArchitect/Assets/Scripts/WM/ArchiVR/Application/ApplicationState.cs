@@ -800,6 +800,17 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 var poiCollection = GameObject.Find("/World/Construction/Phases/Final/POI/Fly");
                 poiManager.SetPOICollection(poiCollection);
             }
+
+            var vegetationManager = VegetationManager.GetInstance();
+
+            if (vegetationManager)
+            {
+                //vegetationManager.InitTerrains();
+
+                var terrains = gameObjectWorld.transform.GetComponentsInChildren<Terrain>();
+
+                vegetationManager.m_terrains.AddRange(terrains);
+            }
         }
 
         public void MakeScreenCapture()

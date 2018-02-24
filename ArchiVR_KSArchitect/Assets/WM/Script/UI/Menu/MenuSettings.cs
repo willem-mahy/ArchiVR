@@ -24,13 +24,17 @@ namespace Assets.WM.Script.UI.Menu
         void GraphicsSettingsButton_OnClick()
         {
             Debug.Log("MenuSettings.GraphicsSettingsButton_OnClick()");
-            UIManager.GetInstance().OpenMenu("MenuGraphicsSettings");
+
+            //UIManager.GetInstance().OpenMenu(GameObject.Find("MenuGraphicsSettings").GetComponent<Assets.Scripts.WM.UI.Menu>());
+            // //UIManager.GetInstance().OpenMenu("MenuGraphicsSettings");
         }
 
         void ControlsSettingsButton_OnClick()
         {
             Debug.Log("MenuSettings.ControlsSettingsButton_OnClick()");
-            UIManager.GetInstance().OpenMenu("MenuControlsSettings");
+
+            //UIManager.GetInstance().OpenMenu(GameObject.Find("MenuControlsSettings").GetComponent<Assets.Scripts.WM.UI.Menu>());
+            // //UIManager.GetInstance().OpenMenu("MenuControlsSettings");
         }
     }
 }
