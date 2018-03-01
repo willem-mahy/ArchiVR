@@ -6,6 +6,9 @@ namespace Assets.Scripts.WM.CameraNavigation
 {
     public class CameraNavigationModeTeleport : CameraNavigationModeBase
     {
+        // Need to press LMB in order to rotate(true), or rotate always(false).
+        public bool m_dragToRotate = false;
+
         public float m_rotateSpeedX = 100;
         public float m_rotateSpeedY = 100;
 
@@ -42,6 +45,14 @@ namespace Assets.Scripts.WM.CameraNavigation
 
         private void UpdateRotation()
         {
+            // Decide if we need to update the rotation, or not.
+            var rotate = (m_dragToRotate ? Input.GetMouseButton(0) : true);
+            
+            if (!rotate)
+            {
+                return;
+            }
+
             var eulerOffset = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
 
             Rotate(eulerOffset);
@@ -56,21 +67,19 @@ namespace Assets.Scripts.WM.CameraNavigation
 
             eulerOffset *= Time.deltaTime;
 
-            if (Input.GetMouseButton(0))
-            {
-                var cameraEulerAngles = m_camera.transform.eulerAngles;
+            
+            var cameraEulerAngles = m_camera.transform.eulerAngles;
 
-                // Mouse drag over X axis = camera rotation around Y axis.
-                cameraEulerAngles.x -= eulerOffset.x;
-                // Mouse drag over Y axis = camera rotation around X axis.
-                cameraEulerAngles.y += eulerOffset.y;
+            // Mouse drag over X axis = camera rotation around Y axis.
+            cameraEulerAngles.x -= eulerOffset.x;
+            // Mouse drag over Y axis = camera rotation around X axis.
+            cameraEulerAngles.y += eulerOffset.y;
 
-                cameraEulerAngles.x = WM.Util.Math.FormatAngle180(cameraEulerAngles.x);
-                cameraEulerAngles.x = Mathf.Clamp(cameraEulerAngles.x, m_rotationMinX, m_rotationMaxX);
+            cameraEulerAngles.x = WM.Util.Math.FormatAngle180(cameraEulerAngles.x);
+            cameraEulerAngles.x = Mathf.Clamp(cameraEulerAngles.x, m_rotationMinX, m_rotationMaxX);
 
-                var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
-                m_camera.transform.rotation = rotation;
-            }
+            var rotation = Quaternion.Euler(cameraEulerAngles.x, cameraEulerAngles.y, 0);
+            m_camera.transform.rotation = rotation;
         }
 
         public override void PositionCamera(Vector3 translation, Quaternion rotation)

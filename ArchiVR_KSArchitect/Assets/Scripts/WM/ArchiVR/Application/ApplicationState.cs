@@ -45,6 +45,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
     public abstract class ApplicationState : MonoBehaviour
     {
+        // For debugging purposes: allows to start up in 'Play' state,
+        // using the default project designated in 'm_initialProjectSceneName'.
+        public static bool s_isFirstTime = true;
+
         // For debugging purposes.
         static private bool s_debugInitialSetup = true;
         
@@ -754,6 +758,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         static public void OpenProject()
         {
             Debug.Log("OpenProject()");
+
+            // Prevent Play state to auto-transition to default project.
+            ApplicationState.s_isFirstTime = false;
 
             var projectName = ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName;
             SceneManager.LoadScene(projectName);

@@ -2136,7 +2136,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 302406788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347395}
+        m_MethodName: MenuControlsSettingsButton_OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &302406788
@@ -3233,7 +3244,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466519545}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347395}
+        m_MethodName: MenuGraphicsSettingsButton_OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &466519545
@@ -3912,7 +3934,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 538029635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 844347394}
+        m_MethodName: ToggleEnableClouds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &538029635
@@ -5357,6 +5390,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714824460}
+--- !u!198 &716487470 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198693277839685618, guid: 994f359d9c405824f836f4c8432854c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 532732076}
 --- !u!1 &719278002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6404,6 +6442,7 @@ GameObject:
   - component: {fileID: 844347393}
   - component: {fileID: 844347395}
   - component: {fileID: 844347392}
+  - component: {fileID: 844347394}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -6437,6 +6476,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844347394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844347391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdfc3e754fdb06479fe1087ccdc15f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clouds: {fileID: 1752741441}
+  m_cloudLayers:
+  - {fileID: 716487470}
+  - {fileID: 878367614}
 --- !u!114 &844347395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6499,6 +6553,11 @@ MonoBehaviour:
   m_camera: {fileID: 1032023898}
   m_fixationArea: {fileID: 1126078000}
   m_offsetFromCamera: {x: 0, y: -1.6, z: 0}
+--- !u!198 &878367614 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198295487443142898, guid: 994f359d9c405824f836f4c8432854c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 532732076}
 --- !u!1 &941843589
 GameObject:
   m_ObjectHideFlags: 0
@@ -12153,6 +12212,11 @@ Transform:
   m_Father: {fileID: 744278267}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1752741441 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1358545970057682, guid: 994f359d9c405824f836f4c8432854c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 532732076}
 --- !u!1001 &1756844384
 Prefab:
   m_ObjectHideFlags: 0

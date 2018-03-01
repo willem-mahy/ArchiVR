@@ -8,9 +8,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStatePlay : ApplicationState
     {
-        // For debugging purposes: allows to start up in 'Play' state,
-        // with the project designated in 'm_initialProjectSceneName'.
-        private static bool s_firstTime = true;
+        
 
         // For debugging purposes: allows to start up in 'Play' state,
         // with the project designated in 'm_initialProjectSceneName'.
@@ -31,9 +29,9 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // For debugging purposes:
             // enables to open an initial project (defined by 'm_initialProjectSceneName')
             // when starting the application directly in 'Play' mode from the Unity editor.
-            if (s_firstTime)
+            if (ApplicationState.s_isFirstTime)
             {
-                s_firstTime = false;
+                ApplicationState.s_isFirstTime = false;
 
                 if (m_initialProjectSceneName.Length > 0)
                 {
