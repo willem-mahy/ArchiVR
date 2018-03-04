@@ -117,12 +117,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             // 2c) Make sure that UI Mode is in accordance to the active XR device.
             OnSetActiveXRDevice(XRSettings.loadedDeviceName);
 
-            var widgetDebug = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
-
-            if (null != widgetDebug)
-            {
-                widgetDebug.SetVisible(false);
-            }
+            UIManager.GetInstance().UpdateControlsVisibility();
         }
 
         public static string GetTextControlsInfo()

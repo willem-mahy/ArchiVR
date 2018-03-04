@@ -66,7 +66,7 @@ namespace Assets.Scripts.WM.UI
 
             UpdateUIState();
         }
-                
+
         // Update is called once per frame
         void Update()
         {
@@ -81,6 +81,42 @@ namespace Assets.Scripts.WM.UI
             HandleTouches();
         }
 
+        public void ToggleFPSVisibility()
+        {            
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
+
+            s.m_showFPS = !s.m_showFPS;
+
+            var uim = UIManager.GetInstance();
+            uim.UpdateControlsVisibility(); // TODO: uim.UpdateFPSVisibility(); ???
+        }
+
+        // FPS, Debug
+        public void UpdateControlsVisibility()
+        {
+            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
+
+            // Update Debug widget visibility.
+            var widgetDebug = GetWidgetByName("WidgetDebug");
+
+            if (null != widgetDebug)
+            {
+                bool v = false; // TODO: s.m_showDebug);
+                Debug.Log("Debug widget visibility set to: " + v);
+                widgetDebug.SetVisible(v);
+            }
+
+            // Update FPC widget visibility.
+            var widgetFPS = GetWidgetByName("WidgetFPS");
+    
+            if (null!= widgetFPS)
+            {
+                bool v = s.m_showFPS;
+                Debug.Log("FPS widget visibility set to: " + v);
+                widgetFPS.SetVisible(v);
+            }
+        }
+     
         public Widget GetWidgetByName(string widgetName)
         {
             var widgets = gameObject.transform.Find("Widget");

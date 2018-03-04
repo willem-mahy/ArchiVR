@@ -116,11 +116,9 @@ namespace Assets.WM.Script.UI.Menu
         void ShowFPSButton_OnClick()
         {
             Debug.Log("MenuGraphicsSettings.ShowFPSButton_OnClick()");
-            var s = ApplicationSettings.GetInstance().m_data.m_graphicSettings;
 
-            s.m_showFPS = !s.m_showFPS;
-
-            UIManager.GetInstance().GetWidgetByName("WidgetFPS").SetVisible(s.m_showFPS);
+            var uim = UIManager.GetInstance();
+            uim.ToggleFPSVisibility();
         }
     }
 }
