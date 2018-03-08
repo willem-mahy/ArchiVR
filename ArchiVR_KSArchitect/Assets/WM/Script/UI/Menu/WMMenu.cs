@@ -59,9 +59,66 @@ namespace Assets.WM.Script.UI.Menu
 
         virtual protected void ProcessInput()
         {
+            var focusedGameObject = GameObject.Find(GUI.GetNameOfFocusedControl());
+
+            var focusedSelectable = focusedGameObject ? focusedGameObject.GetComponent<Selectable>() : null;
+            var focusedButton = focusedGameObject ? focusedGameObject.GetComponent<Button>() : null;
+            
+            // If user starts a tap on GearVR (down event) ...
+            if (Input.GetButton("Tap"))
+            {
+                // ... , perform a click.                
+                if (null != focusedGameObject)
+                {
+                    if (null != focusedSelectable)
+                    {
+                        focusedSelectable.Select();
+                    }
+
+                    if (null != focusedButton)
+                    {
+                        focusedButton.onClick.Invoke();
+                    }
+                }
+
+                //Debug.Log("GearVR Tap Down");
+                //GameObject myEventSystem = GameObject.Find("EventSystem");
+                //myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().;
+            }
+
+            // If user stops a tap on GearVR (up) ...
+            if (Input.GetButtonUp("Tap"))
+            {
+                //Debug.Log("GearVR Tap Up");
+
+                // ... NOOP
+            }
+
             if (Input.GetKeyDown(GamepadXBox.X))
             {
                 
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.Y))
+            {
+                
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.A))
+            {
+                // ... , perform a click.                
+                if (null != focusedGameObject)
+                {
+                    if (null != focusedSelectable)
+                    {
+                        focusedSelectable.Select();
+                    }
+
+                    if (null != focusedButton)
+                    {
+                        focusedButton.onClick.Invoke();
+                    }
+                }
             }
 
             if (Input.GetKeyDown(GamepadXBox.B))
@@ -73,6 +130,61 @@ namespace Assets.WM.Script.UI.Menu
             if (Input.GetKeyDown(GamepadXBox.Y) || Input.GetKeyDown(KeyCode.Escape))
             {
                 CloseMenu();
+            }
+
+            var joystick0Hor = Input.GetAxis("Horizontal");
+            var joystick0Vert = Input.GetAxis("Vertical");
+
+            if (joystick0Vert > 0)
+            {
+                if (null != focusedSelectable)
+                {
+                    var nextSelectable = focusedSelectable.FindSelectableOnUp();
+
+                    if (null != nextSelectable)
+                    {
+                        nextSelectable.Select();
+                    }
+                }
+            }
+
+            if (joystick0Vert < 0)
+            {
+                if (null != focusedSelectable)
+                {
+                    var nextSelectable = focusedSelectable.FindSelectableOnDown();
+
+                    if (null != nextSelectable)
+                    {
+                        nextSelectable.Select();
+                    }
+                }
+            }
+
+            if (joystick0Hor > 0)
+            {
+                if (null != focusedSelectable)
+                {
+                    var nextSelectable = focusedSelectable.FindSelectableOnRight();
+
+                    if (null != nextSelectable)
+                    {
+                        nextSelectable.Select();
+                    }
+                }
+            }
+
+            if (joystick0Hor < 0)
+            {
+                if (null != focusedSelectable)
+                {
+                    var nextSelectable = focusedSelectable.FindSelectableOnLeft();
+
+                    if (null != nextSelectable)
+                    {
+                        nextSelectable.Select();
+                    }
+                }
             }
 
             bool e =
