@@ -304,6 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ButtonSelectProjectWS.cs" />
+    <Compile Include="Assets\GamePadPreview.cs" />
     <Compile Include="Assets\MenuSceneSelectionVR.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationState.cs" />
     <Compile Include="Assets\Scripts\WM\ArchiVR\Application\ApplicationStateHome.cs" />
