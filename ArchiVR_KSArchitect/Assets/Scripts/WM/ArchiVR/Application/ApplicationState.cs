@@ -298,6 +298,29 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
+            if (Input.GetKeyDown(GamepadXBox.L1))
+            {
+                var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+
+                if (null != wd)
+                {
+                    wd.ToggleVisible();
+                }
+            }
+
+            if (Input.GetKeyDown(GamepadXBox.Y))
+            {
+                var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+
+                if (null != wd)
+                {
+                    wd.ToggleVisible();
+
+                    wd.m_uiControlScreenSpace.GetComponent<TabView>().SetActiveTab(2);
+                    wd.m_uiControlWorldSpace.GetComponent<TabView>().SetActiveTab(2);
+                }
+            }
+
             // 'c' key: Generate ScreenCapture.
             if (Input.GetKeyUp("c"))
             {

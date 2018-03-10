@@ -31,15 +31,21 @@ namespace Assets.Scripts.WM
         static public string Y = "joystick button 3";
         static public string L1 = "joystick button 4";
         static public string R1 = "joystick button 5";
+        static public string L2R2 = "Joystick_3thAxis";
         static public string Select = "joystick button 6";
         static public string Start = "joystick button 7";
 
-
+        static public string LeftAnalogPress = "joystick button 8";
+        static public string RightAnalogPress = "joystick button 9";
+        
         static public string LeftAnalogHorizontal = "Joystick_XAxis";
         static public string LeftAnalogVertical = "Joystick_YAxis";
 
         static public string RightAnalogHorizontal = "Joystick_4thAxis";
         static public string RightAnalogVertical = "Joystick_5thAxis";
+
+        static public string DPadHorizontal = "Joystick_6thAxis";
+        static public string DPadVertical = "Joystick_7thAxis";
 
     }
 
