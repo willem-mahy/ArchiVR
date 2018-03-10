@@ -75,72 +75,40 @@ public class GamePadPreview : MonoBehaviour
         mapping[GamepadXBox.Start] = "Go to home";
 
         mapping["LeftJoystick"] = "Navigate menu";
-        mapping["RightJoystick"] = "";
+        mapping["RightJoystick"] = "Look around";
 
         SetFunctionTexts(mapping);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (m_buttonA)
-        {
-            if (Input.GetKey(GamepadXBox.A))
-            {
-                m_buttonA.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonA.OnPointerExit(null);
-            }
-        }
 
-        if (m_buttonB)
-        {
-            if (Input.GetKey(GamepadXBox.B))
-            {
-                m_buttonB.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonB.OnPointerExit(null);
-            }
-        }
+    // Update is called once per frame
+    void Update() {
+        UpdatePressedState();
+    }
 
-        if (m_buttonX)
+    void UpdatePressedState(Button button, String keyName)
+    {
+        if (button)
         {
-            if (Input.GetKey(GamepadXBox.X))
+            if (Input.GetKey(keyName))
             {
-                m_buttonX.OnPointerEnter(null);
+                button.OnPointerEnter(null);
             }
             else
             {
-                m_buttonX.OnPointerExit(null);
+                button.OnPointerExit(null);
             }
         }
+    }
 
-        if (m_buttonY)
-        {
-            if (Input.GetKey(GamepadXBox.Y))
-            {
-                m_buttonY.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonY.OnPointerExit(null);
-            }
-        }
+    void UpdatePressedState()
+    {
+        UpdatePressedState(m_buttonA, GamepadXBox.A);
+        UpdatePressedState(m_buttonB, GamepadXBox.B);
+        UpdatePressedState(m_buttonX, GamepadXBox.X);
+        UpdatePressedState(m_buttonY, GamepadXBox.Y);
 
-        if (m_buttonL1)
-        {
-            if (Input.GetKey(GamepadXBox.L1))
-            {
-                m_buttonL1.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonL1.OnPointerExit(null);
-            }
-        }
+        UpdatePressedState(m_buttonL1, GamepadXBox.L1);
+        UpdatePressedState(m_buttonR1, GamepadXBox.R1);
 
         var valueL2R2 = CrossPlatformInputManager.GetAxis(GamepadXBox.L2R2);
 
@@ -161,18 +129,6 @@ public class GamePadPreview : MonoBehaviour
             }
         }
 
-        if (m_buttonR1)
-        {
-            if (Input.GetKey(GamepadXBox.R1))
-            {
-                m_buttonR1.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonR1.OnPointerExit(null);
-            }
-        }
-
         if (m_buttonR2)
         {
             if (valueL2R2 == 0)
@@ -182,30 +138,6 @@ public class GamePadPreview : MonoBehaviour
             else
             {
                 m_buttonR2.OnPointerExit(null);
-            }
-        }
-
-        if (m_buttonL1)
-        {
-            if (Input.GetKey(GamepadXBox.L1))
-            {
-                m_buttonL1.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonL1.OnPointerExit(null);
-            }
-        }
-
-        if (m_buttonL1)
-        {
-            if (Input.GetKey(GamepadXBox.L1))
-            {
-                m_buttonL1.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonL1.OnPointerExit(null);
             }
         }
 
@@ -260,29 +192,9 @@ public class GamePadPreview : MonoBehaviour
             }
         }
 
-        if (m_buttonStart)
-        {
-            if (Input.GetKey(GamepadXBox.Start))
-            {
-                m_buttonStart.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonStart.OnPointerExit(null);
-            }
-        }
-
-        if (m_buttonSelect)
-        {
-            if (Input.GetKey(GamepadXBox.Select))
-            {
-                m_buttonSelect.OnPointerEnter(null);
-            }
-            else
-            {
-                m_buttonSelect.OnPointerExit(null);
-            }
-        }
+        UpdatePressedState(m_buttonSelect, GamepadXBox.Select);
+        UpdatePressedState(m_buttonStart, GamepadXBox.Start);
+        //UpdatePressedState(m_buttonWindows, GamepadXBox.Windows);
 
         //if (m_joystickLeft)
         //{
