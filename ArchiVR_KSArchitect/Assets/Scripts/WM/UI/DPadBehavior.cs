@@ -190,7 +190,14 @@ namespace Assets.Scripts.WM.UI
         //! Get the offset from the DPad stick rest position, to the current stick posistion.
         public void SetStickOffsetNormalized(Vector2 offset, float scale)
         {
-            Debug.Log("SetStickOffsetNormalized(" + offset.ToString() + ", " + scale + ")");
+            //SetStickOffsetNormalizedOld(offset, scale);
+            SetStickOffsetNormalizedNew(offset, scale);
+        }
+
+        //! Get the offset from the DPad stick rest position, to the current stick posistion.
+        public void SetStickOffsetNormalizedOld(Vector2 offset, float scale)
+        {
+            Debug.Log("SetStickOffsetNormalizedOld(" + offset.ToString() + ", " + scale + ")");
 
             if (!IsAxisXEnabled())
             {
@@ -222,6 +229,46 @@ namespace Assets.Scripts.WM.UI
                 min.x + offset.x * rangeoffset.x,
                 min.y + offset.y * rangeoffset.y,
                 0);
+
+            m_stick.transform.position = pos;
+        }
+
+        //! Get the offset from the DPad stick rest position, to the current stick posistion.
+        public void SetStickOffsetNormalizedNew(Vector2 offset, float scale)
+        {
+            Debug.Log("SetStickOffsetNormalizedNew(" + offset.ToString() + ", " + scale + ")");
+
+            // Constrain disabled axes.
+            if (!IsAxisXEnabled())
+            {
+                offset.x = 0.5f;
+            }
+
+            if (!IsAxisYEnabled())
+            {
+                offset.y = 0.5f;
+            }
+
+            var stickAreaTransform = (RectTransform)m_stickArea.transform;
+            var stickAreaRect = stickAreaTransform.rect;
+
+            var baseY = Vector3.down;
+            var baseX = Vector3.right;
+
+            var maxOffsetLocalY = 0.5f * scale * stickAreaRect.height * baseY;
+            var maxOffsetLocalX = 0.5f * scale * stickAreaRect.width * baseX;
+
+            var maxOffsetLocal = 
+                    maxOffsetLocalY + maxOffsetLocalX;
+
+            var minOffsetLocal = -maxOffsetLocal; // Symmetric with origin in center.
+
+            var offsetLocal =
+                minOffsetLocal
+                + baseX * scale * stickAreaRect.height * offset.x
+                + baseY * scale * stickAreaRect.width * offset.y;
+
+            var pos = stickAreaTransform.TransformPoint(offsetLocal);
 
             m_stick.transform.position = pos;
         }

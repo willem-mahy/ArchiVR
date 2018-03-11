@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.WM;
+using Assets.Scripts.WM.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -51,6 +52,9 @@ public class GamePadPreview : MonoBehaviour
     public Text m_textR1_Function = null;
     public Text m_textL2R2_Function = null;
 
+    public DPadBehavior m_leftJoystick = null;
+    public DPadBehavior m_rightJoystick = null;
+
     // Use this for initialization
     void Start ()
     {
@@ -100,6 +104,24 @@ public class GamePadPreview : MonoBehaviour
         }
     }
 
+    public void UpdateJoyStick(
+            DPadBehavior joystick,
+            String xAxis,
+            String yAxis)
+    {
+        float s = gameObject.GetComponentInParent<Canvas>().scaleFactor;
+
+        if (joystick)
+        {
+            var x = 0.5f * (1 + CrossPlatformInputManager.GetAxis(xAxis));
+            var y = 0.5f * (1 + CrossPlatformInputManager.GetAxis(yAxis));
+
+            var offset = new Vector2(y, x);
+
+            joystick.SetStickOffsetNormalized(offset, s);
+        }
+    }
+
     void UpdatePressedState()
     {
         UpdatePressedState(m_buttonA, GamepadXBox.A);
@@ -140,6 +162,16 @@ public class GamePadPreview : MonoBehaviour
                 m_buttonR2.OnPointerExit(null);
             }
         }
+
+        UpdateJoyStick(
+            m_leftJoystick,
+            GamepadXBox.LeftAnalogVertical,
+            GamepadXBox.LeftAnalogHorizontal);
+
+        UpdateJoyStick(
+            m_rightJoystick,
+            GamepadXBox.RightAnalogVertical,
+            GamepadXBox.RightAnalogHorizontal);
 
         var valueDPadVertical = CrossPlatformInputManager.GetAxis(GamepadXBox.DPadVertical);
         var valueDPadHorizontal = CrossPlatformInputManager.GetAxis(GamepadXBox.DPadHorizontal);
