@@ -57,36 +57,24 @@ public class GamePadPreview : MonoBehaviour
 
     // Use this for initialization
     void Start ()
-    {
-        var mapping = new Dictionary<String, String>();
-
-        mapping["DPadLeft"] = "";
-        mapping["DPadRight"] = "";
-        mapping["DPadUp"] = "";
-        mapping["DPadDown"] = "";
-
-        mapping[GamepadXBox.A] = "OK";
-        mapping[GamepadXBox.B] = "Cancel";
-        mapping[GamepadXBox.X] = "";
-        mapping[GamepadXBox.Y] = "Show/Hide controls";
-
-        mapping[GamepadXBox.L1] = "Show/hide debug";
-        mapping[GamepadXBox.R1] = "";
-        mapping[GamepadXBox.L2R2] = "";
-
-        //mapping[GamepadXBox.Windows] = "";
-        mapping[GamepadXBox.Select] = "Show/Hide menu";
-        mapping[GamepadXBox.Start] = "Go to home";
-
-        mapping["LeftJoystick"] = "Navigate menu";
-        mapping["RightJoystick"] = "Look around";
-
-        SetFunctionTexts(mapping);
+    {           
     }
 
     // Update is called once per frame
     void Update() {
         UpdatePressedState();
+    }
+
+    void UpdatePressedState(DPadBehavior dp, String keyName)
+    {
+        if (dp)
+        {
+            var image = dp.m_stick.GetComponentInChildren<Image>();
+
+            bool pressed = Input.GetKey(keyName);
+
+            image.color = (pressed ? new Color32(0, 255, 0, 255) : new Color32(255, 255, 255, 255));
+        }
     }
 
     void UpdatePressedState(Button button, String keyName)
@@ -124,6 +112,9 @@ public class GamePadPreview : MonoBehaviour
 
     void UpdatePressedState()
     {
+        UpdatePressedState(m_leftJoystick, GamepadXBox.LeftAnalogPress);
+        UpdatePressedState(m_rightJoystick, GamepadXBox.RightAnalogPress);
+
         UpdatePressedState(m_buttonA, GamepadXBox.A);
         UpdatePressedState(m_buttonB, GamepadXBox.B);
         UpdatePressedState(m_buttonX, GamepadXBox.X);
@@ -247,7 +238,7 @@ public class GamePadPreview : MonoBehaviour
         }
     }
 
-    void SetFunctionTexts(Dictionary<String, String> mapping)
+    public void SetFunctionTexts(Dictionary<String, String> mapping)
     {
         SetFunctionText(m_textDPadLeft_Function,    mapping, "DPadLeft");
         SetFunctionText(m_textDPadRight_Function,   mapping, "DPadRight");

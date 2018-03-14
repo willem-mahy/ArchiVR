@@ -45,6 +45,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
     public abstract class ApplicationState : MonoBehaviour
     {
+        public GamePadPreview m_gamepadPreview = null;
+
         // For debugging purposes: allows to start up in 'Play' state,
         // using the default project designated in 'm_initialProjectSceneName'.
         public static bool s_isFirstTime = true;
@@ -279,6 +281,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             m_debugView_WS.m_tabPanes[3].GetComponent<Text>().text = text;
         }
 
+        private bool m_l2R2pressedPrev = false;
+
         // Update is called once per frame
         protected virtual void Update()
         {
@@ -298,14 +302,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
-            if (Input.GetKeyDown(GamepadXBox.L1))
-            {
-                var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+            var l2R2pressed = Input.GetAxis(GamepadXBox.L2R2) < -0.3f;
 
-                if (null != wd)
+            if (l2R2pressed != m_l2R2pressedPrev)
+            {
+                if (l2R2pressed)
                 {
-                    wd.ToggleVisible();
+                    var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+
+                    if (null != wd)
+                    {
+                        wd.ToggleVisible();
+                    }
                 }
+
+                m_l2R2pressedPrev = l2R2pressed;
             }
 
             if (Input.GetKeyDown(GamepadXBox.Y))

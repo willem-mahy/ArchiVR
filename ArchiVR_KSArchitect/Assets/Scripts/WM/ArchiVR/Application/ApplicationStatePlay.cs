@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 using Assets.Scripts.WM.UI;
 using Assets.Scripts.WM.Settings;
+using System.Collections.Generic;
+using System;
 
 namespace Assets.Scripts.WM.ArchiVR.Application
 {
@@ -43,6 +45,34 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             base.Start();
 
             GameObject.Find("Time").GetComponent<TimeBehavior>().SetTime(12, 0, 0);
+
+            var mapping = new Dictionary<String, String>();
+
+            mapping["DPadLeft"] = "";
+            mapping["DPadRight"] = "";
+            mapping["DPadUp"] = "";
+            mapping["DPadDown"] = "";
+
+            mapping[GamepadXBox.A] = "OK";
+            mapping[GamepadXBox.B] = "Cancel";
+            mapping[GamepadXBox.X] = "";
+            mapping[GamepadXBox.Y] = "Show/Hide controls";
+
+            mapping[GamepadXBox.L1] = "Prev POI";
+            mapping[GamepadXBox.R1] = "Next POI";
+            mapping[GamepadXBox.L2R2] = "";
+
+            //mapping[GamepadXBox.Windows] = "";
+            mapping[GamepadXBox.Select] = "Show/Hide menu";
+            mapping[GamepadXBox.Start] = "Go to home";
+
+            mapping["LeftJoystick"] = "Navigate menu";
+            mapping["RightJoystick"] = "Look around";
+
+            if (m_gamepadPreview)
+            {
+                m_gamepadPreview.SetFunctionTexts(mapping);
+            }
         }
 
         // Update is called once per frame

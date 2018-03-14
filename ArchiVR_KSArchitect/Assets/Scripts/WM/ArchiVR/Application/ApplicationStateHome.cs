@@ -1,4 +1,6 @@
 ﻿using Assets.Scripts.WM.UI;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
@@ -17,6 +19,34 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationStateHome.Start()");
             base.Start();
+
+            var mapping = new Dictionary<String, String>();
+
+            mapping["DPadLeft"] = "";
+            mapping["DPadRight"] = "";
+            mapping["DPadUp"] = "";
+            mapping["DPadDown"] = "";
+
+            mapping[GamepadXBox.A] = "OK";
+            mapping[GamepadXBox.B] = "Cancel";
+            mapping[GamepadXBox.X] = "";
+            mapping[GamepadXBox.Y] = "Show/Hide controls";
+
+            mapping[GamepadXBox.L1] = "Show/hide debug";
+            mapping[GamepadXBox.R1] = "";
+            mapping[GamepadXBox.L2R2] = "";
+
+            //mapping[GamepadXBox.Windows] = "";
+            mapping[GamepadXBox.Select] = "Show/Hide menu";
+            mapping[GamepadXBox.Start] = "Go to home";
+
+            mapping["LeftJoystick"] = "Navigate menu";
+            mapping["RightJoystick"] = "Look around";
+
+            if (m_gamepadPreview)
+            {
+                m_gamepadPreview.SetFunctionTexts(mapping);
+            }
         }
 
         // Update is called once per frame
