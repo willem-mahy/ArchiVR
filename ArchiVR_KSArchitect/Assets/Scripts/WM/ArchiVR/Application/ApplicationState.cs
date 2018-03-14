@@ -319,7 +319,7 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 m_l2R2pressedPrev = l2R2pressed;
             }
 
-            if (Input.GetKeyDown(GamepadXBox.Y))
+            if (Input.GetKeyDown(GamepadXBox.Y)) // TODO! use longpress(L2R2) instead!
             {
                 var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
 

@@ -48,10 +48,10 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             var mapping = new Dictionary<String, String>();
 
-            mapping["DPadLeft"] = "";
-            mapping["DPadRight"] = "";
-            mapping["DPadUp"] = "";
-            mapping["DPadDown"] = "";
+            mapping["DPadLeft"]      = "Time Menu";
+            mapping["DPadRight"]     = "Toggle ViewMode";
+            mapping["DPadUp"]        = "Settings Menu";
+            mapping["DPadDown"]      = "Graphics Menu";
 
             mapping[GamepadXBox.A] = "OK";
             mapping[GamepadXBox.B] = "Cancel";
