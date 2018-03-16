@@ -40,6 +40,7 @@ namespace Assets.Scripts.WM.UI.VR {
         private void HandleOver()
         {
             Debug.Log("HandleOver");
+            
         }
         
         //Handle the Out event

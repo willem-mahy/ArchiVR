@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.WM.UI.VR
 {
@@ -30,6 +31,7 @@ namespace Assets.Scripts.WM.UI.VR
         {
             Debug.Log("HandleOver");
             gameObject.transform.localScale = m_highlightScaleFactor * Vector3.one;
+            gameObject.GetComponentInChildren<Button>().Select();
         }
 
         //Handle the Out event
@@ -37,6 +39,7 @@ namespace Assets.Scripts.WM.UI.VR
         {
             Debug.Log("HandleOut");
             gameObject.transform.localScale = Vector3.one;
+            //gameObject.GetComponentInChildren<Button>().Deselect();
         }
     }
 }

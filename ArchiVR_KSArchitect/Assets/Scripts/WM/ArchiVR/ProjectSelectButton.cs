@@ -10,6 +10,17 @@ public class ProjectSelectButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameObject.GetComponent<Button>().onClick.AddListener(OnClick);
+        var c = gameObject.GetComponent<Button>().colors;
+        
+        c.highlightedColor = Color.white;
+        c.normalColor = new Color(1, 1, 1, 0.5f);
+
+        gameObject.GetComponent<Button>().colors = c;
+
+        //gameObject.GetComponent<Button>().OnPointerEnter.AddListener(SetHighLighted);
+        //gameObject.GetComponent<Button>().OnPointerExit.AddListener(SetNormal);
+
+        gameObject.GetComponentInChildren<Image>().color = Color.white;
 
         Init();
     }
@@ -17,6 +28,16 @@ public class ProjectSelectButton : MonoBehaviour {
     void OnClick()
     {
         ApplicationState.OpenProject(m_projectName);
+    }
+
+    private void SetHighLighted()
+    {
+        gameObject.GetComponentInChildren<Image>().color = Color.white;
+    }
+
+    private void SetNormal()
+    {
+        gameObject.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.5f);
     }
 
     public void SetProject(Project project)
