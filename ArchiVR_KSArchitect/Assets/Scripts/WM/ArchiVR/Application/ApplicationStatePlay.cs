@@ -103,46 +103,45 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 ApplicationSettings.GetInstance().SetNextGraphicSettingsQualityLevel();
             }           
 
-            // If user presses 'F12', next poi.
-            if (Input.GetKeyDown("f12"))
-            {
-                GetComponent<POIManager>().ActivateNextPOI();
-            }
-
             // If user presses 'F11', previous poi
             if (Input.GetKeyDown("f11"))
             {
                 GetComponent<POIManager>().ActivatePrevPOI();
             }
 
-            if (Input.GetKeyDown(GamepadXBox.X))
+            // If user presses 'F12', next poi.
+            if (Input.GetKeyDown("f12"))
             {
                 GetComponent<POIManager>().ActivateNextPOI();
             }
 
-            if (Input.GetKeyDown(GamepadXBox.B))
+            if (
+               Input.GetKeyDown(GamepadXBox.Start)
+               || Input.GetKeyDown(GamepadXBox.Select)
+               || Input.GetKeyUp(KeyCode.LeftAlt))
             {
-                GetComponent<POIManager>().ActivateNextPOI();
+                // Show settings menu
+                var uiManager = UIManager.GetInstance();
+
+                uiManager.OpenMenu("MenuMain");
             }
 
+            // If user presses 'L1', next poi.
             if (Input.GetKeyDown(GamepadXBox.L1))
             {
                 GetComponent<POIManager>().ActivatePrevPOI();
             }
 
+            // If user presses 'R2', next poi.
             if (Input.GetKeyDown(GamepadXBox.R1))
             {
                 GetComponent<POIManager>().ActivateNextPOI();
             }
 
+            // If user presses 'R2', open Home menu.
             if (Input.GetKeyDown(GamepadXBox.Start))
             {
                 OpenHomeMenu();
-            }
-
-            if (Input.GetKeyDown(GamepadXBox.Select))
-            {
-                UIManager.GetInstance().OpenMenu("MenuMain");
             }
 
             UpdatePOIMenuVisibility();

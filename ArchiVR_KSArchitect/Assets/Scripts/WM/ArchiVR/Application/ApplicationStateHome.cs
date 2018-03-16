@@ -22,23 +22,23 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             var mapping = new Dictionary<String, String>();
 
-            mapping["DPadLeft"] = "";
-            mapping["DPadRight"] = "";
-            mapping["DPadUp"] = "";
+            mapping["DPadLeft"] = "Prev Menu";
+            mapping["DPadRight"] = "Next Menu";
+            mapping["DPadUp"] = "Parent Menu";
             mapping["DPadDown"] = "";
 
             mapping[GamepadXBox.A] = "OK";
             mapping[GamepadXBox.B] = "Cancel";
             mapping[GamepadXBox.X] = "";
-            mapping[GamepadXBox.Y] = "Show/Hide controls";
+            mapping[GamepadXBox.Y] = "Controls";
 
             mapping[GamepadXBox.L1] = "Show/hide debug";
             mapping[GamepadXBox.R1] = "";
-            mapping[GamepadXBox.L2R2] = "";
+            mapping[GamepadXBox.L2R2] = "Controls";
 
             //mapping[GamepadXBox.Windows] = "";
-            mapping[GamepadXBox.Select] = "Show/Hide menu";
-            mapping[GamepadXBox.Start] = "Go to home";
+            mapping[GamepadXBox.Select] = "Settings";
+            mapping[GamepadXBox.Start] = "Home";
 
             mapping["LeftJoystick"] = "Navigate menu";
             mapping["RightJoystick"] = "Look around";
@@ -63,8 +63,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 QuitApplication();
             }
 
-            if (Input.GetKeyUp(KeyCode.LeftAlt))
+            // GamePad Start -> Home (IE: Close all other menus and return to main (floor) menu)
+            if (Input.GetKeyDown(GamepadXBox.Start))
             {
+                // Show settings menu
+                var uiManager = UIManager.GetInstance();
+
+                uiManager.OpenMenu("MenuMain");
+            }
+
+            if (    Input.GetKeyDown(GamepadXBox.Select)
+                    ||
+                    Input.GetKeyUp(KeyCode.LeftAlt)
+               )
+            {
+                // Show settings menu
                 var uiManager = UIManager.GetInstance();
 
                 var currentMenuName = uiManager.GetCurrentMenu().name;
@@ -73,6 +86,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                     uiManager.OpenMenu("MenuSettings");
                 }
             }
+
+
         }
 
         // OnGUI is called once per frame

@@ -302,18 +302,20 @@ namespace Assets.Scripts.WM.ArchiVR.Application
                 }
             }
 
+            if (Input.GetKeyDown(GamepadXBox.B))
+            {
+                UIManager.GetInstance().CloseMenu();
+            }
+
+            var toggleDebugVisible = false;
+
             var l2R2pressed = Input.GetAxis(GamepadXBox.L2R2) < -0.3f;
 
             if (l2R2pressed != m_l2R2pressedPrev)
             {
                 if (l2R2pressed)
                 {
-                    var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
-
-                    if (null != wd)
-                    {
-                        wd.ToggleVisible();
-                    }
+                    toggleDebugVisible|= true;
                 }
 
                 m_l2R2pressedPrev = l2R2pressed;
@@ -321,14 +323,21 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 
             if (Input.GetKeyDown(GamepadXBox.Y)) // TODO! use longpress(L2R2) instead!
             {
+                toggleDebugVisible |= true;
+
+                var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
+            }            
+
+            if (toggleDebugVisible)
+            {
                 var wd = UIManager.GetInstance().GetWidgetByName("WidgetDebug");
 
                 if (null != wd)
                 {
                     wd.ToggleVisible();
 
-                    wd.m_uiControlScreenSpace.GetComponent<TabView>().SetActiveTab(2);
-                    wd.m_uiControlWorldSpace.GetComponent<TabView>().SetActiveTab(2);
+                    wd.m_uiControlScreenSpace.GetComponent<TabView>().SetActiveTab(3);
+                    wd.m_uiControlWorldSpace.GetComponent<TabView>().SetActiveTab(3);
                 }
             }
 
