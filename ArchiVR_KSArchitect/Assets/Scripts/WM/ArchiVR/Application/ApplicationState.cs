@@ -440,6 +440,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
         {
             Debug.Log("ApplicationState.QuitApplication");
 
+            ToastMessageManager.GetInstance().AddToast("Application closing down...");
+
             ApplicationSettings.GetInstance().Save();
 
             UnityEngine.Application.Quit();
@@ -764,6 +766,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 UIManager.GetInstance().SetUIMode(1 - UIManager.GetInstance().GetUIMode());
             }
+
+            ToastMessageManager.GetInstance().AddToast("Switched viewing device to '"+ deviceName + "'");
         }
 
         IEnumerator LoadDevice(string deviceName, bool enable)
@@ -789,6 +793,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             Debug.Log("OpenProject(" + sceneName + ")");
 
             ApplicationSettings.GetInstance().m_data.m_stateSettings.m_activeProjectName = sceneName;
+            
+            //ToastMessageManager.GetInstance().AddToast("Opening project '" + sceneName + "'");
 
             OpenProject();
         }
