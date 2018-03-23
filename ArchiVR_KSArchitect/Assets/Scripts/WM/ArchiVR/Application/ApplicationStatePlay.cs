@@ -10,8 +10,6 @@ namespace Assets.Scripts.WM.ArchiVR.Application
 {
     public class ApplicationStatePlay : ApplicationState
     {
-        
-
         // For debugging purposes: allows to start up in 'Play' state,
         // with the project designated in 'm_initialProjectSceneName'.
         public string m_initialProjectSceneName = "";

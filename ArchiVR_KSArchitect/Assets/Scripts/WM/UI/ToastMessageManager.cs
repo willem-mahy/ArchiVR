@@ -28,9 +28,22 @@ namespace Assets.Scripts.WM.UI
         public void Start()
         {
             s_instance = this;
+        }
 
-            AddToast("Welcome to The KS-architect protfolio!");
-            AddToast("Hint: To show controls, press Gamepad 'Y' button or 'F3' key.");
+        public void OnDestroy()
+        {
+            if (s_instance == this)
+            {
+                s_instance = null;
+            }
+        }
+
+        public void OnEnable()
+        {
+        }
+
+        public void OnDisable()
+        {
         }
 
         public void Update()
@@ -41,18 +54,25 @@ namespace Assets.Scripts.WM.UI
                 message.Update();
             }
 
+            // Kill all but last X messages.
+            while (m_messages.Count > 5)
+            {
+                m_messages[0].m_speed *= 2;
+                m_messages[0].die();
+            }
+
             // Remove the dead (recently deceased) toasts.
             // Because we release the toasts as last, we transition them into no-existence here.
             for (int i = 0;  i < m_messages.Count; ++i)
             {
                 var message = m_messages[i];
 
-                if (message.m_state.ToastShouldBeRemoved() == true)
+                if (message && message.m_state.ToastShouldBeRemoved() == true)
                 {
                     m_messages.RemoveAt(i);
                     --i;
                 }
-            }
+            }            
 
             // Relayout the toasts that are still alive.
             float posY = 0 ;
@@ -71,7 +91,7 @@ namespace Assets.Scripts.WM.UI
                     }
                     else
                     {
-                        //// Set the rect transform top offset for the layer option UI control.
+                        //// Set the rect transform top offset for the toast message UI control.
                         var rectTransform = message.GetComponent<RectTransform>();
 
                         if (null != rectTransform)
@@ -80,11 +100,18 @@ namespace Assets.Scripts.WM.UI
                             var rpos = rectTransform.localPosition;
                             rpos.y = posY;
                             rectTransform.localPosition = rpos;
+
+                            // WM: TODO1: make scale or  height of toast decreae when fading out...
+                            var s = rectTransform.localScale;
+                            s.y = 
+                                text.color.a / 255.0f;
                         }
                     }
 
                     // Then adjust position for next toast.
                     posY += 100;// text.rectTransform.offsetMax.y;
+
+                    
                 }
             }
         }
@@ -92,6 +119,14 @@ namespace Assets.Scripts.WM.UI
         public void AddMessage(ToastMessage toastMessage)
         {
             m_messages.Add(toastMessage);
+        }
+
+        public void RetireAllToasts()
+        {
+            foreach (var message in m_messages)
+            {
+                message.m_timeSpawned = message.m_lifeTime;
+            }
         }
 
         public void AddToast(String text)
@@ -107,6 +142,9 @@ namespace Assets.Scripts.WM.UI
         private GameObject DynamicallyAddToast(
             String text)
         {
+            if (gameObject.activeInHierarchy == false)
+                return null;
+
             var newToast = (GameObject)Instantiate(m_toastMessagePrefab);
 
             if (null == newToast)

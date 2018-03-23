@@ -82,6 +82,7 @@ namespace Assets.Scripts.WM
             return m_poiCollection.transform.childCount;
         }
 
+        //! Returns active POI.  Returns null if no POI active.
         public GameObject GetActivePOI()
         {
             if (null == m_poiCollection)
@@ -107,6 +108,14 @@ namespace Assets.Scripts.WM
             Debug.Log("SyncWithActivePOI()");
 
             var activePOI = GetActivePOI();
+
+            var tmm = WM.UI.ToastMessageManager.GetInstance();
+
+            if (tmm)
+            {
+                tmm.RetireAllToasts();
+                tmm.AddToast(activePOI ? activePOI.name : "");
+            }
 
             // Update (via camera navigation mode) camera location to newly activated POI location.
             var nm = m_cameraNavigation.GetActiveNavigationMode();

@@ -120,6 +120,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             OnSetActiveXRDevice(XRSettings.loadedDeviceName);
 
             UIManager.GetInstance().UpdateControlsVisibility();
+
+            ToastMessageManager.GetInstance().AddToast("Hint: To show controls, press Gamepad 'Y' button or 'F3' key.");
         }
 
         public static string GetTextControlsInfo()

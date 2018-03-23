@@ -47,6 +47,8 @@ namespace Assets.Scripts.WM.ArchiVR.Application
             {
                 m_gamepadPreview.SetFunctionTexts(mapping);
             }
+
+            ToastMessageManager.GetInstance().AddToast("Welcome to The KS-architect protfolio!");
         }
 
         // Update is called once per frame

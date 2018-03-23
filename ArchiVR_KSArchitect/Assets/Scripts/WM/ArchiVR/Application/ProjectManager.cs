@@ -199,6 +199,8 @@ namespace Assets.Scripts.WM
                 // Could not make it a valid projectIndex                
                 s.m_activeProjectName = "";
             }
-        }        
+
+            ToastMessageManager.GetInstance().AddToast("Welcome to " + m_projects[projectIndex].m_name);
+        }
     }
 }

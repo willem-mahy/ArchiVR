@@ -129,9 +129,13 @@ namespace Assets.Scripts.WM.UI
 
         public ToastMessageState m_state = null;
 
-        public void Start()
+        public void Awake()
         {
             FadeIn();
+        }
+
+        public void Start()
+        {
         }
 
         public void Update()
