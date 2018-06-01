@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 133
+  controlID: 48
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 134
+  controlID: 49
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 135
+  controlID: 50
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 331
     height: 249
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -369,9 +369,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e590000
+    m_SelectedIDs: 142c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: ba50ffff00000000
+    m_ExpandedIDs: 18e9ffffaef7ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -390,7 +390,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - 
+  - Project001
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -537,19 +537,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Scenes
+    - Assets/Scenes/Project
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets/Scenes/Project
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Dev\Unity\ArchiVR\ArchiVR_KSArchitect
+  m_LastProjectPath: C:\Dev\Unity\ArchiVR\KSArchitect_ArchiMR
   m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9e4d0000
-    m_LastClickedID: 19870
-    m_ExpandedIDs: 0000000078390000703b0000683d0000943d00009e3d0000e03d0000ac3e000028400000b24000003a4100004e4100006241000066410000b2410000224200002842000068420000084500005e460000f247000042480000e2480000284b0000fc4b00000c4c00009e4d0000464e0000c84f0000d44f00003250000012520000665300002c5500009c550000b05500000a560000085700002057000012590000f05a00002c5b00005a5b0000785b0000be5b0000fa5b0000c65d0000ba5e0000be5e0000005f0000c25f00008a600000386100005a6100009e6100004e6200005c63000068630000f8630000e6640000286500008a650000fa660000ffffff7f
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: f0540000
+    m_LastClickedID: 21744
+    m_ExpandedIDs: 00000000b4300000c2320000c0340000ee340000fa3400003e35000016360000b037000040380000d2380000e8380000fe3800000239000054390000d0390000d63900001a3a0000e43c0000fa3f000054400000fa4000004e4300002244000034440000de450000904600002c4800003a4800009e4800009e4a0000084c0000f04d00006a4e00007e4e0000de4e0000e84f00000250000000520000e25300002054000050540000c254000002550000e6560000e8570000ec570000345800000c590000d85900008c5a0000b25a0000fa5a0000b05b0000c05c0000cc5c00005c5d0000545e00009a5e0000005f000070600000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000078390000703b0000683d0000943d00009e3d0000e03d0000ac3e000028400000b24000003a4100004e4100006241000066410000b2410000224200002842000068420000084500005e460000f247000042480000e2480000284b0000fc4b00000c4c00009e4d0000464e0000c84f0000d44f00003250000012520000665300002c5500009c550000b05500000a560000085700002057000012590000f05a00002c5b00005a5b0000785b0000be5b0000fa5b0000c65d0000285e0000ba5e0000be5e0000005f0000c25f00008a600000386100005a6100009e6100004e6200005c63000068630000f8630000e6640000286500008a650000fa660000
+    m_ExpandedIDs: 00000000b4300000c2320000c0340000ee340000fa3400003e35000016360000b037000040380000d2380000e8380000fe3800000239000054390000d0390000d63900001a3a0000e43c00005a3e0000fa3f000054400000fa4000004e4300002244000034440000de450000904600002c4800003a4800009e4800009e4a0000084c0000f04d00006a4e00007e4e0000de4e0000e84f00000250000000520000e2530000205400005054000072540000c254000002550000e6560000e8570000ec570000345800000c590000d85900008c5a0000b25a0000fa5a0000b05b0000c05c0000cc5c00005c5d0000545e00009a5e0000005f000070600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 7a29000000000000c22c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
