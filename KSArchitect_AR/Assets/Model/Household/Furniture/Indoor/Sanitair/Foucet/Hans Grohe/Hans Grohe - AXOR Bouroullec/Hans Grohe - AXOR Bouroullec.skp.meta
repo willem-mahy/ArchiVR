@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 0f765a229c5cec147ac63e30790787e3
+timeCreated: 1511823567
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 68f8d6ffdcd121faadb8c14046f4f41e
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.009362276, y: 0.51928663, z: -0.6097895}
+      lookAt: {x: 0.040883377, y: 0.416753, z: -0.48312986}
+      up: {x: 0.14918493, y: 0.78637725, z: 0.5994621}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 16__acb03957_dwg AXOR Bouroullec 3-hole basin mixer for concealed installation
+      with spout 245 mm and lever handles wall-mounted.dwg
+    100002: //RootNode
+    400000: 16__acb03957_dwg AXOR Bouroullec 3-hole basin mixer for concealed installation
+      with spout 245 mm and lever handles wall-mounted.dwg
+    400002: //RootNode
+    2300000: 16__acb03957_dwg AXOR Bouroullec 3-hole basin mixer for concealed installation
+      with spout 245 mm and lever handles wall-mounted.dwg
+    3300000: 16__acb03957_dwg AXOR Bouroullec 3-hole basin mixer for concealed installation
+      with spout 245 mm and lever handles wall-mounted.dwg
+    4300000: Mesh 16__acb03957_dwg AXOR Bouroullec 3-hole basin mixer for concealed
+      installation with spout 245 mm and lever handles wall-mounted.dwg
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hans Grihe - Cold Indicator
+    second: {fileID: 2100000, guid: 2767fdb5ab02181469a8730e2eba0213, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hans Grohe - Chrome
+    second: {fileID: 2100000, guid: 4d4eca9d79e2bbd448a83a9f2be4753c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hans Grohe - Hot Indicator
+    second: {fileID: 2100000, guid: f8ee0cd3baa6aff478618c15e2c2e2a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 0f77f519b1415ed4c8192914bb22273b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
