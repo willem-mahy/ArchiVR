@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: f8d269bc493cb2b4fb695ab45badf4bb
+timeCreated: 1510657022
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a8000000a9000000aa000000ab000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 315eeeca361bc499a8b57e94342adaa4
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 6.127012, y: 14.035909, z: 22.594503}
+      lookAt: {x: 2.613359, y: 9.45933, z: 8.255523}
+      up: {x: -0.07047153, y: 0.9551576, z: -0.2875896}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: B1
+    100002: B1 Binnenmuur
+    100004: B1 Floor
+    100006: B1 Plafond
+    100008: Buitenschrijnwerk
+    100010: Buitenschrijnwerk 1
+    100012: Buur Rechts
+    100014: Dining Chair 1
+    100016: Dining Chair 2
+    100018: Dining Chair 3
+    100020: Dining Chair 4
+    100022: Dining Chair 5
+    100024: Dining Chair 6
+    100026: Dining Chair 7
+    100028: Dining Chair 8
+    100030: Eethoek
+    100032: Garagepoort
+    100034: Gevel
+    100036: GLAZEN DEUR0
+    100038: GROND
+    100040: Group 112
+    100042: Group 114
+    100044: Group 116
+    100046: Group 118
+    100048: Group 121
+    100050: Group 123
+    100052: Group 125
+    100054: Group 127
+    100056: Group 130
+    100058: Group 132
+    100060: Group 134
+    100062: Group 136
+    100064: Group 139
+    100066: Group 141
+    100068: Group 143
+    100070: Group 145
+    100072: Group 6
+    100074: Handgreep
+    100076: HELLEND DAK
+    100078: KEUKEN
+    100080: Keuken
+    100082: KRUK
+    100084: KRUK 1
+    100086: KRUK 2
+    100088: KRUK 3
+    100090: //RootNode
+    100092: L0
+    100094: L0 Binnenmuur
+    100096: L0 Plafond
+    100098: L0 Raam Berging
+    100100: L0 Raam Keuken
+    100102: L0 Raam Keuken Zijgevel
+    100104: L0 Schuifraam Eethoek
+    100106: L0 Shuifraam Keuken
+    100108: L0 Vloer
+    100110: L0,5
+    100112: L0.5 Vloer
+    100114: L1
+    100116: L1 Binnenmuur
+    100118: L1 Plafond
+    100120: L1 Raam Overloop
+    100122: L1 Raam Vooraan
+    100124: L1 Vloer
+    100126: L2
+    100128: L2 Binnenmuur
+    100130: L2 Binnenschrijnwerk
+    100132: L2 Deur SLK 01
+    100134: L2 Deur SLK 02
+    100136: L2 Deur SLK 03
+    100138: L2 Deur SLK 04
+    100140: L2 Deur WC
+    100142: L2 Plafond
+    100144: L2 Vloer
+    100146: L3 Binnenmuur
+    100148: Meubel
+    100150: Pilaar Zithoek
+    100152: plat dak
+    100154: Sofa Zithoek 1
+    100156: Sofa Zithoek 2
+    100158: Trap B1L0
+    100160: Trap L0,5L1
+    100162: Trap L0L0,5
+    100164: Trap L1L2
+    100166: Velux 0
+    100168: Velux 1
+    100170: Velux 2
+    100172: Velux 3
+    100174: Velux Vooraan 1
+    100176: Velux Vooraan 2
+    100178: Velux Vooraan 3
+    100180: Voordeur
+    100182: WONING
+    100184: Zithoek
+    400000: B1
+    400002: B1 Binnenmuur
+    400004: B1 Floor
+    400006: B1 Plafond
+    400008: Buitenschrijnwerk
+    400010: Buitenschrijnwerk 1
+    400012: Buur Rechts
+    400014: Dining Chair 1
+    400016: Dining Chair 2
+    400018: Dining Chair 3
+    400020: Dining Chair 4
+    400022: Dining Chair 5
+    400024: Dining Chair 6
+    400026: Dining Chair 7
+    400028: Dining Chair 8
+    400030: Eethoek
+    400032: Garagepoort
+    400034: Gevel
+    400036: GLAZEN DEUR0
+    400038: GROND
+    400040: Group 112
+    400042: Group 114
+    400044: Group 116
+    400046: Group 118
+    400048: Group 121
+    400050: Group 123
+    400052: Group 125
+    400054: Group 127
+    400056: Group 130
+    400058: Group 132
+    400060: Group 134
+    400062: Group 136
+    400064: Group 139
+    400066: Group 141
+    400068: Group 143
+    400070: Group 145
+    400072: Group 6
+    400074: Handgreep
+    400076: HELLEND DAK
+    400078: KEUKEN
+    400080: Keuken
+    400082: KRUK
+    400084: KRUK 1
+    400086: KRUK 2
+    400088: KRUK 3
+    400090: //RootNode
+    400092: L0
+    400094: L0 Binnenmuur
+    400096: L0 Plafond
+    400098: L0 Raam Berging
+    400100: L0 Raam Keuken
+    400102: L0 Raam Keuken Zijgevel
+    400104: L0 Schuifraam Eethoek
+    400106: L0 Shuifraam Keuken
+    400108: L0 Vloer
+    400110: L0,5
+    400112: L0.5 Vloer
+    400114: L1
+    400116: L1 Binnenmuur
+    400118: L1 Plafond
+    400120: L1 Raam Overloop
+    400122: L1 Raam Vooraan
+    400124: L1 Vloer
+    400126: L2
+    400128: L2 Binnenmuur
+    400130: L2 Binnenschrijnwerk
+    400132: L2 Deur SLK 01
+    400134: L2 Deur SLK 02
+    400136: L2 Deur SLK 03
+    400138: L2 Deur SLK 04
+    400140: L2 Deur WC
+    400142: L2 Plafond
+    400144: L2 Vloer
+    400146: L3 Binnenmuur
+    400148: Meubel
+    400150: Pilaar Zithoek
+    400152: plat dak
+    400154: Sofa Zithoek 1
+    400156: Sofa Zithoek 2
+    400158: Trap B1L0
+    400160: Trap L0,5L1
+    400162: Trap L0L0,5
+    400164: Trap L1L2
+    400166: Velux 0
+    400168: Velux 1
+    400170: Velux 2
+    400172: Velux 3
+    400174: Velux Vooraan 1
+    400176: Velux Vooraan 2
+    400178: Velux Vooraan 3
+    400180: Voordeur
+    400182: WONING
+    400184: Zithoek
+    2300000: B1 Binnenmuur
+    2300002: B1 Floor
+    2300004: B1 Plafond
+    2300006: Buur Rechts
+    2300008: Dining Chair 1
+    2300010: Dining Chair 2
+    2300012: Dining Chair 3
+    2300014: Dining Chair 4
+    2300016: Dining Chair 5
+    2300018: Dining Chair 6
+    2300020: Dining Chair 7
+    2300022: Dining Chair 8
+    2300024: Garagepoort
+    2300026: Gevel
+    2300028: GLAZEN DEUR0
+    2300030: GROND
+    2300032: Group 112
+    2300034: Group 114
+    2300036: Group 116
+    2300038: Group 118
+    2300040: Group 121
+    2300042: Group 123
+    2300044: Group 125
+    2300046: Group 127
+    2300048: Group 130
+    2300050: Group 132
+    2300052: Group 134
+    2300054: Group 136
+    2300056: Group 139
+    2300058: Group 141
+    2300060: Group 143
+    2300062: Group 145
+    2300064: Group 6
+    2300066: Handgreep
+    2300068: HELLEND DAK
+    2300070: KEUKEN
+    2300072: L0
+    2300074: L0 Binnenmuur
+    2300076: L0 Plafond
+    2300078: L0 Raam Berging
+    2300080: L0 Raam Keuken
+    2300082: L0 Raam Keuken Zijgevel
+    2300084: L0 Schuifraam Eethoek
+    2300086: L0 Shuifraam Keuken
+    2300088: L0 Vloer
+    2300090: L0.5 Vloer
+    2300092: L1
+    2300094: L1 Binnenmuur
+    2300096: L1 Plafond
+    2300098: L1 Raam Overloop
+    2300100: L1 Raam Vooraan
+    2300102: L1 Vloer
+    2300104: L2
+    2300106: L2 Binnenmuur
+    2300108: L2 Deur SLK 01
+    2300110: L2 Deur SLK 02
+    2300112: L2 Deur SLK 03
+    2300114: L2 Deur SLK 04
+    2300116: L2 Deur WC
+    2300118: L2 Plafond
+    2300120: L2 Vloer
+    2300122: L3 Binnenmuur
+    2300124: Pilaar Zithoek
+    2300126: plat dak
+    2300128: Sofa Zithoek 1
+    2300130: Sofa Zithoek 2
+    2300132: Trap B1L0
+    2300134: Trap L0,5L1
+    2300136: Trap L0L0,5
+    2300138: Trap L1L2
+    2300140: Velux 0
+    2300142: Velux 1
+    2300144: Velux 2
+    2300146: Velux 3
+    2300148: Velux Vooraan 1
+    2300150: Velux Vooraan 2
+    2300152: Velux Vooraan 3
+    3300000: B1 Binnenmuur
+    3300002: B1 Floor
+    3300004: B1 Plafond
+    3300006: Buur Rechts
+    3300008: Dining Chair 1
+    3300010: Dining Chair 2
+    3300012: Dining Chair 3
+    3300014: Dining Chair 4
+    3300016: Dining Chair 5
+    3300018: Dining Chair 6
+    3300020: Dining Chair 7
+    3300022: Dining Chair 8
+    3300024: Garagepoort
+    3300026: Gevel
+    3300028: GLAZEN DEUR0
+    3300030: GROND
+    3300032: Group 112
+    3300034: Group 114
+    3300036: Group 116
+    3300038: Group 118
+    3300040: Group 121
+    3300042: Group 123
+    3300044: Group 125
+    3300046: Group 127
+    3300048: Group 130
+    3300050: Group 132
+    3300052: Group 134
+    3300054: Group 136
+    3300056: Group 139
+    3300058: Group 141
+    3300060: Group 143
+    3300062: Group 145
+    3300064: Group 6
+    3300066: Handgreep
+    3300068: HELLEND DAK
+    3300070: KEUKEN
+    3300072: L0
+    3300074: L0 Binnenmuur
+    3300076: L0 Plafond
+    3300078: L0 Raam Berging
+    3300080: L0 Raam Keuken
+    3300082: L0 Raam Keuken Zijgevel
+    3300084: L0 Schuifraam Eethoek
+    3300086: L0 Shuifraam Keuken
+    3300088: L0 Vloer
+    3300090: L0.5 Vloer
+    3300092: L1
+    3300094: L1 Binnenmuur
+    3300096: L1 Plafond
+    3300098: L1 Raam Overloop
+    3300100: L1 Raam Vooraan
+    3300102: L1 Vloer
+    3300104: L2
+    3300106: L2 Binnenmuur
+    3300108: L2 Deur SLK 01
+    3300110: L2 Deur SLK 02
+    3300112: L2 Deur SLK 03
+    3300114: L2 Deur SLK 04
+    3300116: L2 Deur WC
+    3300118: L2 Plafond
+    3300120: L2 Vloer
+    3300122: L3 Binnenmuur
+    3300124: Pilaar Zithoek
+    3300126: plat dak
+    3300128: Sofa Zithoek 1
+    3300130: Sofa Zithoek 2
+    3300132: Trap B1L0
+    3300134: Trap L0,5L1
+    3300136: Trap L0L0,5
+    3300138: Trap L1L2
+    3300140: Velux 0
+    3300142: Velux 1
+    3300144: Velux 2
+    3300146: Velux 3
+    3300148: Velux Vooraan 1
+    3300150: Velux Vooraan 2
+    3300152: Velux Vooraan 3
+    4300000: Mesh Handgreep
+    4300002: Mesh Group 6
+    4300004: Mesh Garagepoort
+    4300006: Mesh L0 Raam Keuken
+    4300008: Mesh L0 Shuifraam Keuken
+    4300010: Mesh L0 Schuifraam Eethoek
+    4300012: Mesh L1 Raam Vooraan
+    4300014: Mesh L0 Raam Berging
+    4300016: Mesh L0 Raam Keuken Zijgevel
+    4300018: Mesh L1 Raam Overloop
+    4300020: Mesh L3 Binnenmuur
+    4300022: Mesh B1 Binnenmuur
+    4300024: Mesh B1 Plafond
+    4300026: Mesh B1 Floor
+    4300028: Mesh Trap B1L0
+    4300030: Mesh L0.5 Vloer
+    4300032: Mesh Trap L0,5L1
+    4300034: Mesh L2
+    4300036: Mesh L2 Deur SLK 02
+    4300038: Mesh L2 Deur SLK 03
+    4300040: Mesh L2 Deur SLK 01
+    4300042: Mesh L2 Deur SLK 04
+    4300044: Mesh L2 Deur WC
+    4300046: Mesh L2 Vloer
+    4300048: Mesh L2 Binnenmuur
+    4300050: Mesh L2 Plafond
+    4300052: Mesh L1
+    4300054: Mesh L1 Vloer
+    4300056: Mesh L1 Plafond
+    4300058: Mesh L1 Binnenmuur
+    4300060: Mesh Pilaar Zithoek
+    4300062: Mesh Trap L1L2
+    4300064: Mesh Gevel
+    4300066: Mesh plat dak
+    4300068: Mesh HELLEND DAK
+    4300070: Mesh Velux 3
+    4300072: Mesh Velux 1
+    4300074: Mesh Velux 2
+    4300076: Mesh Velux 0
+    4300078: Mesh Velux Vooraan 2
+    4300080: Mesh Velux Vooraan 3
+    4300082: Mesh Velux Vooraan 1
+    4300084: Mesh L0
+    4300086: Mesh L0 Plafond
+    4300088: Mesh L0 Vloer
+    4300090: Mesh GLAZEN DEUR0
+    4300092: Mesh Trap L0L0,5
+    4300094: Mesh L0 Binnenmuur
+    4300096: Mesh Sofa Zithoek 2
+    4300098: Mesh Group 112
+    4300100: Mesh Group 114
+    4300102: Mesh Group 116
+    4300104: Mesh Group 118
+    4300106: Mesh KEUKEN
+    4300108: Mesh Dining Chair 3
+    4300110: Mesh GROND
+    4300112: Mesh Buur Rechts
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aluminum
+    second: {fileID: 2100000, guid: 05687130961914e40a8bcc1b27bf2885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AnodizedAluminum
+    second: {fileID: 2100000, guid: 18dd819d7312dcb4b9bb6b8cdc39076d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blacktop Old 01
+    second: {fileID: 2100000, guid: 3a625710df322a64f88159913887bae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet Berber Multi
+    second: {fileID: 2100000, guid: c61dae36cedd3384b8145de5b5e8033b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color C04
+    second: {fileID: 2100000, guid: 1d59576e2cfad184abacd8be2ebf824e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color M02
+    second: {fileID: 2100000, guid: 22ce2d823f2f144408b7c9c1661c31ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color M03
+    second: {fileID: 2100000, guid: 5ac6eb6f7a0f39542bb610f832fd9be3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color M06
+    second: {fileID: 2100000, guid: b9499709481232941b2c179a5522c16a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color M07
+    second: {fileID: 2100000, guid: a262907e24be7df4793405ffd8c0f173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_000
+    second: {fileID: 2100000, guid: 499fc708cdb63c746aff6f6d80134848, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002
+    second: {fileID: 2100000, guid: c1fe7de1496d0fc4f8b8e165593dc76b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_003
+    second: {fileID: 2100000, guid: 934332f2b126acb43a3f3efab9084069, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007
+    second: {fileID: 2100000, guid: ffbad2f3aaeeddd4586cbe990e8e7a8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_009
+    second: {fileID: 2100000, guid: 9f256698cebb0ea4a993f739f47ac2f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete Block 8x8 Gray
+    second: {fileID: 2100000, guid: f31e4ef15acf1a34f9b0918d4bc1831b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete Form 4x8
+    second: {fileID: 2100000, guid: dfb37e2385b176647b7372bb32ba3fca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Field Square Tile
+    second: {fileID: 2100000, guid: a6b31be9cab1770498c12d8108de8ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gray_225
+    second: {fileID: 2100000, guid: 1dd5ec1a50625b540a1d01e666714911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Groundcover River Rock 4 inch
+    second: {fileID: 2100000, guid: 8da2559822e377749ab214d5ac7fdef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lisanne_Boot_Sole_02
+    second: {fileID: 2100000, guid: f87c5e4f4ef89e04aba99a5fc0fb0d0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Polished Concrete New
+    second: {fileID: 2100000, guid: 8387ee5178f550746bae6a192f2f1f71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Polished Concrete Old
+    second: {fileID: 2100000, guid: c34224f5c092d8147b6c0d0bfcb681bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofing Shingles GAF Estates
+    second: {fileID: 2100000, guid: f6fba8dd1c030484fb03c62ced099a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Grey
+    second: {fileID: 2100000, guid: ed8983cb72458974d83285a52414c0f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent Glass Blue
+    second: {fileID: 2100000, guid: b5424fcbbfdf9f74ba3f009921e18970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent Glass Gray
+    second: {fileID: 2100000, guid: 86b263fa8f252964b90c9f51ee21ae5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vegetation Grass Artificial
+    second: {fileID: 2100000, guid: 0f928671e29f7254abf825f35ad13649, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Floor Dark
+    second: {fileID: 2100000, guid: 9460c0bf90dc52443839434b22e699de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Concrete Form 4x8]1'
+    second: {fileID: 2100000, guid: e1c8e96d0265e8040af4d54d367e025e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 710ebcadf4400b744ad92486fca2296c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

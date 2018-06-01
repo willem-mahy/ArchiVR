@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 7b244bae459cb83459f7531383039bd8
+timeCreated: 1512324006
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 3270db67e106654fafbbbe93b1bca955
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.67838943, y: 0.3001246, z: 0.66873294}
+      lookAt: {x: 0.22119744, y: 0.07152858, z: 0.21154094}
+      up: {x: -0.23570226, y: 0.94280905, z: -0.23570226}
+      fov: 30
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: APLLE015  70%  70%  70%  70%  70%  70%
+    100002: apple  70%  70%  70%  70%  70%  70%
+    100004: apple001  70%  70%  70%  70%  70%  70%
+    100006: apple002  70%  70%  70%  70%  70%  70%
+    100008: apple003  70%  70%  70%  70%  70%  70%
+    100010: apple004  70%  70%  70%  70%  70%  70%
+    100012: apple005  70%  70%  70%  70%  70%  70%
+    100014: apple006  70%  70%  70%  70%  70%  70%
+    100016: apple007  70%  70%  70%  70%  70%  70%
+    100018: apple010  70%  70%  70%  70%  70%  70%
+    100020: apple011  70%  70%  70%  70%  70%  70%
+    100022: apple012  70%  70%  70%  70%  70%  70%
+    100024: apple013  70%  70%  70%  70%  70%  70%
+    100026: apple014  70%  70%  70%  70%  70%  70%
+    100028: apple015  70%  70%  70%  70%  70%  70%
+    100030: apple016  70%  70%  70%  70%  70%  70%
+    100032: apple017  70%  70%  70%  70%  70%  70%
+    100034: apple018  70%  70%  70%  70%  70%  70%
+    100036: apple019  70%  70%  70%  70%  70%  70%
+    100038: apple020  70%  70%  70%  70%  70%  70%
+    100040: apple021  70%  70%  70%  70%  70%  70%
+    100042: apple022  70%  70%  70%  70%  70%  70%
+    100044: apple023  70%  70%  70%  70%  70%  70%
+    100046: apple024  70%  70%  70%  70%  70%  70%
+    100048: //RootNode
+    100050: Line001
+    100052: Line002
+    100054: Line003
+    100056: Shape002
+    100058: Shape002_MeshPart0
+    100060: Shape002_MeshPart1
+    100062: Shape003
+    400000: APLLE015  70%  70%  70%  70%  70%  70%
+    400002: apple  70%  70%  70%  70%  70%  70%
+    400004: apple001  70%  70%  70%  70%  70%  70%
+    400006: apple002  70%  70%  70%  70%  70%  70%
+    400008: apple003  70%  70%  70%  70%  70%  70%
+    400010: apple004  70%  70%  70%  70%  70%  70%
+    400012: apple005  70%  70%  70%  70%  70%  70%
+    400014: apple006  70%  70%  70%  70%  70%  70%
+    400016: apple007  70%  70%  70%  70%  70%  70%
+    400018: apple010  70%  70%  70%  70%  70%  70%
+    400020: apple011  70%  70%  70%  70%  70%  70%
+    400022: apple012  70%  70%  70%  70%  70%  70%
+    400024: apple013  70%  70%  70%  70%  70%  70%
+    400026: apple014  70%  70%  70%  70%  70%  70%
+    400028: apple015  70%  70%  70%  70%  70%  70%
+    400030: apple016  70%  70%  70%  70%  70%  70%
+    400032: apple017  70%  70%  70%  70%  70%  70%
+    400034: apple018  70%  70%  70%  70%  70%  70%
+    400036: apple019  70%  70%  70%  70%  70%  70%
+    400038: apple020  70%  70%  70%  70%  70%  70%
+    400040: apple021  70%  70%  70%  70%  70%  70%
+    400042: apple022  70%  70%  70%  70%  70%  70%
+    400044: apple023  70%  70%  70%  70%  70%  70%
+    400046: apple024  70%  70%  70%  70%  70%  70%
+    400048: //RootNode
+    400050: Line001
+    400052: Line002
+    400054: Line003
+    400056: Shape002
+    400058: Shape002_MeshPart0
+    400060: Shape002_MeshPart1
+    400062: Shape003
+    2300000: APLLE015  70%  70%  70%  70%  70%  70%
+    2300002: apple  70%  70%  70%  70%  70%  70%
+    2300004: apple001  70%  70%  70%  70%  70%  70%
+    2300006: apple002  70%  70%  70%  70%  70%  70%
+    2300008: apple003  70%  70%  70%  70%  70%  70%
+    2300010: apple004  70%  70%  70%  70%  70%  70%
+    2300012: apple005  70%  70%  70%  70%  70%  70%
+    2300014: apple006  70%  70%  70%  70%  70%  70%
+    2300016: apple007  70%  70%  70%  70%  70%  70%
+    2300018: apple010  70%  70%  70%  70%  70%  70%
+    2300020: apple011  70%  70%  70%  70%  70%  70%
+    2300022: apple012  70%  70%  70%  70%  70%  70%
+    2300024: apple013  70%  70%  70%  70%  70%  70%
+    2300026: apple014  70%  70%  70%  70%  70%  70%
+    2300028: apple015  70%  70%  70%  70%  70%  70%
+    2300030: apple016  70%  70%  70%  70%  70%  70%
+    2300032: apple017  70%  70%  70%  70%  70%  70%
+    2300034: apple018  70%  70%  70%  70%  70%  70%
+    2300036: apple019  70%  70%  70%  70%  70%  70%
+    2300038: apple020  70%  70%  70%  70%  70%  70%
+    2300040: apple021  70%  70%  70%  70%  70%  70%
+    2300042: apple022  70%  70%  70%  70%  70%  70%
+    2300044: apple023  70%  70%  70%  70%  70%  70%
+    2300046: apple024  70%  70%  70%  70%  70%  70%
+    2300048: Line001
+    2300050: Line002
+    2300052: Line003
+    2300054: Shape002_MeshPart0
+    2300056: Shape002_MeshPart1
+    2300058: Shape003
+    3300000: APLLE015  70%  70%  70%  70%  70%  70%
+    3300002: apple  70%  70%  70%  70%  70%  70%
+    3300004: apple001  70%  70%  70%  70%  70%  70%
+    3300006: apple002  70%  70%  70%  70%  70%  70%
+    3300008: apple003  70%  70%  70%  70%  70%  70%
+    3300010: apple004  70%  70%  70%  70%  70%  70%
+    3300012: apple005  70%  70%  70%  70%  70%  70%
+    3300014: apple006  70%  70%  70%  70%  70%  70%
+    3300016: apple007  70%  70%  70%  70%  70%  70%
+    3300018: apple010  70%  70%  70%  70%  70%  70%
+    3300020: apple011  70%  70%  70%  70%  70%  70%
+    3300022: apple012  70%  70%  70%  70%  70%  70%
+    3300024: apple013  70%  70%  70%  70%  70%  70%
+    3300026: apple014  70%  70%  70%  70%  70%  70%
+    3300028: apple015  70%  70%  70%  70%  70%  70%
+    3300030: apple016  70%  70%  70%  70%  70%  70%
+    3300032: apple017  70%  70%  70%  70%  70%  70%
+    3300034: apple018  70%  70%  70%  70%  70%  70%
+    3300036: apple019  70%  70%  70%  70%  70%  70%
+    3300038: apple020  70%  70%  70%  70%  70%  70%
+    3300040: apple021  70%  70%  70%  70%  70%  70%
+    3300042: apple022  70%  70%  70%  70%  70%  70%
+    3300044: apple023  70%  70%  70%  70%  70%  70%
+    3300046: apple024  70%  70%  70%  70%  70%  70%
+    3300048: Line001
+    3300050: Line002
+    3300052: Line003
+    3300054: Shape002_MeshPart0
+    3300056: Shape002_MeshPart1
+    3300058: Shape003
+    4300000: Mesh apple003  70%  70%  70%  70%  70%  70%
+    4300002: Mesh apple007  70%  70%  70%  70%  70%  70%
+    4300004: Mesh apple005  70%  70%  70%  70%  70%  70%
+    4300006: Mesh apple010  70%  70%  70%  70%  70%  70%
+    4300008: Mesh apple011  70%  70%  70%  70%  70%  70%
+    4300010: Mesh apple004  70%  70%  70%  70%  70%  70%
+    4300012: Mesh apple017  70%  70%  70%  70%  70%  70%
+    4300014: Mesh APLLE015  70%  70%  70%  70%  70%  70%
+    4300016: Mesh apple023  70%  70%  70%  70%  70%  70%
+    4300018: Mesh apple012  70%  70%  70%  70%  70%  70%
+    4300020: Mesh Shape002_MeshPart0
+    4300022: Mesh Shape002_MeshPart1
+    4300024: Mesh apple  70%  70%  70%  70%  70%  70%
+    4300026: Mesh apple013  70%  70%  70%  70%  70%  70%
+    4300028: Mesh apple002  70%  70%  70%  70%  70%  70%
+    4300030: Mesh apple024  70%  70%  70%  70%  70%  70%
+    4300032: Mesh Line001
+    4300034: Mesh apple019  70%  70%  70%  70%  70%  70%
+    4300036: Mesh apple021  70%  70%  70%  70%  70%  70%
+    4300038: Mesh Shape003
+    4300040: Mesh apple001  70%  70%  70%  70%  70%  70%
+    4300042: Mesh apple016  70%  70%  70%  70%  70%  70%
+    4300044: Mesh Line002
+    4300046: Mesh apple022  70%  70%  70%  70%  70%  70%
+    4300048: Mesh apple006  70%  70%  70%  70%  70%  70%
+    4300050: Mesh apple014  70%  70%  70%  70%  70%  70%
+    4300052: Mesh apple020  70%  70%  70%  70%  70%  70%
+    4300054: Mesh apple018  70%  70%  70%  70%  70%  70%
+    4300056: Mesh Line003
+    4300058: Mesh apple015  70%  70%  70%  70%  70%  70%
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Black1
+    second: {fileID: 2100000, guid: 674efd7888b382049bb92af32be13e03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_1
+    second: {fileID: 2100000, guid: c444e219e207ea44fa25a70d72ca67f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_2
+    second: {fileID: 2100000, guid: c098a96dc4dbbac4fa72e5f9a5e0b83c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_3
+    second: {fileID: 2100000, guid: 773cadcd49ff56c4f819782591cae86e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_4
+    second: {fileID: 2100000, guid: 6b5270827596ee64c98b59fd9d094420, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

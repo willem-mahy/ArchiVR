@@ -1,0 +1,150 @@
+﻿using Assets.Scripts.WM.Util;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace Assets.Scripts.WM.CameraNavigation.RotationControl
+{
+    public class RotationControlSwipe : RotationControlBase
+    {
+        private bool m_swiping = false;
+        private Vector2 m_swipeStart = new Vector2(0, 0);
+        private Vector2 m_lastTouchPosition = new Vector2(0, 0);
+
+        // Use this for initialization
+        virtual public void Start()
+        {            
+            Debug.Log("RotationControlSwipe.Start()");
+        }
+
+        /// <summary>
+        /// Cast a ray to test if Input.mousePosition is over any UI object in EventSystem.current.
+        /// This is a replacement for IsPointerOverGameObject(), which does not work on Android in 4.6.0f3
+        /// 
+        /// \note UI Objects with following tags are not taken into consideration:
+        /// - VRMenu
+        /// </summary>
+        private bool IsPointerOverUIObject(Touch t)
+        {
+            Debug.Log("RotationControlSwipe.IsPointerOverUIObject()");
+            var position = new Vector2(t.position.x, t.position.y);
+
+            return InputUtil.IsPointerOverUIObject(position);
+        }        
+
+        private int GetIndexOfTouchClosestToLastTouch()
+        {
+            //Debug.Log("CameraRotateBySwipe.GetIndexOfTouchClosestToLastTouch()");
+
+            int touchIndex = -1;
+
+            if (Input.touchCount > 0)
+            {
+                float minDist = float.MaxValue;
+
+                for (int i = 0; i < Input.touchCount; ++i)
+                {
+                    Vector2 offset = (m_lastTouchPosition - Input.touches[i].position);
+                    float dist = offset.sqrMagnitude;
+
+                    if (dist < minDist)
+                    {
+                        touchIndex = i;
+                        minDist = dist;
+                    }
+                }
+            }
+
+            //Debug.Log("Index of closest touch = " + touchIndex);
+
+            return touchIndex;
+        }
+
+        private Quaternion m_initialCameraRotation = new Quaternion();
+
+        override public void UpdateRotation(GameObject gameObject)
+        {
+            //Debug.Log("WMCameraRotateBySwipe.UpdateCameraRotation()");
+
+            //Debug.Log("#touches:" + Input.touchCount);
+
+            switch (Input.touchCount)
+            {
+                case 0:
+                    m_swiping = false;
+                    break;
+                default:
+                    {
+                        var closestTouchIndex = GetIndexOfTouchClosestToLastTouch();
+
+                        if (closestTouchIndex == -1)
+                        {
+                            Debug.Log("invalid closestTouchIndex:" + closestTouchIndex);
+                            m_swiping = false;
+                            return;
+                        }
+
+                        var closestTouch = Input.touches[closestTouchIndex];
+
+                        m_lastTouchPosition = closestTouch.position;
+
+                        //Debug.Log(m_swiping ? "Swiping..." : "Not swiping...");
+                        //Debug.Log("Touch phase:" + closestTouch.phase);
+
+                        if (m_swiping)
+                        {
+                            switch (closestTouch.phase)
+                            {
+                                case TouchPhase.Moved:
+                                    {
+                                        //Debug.Log("Continue Swipe");
+                                        Vector2 offset = closestTouch.position - m_swipeStart;
+                                        Vector2 euler = 0.1f * offset;
+                                        Quaternion rotX = Quaternion.Euler(new Vector3(euler.y, 0, 0));
+                                        Quaternion rotY = Quaternion.Euler(new Vector3(0, -euler.x, 0));
+
+                                        gameObject.transform.rotation = m_initialCameraRotation;
+
+                                        Vector3 axis = new Vector3();
+                                        float angle = 0;
+
+                                        {
+                                            rotX.ToAngleAxis(out angle, out axis);
+                                            gameObject.transform.rotation = m_initialCameraRotation;
+                                            gameObject.transform.Rotate(axis, angle, Space.Self);
+                                        }
+
+                                        {
+                                            rotY.ToAngleAxis(out angle, out axis);
+
+                                            gameObject.transform.Rotate(axis, angle, Space.World);
+                                        }
+                                    }
+                                    break;
+                                case TouchPhase.Ended:
+                                    {
+                                        Debug.Log("End Swipe");
+                                        m_swiping = false;
+                                    }
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            switch (closestTouch.phase)
+                            {
+                                case TouchPhase.Began:
+                                    m_swiping = !IsPointerOverUIObject(closestTouch);
+                                    Debug.Log(m_swiping ? "Start Swipe" : "UI Press");
+                                    m_swipeStart = closestTouch.position;
+                                    m_initialCameraRotation = gameObject.transform.rotation;
+                                    break;
+                            }
+                        }
+                        break;
+                    }
+            }
+        }
+    }
+}

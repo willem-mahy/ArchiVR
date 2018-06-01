@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: d60f4d2fb86cf90439b71d0ebc07a7ed
+timeCreated: 1504466606
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 5cbbaa183b283aca6cc675850d65a4c5
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.08096263, y: 0.03876266, z: -0.023907803}
+      lookAt: {x: 0.017007135, y: 0.0070212996, z: 0.047446363}
+      up: {x: -0.20987973, y: 0.9492733, z: 0.2341596}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 056A4c1
+    100002: //RootNode
+    100004: Component#94
+    100006: Component#96
+    100008: Component#97
+    100010: Group 19
+    100012: Group 3
+    100014: Group 7
+    100016: Group 81
+    100018: Group 93
+    100020: Group#10
+    100022: Group#10 1
+    100024: Group#11
+    100026: Group#11 1
+    100028: Group#13
+    100030: Group#13 1
+    100032: Group#14
+    100034: Group#14 1
+    100036: Group#15
+    100038: Group#15 1
+    100040: Group#16
+    100042: Group#16 1
+    100044: Group#17
+    100046: Group#17 1
+    100048: Group#17 2
+    100050: Group#17 3
+    100052: Group#18
+    100054: Group#18 1
+    100056: Group#18 10
+    100058: Group#18 11
+    100060: Group#18 12
+    100062: Group#18 13
+    100064: Group#18 2
+    100066: Group#18 3
+    100068: Group#18 4
+    100070: Group#18 5
+    100072: Group#18 6
+    100074: Group#18 7
+    100076: Group#18 8
+    100078: Group#18 9
+    100080: Group#19
+    100082: Group#2
+    100084: Group#2 1
+    100086: Group#20
+    100088: Group#21
+    100090: Group#21 1
+    100092: Group#22
+    100094: Group#22 1
+    100096: Group#23
+    100098: Group#23 1
+    100100: Group#24
+    100102: Group#24 1
+    100104: Group#26
+    100106: Group#26 1
+    100108: Group#27
+    100110: Group#27 1
+    100112: Group#28
+    100114: Group#28 1
+    100116: Group#29
+    100118: Group#29 1
+    100120: Group#3
+    100122: Group#3 1
+    100124: Group#30
+    100126: Group#30 1
+    100128: Group#32
+    100130: Group#32 1
+    100132: Group#33
+    100134: Group#33 1
+    100136: Group#35
+    100138: Group#35 1
+    100140: Group#5
+    100142: Group#5 1
+    100144: Group#6
+    100146: Group#6 1
+    100148: Group#7
+    100150: Group#8
+    100152: Group#8 1
+    100154: Group#9
+    100156: Group#9 1
+    100158: Headlight Assembly
+    100160: Headlight Assembly 1
+    100162: skp27F
+    100164: w3
+    100166: w3 1
+    100168: w3 2
+    100170: w3 3
+    400000: 056A4c1
+    400002: //RootNode
+    400004: Component#94
+    400006: Component#96
+    400008: Component#97
+    400010: Group 19
+    400012: Group 3
+    400014: Group 7
+    400016: Group 81
+    400018: Group 93
+    400020: Group#10
+    400022: Group#10 1
+    400024: Group#11
+    400026: Group#11 1
+    400028: Group#13
+    400030: Group#13 1
+    400032: Group#14
+    400034: Group#14 1
+    400036: Group#15
+    400038: Group#15 1
+    400040: Group#16
+    400042: Group#16 1
+    400044: Group#17
+    400046: Group#17 1
+    400048: Group#17 2
+    400050: Group#17 3
+    400052: Group#18
+    400054: Group#18 1
+    400056: Group#18 10
+    400058: Group#18 11
+    400060: Group#18 12
+    400062: Group#18 13
+    400064: Group#18 2
+    400066: Group#18 3
+    400068: Group#18 4
+    400070: Group#18 5
+    400072: Group#18 6
+    400074: Group#18 7
+    400076: Group#18 8
+    400078: Group#18 9
+    400080: Group#19
+    400082: Group#2
+    400084: Group#2 1
+    400086: Group#20
+    400088: Group#21
+    400090: Group#21 1
+    400092: Group#22
+    400094: Group#22 1
+    400096: Group#23
+    400098: Group#23 1
+    400100: Group#24
+    400102: Group#24 1
+    400104: Group#26
+    400106: Group#26 1
+    400108: Group#27
+    400110: Group#27 1
+    400112: Group#28
+    400114: Group#28 1
+    400116: Group#29
+    400118: Group#29 1
+    400120: Group#3
+    400122: Group#3 1
+    400124: Group#30
+    400126: Group#30 1
+    400128: Group#32
+    400130: Group#32 1
+    400132: Group#33
+    400134: Group#33 1
+    400136: Group#35
+    400138: Group#35 1
+    400140: Group#5
+    400142: Group#5 1
+    400144: Group#6
+    400146: Group#6 1
+    400148: Group#7
+    400150: Group#8
+    400152: Group#8 1
+    400154: Group#9
+    400156: Group#9 1
+    400158: Headlight Assembly
+    400160: Headlight Assembly 1
+    400162: skp27F
+    400164: w3
+    400166: w3 1
+    400168: w3 2
+    400170: w3 3
+    2300000: Component#94
+    2300002: Component#96
+    2300004: Group 19
+    2300006: Group 3
+    2300008: Group 7
+    2300010: Group 81
+    2300012: Group 93
+    2300014: Group#10
+    2300016: Group#10 1
+    2300018: Group#13
+    2300020: Group#13 1
+    2300022: Group#14
+    2300024: Group#14 1
+    2300026: Group#15
+    2300028: Group#15 1
+    2300030: Group#16
+    2300032: Group#16 1
+    2300034: Group#17
+    2300036: Group#17 1
+    2300038: Group#17 2
+    2300040: Group#17 3
+    2300042: Group#18
+    2300044: Group#18 1
+    2300046: Group#18 10
+    2300048: Group#18 11
+    2300050: Group#18 12
+    2300052: Group#18 13
+    2300054: Group#18 2
+    2300056: Group#18 3
+    2300058: Group#18 4
+    2300060: Group#18 5
+    2300062: Group#18 6
+    2300064: Group#18 7
+    2300066: Group#18 8
+    2300068: Group#18 9
+    2300070: Group#19
+    2300072: Group#2
+    2300074: Group#2 1
+    2300076: Group#20
+    2300078: Group#21
+    2300080: Group#21 1
+    2300082: Group#22
+    2300084: Group#22 1
+    2300086: Group#23
+    2300088: Group#23 1
+    2300090: Group#24
+    2300092: Group#24 1
+    2300094: Group#26
+    2300096: Group#26 1
+    2300098: Group#27
+    2300100: Group#27 1
+    2300102: Group#28
+    2300104: Group#28 1
+    2300106: Group#29
+    2300108: Group#29 1
+    2300110: Group#3
+    2300112: Group#3 1
+    2300114: Group#30
+    2300116: Group#30 1
+    2300118: Group#32
+    2300120: Group#32 1
+    2300122: Group#33
+    2300124: Group#33 1
+    2300126: Group#35
+    2300128: Group#35 1
+    2300130: Group#6
+    2300132: Group#6 1
+    2300134: Group#7
+    2300136: Group#8
+    2300138: Group#8 1
+    2300140: Group#9
+    2300142: Group#9 1
+    2300144: Headlight Assembly
+    2300146: Headlight Assembly 1
+    2300148: w3
+    2300150: w3 1
+    2300152: w3 2
+    2300154: w3 3
+    3300000: Component#94
+    3300002: Component#96
+    3300004: Group 19
+    3300006: Group 3
+    3300008: Group 7
+    3300010: Group 81
+    3300012: Group 93
+    3300014: Group#10
+    3300016: Group#10 1
+    3300018: Group#13
+    3300020: Group#13 1
+    3300022: Group#14
+    3300024: Group#14 1
+    3300026: Group#15
+    3300028: Group#15 1
+    3300030: Group#16
+    3300032: Group#16 1
+    3300034: Group#17
+    3300036: Group#17 1
+    3300038: Group#17 2
+    3300040: Group#17 3
+    3300042: Group#18
+    3300044: Group#18 1
+    3300046: Group#18 10
+    3300048: Group#18 11
+    3300050: Group#18 12
+    3300052: Group#18 13
+    3300054: Group#18 2
+    3300056: Group#18 3
+    3300058: Group#18 4
+    3300060: Group#18 5
+    3300062: Group#18 6
+    3300064: Group#18 7
+    3300066: Group#18 8
+    3300068: Group#18 9
+    3300070: Group#19
+    3300072: Group#2
+    3300074: Group#2 1
+    3300076: Group#20
+    3300078: Group#21
+    3300080: Group#21 1
+    3300082: Group#22
+    3300084: Group#22 1
+    3300086: Group#23
+    3300088: Group#23 1
+    3300090: Group#24
+    3300092: Group#24 1
+    3300094: Group#26
+    3300096: Group#26 1
+    3300098: Group#27
+    3300100: Group#27 1
+    3300102: Group#28
+    3300104: Group#28 1
+    3300106: Group#29
+    3300108: Group#29 1
+    3300110: Group#3
+    3300112: Group#3 1
+    3300114: Group#30
+    3300116: Group#30 1
+    3300118: Group#32
+    3300120: Group#32 1
+    3300122: Group#33
+    3300124: Group#33 1
+    3300126: Group#35
+    3300128: Group#35 1
+    3300130: Group#6
+    3300132: Group#6 1
+    3300134: Group#7
+    3300136: Group#8
+    3300138: Group#8 1
+    3300140: Group#9
+    3300142: Group#9 1
+    3300144: Headlight Assembly
+    3300146: Headlight Assembly 1
+    3300148: w3
+    3300150: w3 1
+    3300152: w3 2
+    3300154: w3 3
+    4300000: Mesh Group 3
+    4300002: Mesh Group#6
+    4300004: Mesh Group 7
+    4300006: Mesh Group#9
+    4300008: Mesh Group#10
+    4300010: Mesh Group#13
+    4300012: Mesh Group#14
+    4300014: Mesh Group#15
+    4300016: Mesh Group 19
+    4300018: Mesh Group#16
+    4300020: Mesh Group#2
+    4300022: Mesh Group#27
+    4300024: Mesh Group#28
+    4300026: Mesh Group#24
+    4300028: Mesh Group#29
+    4300030: Mesh Group#18
+    4300032: Mesh Group#17
+    4300034: Mesh Group#21
+    4300036: Mesh Group#3
+    4300038: Mesh Headlight Assembly
+    4300040: Mesh Group#26
+    4300042: Mesh Group#30
+    4300044: Mesh Group#8
+    4300046: Mesh Group#22
+    4300048: Mesh Group#23
+    4300050: Mesh Group#32
+    4300052: Mesh Group#33
+    4300054: Mesh w3
+    4300056: Mesh Group#35
+    4300058: Mesh Group#7
+    4300060: Mesh Group#19
+    4300062: Mesh Group#20
+    4300064: Mesh Component#96
+    4300066: Mesh Component#94
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

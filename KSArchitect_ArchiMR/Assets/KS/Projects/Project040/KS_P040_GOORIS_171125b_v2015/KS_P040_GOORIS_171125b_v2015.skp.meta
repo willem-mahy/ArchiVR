@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: 1d0f200222d2d484fa2c54e838639ff1
+timeCreated: 1511631145
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 25b2abe5a772ace4f5ee90fc8d708f55
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 25.486967, y: 6.0220404, z: -16.409374}
+      lookAt: {x: 20.15746, y: 4.4506645, z: -8.30698}
+      up: {x: -0.08789615, y: 0.9871261, z: 0.13362761}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Buitenschrijnwerk
+    100002: Dak
+    100004: DEUR80-206
+    100006: DEUR90-206
+    100008: DEUR90-206 1
+    100010: DEUR90-206 2
+    100012: DEUR90-206 3
+    100014: DEUR90-206 4
+    100016: DEUR90-206 5
+    100018: DEUR90-206 6
+    100020: DEUREN
+    100022: DEUREN 1
+    100024: door handle
+    100026: door handle 1
+    100028: door handle 10
+    100030: door handle 11
+    100032: door handle 12
+    100034: door handle 13
+    100036: door handle 14
+    100038: door handle 15
+    100040: door handle 2
+    100042: door handle 3
+    100044: door handle 4
+    100046: door handle 5
+    100048: door handle 6
+    100050: door handle 7
+    100052: door handle 8
+    100054: door handle 9
+    100056: Gelijkvloers
+    100058: Gevels
+    100060: //RootNode
+    100062: Meubels gelijkvloers3
+    100064: Meubels verdieping
+    100066: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+    100068: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      1
+    100070: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      10
+    100072: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      11
+    100074: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      12
+    100076: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      13
+    100078: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      14
+    100080: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      15
+    100082: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      2
+    100084: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      3
+    100086: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      4
+    100088: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      5
+    100090: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      6
+    100092: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      7
+    100094: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      8
+    100096: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      9
+    100098: Terrein
+    100100: Verdieping
+    400000: Buitenschrijnwerk
+    400002: Dak
+    400004: DEUR80-206
+    400006: DEUR90-206
+    400008: DEUR90-206 1
+    400010: DEUR90-206 2
+    400012: DEUR90-206 3
+    400014: DEUR90-206 4
+    400016: DEUR90-206 5
+    400018: DEUR90-206 6
+    400020: DEUREN
+    400022: DEUREN 1
+    400024: door handle
+    400026: door handle 1
+    400028: door handle 10
+    400030: door handle 11
+    400032: door handle 12
+    400034: door handle 13
+    400036: door handle 14
+    400038: door handle 15
+    400040: door handle 2
+    400042: door handle 3
+    400044: door handle 4
+    400046: door handle 5
+    400048: door handle 6
+    400050: door handle 7
+    400052: door handle 8
+    400054: door handle 9
+    400056: Gelijkvloers
+    400058: Gevels
+    400060: //RootNode
+    400062: Meubels gelijkvloers3
+    400064: Meubels verdieping
+    400066: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+    400068: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      1
+    400070: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      10
+    400072: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      11
+    400074: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      12
+    400076: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      13
+    400078: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      14
+    400080: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      15
+    400082: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      2
+    400084: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      3
+    400086: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      4
+    400088: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      5
+    400090: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      6
+    400092: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      7
+    400094: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      8
+    400096: modern door handle http://www.facebook.com/pages/The-Little-Architect/105428272867314
+      9
+    400098: Terrein
+    400100: Verdieping
+    2300000: Buitenschrijnwerk
+    2300002: Dak
+    2300004: DEUR80-206
+    2300006: DEUR90-206
+    2300008: DEUR90-206 1
+    2300010: DEUR90-206 2
+    2300012: DEUR90-206 3
+    2300014: DEUR90-206 4
+    2300016: DEUR90-206 5
+    2300018: DEUR90-206 6
+    2300020: door handle
+    2300022: door handle 1
+    2300024: door handle 10
+    2300026: door handle 11
+    2300028: door handle 12
+    2300030: door handle 13
+    2300032: door handle 14
+    2300034: door handle 15
+    2300036: door handle 2
+    2300038: door handle 3
+    2300040: door handle 4
+    2300042: door handle 5
+    2300044: door handle 6
+    2300046: door handle 7
+    2300048: door handle 8
+    2300050: door handle 9
+    2300052: Gelijkvloers
+    2300054: Gevels
+    2300056: Meubels gelijkvloers3
+    2300058: Meubels verdieping
+    2300060: Terrein
+    2300062: Verdieping
+    3300000: Buitenschrijnwerk
+    3300002: Dak
+    3300004: DEUR80-206
+    3300006: DEUR90-206
+    3300008: DEUR90-206 1
+    3300010: DEUR90-206 2
+    3300012: DEUR90-206 3
+    3300014: DEUR90-206 4
+    3300016: DEUR90-206 5
+    3300018: DEUR90-206 6
+    3300020: door handle
+    3300022: door handle 1
+    3300024: door handle 10
+    3300026: door handle 11
+    3300028: door handle 12
+    3300030: door handle 13
+    3300032: door handle 14
+    3300034: door handle 15
+    3300036: door handle 2
+    3300038: door handle 3
+    3300040: door handle 4
+    3300042: door handle 5
+    3300044: door handle 6
+    3300046: door handle 7
+    3300048: door handle 8
+    3300050: door handle 9
+    3300052: Gelijkvloers
+    3300054: Gevels
+    3300056: Meubels gelijkvloers3
+    3300058: Meubels verdieping
+    3300060: Terrein
+    3300062: Verdieping
+    4300000: Mesh Gelijkvloers
+    4300002: Mesh DEUR90-206
+    4300004: Mesh door handle
+    4300006: Mesh Meubels gelijkvloers3
+    4300008: Mesh Dak
+    4300010: Mesh Verdieping
+    4300012: Mesh DEUR80-206
+    4300014: Mesh Meubels verdieping
+    4300016: Mesh Gevels
+    4300018: Mesh Buitenschrijnwerk
+    4300020: Mesh Terrein
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0110_LightSlateGray
+    second: {fileID: 2100000, guid: 330d9464f60ad6b42800e6ca9f2a0fb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0128_White
+    second: {fileID: 2100000, guid: 297eea06ea6f67141a21c011f6d873a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0134_DimGray
+    second: {fileID: 2100000, guid: aa87059e5a3cfd34c9e6c371217d4b0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0135_DarkGray
+    second: {fileID: 2100000, guid: b1156fb4a0c5e4d449616b5b397ff4a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0136_Charcoal
+    second: {fileID: 2100000, guid: f915c088130165f4fb9a53c66cd3ec4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet Loop Pattern
+    second: {fileID: 2100000, guid: 783861ba80b96f24d9ab82d1c896e9f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Shirt
+    second: {fileID: 2100000, guid: 322fec48fe2157c419867422c9b3af48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color M02
+    second: {fileID: 2100000, guid: 5f1f0f638bd75014c8755778fbe80d39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Granite Light Gray
+    second: {fileID: 2100000, guid: eed6698e5a6c887499f6ef9814f5b95e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass Dark Green
+    second: {fileID: 2100000, guid: 74180ef2caa68764cb221744d4363948, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Aluminum_Anodized
+    second: {fileID: 2100000, guid: c2c2c037ad57e7341ac2043adfbba782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Navy
+    second: {fileID: 2100000, guid: b5999d7be139a5f43ac9978c42bd2b08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent Glass Blue
+    second: {fileID: 2100000, guid: aa3e441ecde4c4a4aa0907d8bcc30b76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent Glass Gray
+    second: {fileID: 2100000, guid: c1381cb26a068504fb43111921c9dd2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Lumber ButtJoined
+    second: {fileID: 2100000, guid: dfb0778b41448984299379b3644442cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 91e177dfeed278b4395c76969562fd22, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: b670cf212e5478642a8d76935c607f0d
+timeCreated: 1501325704
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000200000003000000040000000500000006000000330000003400000035000000360000003700000038000000390000003a0000003e0000003f00000040000000410000004200000043000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f8343b77d24e9534eae26a1027ecc5a3
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -23.77778, y: 8.169227, z: -35.18739}
+      lookAt: {x: 57.418865, y: -1.6242771, z: 86.8005}
+      up: {x: 0.03694849, y: 0.99777424, z: 0.05551053}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Buur
+    100002: //RootNode
+    100004: Woning1
+    100006: Woning1_Grond
+    100008: Woning1_woning
+    100010: Woning2
+    100012: Woning2_grond
+    100014: Woning2_woning
+    100016: Woning3
+    100018: Woning3_grond
+    100020: Woning3_woning
+    400000: Buur
+    400002: //RootNode
+    400004: Woning1
+    400006: Woning1_Grond
+    400008: Woning1_woning
+    400010: Woning2
+    400012: Woning2_grond
+    400014: Woning2_woning
+    400016: Woning3
+    400018: Woning3_grond
+    400020: Woning3_woning
+    2300000: Buur
+    2300002: //RootNode
+    2300004: Woning1_Grond
+    2300006: Woning1_woning
+    2300008: Woning2
+    2300010: Woning2_grond
+    2300012: Woning2_woning
+    2300014: Woning3
+    2300016: Woning3_grond
+    2300018: Woning3_woning
+    3300000: Buur
+    3300002: //RootNode
+    3300004: Woning1_Grond
+    3300006: Woning1_woning
+    3300008: Woning2
+    3300010: Woning2_grond
+    3300012: Woning2_woning
+    3300014: Woning3
+    3300016: Woning3_grond
+    3300018: Woning3_woning
+    4300000: Mesh KS P024 140427c v2015
+    4300002: Mesh Woning1_Grond
+    4300004: Mesh Woning1_woning
+    4300006: Mesh Buur
+    4300008: Mesh Woning2
+    4300010: Mesh Woning2_woning
+    4300012: Mesh Woning2_grond
+    4300014: Mesh Woning3
+    4300016: Mesh Woning3_grond
+    4300018: Mesh Woning3_woning
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
