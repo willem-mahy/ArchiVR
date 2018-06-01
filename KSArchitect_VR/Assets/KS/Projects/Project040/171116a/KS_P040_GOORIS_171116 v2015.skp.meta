@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 463462c1066b335448e1e89d9029c535
+timeCreated: 1510870207
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  assetHash:
+    serializedVersion: 2
+    Hash: b1d41f733a554082c171ead549571c3e
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -11.088537, y: 12.227425, z: 36.23971}
+      lookAt: {x: 0.4266787, y: 2.4875827, z: 16.274872}
+      up: {x: 0.1944864, y: 0.92112625, z: -0.33719644}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Buitenschrijnwerk
+    100002: Chris
+    100004: Dak
+    100006: Gelijkvloers
+    100008: Gevels
+    100010: //RootNode
+    100012: Terrein
+    100014: Verdieping
+    400000: Buitenschrijnwerk
+    400002: Chris
+    400004: Dak
+    400006: Gelijkvloers
+    400008: Gevels
+    400010: //RootNode
+    400012: Terrein
+    400014: Verdieping
+    2300000: Buitenschrijnwerk
+    2300002: Chris
+    2300004: Dak
+    2300006: Gelijkvloers
+    2300008: Gevels
+    2300010: Terrein
+    2300012: Verdieping
+    3300000: Buitenschrijnwerk
+    3300002: Chris
+    3300004: Dak
+    3300006: Gelijkvloers
+    3300008: Gevels
+    3300010: Terrein
+    3300012: Verdieping
+    4300000: Mesh Chris
+    4300002: Mesh Gelijkvloers
+    4300004: Mesh Dak
+    4300006: Mesh Verdieping
+    4300008: Mesh Gevels
+    4300010: Mesh Buitenschrijnwerk
+    4300012: Mesh Terrein
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0110_LightSlateGray
+    second: {fileID: 2100000, guid: d7edebedeb9f44f41a2ce3ac5b2b60c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0128_White
+    second: {fileID: 2100000, guid: 00644be7b4f16654e84f5eeacaa5a261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0134_DimGray
+    second: {fileID: 2100000, guid: 0e8ccb9970e9b41469d30eb563422edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0135_DarkGray
+    second: {fileID: 2100000, guid: 9e75b29d8409b7447b299d2cce3c86a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0136_Charcoal
+    second: {fileID: 2100000, guid: d599b2975d0897f4b881e1b3b0b810ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Hair
+    second: {fileID: 2100000, guid: 5ca824f359a2ed54a8eec7f445d07a61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Pants
+    second: {fileID: 2100000, guid: 01186515b63cc114ca7db5e26857e220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Shirt
+    second: {fileID: 2100000, guid: bd6a0c90151950a4abe4d317f48d83ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Shoe
+    second: {fileID: 2100000, guid: b271c3ee94109064398257b24094fceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Shoe_Sole
+    second: {fileID: 2100000, guid: 1aeddb66f0c23a24aa6e072930742162, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chris_Skin
+    second: {fileID: 2100000, guid: cd0597d1c1396a44d8e39b651cc70ff3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent Glass Gray
+    second: {fileID: 2100000, guid: 32f18b1cf709df140b811adb381e04d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 208a1d1cc65f6ce4a9901826f88c802a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

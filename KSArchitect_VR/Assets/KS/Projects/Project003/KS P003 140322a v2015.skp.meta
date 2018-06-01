@@ -1,0 +1,2046 @@
+fileFormatVersion: 2
+guid: 8277ccb428d596a4e975f492985de265
+timeCreated: 1510654756
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000d3010000d4010000d5010000d6010000d7010000d8010000d9010000da010000db010000dc010000dd010000de010000df010000e0010000e1010000e2010000e3010000e4010000e5010000e6010000e7010000e8010000e9010000ea010000eb010000ec010000ed010000ee010000ef010000f0010000f1010000f2010000f3010000f4010000f5010000f6010000f7010000f8010000f9010000fa010000fb010000fc010000fd010000fe010000ff0100000002000001020000020200000302000004020000050200000602000007020000
+  assetHash:
+    serializedVersion: 2
+    Hash: 9b2277f55147b20d65384cab4fe0424c
+  longitude: -0.167
+  latitude: 51.5
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -1.0377766, y: 2.288917, z: 12.463738}
+      lookAt: {x: 6.0935707, y: 0.23919526, z: 8.583516}
+      up: {x: 0.21502173, y: 0.9695761, z: -0.116995014}
+      fov: 45
+      aspectRatio: 0
+      orthoSize: 171.17572
+      isPerspective: 0
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back
+    100002: Base
+    100004: Blad
+    100006: Blinds
+    100008: Book Africa
+    100010: Book Fresco
+    100012: Book KLM
+    100014: book#1
+    100016: book#1 1
+    100018: book#1 2
+    100020: book#1 3
+    100022: Books 01
+    100024: Books 02
+    100026: Books 03
+    100028: books.dxf#1
+    100030: Candles 01
+    100032: Chair Modern 01
+    100034: Chair Modern 01 1
+    100036: Chair Modern 01 2
+    100038: Chair Modern 01 Black
+    100040: Chair Modern 01 Black 1
+    100042: Chair Modern 01 Black 2
+    100044: Chair modern 02
+    100046: Chair modern 02 1
+    100048: Chair modern 02 2
+    100050: Chair Modern Poten
+    100052: Chair Modern Poten 1
+    100054: Chair Modern Poten 2
+    100056: Chair Modern Zitvlak
+    100058: Chair Modern Zitvlak 1
+    100060: Chair Modern Zitvlak 2
+    100062: Clothes Hanger 01
+    100064: Clothes Hanger 01 1
+    100066: Clothes Hanger 01 2
+    100068: Component#1
+    100070: Cushion 01
+    100072: Cushion 02
+    100074: Cushion 03
+    100076: Cushion 04
+    100078: Cushion 05
+    100080: Cushions
+    100082: Dining
+    100084: Dining Furniture
+    100086: Door Handle All
+    100088: Door Handle Base
+    100090: Door Handle Handle
+    100092: Front Door Handle
+    100094: Group 101
+    100096: Group 103
+    100098: Group 105
+    100100: Group 107
+    100102: Group 109
+    100104: Group 113
+    100106: Group 115
+    100108: Group 117
+    100110: Group 119
+    100112: Group 121
+    100114: Group 123
+    100116: Group 125
+    100118: Group 127
+    100120: Group 129
+    100122: Group 131
+    100124: Group 135
+    100126: Group 137
+    100128: Group 139
+    100130: Group 141
+    100132: Group 143
+    100134: Group 147
+    100136: Group 149
+    100138: Group 151
+    100140: Group 153
+    100142: Group 155
+    100144: Group 157
+    100146: Group 16
+    100148: Group 169
+    100150: Group 172
+    100152: Group 174
+    100154: Group 177
+    100156: Group 179
+    100158: Group 18
+    100160: Group 181
+    100162: Group 183
+    100164: Group 185
+    100166: Group 20
+    100168: Group 22
+    100170: Group 24
+    100172: Group 26
+    100174: Group 27
+    100176: Group 28
+    100178: Group 30
+    100180: Group 330
+    100182: Group 468
+    100184: Group 474
+    100186: Group 478
+    100188: Group 484
+    100190: Group 488
+    100192: Group 494
+    100194: Group 90
+    100196: Group 91
+    100198: Group 93
+    100200: Group 95
+    100202: Group 97
+    100204: Group 99
+    100206: haczyk
+    100208: haczyk 1
+    100210: Handle
+    100212: IKEA  Dining table
+    100214: iPad
+    100216: Kast
+    100218: Kast Expedit
+    100220: Kitchen
+    100222: Kitchen Furniture
+    100224: Kitchen Sink
+    100226: Kitchen Vent
+    100228: kkk
+    100230: koffie-uitgang
+    100232: Kraan Keuken
+    100234: //RootNode
+    100236: L-Shape Sofa 01
+    100238: Light Dining-Plafond 1
+    100240: Light L0-Dining-Wall 1
+    100242: Light L0-Dining-Wall 2
+    100244: Light L0-Hall-Wall 1
+    100246: Light L0-Kitchen-Sink 1
+    100248: Light L0-Kitchen-Vent 1
+    100250: Light L0-Living-Plafond 1
+    100252: Light L0-Living-Plafond 2
+    100254: Light L0-Living-Plafond 3
+    100256: Light L0-Living-Wall 1
+    100258: Light L0-Living-Wall 2
+    100260: Lightgroup Kitchen Wall
+    100262: LightGroup L0-Dining-Wall
+    100264: LightGroup L0-Living-Plafond
+    100266: LightGroup L0-Living-Wall
+    100268: Lightsource
+    100270: Lightsource 1
+    100272: Lightsource 10
+    100274: Lightsource 2
+    100276: Lightsource 3
+    100278: Lightsource 4
+    100280: Lightsource 5
+    100282: Lightsource 6
+    100284: Lightsource 7
+    100286: Lightsource 8
+    100288: Lightsource 9
+    100290: linka
+    100292: linka 1
+    100294: listwa
+    100296: Living Furniture
+    100298: Magazines 01
+    100300: OD=200.0mm ID=0mm
+    100302: OD=200.0mm ID=0mm 1
+    100304: OD=298.0mm ID=0mm
+    100306: OD=300.0mm ID=0mm
+    100308: OD=300.0mm ID=0mm 1
+    100310: OD=50.0mm ID=0mm
+    100312: Onderstel
+    100314: Part1
+    100316: Part1_Body
+    100318: Part1_Cushion
+    100320: Part1_Leg1
+    100322: Part1_Leg2
+    100324: Part1_Leg3
+    100326: Part1_Leg4
+    100328: Part2
+    100330: Part2_Body
+    100332: Part2_Cushion
+    100334: Part2_Leg1
+    100336: Part2_Leg2
+    100338: Part2_Leg3
+    100340: Part2_Leg4
+    100342: Potted plant 005
+    100344: Senseo
+    100346: ske865
+    100348: Sofa
+    100350: spath_flower
+    100352: spath_flower 1
+    100354: spath_flower 2
+    100356: spath_flower_half
+    100358: spath_flower_half 1
+    100360: spath_flower_half 2
+    100362: spath_flower_half 3
+    100364: spath_flower_half 4
+    100366: spath_flower_half 5
+    100368: spath_flower_withPistol
+    100370: spath_flower_withPistol 1
+    100372: spath_flower_withPistol 2
+    100374: spath_leaf
+    100376: spath_leaf 1
+    100378: spath_leaf 10
+    100380: spath_leaf 11
+    100382: spath_leaf 12
+    100384: spath_leaf 13
+    100386: spath_leaf 14
+    100388: spath_leaf 15
+    100390: spath_leaf 16
+    100392: spath_leaf 17
+    100394: spath_leaf 18
+    100396: spath_leaf 19
+    100398: spath_leaf 2
+    100400: spath_leaf 20
+    100402: spath_leaf 21
+    100404: spath_leaf 22
+    100406: spath_leaf 23
+    100408: spath_leaf 24
+    100410: spath_leaf 25
+    100412: spath_leaf 26
+    100414: spath_leaf 27
+    100416: spath_leaf 28
+    100418: spath_leaf 3
+    100420: spath_leaf 4
+    100422: spath_leaf 5
+    100424: spath_leaf 6
+    100426: spath_leaf 7
+    100428: spath_leaf 8
+    100430: spath_leaf 9
+    100432: spath_pistol
+    100434: spath_pistol 1
+    100436: spath_pistol 2
+    100438: Spath_stem
+    100440: Spath_stem 1
+    100442: Spath_stem 2
+    100444: Spathaphylum
+    100446: Spiral staris
+    100448: Spiral staris 1
+    100450: Stair
+    100452: Stair Bottom
+    100454: Stair Top
+    100456: Street
+    100458: Table living
+    100460: Teelicht
+    100462: Teelicht 1
+    100464: TV
+    100466: Waltz modern dining chair
+    100468: Waltz modern dining chair 1
+    100470: Waltz modern dining chair 2
+    100472: WC Door Handle
+    100474: "\xE9tag\xE8res EXPEDIT ikea 149*79"
+    100476: "\u017Caluzja"
+    100478: "\u017Caluzja 1"
+    100480: "\u017Caluzja 10"
+    100482: "\u017Caluzja 11"
+    100484: "\u017Caluzja 12"
+    100486: "\u017Caluzja 13"
+    100488: "\u017Caluzja 14"
+    100490: "\u017Caluzja 15"
+    100492: "\u017Caluzja 16"
+    100494: "\u017Caluzja 17"
+    100496: "\u017Caluzja 18"
+    100498: "\u017Caluzja 19"
+    100500: "\u017Caluzja 2"
+    100502: "\u017Caluzja 20"
+    100504: "\u017Caluzja 21"
+    100506: "\u017Caluzja 22"
+    100508: "\u017Caluzja 23"
+    100510: "\u017Caluzja 24"
+    100512: "\u017Caluzja 25"
+    100514: "\u017Caluzja 26"
+    100516: "\u017Caluzja 27"
+    100518: "\u017Caluzja 28"
+    100520: "\u017Caluzja 29"
+    100522: "\u017Caluzja 3"
+    100524: "\u017Caluzja 30"
+    100526: "\u017Caluzja 31"
+    100528: "\u017Caluzja 32"
+    100530: "\u017Caluzja 33"
+    100532: "\u017Caluzja 34"
+    100534: "\u017Caluzja 35"
+    100536: "\u017Caluzja 36"
+    100538: "\u017Caluzja 37"
+    100540: "\u017Caluzja 38"
+    100542: "\u017Caluzja 39"
+    100544: "\u017Caluzja 4"
+    100546: "\u017Caluzja 40"
+    100548: "\u017Caluzja 41"
+    100550: "\u017Caluzja 42"
+    100552: "\u017Caluzja 43"
+    100554: "\u017Caluzja 44"
+    100556: "\u017Caluzja 45"
+    100558: "\u017Caluzja 46"
+    100560: "\u017Caluzja 47"
+    100562: "\u017Caluzja 48"
+    100564: "\u017Caluzja 49"
+    100566: "\u017Caluzja 5"
+    100568: "\u017Caluzja 50"
+    100570: "\u017Caluzja 6"
+    100572: "\u017Caluzja 7"
+    100574: "\u017Caluzja 8"
+    100576: "\u017Caluzja 9"
+    400000: Back
+    400002: Base
+    400004: Blad
+    400006: Blinds
+    400008: Book Africa
+    400010: Book Fresco
+    400012: Book KLM
+    400014: book#1
+    400016: book#1 1
+    400018: book#1 2
+    400020: book#1 3
+    400022: Books 01
+    400024: Books 02
+    400026: Books 03
+    400028: books.dxf#1
+    400030: Candles 01
+    400032: Chair Modern 01
+    400034: Chair Modern 01 1
+    400036: Chair Modern 01 2
+    400038: Chair Modern 01 Black
+    400040: Chair Modern 01 Black 1
+    400042: Chair Modern 01 Black 2
+    400044: Chair modern 02
+    400046: Chair modern 02 1
+    400048: Chair modern 02 2
+    400050: Chair Modern Poten
+    400052: Chair Modern Poten 1
+    400054: Chair Modern Poten 2
+    400056: Chair Modern Zitvlak
+    400058: Chair Modern Zitvlak 1
+    400060: Chair Modern Zitvlak 2
+    400062: Clothes Hanger 01
+    400064: Clothes Hanger 01 1
+    400066: Clothes Hanger 01 2
+    400068: Component#1
+    400070: Cushion 01
+    400072: Cushion 02
+    400074: Cushion 03
+    400076: Cushion 04
+    400078: Cushion 05
+    400080: Cushions
+    400082: Dining
+    400084: Dining Furniture
+    400086: Door Handle All
+    400088: Door Handle Base
+    400090: Door Handle Handle
+    400092: Front Door Handle
+    400094: Group 101
+    400096: Group 103
+    400098: Group 105
+    400100: Group 107
+    400102: Group 109
+    400104: Group 113
+    400106: Group 115
+    400108: Group 117
+    400110: Group 119
+    400112: Group 121
+    400114: Group 123
+    400116: Group 125
+    400118: Group 127
+    400120: Group 129
+    400122: Group 131
+    400124: Group 135
+    400126: Group 137
+    400128: Group 139
+    400130: Group 141
+    400132: Group 143
+    400134: Group 147
+    400136: Group 149
+    400138: Group 151
+    400140: Group 153
+    400142: Group 155
+    400144: Group 157
+    400146: Group 16
+    400148: Group 169
+    400150: Group 172
+    400152: Group 174
+    400154: Group 177
+    400156: Group 179
+    400158: Group 18
+    400160: Group 181
+    400162: Group 183
+    400164: Group 185
+    400166: Group 20
+    400168: Group 22
+    400170: Group 24
+    400172: Group 26
+    400174: Group 27
+    400176: Group 28
+    400178: Group 30
+    400180: Group 330
+    400182: Group 468
+    400184: Group 474
+    400186: Group 478
+    400188: Group 484
+    400190: Group 488
+    400192: Group 494
+    400194: Group 90
+    400196: Group 91
+    400198: Group 93
+    400200: Group 95
+    400202: Group 97
+    400204: Group 99
+    400206: haczyk
+    400208: haczyk 1
+    400210: Handle
+    400212: IKEA  Dining table
+    400214: iPad
+    400216: Kast
+    400218: Kast Expedit
+    400220: Kitchen
+    400222: Kitchen Furniture
+    400224: Kitchen Sink
+    400226: Kitchen Vent
+    400228: kkk
+    400230: koffie-uitgang
+    400232: Kraan Keuken
+    400234: //RootNode
+    400236: L-Shape Sofa 01
+    400238: Light Dining-Plafond 1
+    400240: Light L0-Dining-Wall 1
+    400242: Light L0-Dining-Wall 2
+    400244: Light L0-Hall-Wall 1
+    400246: Light L0-Kitchen-Sink 1
+    400248: Light L0-Kitchen-Vent 1
+    400250: Light L0-Living-Plafond 1
+    400252: Light L0-Living-Plafond 2
+    400254: Light L0-Living-Plafond 3
+    400256: Light L0-Living-Wall 1
+    400258: Light L0-Living-Wall 2
+    400260: Lightgroup Kitchen Wall
+    400262: LightGroup L0-Dining-Wall
+    400264: LightGroup L0-Living-Plafond
+    400266: LightGroup L0-Living-Wall
+    400268: Lightsource
+    400270: Lightsource 1
+    400272: Lightsource 10
+    400274: Lightsource 2
+    400276: Lightsource 3
+    400278: Lightsource 4
+    400280: Lightsource 5
+    400282: Lightsource 6
+    400284: Lightsource 7
+    400286: Lightsource 8
+    400288: Lightsource 9
+    400290: linka
+    400292: linka 1
+    400294: listwa
+    400296: Living Furniture
+    400298: Magazines 01
+    400300: OD=200.0mm ID=0mm
+    400302: OD=200.0mm ID=0mm 1
+    400304: OD=298.0mm ID=0mm
+    400306: OD=300.0mm ID=0mm
+    400308: OD=300.0mm ID=0mm 1
+    400310: OD=50.0mm ID=0mm
+    400312: Onderstel
+    400314: Part1
+    400316: Part1_Body
+    400318: Part1_Cushion
+    400320: Part1_Leg1
+    400322: Part1_Leg2
+    400324: Part1_Leg3
+    400326: Part1_Leg4
+    400328: Part2
+    400330: Part2_Body
+    400332: Part2_Cushion
+    400334: Part2_Leg1
+    400336: Part2_Leg2
+    400338: Part2_Leg3
+    400340: Part2_Leg4
+    400342: Potted plant 005
+    400344: Senseo
+    400346: ske865
+    400348: Sofa
+    400350: spath_flower
+    400352: spath_flower 1
+    400354: spath_flower 2
+    400356: spath_flower_half
+    400358: spath_flower_half 1
+    400360: spath_flower_half 2
+    400362: spath_flower_half 3
+    400364: spath_flower_half 4
+    400366: spath_flower_half 5
+    400368: spath_flower_withPistol
+    400370: spath_flower_withPistol 1
+    400372: spath_flower_withPistol 2
+    400374: spath_leaf
+    400376: spath_leaf 1
+    400378: spath_leaf 10
+    400380: spath_leaf 11
+    400382: spath_leaf 12
+    400384: spath_leaf 13
+    400386: spath_leaf 14
+    400388: spath_leaf 15
+    400390: spath_leaf 16
+    400392: spath_leaf 17
+    400394: spath_leaf 18
+    400396: spath_leaf 19
+    400398: spath_leaf 2
+    400400: spath_leaf 20
+    400402: spath_leaf 21
+    400404: spath_leaf 22
+    400406: spath_leaf 23
+    400408: spath_leaf 24
+    400410: spath_leaf 25
+    400412: spath_leaf 26
+    400414: spath_leaf 27
+    400416: spath_leaf 28
+    400418: spath_leaf 3
+    400420: spath_leaf 4
+    400422: spath_leaf 5
+    400424: spath_leaf 6
+    400426: spath_leaf 7
+    400428: spath_leaf 8
+    400430: spath_leaf 9
+    400432: spath_pistol
+    400434: spath_pistol 1
+    400436: spath_pistol 2
+    400438: Spath_stem
+    400440: Spath_stem 1
+    400442: Spath_stem 2
+    400444: Spathaphylum
+    400446: Spiral staris
+    400448: Spiral staris 1
+    400450: Stair
+    400452: Stair Bottom
+    400454: Stair Top
+    400456: Street
+    400458: Table living
+    400460: Teelicht
+    400462: Teelicht 1
+    400464: TV
+    400466: Waltz modern dining chair
+    400468: Waltz modern dining chair 1
+    400470: Waltz modern dining chair 2
+    400472: WC Door Handle
+    400474: "\xE9tag\xE8res EXPEDIT ikea 149*79"
+    400476: "\u017Caluzja"
+    400478: "\u017Caluzja 1"
+    400480: "\u017Caluzja 10"
+    400482: "\u017Caluzja 11"
+    400484: "\u017Caluzja 12"
+    400486: "\u017Caluzja 13"
+    400488: "\u017Caluzja 14"
+    400490: "\u017Caluzja 15"
+    400492: "\u017Caluzja 16"
+    400494: "\u017Caluzja 17"
+    400496: "\u017Caluzja 18"
+    400498: "\u017Caluzja 19"
+    400500: "\u017Caluzja 2"
+    400502: "\u017Caluzja 20"
+    400504: "\u017Caluzja 21"
+    400506: "\u017Caluzja 22"
+    400508: "\u017Caluzja 23"
+    400510: "\u017Caluzja 24"
+    400512: "\u017Caluzja 25"
+    400514: "\u017Caluzja 26"
+    400516: "\u017Caluzja 27"
+    400518: "\u017Caluzja 28"
+    400520: "\u017Caluzja 29"
+    400522: "\u017Caluzja 3"
+    400524: "\u017Caluzja 30"
+    400526: "\u017Caluzja 31"
+    400528: "\u017Caluzja 32"
+    400530: "\u017Caluzja 33"
+    400532: "\u017Caluzja 34"
+    400534: "\u017Caluzja 35"
+    400536: "\u017Caluzja 36"
+    400538: "\u017Caluzja 37"
+    400540: "\u017Caluzja 38"
+    400542: "\u017Caluzja 39"
+    400544: "\u017Caluzja 4"
+    400546: "\u017Caluzja 40"
+    400548: "\u017Caluzja 41"
+    400550: "\u017Caluzja 42"
+    400552: "\u017Caluzja 43"
+    400554: "\u017Caluzja 44"
+    400556: "\u017Caluzja 45"
+    400558: "\u017Caluzja 46"
+    400560: "\u017Caluzja 47"
+    400562: "\u017Caluzja 48"
+    400564: "\u017Caluzja 49"
+    400566: "\u017Caluzja 5"
+    400568: "\u017Caluzja 50"
+    400570: "\u017Caluzja 6"
+    400572: "\u017Caluzja 7"
+    400574: "\u017Caluzja 8"
+    400576: "\u017Caluzja 9"
+    2300000: Back
+    2300002: Base
+    2300004: Blad
+    2300006: Book Africa
+    2300008: Book Fresco
+    2300010: Book KLM
+    2300012: book#1
+    2300014: book#1 1
+    2300016: book#1 2
+    2300018: book#1 3
+    2300020: Books 01
+    2300022: books.dxf#1
+    2300024: Chair Modern Zitvlak
+    2300026: Chair Modern Zitvlak 1
+    2300028: Chair Modern Zitvlak 2
+    2300030: Clothes Hanger 01
+    2300032: Clothes Hanger 01 1
+    2300034: Clothes Hanger 01 2
+    2300036: Component#1
+    2300038: Cushion 01
+    2300040: Cushion 02
+    2300042: Cushion 03
+    2300044: Cushion 04
+    2300046: Cushion 05
+    2300048: Door Handle Base
+    2300050: Door Handle Handle
+    2300052: Group 101
+    2300054: Group 103
+    2300056: Group 105
+    2300058: Group 107
+    2300060: Group 109
+    2300062: Group 113
+    2300064: Group 115
+    2300066: Group 117
+    2300068: Group 119
+    2300070: Group 121
+    2300072: Group 123
+    2300074: Group 125
+    2300076: Group 127
+    2300078: Group 129
+    2300080: Group 131
+    2300082: Group 135
+    2300084: Group 137
+    2300086: Group 139
+    2300088: Group 141
+    2300090: Group 143
+    2300092: Group 147
+    2300094: Group 149
+    2300096: Group 151
+    2300098: Group 153
+    2300100: Group 155
+    2300102: Group 157
+    2300104: Group 16
+    2300106: Group 169
+    2300108: Group 172
+    2300110: Group 174
+    2300112: Group 177
+    2300114: Group 179
+    2300116: Group 18
+    2300118: Group 181
+    2300120: Group 183
+    2300122: Group 185
+    2300124: Group 20
+    2300126: Group 22
+    2300128: Group 24
+    2300130: Group 28
+    2300132: Group 30
+    2300134: Group 474
+    2300136: Group 484
+    2300138: Group 494
+    2300140: Group 91
+    2300142: Group 93
+    2300144: Group 95
+    2300146: Group 97
+    2300148: Group 99
+    2300150: haczyk
+    2300152: haczyk 1
+    2300154: Handle
+    2300156: iPad
+    2300158: Kast
+    2300160: Kitchen
+    2300162: Kitchen Sink
+    2300164: Kitchen Vent
+    2300166: kkk
+    2300168: koffie-uitgang
+    2300170: //RootNode
+    2300172: Light Dining-Plafond 1
+    2300174: Light L0-Dining-Wall 1
+    2300176: Light L0-Dining-Wall 2
+    2300178: Light L0-Hall-Wall 1
+    2300180: Light L0-Kitchen-Sink 1
+    2300182: Light L0-Kitchen-Vent 1
+    2300184: Light L0-Living-Plafond 1
+    2300186: Light L0-Living-Plafond 2
+    2300188: Light L0-Living-Plafond 3
+    2300190: Light L0-Living-Wall 1
+    2300192: Light L0-Living-Wall 2
+    2300194: Lightsource
+    2300196: Lightsource 1
+    2300198: Lightsource 10
+    2300200: Lightsource 2
+    2300202: Lightsource 3
+    2300204: Lightsource 4
+    2300206: Lightsource 5
+    2300208: Lightsource 6
+    2300210: Lightsource 7
+    2300212: Lightsource 8
+    2300214: Lightsource 9
+    2300216: linka
+    2300218: linka 1
+    2300220: listwa
+    2300222: OD=200.0mm ID=0mm
+    2300224: OD=200.0mm ID=0mm 1
+    2300226: OD=298.0mm ID=0mm
+    2300228: OD=300.0mm ID=0mm
+    2300230: OD=300.0mm ID=0mm 1
+    2300232: OD=50.0mm ID=0mm
+    2300234: Onderstel
+    2300236: Part1_Body
+    2300238: Part1_Cushion
+    2300240: Part1_Leg1
+    2300242: Part1_Leg2
+    2300244: Part1_Leg3
+    2300246: Part1_Leg4
+    2300248: Part2_Body
+    2300250: Part2_Cushion
+    2300252: Part2_Leg1
+    2300254: Part2_Leg2
+    2300256: Part2_Leg3
+    2300258: Part2_Leg4
+    2300260: Potted plant 005
+    2300262: ske865
+    2300264: spath_flower_half
+    2300266: spath_flower_half 1
+    2300268: spath_flower_half 2
+    2300270: spath_flower_half 3
+    2300272: spath_flower_half 4
+    2300274: spath_flower_half 5
+    2300276: spath_leaf
+    2300278: spath_leaf 1
+    2300280: spath_leaf 10
+    2300282: spath_leaf 11
+    2300284: spath_leaf 12
+    2300286: spath_leaf 13
+    2300288: spath_leaf 14
+    2300290: spath_leaf 15
+    2300292: spath_leaf 16
+    2300294: spath_leaf 17
+    2300296: spath_leaf 18
+    2300298: spath_leaf 19
+    2300300: spath_leaf 2
+    2300302: spath_leaf 20
+    2300304: spath_leaf 21
+    2300306: spath_leaf 22
+    2300308: spath_leaf 23
+    2300310: spath_leaf 24
+    2300312: spath_leaf 25
+    2300314: spath_leaf 26
+    2300316: spath_leaf 27
+    2300318: spath_leaf 28
+    2300320: spath_leaf 3
+    2300322: spath_leaf 4
+    2300324: spath_leaf 5
+    2300326: spath_leaf 6
+    2300328: spath_leaf 7
+    2300330: spath_leaf 8
+    2300332: spath_leaf 9
+    2300334: spath_pistol
+    2300336: spath_pistol 1
+    2300338: spath_pistol 2
+    2300340: Spath_stem
+    2300342: Spath_stem 1
+    2300344: Spath_stem 2
+    2300346: Spiral staris
+    2300348: Spiral staris 1
+    2300350: Street
+    2300352: Table living
+    2300354: TV
+    2300356: "\xE9tag\xE8res EXPEDIT ikea 149*79"
+    2300358: "\u017Caluzja"
+    2300360: "\u017Caluzja 1"
+    2300362: "\u017Caluzja 10"
+    2300364: "\u017Caluzja 11"
+    2300366: "\u017Caluzja 12"
+    2300368: "\u017Caluzja 13"
+    2300370: "\u017Caluzja 14"
+    2300372: "\u017Caluzja 15"
+    2300374: "\u017Caluzja 16"
+    2300376: "\u017Caluzja 17"
+    2300378: "\u017Caluzja 18"
+    2300380: "\u017Caluzja 19"
+    2300382: "\u017Caluzja 2"
+    2300384: "\u017Caluzja 20"
+    2300386: "\u017Caluzja 21"
+    2300388: "\u017Caluzja 22"
+    2300390: "\u017Caluzja 23"
+    2300392: "\u017Caluzja 24"
+    2300394: "\u017Caluzja 25"
+    2300396: "\u017Caluzja 26"
+    2300398: "\u017Caluzja 27"
+    2300400: "\u017Caluzja 28"
+    2300402: "\u017Caluzja 29"
+    2300404: "\u017Caluzja 3"
+    2300406: "\u017Caluzja 30"
+    2300408: "\u017Caluzja 31"
+    2300410: "\u017Caluzja 32"
+    2300412: "\u017Caluzja 33"
+    2300414: "\u017Caluzja 34"
+    2300416: "\u017Caluzja 35"
+    2300418: "\u017Caluzja 36"
+    2300420: "\u017Caluzja 37"
+    2300422: "\u017Caluzja 38"
+    2300424: "\u017Caluzja 39"
+    2300426: "\u017Caluzja 4"
+    2300428: "\u017Caluzja 40"
+    2300430: "\u017Caluzja 41"
+    2300432: "\u017Caluzja 42"
+    2300434: "\u017Caluzja 43"
+    2300436: "\u017Caluzja 44"
+    2300438: "\u017Caluzja 45"
+    2300440: "\u017Caluzja 46"
+    2300442: "\u017Caluzja 47"
+    2300444: "\u017Caluzja 48"
+    2300446: "\u017Caluzja 49"
+    2300448: "\u017Caluzja 5"
+    2300450: "\u017Caluzja 50"
+    2300452: "\u017Caluzja 6"
+    2300454: "\u017Caluzja 7"
+    2300456: "\u017Caluzja 8"
+    2300458: "\u017Caluzja 9"
+    3300000: Back
+    3300002: Base
+    3300004: Blad
+    3300006: Book Africa
+    3300008: Book Fresco
+    3300010: Book KLM
+    3300012: book#1
+    3300014: book#1 1
+    3300016: book#1 2
+    3300018: book#1 3
+    3300020: Books 01
+    3300022: books.dxf#1
+    3300024: Chair Modern Zitvlak
+    3300026: Chair Modern Zitvlak 1
+    3300028: Chair Modern Zitvlak 2
+    3300030: Clothes Hanger 01
+    3300032: Clothes Hanger 01 1
+    3300034: Clothes Hanger 01 2
+    3300036: Component#1
+    3300038: Cushion 01
+    3300040: Cushion 02
+    3300042: Cushion 03
+    3300044: Cushion 04
+    3300046: Cushion 05
+    3300048: Door Handle Base
+    3300050: Door Handle Handle
+    3300052: Group 101
+    3300054: Group 103
+    3300056: Group 105
+    3300058: Group 107
+    3300060: Group 109
+    3300062: Group 113
+    3300064: Group 115
+    3300066: Group 117
+    3300068: Group 119
+    3300070: Group 121
+    3300072: Group 123
+    3300074: Group 125
+    3300076: Group 127
+    3300078: Group 129
+    3300080: Group 131
+    3300082: Group 135
+    3300084: Group 137
+    3300086: Group 139
+    3300088: Group 141
+    3300090: Group 143
+    3300092: Group 147
+    3300094: Group 149
+    3300096: Group 151
+    3300098: Group 153
+    3300100: Group 155
+    3300102: Group 157
+    3300104: Group 16
+    3300106: Group 169
+    3300108: Group 172
+    3300110: Group 174
+    3300112: Group 177
+    3300114: Group 179
+    3300116: Group 18
+    3300118: Group 181
+    3300120: Group 183
+    3300122: Group 185
+    3300124: Group 20
+    3300126: Group 22
+    3300128: Group 24
+    3300130: Group 28
+    3300132: Group 30
+    3300134: Group 474
+    3300136: Group 484
+    3300138: Group 494
+    3300140: Group 91
+    3300142: Group 93
+    3300144: Group 95
+    3300146: Group 97
+    3300148: Group 99
+    3300150: haczyk
+    3300152: haczyk 1
+    3300154: Handle
+    3300156: iPad
+    3300158: Kast
+    3300160: Kitchen
+    3300162: Kitchen Sink
+    3300164: Kitchen Vent
+    3300166: kkk
+    3300168: koffie-uitgang
+    3300170: //RootNode
+    3300172: Light Dining-Plafond 1
+    3300174: Light L0-Dining-Wall 1
+    3300176: Light L0-Dining-Wall 2
+    3300178: Light L0-Hall-Wall 1
+    3300180: Light L0-Kitchen-Sink 1
+    3300182: Light L0-Kitchen-Vent 1
+    3300184: Light L0-Living-Plafond 1
+    3300186: Light L0-Living-Plafond 2
+    3300188: Light L0-Living-Plafond 3
+    3300190: Light L0-Living-Wall 1
+    3300192: Light L0-Living-Wall 2
+    3300194: Lightsource
+    3300196: Lightsource 1
+    3300198: Lightsource 10
+    3300200: Lightsource 2
+    3300202: Lightsource 3
+    3300204: Lightsource 4
+    3300206: Lightsource 5
+    3300208: Lightsource 6
+    3300210: Lightsource 7
+    3300212: Lightsource 8
+    3300214: Lightsource 9
+    3300216: linka
+    3300218: linka 1
+    3300220: listwa
+    3300222: OD=200.0mm ID=0mm
+    3300224: OD=200.0mm ID=0mm 1
+    3300226: OD=298.0mm ID=0mm
+    3300228: OD=300.0mm ID=0mm
+    3300230: OD=300.0mm ID=0mm 1
+    3300232: OD=50.0mm ID=0mm
+    3300234: Onderstel
+    3300236: Part1_Body
+    3300238: Part1_Cushion
+    3300240: Part1_Leg1
+    3300242: Part1_Leg2
+    3300244: Part1_Leg3
+    3300246: Part1_Leg4
+    3300248: Part2_Body
+    3300250: Part2_Cushion
+    3300252: Part2_Leg1
+    3300254: Part2_Leg2
+    3300256: Part2_Leg3
+    3300258: Part2_Leg4
+    3300260: Potted plant 005
+    3300262: ske865
+    3300264: spath_flower_half
+    3300266: spath_flower_half 1
+    3300268: spath_flower_half 2
+    3300270: spath_flower_half 3
+    3300272: spath_flower_half 4
+    3300274: spath_flower_half 5
+    3300276: spath_leaf
+    3300278: spath_leaf 1
+    3300280: spath_leaf 10
+    3300282: spath_leaf 11
+    3300284: spath_leaf 12
+    3300286: spath_leaf 13
+    3300288: spath_leaf 14
+    3300290: spath_leaf 15
+    3300292: spath_leaf 16
+    3300294: spath_leaf 17
+    3300296: spath_leaf 18
+    3300298: spath_leaf 19
+    3300300: spath_leaf 2
+    3300302: spath_leaf 20
+    3300304: spath_leaf 21
+    3300306: spath_leaf 22
+    3300308: spath_leaf 23
+    3300310: spath_leaf 24
+    3300312: spath_leaf 25
+    3300314: spath_leaf 26
+    3300316: spath_leaf 27
+    3300318: spath_leaf 28
+    3300320: spath_leaf 3
+    3300322: spath_leaf 4
+    3300324: spath_leaf 5
+    3300326: spath_leaf 6
+    3300328: spath_leaf 7
+    3300330: spath_leaf 8
+    3300332: spath_leaf 9
+    3300334: spath_pistol
+    3300336: spath_pistol 1
+    3300338: spath_pistol 2
+    3300340: Spath_stem
+    3300342: Spath_stem 1
+    3300344: Spath_stem 2
+    3300346: Spiral staris
+    3300348: Spiral staris 1
+    3300350: Street
+    3300352: Table living
+    3300354: TV
+    3300356: "\xE9tag\xE8res EXPEDIT ikea 149*79"
+    3300358: "\u017Caluzja"
+    3300360: "\u017Caluzja 1"
+    3300362: "\u017Caluzja 10"
+    3300364: "\u017Caluzja 11"
+    3300366: "\u017Caluzja 12"
+    3300368: "\u017Caluzja 13"
+    3300370: "\u017Caluzja 14"
+    3300372: "\u017Caluzja 15"
+    3300374: "\u017Caluzja 16"
+    3300376: "\u017Caluzja 17"
+    3300378: "\u017Caluzja 18"
+    3300380: "\u017Caluzja 19"
+    3300382: "\u017Caluzja 2"
+    3300384: "\u017Caluzja 20"
+    3300386: "\u017Caluzja 21"
+    3300388: "\u017Caluzja 22"
+    3300390: "\u017Caluzja 23"
+    3300392: "\u017Caluzja 24"
+    3300394: "\u017Caluzja 25"
+    3300396: "\u017Caluzja 26"
+    3300398: "\u017Caluzja 27"
+    3300400: "\u017Caluzja 28"
+    3300402: "\u017Caluzja 29"
+    3300404: "\u017Caluzja 3"
+    3300406: "\u017Caluzja 30"
+    3300408: "\u017Caluzja 31"
+    3300410: "\u017Caluzja 32"
+    3300412: "\u017Caluzja 33"
+    3300414: "\u017Caluzja 34"
+    3300416: "\u017Caluzja 35"
+    3300418: "\u017Caluzja 36"
+    3300420: "\u017Caluzja 37"
+    3300422: "\u017Caluzja 38"
+    3300424: "\u017Caluzja 39"
+    3300426: "\u017Caluzja 4"
+    3300428: "\u017Caluzja 40"
+    3300430: "\u017Caluzja 41"
+    3300432: "\u017Caluzja 42"
+    3300434: "\u017Caluzja 43"
+    3300436: "\u017Caluzja 44"
+    3300438: "\u017Caluzja 45"
+    3300440: "\u017Caluzja 46"
+    3300442: "\u017Caluzja 47"
+    3300444: "\u017Caluzja 48"
+    3300446: "\u017Caluzja 49"
+    3300448: "\u017Caluzja 5"
+    3300450: "\u017Caluzja 50"
+    3300452: "\u017Caluzja 6"
+    3300454: "\u017Caluzja 7"
+    3300456: "\u017Caluzja 8"
+    3300458: "\u017Caluzja 9"
+    4300000: Mesh KS P003 140322a v2015
+    4300002: Mesh Kitchen
+    4300004: Mesh Light L0-Kitchen-Sink 1
+    4300006: Mesh Lightsource
+    4300008: Mesh Kitchen Sink
+    4300010: Mesh ske865
+    4300012: Mesh Group 16
+    4300014: Mesh Group 18
+    4300016: Mesh Group 20
+    4300018: Mesh Group 22
+    4300020: Mesh Group 28
+    4300022: Mesh Group 30
+    4300024: Mesh koffie-uitgang
+    4300026: Mesh OD=298.0mm ID=0mm
+    4300028: Mesh OD=300.0mm ID=0mm
+    4300030: Mesh OD=300.0mm ID=0mm
+    4300032: Mesh OD=50.0mm ID=0mm
+    4300034: Mesh OD=200.0mm ID=0mm
+    4300036: Mesh OD=200.0mm ID=0mm
+    4300038: Mesh Kitchen Vent
+    4300040: Mesh Light L0-Kitchen-Vent 1
+    4300042: Mesh Light Dining-Plafond 1
+    4300044: Mesh Lightsource
+    4300046: Mesh Light L0-Living-Plafond 1
+    4300048: Mesh Lightsource
+    4300050: Mesh Light L0-Living-Wall 1
+    4300052: Mesh Lightsource
+    4300054: Mesh TV
+    4300056: Mesh Table living
+    4300058: "Mesh \xE9tag\xE8res EXPEDIT ikea 149*79"
+    4300060: Mesh Books 01
+    4300062: Mesh Group 91
+    4300064: Mesh Group 93
+    4300066: Mesh Group 95
+    4300068: Mesh Group 97
+    4300070: Mesh Group 99
+    4300072: Mesh Group 101
+    4300074: Mesh Group 103
+    4300076: Mesh Group 105
+    4300078: Mesh Group 107
+    4300080: Mesh Group 109
+    4300082: Mesh Book Africa
+    4300084: Mesh Group 113
+    4300086: Mesh Group 115
+    4300088: Mesh Group 117
+    4300090: Mesh Group 119
+    4300092: Mesh Group 121
+    4300094: Mesh Group 123
+    4300096: Mesh Group 125
+    4300098: Mesh Group 127
+    4300100: Mesh Group 129
+    4300102: Mesh Group 131
+    4300104: Mesh Book Fresco
+    4300106: Mesh Group 135
+    4300108: Mesh Group 137
+    4300110: Mesh Group 139
+    4300112: Mesh Group 141
+    4300114: Mesh Group 143
+    4300116: Mesh Book KLM
+    4300118: Mesh Group 147
+    4300120: Mesh Group 149
+    4300122: Mesh Group 151
+    4300124: Mesh Group 153
+    4300126: Mesh Group 155
+    4300128: Mesh Group 157
+    4300130: Mesh book#1
+    4300132: Mesh book#1
+    4300134: Mesh book#1
+    4300136: Mesh book#1
+    4300138: Mesh Group 169
+    4300140: Mesh Group 172
+    4300142: Mesh Group 174
+    4300144: Mesh Group 179
+    4300146: Mesh Group 181
+    4300148: Mesh Group 183
+    4300150: Mesh Group 185
+    4300152: Mesh Potted plant 005
+    4300154: Mesh Component#1
+    4300156: Mesh spath_leaf
+    4300158: Mesh spath_flower_half
+    4300160: Mesh spath_pistol
+    4300162: Mesh Spath_stem
+    4300164: Mesh Back
+    4300166: Mesh Part2_Leg4
+    4300168: Mesh Part2_Leg2
+    4300170: Mesh Part2_Leg3
+    4300172: Mesh Part2_Cushion
+    4300174: Mesh Part2_Body
+    4300176: Mesh Part2_Leg1
+    4300178: Mesh Part1_Leg2
+    4300180: Mesh Part1_Body
+    4300182: Mesh Part1_Leg3
+    4300184: Mesh Part1_Leg4
+    4300186: Mesh Part1_Leg1
+    4300188: Mesh Part1_Cushion
+    4300190: Mesh Cushion 04
+    4300192: Mesh Cushion 05
+    4300194: Mesh Cushion 02
+    4300196: Mesh Cushion 01
+    4300198: Mesh Cushion 03
+    4300200: Mesh Kast
+    4300202: Mesh Clothes Hanger 01
+    4300204: Mesh kkk
+    4300206: Mesh listwa
+    4300208: Mesh haczyk
+    4300210: "Mesh \u017Caluzja"
+    4300212: Mesh linka
+    4300214: Mesh books.dxf#1
+    4300216: Mesh Spiral staris
+    4300218: Mesh Light L0-Dining-Wall 2
+    4300220: Mesh Lightsource
+    4300222: Mesh Chair Modern Zitvlak
+    4300224: Mesh Group 474
+    4300226: Mesh iPad
+    4300228: Mesh Blad
+    4300230: Mesh Onderstel
+    4300232: Mesh Door Handle Base
+    4300234: Mesh Door Handle Handle
+    4300236: Mesh Street
+    4300238: Mesh Base
+    4300240: Mesh Handle
+    4300242: Mesh Light L0-Hall-Wall 1
+    4300244: Mesh Lightsource
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0003_DeepPink
+    second: {fileID: 2100000, guid: 06b285c2851f42f4db7e687084e4aa36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0056_Yellow
+    second: {fileID: 2100000, guid: 5737e0ca6f91dfa4a89a69bfb72eb4c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0133_Gray
+    second: {fileID: 2100000, guid: fc5f7b29fd6dda445ad9aa9555bc1c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0136_Charcoal
+    second: {fileID: 2100000, guid: 77e75b2d5759f5240ae06d84645463eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Roman_Hobbled_Blue
+    second: {fileID: 2100000, guid: c67e5e6908958c14181002b65e4cc74e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Roman_Hobbled_Red
+    second: {fileID: 2100000, guid: 15b61b11869f5594e9f7c5e4f466126a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Wood_Dark
+    second: {fileID: 2100000, guid: 589b9da220033d44591faed3929ff219, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Wood_Natural
+    second: {fileID: 2100000, guid: ad81dbc47cbe18240bb0b9fa53d2b707, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Berber_Pattern_Tan
+    second: {fileID: 2100000, guid: eb172b51b9ffa0046bb877600f7ae0f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Frieze_Low
+    second: {fileID: 2100000, guid: cb0e516e74adb1e49bfe40e2fa1b819c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Frieze_Smoke
+    second: {fileID: 2100000, guid: 9182d833b023b924db1868473697e70e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Loop_Pattern
+    second: {fileID: 2100000, guid: be5cc678ecb25464a84ec2ed1f68c4ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Ltblue
+    second: {fileID: 2100000, guid: 045c1dd63da719b4e802dc4b32409ee4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Pattern_Squares_Multi
+    second: {fileID: 2100000, guid: 25751c07fa541714b8c6d121be8eadfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Plush_Charcoal
+    second: {fileID: 2100000, guid: cb17bc7c728128e4192c70b17a29d5cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Plush_Reddish
+    second: {fileID: 2100000, guid: ac9c8190f74719044b817422ab8d661a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Plush_Tan
+    second: {fileID: 2100000, guid: 86edfce1e7c26274a992af33814c547c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceramic 01 512
+    second: {fileID: 2100000, guid: caf2dcb77f58a8d469bc4025a40a8d96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_000
+    second: {fileID: 2100000, guid: 0e7e2225acc4cba43a10b33289649995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_001
+    second: {fileID: 2100000, guid: 618d425b934c87346a57fdedb740e66c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_001 Phong
+    second: {fileID: 2100000, guid: c09858d09415bfc43883429c3dff7347, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002
+    second: {fileID: 2100000, guid: fb6d0c3b54d053042bf9ab5aba3d676c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_003
+    second: {fileID: 2100000, guid: a002e5c1a188c8e409a160b0ab54a0f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_004
+    second: {fileID: 2100000, guid: ddf323ba6bb61d94e8618c33801deafe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_006
+    second: {fileID: 2100000, guid: c2a8a63eec6125343a28fa81ecdc467a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007
+    second: {fileID: 2100000, guid: f8b655fee283eea4b800d4631a12d292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A05
+    second: {fileID: 2100000, guid: d9769aed28250944aaeea60fd3ddf647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A07
+    second: {fileID: 2100000, guid: 9dc265c334e91594e836a4173caa4f0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B10
+    second: {fileID: 2100000, guid: c19b7b50d271e9540aa98c628f66cff8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B17
+    second: {fileID: 2100000, guid: 640f538664b9fbc4cbe52790ef92e821, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C04
+    second: {fileID: 2100000, guid: efb942e864b7d5b4fb7b77a2d554a283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C05
+    second: {fileID: 2100000, guid: 7650ee88f4ba41a4ebe931dc0339eae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C06
+    second: {fileID: 2100000, guid: cfb3284f9082b6b4884c461f9f3e8086, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C08
+    second: {fileID: 2100000, guid: b8a8033bc99073b48963c985a7af5f13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C14
+    second: {fileID: 2100000, guid: 4929dfb03e5948048b82f14f0f9da6c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D01
+    second: {fileID: 2100000, guid: c1a94f5927a88444d9ad9a53d8e1d515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D02
+    second: {fileID: 2100000, guid: 9599752515388dc40a9d58a1014b7cb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D04
+    second: {fileID: 2100000, guid: c56c3b1165cebbd4e89596757d8ea93d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D05
+    second: {fileID: 2100000, guid: 27943925376193243ab1fd67b58b27f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D09
+    second: {fileID: 2100000, guid: 73af256048315a044bb140c423424fc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D15
+    second: {fileID: 2100000, guid: 558024c9bef721f489c6e5eedf70b94e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_E01
+    second: {fileID: 2100000, guid: 2bcd67f63802d424b9648faad58edbd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_E04
+    second: {fileID: 2100000, guid: 71456d7dba48566428fe9cbedf8fffa7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_E05
+    second: {fileID: 2100000, guid: 2a9093ae02fbe6145affdcb870592b41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_E06
+    second: {fileID: 2100000, guid: f8cf63f9b10208640aa10d80f98d05c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_F01
+    second: {fileID: 2100000, guid: dee77cfd03fb7874eb776541e71e0931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_F04
+    second: {fileID: 2100000, guid: 8547fc5c3cc639442b4718e0daa341a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_G16
+    second: {fileID: 2100000, guid: b8b7eed0de9b9fa42bcfa951157af76a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_H07
+    second: {fileID: 2100000, guid: 129d99d4f7490e748bcd9f06837340cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_H10
+    second: {fileID: 2100000, guid: f320b8a484f7b764da12bda73e5afb47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_H15
+    second: {fileID: 2100000, guid: e1c09c9bf22a6754cbfe4729cccbe1e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_I02
+    second: {fileID: 2100000, guid: d9226f9cdcff3a843b83e6cf35cad3cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_I05
+    second: {fileID: 2100000, guid: 5dadcbb71dd7b004191b6596d1b178dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_K05
+    second: {fileID: 2100000, guid: 750d5a7c09987d04584fcc40f22b76c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_K22
+    second: {fileID: 2100000, guid: 0c2d6b58e8bd2a845911811e8c8998b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cooking Plates
+    second: {fileID: 2100000, guid: 6f38f10879691014d9275a458dd3e3f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover Black
+    second: {fileID: 2100000, guid: 0eb8a3a606996d8489d0af79458a0e28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DimGray Phong
+    second: {fileID: 2100000, guid: a8d14e8bf4a2df8479edc1742a48a3a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment
+    second: {fileID: 2100000, guid: 184dfa34d19dd6d4f8c3728e6772dda4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 001
+    second: {fileID: 2100000, guid: b58ee3e9b6cf2284c9fe22fcbeb2e80a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 002
+    second: {fileID: 2100000, guid: dc0683b24c402334e8db564e96861521, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 003
+    second: {fileID: 2100000, guid: 4e1286513b23b974195518fe6d8fa7aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 005
+    second: {fileID: 2100000, guid: 97d16c5fe99988544a89549b4b719d6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fencing_Mesh_Blue
+    second: {fileID: 2100000, guid: 4e935a45571741741976c482a7bf8f0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 4ab33c301c14f8848b0d2cfb7d10e44b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Foto KLM 01 256
+    second: {fileID: 2100000, guid: d8845d351b19aa648a72c6f6ee460644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fresco 01 256
+    second: {fileID: 2100000, guid: 765379a48c3270d40bfb9b179314ca40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Furnace Constructa 01
+    second: {fileID: 2100000, guid: 36495039871f8f040a906de8c58cea95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 577213e2bb3b9f24da52013865b022cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Gray
+    second: {fileID: 2100000, guid: 97256879c27d69141853414701406164, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inox 01 128
+    second: {fileID: 2100000, guid: cc2ebb3beda842644800fa5624adef8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inox Specular 1
+    second: {fileID: 2100000, guid: e970d49d63d57eb4f94c1357e33e4498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inox Specular 99
+    second: {fileID: 2100000, guid: 5d921e7826a77fe4daedc7701929f70b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Invisible
+    second: {fileID: 2100000, guid: 8ec94989a1858c449b267c76765f93d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KS003_Shilderij
+    second: {fileID: 2100000, guid: e103ed928de56a945978fc18e2491fcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LED group1
+    second: {fileID: 2100000, guid: 215de787c9136b74da1356021ae7f507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logo Pepsi Max 256
+    second: {fileID: 2100000, guid: 1cf60f336c1758d4b96eda2aadfe7958, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magazine Cover CountryHome
+    second: {fileID: 2100000, guid: 8ed35c2c613c3704b92595fb7f7a2cf8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magazine Cover Home
+    second: {fileID: 2100000, guid: 9ab46d3fc8149bc44b164e6531b44794, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magazine Cover TIME
+    second: {fileID: 2100000, guid: 89753efd6288b6b4f809e714b71dafd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal 001
+    second: {fileID: 2100000, guid: cd72ba39ef95aaa4e9cd6e9f45335c0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Brass Ceiling 01 256
+    second: {fileID: 2100000, guid: 07fa2a25ec60a5e4692b32cf4697bbb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Steel_Textured_White
+    second: {fileID: 2100000, guid: ce1ef3c4df758f243aff1cd9e1ac0650, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Painting Africa 01 256
+    second: {fileID: 2100000, guid: 36f6d5962f769dc45a57da8ac3d3d94e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Perforated_Metal_Mesh_Sheet
+    second: {fileID: 2100000, guid: ed99825b26df3054da9656667a36f1af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Radiator 001
+    second: {fileID: 2100000, guid: d6683c970abf3e248b82c69e966566cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Radiator Side
+    second: {fileID: 2100000, guid: 47e4854dd99d2f2418d64ea18ff94e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofing Slate Dark 256
+    second: {fileID: 2100000, guid: 0c0bb97190d42584aa13c40a6dd1cf13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofing_Tile_Spanish
+    second: {fileID: 2100000, guid: 5dc1c96cc83fe7b479854f04a19909bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Santa 128
+    second: {fileID: 2100000, guid: e559e594e87a35742aea378e0c427545, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shingles Wood 01 256
+    second: {fileID: 2100000, guid: dc05b256235b3564c8d7199ff99cd2e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SintMaartensDal
+    second: {fileID: 2100000, guid: 7bb5ffb9406865f4c841f04851b2bc11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soil 01 512
+    second: {fileID: 2100000, guid: bb81ab2a07d948242b3bd48f2bee0f20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spathaphila
+    second: {fileID: 2100000, guid: d72502cf64c8d1f488bac4524fc84c02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Floral_Browns1
+    second: {fileID: 2100000, guid: c6cbe152da12f5948b0b9253f3812226, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Green
+    second: {fileID: 2100000, guid: 24a3f9c0e2813244089faf59410160ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Leaves_Green
+    second: {fileID: 2100000, guid: 9d85f43f287f0aa448f3b28364c6ad78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Midnight
+    second: {fileID: 2100000, guid: 10a644fc71b58104a98e489a8916f0a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Tiedye_Sun
+    second: {fileID: 2100000, guid: 80ae3220cb524174ea00d95a6716c182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Border Travertine 01 256x128
+    second: {fileID: 2100000, guid: 89344cb0664ea0548a0e10d483c597d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Hexagon White 01 256
+    second: {fileID: 2100000, guid: 898229627c9b1534f8cd780001dd6e57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tile Navy 01 128
+    second: {fileID: 2100000, guid: 2bfc358deb5045e4e98df46eb152b588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Matte Phong
+    second: {fileID: 2100000, guid: 5968612b6dfe06c47a7d788d60ee8de0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteGlossy
+    second: {fileID: 2100000, guid: 8e8e524a574727e4798a3c1dfb9e780f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Floor Dark 01 256
+    second: {fileID: 2100000, guid: 327b5da3c5005e34fb81b569cc41606b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_ Floor
+    second: {fileID: 2100000, guid: 8c0316f5ca53e5d4db81863ea03434d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Cherry_Original
+    second: {fileID: 2100000, guid: c307ee80b3eed8c47946816c19ba110d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Floor_Light
+    second: {fileID: 2100000, guid: 813217e43923c704baa4c13bdc33119a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Floor_Parquet
+    second: {fileID: 2100000, guid: acd4b8b16874b7b49b41fa90e1796190, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: YellowGreen Phong
+    second: {fileID: 2100000, guid: cb8e6252750b40549801111c2b051f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Brick_Basket_Two]1'
+    second: {fileID: 2100000, guid: edb1a3a338573ec49aeeafa2885edf33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Brick_Tumbled]1'
+    second: {fileID: 2100000, guid: 1bbe6d11589467e4980bff655d350cae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Aluminum_Anodized]1'
+    second: {fileID: 2100000, guid: 58ee6e30e8f8f1f41b86b7c791fb9602, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Corrogated_Shiny]2'
+    second: {fileID: 2100000, guid: e27d1c36e4fbad144b8f4a6ba6316906, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Rusted]1'
+    second: {fileID: 2100000, guid: e9e1cf876b2d6fa4dab6b082b9c6d27d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Roofing_Metal_Standing_Seam_Red]1'
+    second: {fileID: 2100000, guid: c0fb4ca4cf9162a44a3fd420b8df164d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Water_Sparkling]1'
+    second: {fileID: 2100000, guid: cdb407a664d9227498b2d7ff5e6f2011, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _1
+    second: {fileID: 2100000, guid: 5dff9a60d4c403843817df11c3d9e513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _13
+    second: {fileID: 2100000, guid: 1d4973cf4c4dadc429e30977796dd436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _14
+    second: {fileID: 2100000, guid: 78110aa667ea92540b8a9a6f6d0e273d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _15
+    second: {fileID: 2100000, guid: a05426d89dcc4ac44b75be0c2a382bd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _17
+    second: {fileID: 2100000, guid: 7839d092fd1da8d4e86cd36020d4a3d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _18
+    second: {fileID: 2100000, guid: dc73c04c41ee0704887cf1357bb1827b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _19
+    second: {fileID: 2100000, guid: 3e213c07d9de8e54c9d443e91425c3fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2
+    second: {fileID: 2100000, guid: 3d54dbc43b1d65145aaf361376338652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _3
+    second: {fileID: 2100000, guid: c2749801da3c96f40ab9534f910bd1b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _33
+    second: {fileID: 2100000, guid: 0c1e97a79e0c89943bf8733589a46504, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4
+    second: {fileID: 2100000, guid: 09ca3242eba672f459cb1c78f97a72f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _65
+    second: {fileID: 2100000, guid: 38705e12f59ea0a4c85566961b90a29b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _66
+    second: {fileID: 2100000, guid: 899d00787861755468146d795a1660fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _67
+    second: {fileID: 2100000, guid: 8a8876a77feaa5a4ea370a3b1c083388, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _68
+    second: {fileID: 2100000, guid: 6d9de524962bc0d4f808bd26a54ae43a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _BurlyWood_
+    second: {fileID: 2100000, guid: 84dc29cd52129db4fad9c61ed471655e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Charcoal_
+    second: {fileID: 2100000, guid: ec26112a40d97ec4296167cd4a21749c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _DarkGray_
+    second: {fileID: 2100000, guid: 5dc1dfe324c76ec4c8cc49b7221ba1ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _FireBrick_
+    second: {fileID: 2100000, guid: 111c3b75307bf344fbe142f2afd0dfee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LemonChiffon_
+    second: {fileID: 2100000, guid: c107b926dfd658a4daa4ebfeb1b4dcb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LightYellow_
+    second: {fileID: 2100000, guid: 8997b8115076436499aa5f2553143f7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Red Glass_
+    second: {fileID: 2100000, guid: 2131707b8273f3c4eae8eef9c84665d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _SaddleBrown_
+    second: {fileID: 2100000, guid: 5ea62ed376f453547ab3ec1dc95e2fcf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _SandyBrown_
+    second: {fileID: 2100000, guid: 8bafa38a34cd24d499d42edeaa28af71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Seashell_
+    second: {fileID: 2100000, guid: 86fa722d16fa0d441bbd5b0a44ba0f34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Silver_
+    second: {fileID: 2100000, guid: 8ab928ae841d21b49999bb7998d206de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Snow_
+    second: {fileID: 2100000, guid: 5b4f963b8cc573b4a994f0383f135000, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: d9f88131ebae6634887b2e79e1c264e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: a8_1
+    second: {fileID: 2100000, guid: 67d4813918d7be74c8e391214ed0bb5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cromado_01
+    second: {fileID: 2100000, guid: e5344dabc0b998242abd534980c3be24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cromado_02
+    second: {fileID: 2100000, guid: 5df0b655de9317742809f9147f51015e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark-sketch-stone
+    second: {fileID: 2100000, guid: 6f46dd9cc609f664ebb0c3ec7736fac1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: df_1
+    second: {fileID: 2100000, guid: 2a202aa274ebadc42bdb65e1ec6a4045, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: goma
+    second: {fileID: 2100000, guid: 6018c3a5393b4fe488383da3cc90ed48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: iPad
+    second: {fileID: 2100000, guid: 4cf99da016392fb4a849ab7b07e71c42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light-sketch-stone
+    second: {fileID: 2100000, guid: c7d2d209450abac4f928b8d7847ccd4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spath_front_smaller
+    second: {fileID: 2100000, guid: bcbb9d310e060844b89e4c6e74b806a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spath_pistol
+    second: {fileID: 2100000, guid: 2822053e25fa9634db3401bfe26d2b7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tornillo-estrella
+    second: {fileID: 2100000, guid: 28f1dfeb916e30c43a43320a3d78a1f1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

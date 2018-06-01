@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: 171e9b4146327304d9c218a5453c6f96
+timeCreated: 1510655868
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e000000
+  assetHash:
+    serializedVersion: 2
+    Hash: d6452edd03bda261ea05dc9ba6e9b032
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -7.495582, y: 1.4800227, z: 3.5489497}
+      lookAt: {x: 836.455, y: 30.8213, z: 153.48059}
+      up: {x: -0.03368315, y: 0.9994146, z: -0.005983964}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: bankblad
+    100002: bankblad 1
+    100004: binnenmuren gelijkvloers
+    100006: BRAVIA
+    100008: Corner sofa couch 240 cm
+    100010: dak aanbouw
+    100012: dak hoofdbouw
+    100014: dakoversteek
+    100016: dressoir
+    100018: eettafel 150150
+    100020: gevels aanbouw
+    100022: gevels bestaande woning
+    100024: GRAND PIANO#2
+    100026: Group 119
+    100028: Group 121
+    100030: Group 13
+    100032: Group 15
+    100034: Group 17
+    100036: Group 19
+    100038: Group 23
+    100040: Group 25
+    100042: Group 27
+    100044: Group 29
+    100046: Group 33
+    100048: Group 35
+    100050: Group 37
+    100052: Group 39
+    100054: Group 43
+    100056: Group 45
+    100058: Group 47
+    100060: Group 49
+    100062: Group 53
+    100064: Group 55
+    100066: Group 57
+    100068: Group 59
+    100070: Group 63
+    100072: Group 65
+    100074: Group 67
+    100076: Group 69
+    100078: Group 73
+    100080: Group 75
+    100082: Group 77
+    100084: Group 79
+    100086: Group 8
+    100088: Group 83
+    100090: Group 85
+    100092: Group 87
+    100094: Group 89
+    100096: keuken
+    100098: //RootNode
+    100100: pootbank
+    100102: pootbank 1
+    100104: pootbank 2
+    100106: pootbank 3
+    100108: SONY BRAVIA KDL-26EX420#5
+    100110: SONY BRAVIA KDL-26EX420#6
+    100112: SONY#2
+    100114: tafelblad
+    100116: trap
+    100118: tuinmuur
+    100120: tuintafel met banken (VTI-LOKEREN)
+    100122: TV de LED BRAVIA 46" - Conversor digital integrado - Full HD 3D - Intern
+    100124: "TV LCD Sony Bravia CX525 com 32\" Full HD, Bravia Internet V\xEDdeo,
+      Web Bro"
+    100126: Upholstered steel dining chair
+    100128: Upholstered steel dining chair 1
+    100130: Upholstered steel dining chair 2
+    100132: Upholstered steel dining chair 3
+    100134: Upholstered steel dining chair 4
+    100136: Upholstered steel dining chair 5
+    100138: Upholstered steel dining chair 6
+    100140: Upholstered steel dining chair 7
+    100142: vloer gelijkvloers
+    100144: vloer verdieping
+    400000: bankblad
+    400002: bankblad 1
+    400004: binnenmuren gelijkvloers
+    400006: BRAVIA
+    400008: Corner sofa couch 240 cm
+    400010: dak aanbouw
+    400012: dak hoofdbouw
+    400014: dakoversteek
+    400016: dressoir
+    400018: eettafel 150150
+    400020: gevels aanbouw
+    400022: gevels bestaande woning
+    400024: GRAND PIANO#2
+    400026: Group 119
+    400028: Group 121
+    400030: Group 13
+    400032: Group 15
+    400034: Group 17
+    400036: Group 19
+    400038: Group 23
+    400040: Group 25
+    400042: Group 27
+    400044: Group 29
+    400046: Group 33
+    400048: Group 35
+    400050: Group 37
+    400052: Group 39
+    400054: Group 43
+    400056: Group 45
+    400058: Group 47
+    400060: Group 49
+    400062: Group 53
+    400064: Group 55
+    400066: Group 57
+    400068: Group 59
+    400070: Group 63
+    400072: Group 65
+    400074: Group 67
+    400076: Group 69
+    400078: Group 73
+    400080: Group 75
+    400082: Group 77
+    400084: Group 79
+    400086: Group 8
+    400088: Group 83
+    400090: Group 85
+    400092: Group 87
+    400094: Group 89
+    400096: keuken
+    400098: //RootNode
+    400100: pootbank
+    400102: pootbank 1
+    400104: pootbank 2
+    400106: pootbank 3
+    400108: SONY BRAVIA KDL-26EX420#5
+    400110: SONY BRAVIA KDL-26EX420#6
+    400112: SONY#2
+    400114: tafelblad
+    400116: trap
+    400118: tuinmuur
+    400120: tuintafel met banken (VTI-LOKEREN)
+    400122: TV de LED BRAVIA 46" - Conversor digital integrado - Full HD 3D - Intern
+    400124: "TV LCD Sony Bravia CX525 com 32\" Full HD, Bravia Internet V\xEDdeo,
+      Web Bro"
+    400126: Upholstered steel dining chair
+    400128: Upholstered steel dining chair 1
+    400130: Upholstered steel dining chair 2
+    400132: Upholstered steel dining chair 3
+    400134: Upholstered steel dining chair 4
+    400136: Upholstered steel dining chair 5
+    400138: Upholstered steel dining chair 6
+    400140: Upholstered steel dining chair 7
+    400142: vloer gelijkvloers
+    400144: vloer verdieping
+    2300000: bankblad
+    2300002: bankblad 1
+    2300004: binnenmuren gelijkvloers
+    2300006: BRAVIA
+    2300008: Corner sofa couch 240 cm
+    2300010: dak aanbouw
+    2300012: dak hoofdbouw
+    2300014: dakoversteek
+    2300016: dressoir
+    2300018: eettafel 150150
+    2300020: gevels aanbouw
+    2300022: gevels bestaande woning
+    2300024: GRAND PIANO#2
+    2300026: Group 119
+    2300028: Group 121
+    2300030: Group 13
+    2300032: Group 15
+    2300034: Group 17
+    2300036: Group 19
+    2300038: Group 23
+    2300040: Group 25
+    2300042: Group 27
+    2300044: Group 29
+    2300046: Group 33
+    2300048: Group 35
+    2300050: Group 37
+    2300052: Group 39
+    2300054: Group 43
+    2300056: Group 45
+    2300058: Group 47
+    2300060: Group 49
+    2300062: Group 53
+    2300064: Group 55
+    2300066: Group 57
+    2300068: Group 59
+    2300070: Group 63
+    2300072: Group 65
+    2300074: Group 67
+    2300076: Group 69
+    2300078: Group 73
+    2300080: Group 75
+    2300082: Group 77
+    2300084: Group 79
+    2300086: Group 83
+    2300088: Group 85
+    2300090: Group 87
+    2300092: Group 89
+    2300094: keuken
+    2300096: //RootNode
+    2300098: pootbank
+    2300100: pootbank 1
+    2300102: pootbank 2
+    2300104: pootbank 3
+    2300106: SONY BRAVIA KDL-26EX420#6
+    2300108: SONY#2
+    2300110: tafelblad
+    2300112: trap
+    2300114: tuinmuur
+    2300116: tuintafel met banken (VTI-LOKEREN)
+    2300118: TV de LED BRAVIA 46" - Conversor digital integrado - Full HD 3D - Intern
+    2300120: Upholstered steel dining chair
+    2300122: Upholstered steel dining chair 1
+    2300124: Upholstered steel dining chair 2
+    2300126: Upholstered steel dining chair 3
+    2300128: Upholstered steel dining chair 4
+    2300130: Upholstered steel dining chair 5
+    2300132: Upholstered steel dining chair 6
+    2300134: Upholstered steel dining chair 7
+    2300136: vloer gelijkvloers
+    2300138: vloer verdieping
+    3300000: bankblad
+    3300002: bankblad 1
+    3300004: binnenmuren gelijkvloers
+    3300006: BRAVIA
+    3300008: Corner sofa couch 240 cm
+    3300010: dak aanbouw
+    3300012: dak hoofdbouw
+    3300014: dakoversteek
+    3300016: dressoir
+    3300018: eettafel 150150
+    3300020: gevels aanbouw
+    3300022: gevels bestaande woning
+    3300024: GRAND PIANO#2
+    3300026: Group 119
+    3300028: Group 121
+    3300030: Group 13
+    3300032: Group 15
+    3300034: Group 17
+    3300036: Group 19
+    3300038: Group 23
+    3300040: Group 25
+    3300042: Group 27
+    3300044: Group 29
+    3300046: Group 33
+    3300048: Group 35
+    3300050: Group 37
+    3300052: Group 39
+    3300054: Group 43
+    3300056: Group 45
+    3300058: Group 47
+    3300060: Group 49
+    3300062: Group 53
+    3300064: Group 55
+    3300066: Group 57
+    3300068: Group 59
+    3300070: Group 63
+    3300072: Group 65
+    3300074: Group 67
+    3300076: Group 69
+    3300078: Group 73
+    3300080: Group 75
+    3300082: Group 77
+    3300084: Group 79
+    3300086: Group 83
+    3300088: Group 85
+    3300090: Group 87
+    3300092: Group 89
+    3300094: keuken
+    3300096: //RootNode
+    3300098: pootbank
+    3300100: pootbank 1
+    3300102: pootbank 2
+    3300104: pootbank 3
+    3300106: SONY BRAVIA KDL-26EX420#6
+    3300108: SONY#2
+    3300110: tafelblad
+    3300112: trap
+    3300114: tuinmuur
+    3300116: tuintafel met banken (VTI-LOKEREN)
+    3300118: TV de LED BRAVIA 46" - Conversor digital integrado - Full HD 3D - Intern
+    3300120: Upholstered steel dining chair
+    3300122: Upholstered steel dining chair 1
+    3300124: Upholstered steel dining chair 2
+    3300126: Upholstered steel dining chair 3
+    3300128: Upholstered steel dining chair 4
+    3300130: Upholstered steel dining chair 5
+    3300132: Upholstered steel dining chair 6
+    3300134: Upholstered steel dining chair 7
+    3300136: vloer gelijkvloers
+    3300138: vloer verdieping
+    4300000: Mesh KS P027 150605a v2015
+    4300002: Mesh tuinmuur
+    4300004: Mesh dak aanbouw
+    4300006: Mesh vloer gelijkvloers
+    4300008: Mesh eettafel 150150
+    4300010: Mesh Upholstered steel dining chair
+    4300012: Mesh Group 13
+    4300014: Mesh Group 15
+    4300016: Mesh Group 17
+    4300018: Mesh gevels bestaande woning
+    4300020: Mesh gevels aanbouw
+    4300022: Mesh binnenmuren gelijkvloers
+    4300024: Mesh vloer verdieping
+    4300026: Mesh keuken
+    4300028: Mesh dressoir
+    4300030: Mesh Corner sofa couch 240 cm
+    4300032: Mesh trap
+    4300034: Mesh dakoversteek
+    4300036: Mesh dak hoofdbouw
+    4300038: Mesh GRAND PIANO#2
+    4300040: Mesh TV de LED BRAVIA 46" - Conversor digital integrado - Full HD 3D
+      - Intern
+    4300042: Mesh SONY BRAVIA KDL-26EX420#6
+    4300044: Mesh Group 119
+    4300046: Mesh Group 121
+    4300048: Mesh SONY#2
+    4300050: Mesh BRAVIA
+    4300052: Mesh tuintafel met banken (VTI-LOKEREN)
+    4300054: Mesh tafelblad
+    4300056: Mesh pootbank
+    4300058: Mesh bankblad
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0035_Tan
+    second: {fileID: 2100000, guid: eb105aadba1726941a0f4964c1598bd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0049_Beige
+    second: {fileID: 2100000, guid: f9dd267d5c8985841be139c573e1e2f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0128_White
+    second: {fileID: 2100000, guid: 45740a006215d824994f50212dbb2d0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0132_LightGray
+    second: {fileID: 2100000, guid: eefcc617d3ca0d7419cf69b6a98e98a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0134_DimGray
+    second: {fileID: 2100000, guid: 196538fe30dfa3e40bd441152c8c6c59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0135_DarkGray
+    second: {fileID: 2100000, guid: 868cf7386a0302d448ce6587847e9be3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0136_Charcoal
+    second: {fileID: 2100000, guid: 5f2e4be04c8b0e14d9ca865c2bbb86a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0137_Black
+    second: {fileID: 2100000, guid: 3c3b93838f461ec418ee0b9248ad323f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick_Tumbled
+    second: {fileID: 2100000, guid: 45097306855039c4f9bc115be71a9669, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CUSHION
+    second: {fileID: 2100000, guid: eca4a780226c22c4f97f93f57d9242ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_000
+    second: {fileID: 2100000, guid: 7e0bfa49a57087040b6a8e4862b11e3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_003
+    second: {fileID: 2100000, guid: 793f8a436958d6745ac6e5324cd2813e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_006
+    second: {fileID: 2100000, guid: 7ee699dfdbe6c604aa63bf87d633bba0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_008
+    second: {fileID: 2100000, guid: 907b5e66a5573e247a41721d46d55aac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A06
+    second: {fileID: 2100000, guid: 434e3ba0ad3cd4a47ba315e3fc65f4e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B21
+    second: {fileID: 2100000, guid: 3c5e7ec85292e0840bc61e5aa7d3b50e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C04
+    second: {fileID: 2100000, guid: 41ba11b27026d8241812ea7a73665ab6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_H25
+    second: {fileID: 2100000, guid: bb9b7df694d4d82449cac21384e5adc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_I20
+    second: {fileID: 2100000, guid: 3e694a4da1d18a74687ba14964e9c725, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: H3382_ST9
+    second: {fileID: 2100000, guid: 1805318c82bca684885f378f7f3615cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Aluminum_Anodized
+    second: {fileID: 2100000, guid: be9110c882880254b924e2b6e75de531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofing_Shingles_GAF_Estates
+    second: {fileID: 2100000, guid: ed18dccc94f40e34cb93bf4f4181e59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steve_Book
+    second: {fileID: 2100000, guid: b80435e7e39a27d48a7c948d09dd3a02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steve_Shoes2
+    second: {fileID: 2100000, guid: 2d349734b3cdc6043bf794f279856ed9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textile_Leaves_Green
+    second: {fileID: 2100000, guid: 48a23455e3d4e6947ae6733584e83430, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Blue
+    second: {fileID: 2100000, guid: 4ef692f860ba5ba45ab1e73a2e69cbb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 0b614668f51bed74ab03caa13c5e67d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vegetation_Blur7
+    second: {fileID: 2100000, guid: b408610ba17bcb049bc2706ef9c172ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vegetation_Grass_Artificial
+    second: {fileID: 2100000, guid: 33ac39726631a4543a5d116bae10e169, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_ Floor
+    second: {fileID: 2100000, guid: d431fc08a03cd1b44836899da56bc234, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Cherry_Original
+    second: {fileID: 2100000, guid: c4d45da495c499d49a29686ef3b52251, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Lumber_ButtJoined
+    second: {fileID: 2100000, guid: cbc93008f69bc6e48abe203debb13825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Plywood_Knots
+    second: {fileID: 2100000, guid: 3d62d6cc8dd661644a23c63a72fa0c4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_003]1'
+    second: {fileID: 2100000, guid: fa0ee6f958f4e3c4d8b575bec1c39438, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Aluminum_Anodized]3'
+    second: {fileID: 2100000, guid: 682d208692c72a141b7ef0cccb2f3add, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Wood_Lumber_ButtJoined]1'
+    second: {fileID: 2100000, guid: 75d1338b5cafc0142976b93fdb8104e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Wood_Lumber_ButtJoined]2'
+    second: {fileID: 2100000, guid: a99aa8894b7c28d449fd952d611ed2dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2
+    second: {fileID: 2100000, guid: fa0318e1af409da44ba1a50c3ae0cd7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Black_
+    second: {fileID: 2100000, guid: 068203066d05c7f4783b241878ee59d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Charcoal_1
+    second: {fileID: 2100000, guid: 7b9c5c83c9972db4abca342dc36269be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 7abfd501b3d88274a8e73eac1982b358, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mattemetal
+    second: {fileID: 2100000, guid: 36c5ee69aebb43442b01c7f6f8f95cf8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

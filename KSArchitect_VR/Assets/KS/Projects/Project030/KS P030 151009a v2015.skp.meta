@@ -1,0 +1,1201 @@
+fileFormatVersion: 2
+guid: cba722352839cfc489a0dd027e6bca8d
+timeCreated: 1510655908
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000
+  assetHash:
+    serializedVersion: 2
+    Hash: fd060c2d6dc7496545a36f8ee7625e98
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -13.1394005, y: 9.283645, z: 11.906222}
+      lookAt: {x: 9.832656, y: -0.66477156, z: 2.6749773}
+      up: {x: 0.34596944, y: 0.92788833, z: -0.13902666}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Component#112
+    100002: Component#112 1
+    100004: Component#112 10
+    100006: Component#112 11
+    100008: Component#112 12
+    100010: Component#112 13
+    100012: Component#112 14
+    100014: Component#112 15
+    100016: Component#112 16
+    100018: Component#112 17
+    100020: Component#112 18
+    100022: Component#112 19
+    100024: Component#112 2
+    100026: Component#112 20
+    100028: Component#112 21
+    100030: Component#112 22
+    100032: Component#112 23
+    100034: Component#112 3
+    100036: Component#112 4
+    100038: Component#112 5
+    100040: Component#112 6
+    100042: Component#112 7
+    100044: Component#112 8
+    100046: Component#112 9
+    100048: Component#130
+    100050: Component#14
+    100052: Component#14 1
+    100054: Component#14 2
+    100056: Component#14 3
+    100058: Component#14 4
+    100060: Component#14 5
+    100062: Component#14 6
+    100064: Component#14 7
+    100066: Component#14 8
+    100068: Component#14 9
+    100070: Component#165
+    100072: Component#165 1
+    100074: Component#165 2
+    100076: Component#165 3
+    100078: Component#165 4
+    100080: Component#165 5
+    100082: Component#165 6
+    100084: Component#165 7
+    100086: Component#165 8
+    100088: Component#17
+    100090: Component#18
+    100092: Component#19
+    100094: Component#19 1
+    100096: Component#19 2
+    100098: Component#19 3
+    100100: Component#19 4
+    100102: Component#20
+    100104: Component#21
+    100106: Component#210
+    100108: Component#210 1
+    100110: Component#210 2
+    100112: Component#210 3
+    100114: Component#210 4
+    100116: Component#210 5
+    100118: Component#210 6
+    100120: Component#210 7
+    100122: Component#210 8
+    100124: Component#210 9
+    100126: Component#213
+    100128: Component#213 1
+    100130: Component#213 2
+    100132: Component#213 3
+    100134: Component#213 4
+    100136: Component#213 5
+    100138: Component#213 6
+    100140: Component#213 7
+    100142: Component#213 8
+    100144: Component#213 9
+    100146: Component#251
+    100148: Component#252
+    100150: Component#253
+    100152: Component#254
+    100154: Component#255
+    100156: Component#256
+    100158: Component#257
+    100160: Component#258
+    100162: Component#50
+    100164: Component#50 1
+    100166: Component#50 10
+    100168: Component#50 11
+    100170: Component#50 12
+    100172: Component#50 13
+    100174: Component#50 14
+    100176: Component#50 15
+    100178: Component#50 16
+    100180: Component#50 17
+    100182: Component#50 18
+    100184: Component#50 19
+    100186: Component#50 2
+    100188: Component#50 3
+    100190: Component#50 4
+    100192: Component#50 5
+    100194: Component#50 6
+    100196: Component#50 7
+    100198: Component#50 8
+    100200: Component#50 9
+    100202: Fork
+    100204: Fork 1
+    100206: Fork 2
+    100208: Fork 3
+    100210: Fork 4
+    100212: Fork 5
+    100214: Fork 6
+    100216: Fork 7
+    100218: Fork 8
+    100220: Fork 9
+    100222: Goliath table (resource furniture) DC
+    100224: Group 102
+    100226: Group 104
+    100228: Group 106
+    100230: Group 108
+    100232: Group 11
+    100234: Group 114
+    100236: Group 115
+    100238: Group 117
+    100240: Group 119
+    100242: Group 121
+    100244: Group 122
+    100246: Group 124
+    100248: Group 135
+    100250: Group 137
+    100252: Group 138
+    100254: Group 14
+    100256: Group 140
+    100258: Group 142
+    100260: Group 143
+    100262: Group 145
+    100264: Group 148
+    100266: Group 150
+    100268: Group 16
+    100270: Group 18
+    100272: Group 21
+    100274: Group 23
+    100276: Group 25
+    100278: Group 28
+    100280: Group 3
+    100282: Group 30
+    100284: Group 32
+    100286: Group 38
+    100288: Group 4
+    100290: Group 42
+    100292: Group 44
+    100294: Group 46
+    100296: Group 48
+    100298: Group 50
+    100300: Group 52
+    100302: Group 54
+    100304: Group 56
+    100306: Group 58
+    100308: Group 60
+    100310: Group 62
+    100312: Group 64
+    100314: Group 66
+    100316: Group 68
+    100318: Group 7
+    100320: Group 70
+    100322: Group 72
+    100324: Group 74
+    100326: Group 76
+    100328: Group 78
+    100330: Group 80
+    100332: Group 82
+    100334: Group 84
+    100336: Group 88
+    100338: Group 9
+    100340: Group 90
+    100342: Group 92
+    100344: Group 95
+    100346: Group 97
+    100348: Group 99
+    100350: Group#2
+    100352: Group#2 1
+    100354: Group#23
+    100356: Group#23 1
+    100358: HDTV#1
+    100360: Image 40
+    100362: Image 41
+    100364: Knife
+    100366: Knife 1
+    100368: Knife 2
+    100370: Knife 3
+    100372: Knife 4
+    100374: Knife 5
+    100376: Knife 6
+    100378: Knife 7
+    100380: Knife 8
+    100382: Knife 9
+    100384: //RootNode
+    100386: Modern Chair  RM58
+    100388: Prades, salontafel
+    100390: Remedy 2 seater Sofa by Versus
+    100392: Remedy 3 seater Sofa by Versus
+    100394: Remedy 3D 2,5-seater
+    100396: Remedy 3D 2,5-seater#1
+    100398: Remedy 3D 2-seater
+    100400: Remedy 3D 2-seater#1
+    100402: SCREWS#1
+    100404: SCREWS#1 1
+    100406: SCREWS#1 2
+    100408: SCREWS#1 3
+    100410: SCREWS#1 4
+    100412: SCREWS#1 5
+    100414: Silverware Set
+    100416: Silverware Set 1
+    100418: Silverware Set 2
+    100420: Silverware Set 3
+    100422: Silverware Set 4
+    100424: Silverware Set 5
+    100426: Silverware Set 6
+    100428: Silverware Set 7
+    100430: Silverware Set 8
+    100432: Silverware Set 9
+    100434: Spoon
+    100436: Spoon 1
+    100438: Spoon 2
+    100440: Spoon 3
+    100442: Spoon 4
+    100444: Spoon 5
+    100446: Spoon 6
+    100448: Spoon 7
+    100450: Spoon 8
+    100452: Spoon 9
+    100454: WALL MOUNTED HDTV (comes with a wall bracket)
+    400000: Component#112
+    400002: Component#112 1
+    400004: Component#112 10
+    400006: Component#112 11
+    400008: Component#112 12
+    400010: Component#112 13
+    400012: Component#112 14
+    400014: Component#112 15
+    400016: Component#112 16
+    400018: Component#112 17
+    400020: Component#112 18
+    400022: Component#112 19
+    400024: Component#112 2
+    400026: Component#112 20
+    400028: Component#112 21
+    400030: Component#112 22
+    400032: Component#112 23
+    400034: Component#112 3
+    400036: Component#112 4
+    400038: Component#112 5
+    400040: Component#112 6
+    400042: Component#112 7
+    400044: Component#112 8
+    400046: Component#112 9
+    400048: Component#130
+    400050: Component#14
+    400052: Component#14 1
+    400054: Component#14 2
+    400056: Component#14 3
+    400058: Component#14 4
+    400060: Component#14 5
+    400062: Component#14 6
+    400064: Component#14 7
+    400066: Component#14 8
+    400068: Component#14 9
+    400070: Component#165
+    400072: Component#165 1
+    400074: Component#165 2
+    400076: Component#165 3
+    400078: Component#165 4
+    400080: Component#165 5
+    400082: Component#165 6
+    400084: Component#165 7
+    400086: Component#165 8
+    400088: Component#17
+    400090: Component#18
+    400092: Component#19
+    400094: Component#19 1
+    400096: Component#19 2
+    400098: Component#19 3
+    400100: Component#19 4
+    400102: Component#20
+    400104: Component#21
+    400106: Component#210
+    400108: Component#210 1
+    400110: Component#210 2
+    400112: Component#210 3
+    400114: Component#210 4
+    400116: Component#210 5
+    400118: Component#210 6
+    400120: Component#210 7
+    400122: Component#210 8
+    400124: Component#210 9
+    400126: Component#213
+    400128: Component#213 1
+    400130: Component#213 2
+    400132: Component#213 3
+    400134: Component#213 4
+    400136: Component#213 5
+    400138: Component#213 6
+    400140: Component#213 7
+    400142: Component#213 8
+    400144: Component#213 9
+    400146: Component#251
+    400148: Component#252
+    400150: Component#253
+    400152: Component#254
+    400154: Component#255
+    400156: Component#256
+    400158: Component#257
+    400160: Component#258
+    400162: Component#50
+    400164: Component#50 1
+    400166: Component#50 10
+    400168: Component#50 11
+    400170: Component#50 12
+    400172: Component#50 13
+    400174: Component#50 14
+    400176: Component#50 15
+    400178: Component#50 16
+    400180: Component#50 17
+    400182: Component#50 18
+    400184: Component#50 19
+    400186: Component#50 2
+    400188: Component#50 3
+    400190: Component#50 4
+    400192: Component#50 5
+    400194: Component#50 6
+    400196: Component#50 7
+    400198: Component#50 8
+    400200: Component#50 9
+    400202: Fork
+    400204: Fork 1
+    400206: Fork 2
+    400208: Fork 3
+    400210: Fork 4
+    400212: Fork 5
+    400214: Fork 6
+    400216: Fork 7
+    400218: Fork 8
+    400220: Fork 9
+    400222: Goliath table (resource furniture) DC
+    400224: Group 102
+    400226: Group 104
+    400228: Group 106
+    400230: Group 108
+    400232: Group 11
+    400234: Group 114
+    400236: Group 115
+    400238: Group 117
+    400240: Group 119
+    400242: Group 121
+    400244: Group 122
+    400246: Group 124
+    400248: Group 135
+    400250: Group 137
+    400252: Group 138
+    400254: Group 14
+    400256: Group 140
+    400258: Group 142
+    400260: Group 143
+    400262: Group 145
+    400264: Group 148
+    400266: Group 150
+    400268: Group 16
+    400270: Group 18
+    400272: Group 21
+    400274: Group 23
+    400276: Group 25
+    400278: Group 28
+    400280: Group 3
+    400282: Group 30
+    400284: Group 32
+    400286: Group 38
+    400288: Group 4
+    400290: Group 42
+    400292: Group 44
+    400294: Group 46
+    400296: Group 48
+    400298: Group 50
+    400300: Group 52
+    400302: Group 54
+    400304: Group 56
+    400306: Group 58
+    400308: Group 60
+    400310: Group 62
+    400312: Group 64
+    400314: Group 66
+    400316: Group 68
+    400318: Group 7
+    400320: Group 70
+    400322: Group 72
+    400324: Group 74
+    400326: Group 76
+    400328: Group 78
+    400330: Group 80
+    400332: Group 82
+    400334: Group 84
+    400336: Group 88
+    400338: Group 9
+    400340: Group 90
+    400342: Group 92
+    400344: Group 95
+    400346: Group 97
+    400348: Group 99
+    400350: Group#2
+    400352: Group#2 1
+    400354: Group#23
+    400356: Group#23 1
+    400358: HDTV#1
+    400360: Image 40
+    400362: Image 41
+    400364: Knife
+    400366: Knife 1
+    400368: Knife 2
+    400370: Knife 3
+    400372: Knife 4
+    400374: Knife 5
+    400376: Knife 6
+    400378: Knife 7
+    400380: Knife 8
+    400382: Knife 9
+    400384: //RootNode
+    400386: Modern Chair  RM58
+    400388: Prades, salontafel
+    400390: Remedy 2 seater Sofa by Versus
+    400392: Remedy 3 seater Sofa by Versus
+    400394: Remedy 3D 2,5-seater
+    400396: Remedy 3D 2,5-seater#1
+    400398: Remedy 3D 2-seater
+    400400: Remedy 3D 2-seater#1
+    400402: SCREWS#1
+    400404: SCREWS#1 1
+    400406: SCREWS#1 2
+    400408: SCREWS#1 3
+    400410: SCREWS#1 4
+    400412: SCREWS#1 5
+    400414: Silverware Set
+    400416: Silverware Set 1
+    400418: Silverware Set 2
+    400420: Silverware Set 3
+    400422: Silverware Set 4
+    400424: Silverware Set 5
+    400426: Silverware Set 6
+    400428: Silverware Set 7
+    400430: Silverware Set 8
+    400432: Silverware Set 9
+    400434: Spoon
+    400436: Spoon 1
+    400438: Spoon 2
+    400440: Spoon 3
+    400442: Spoon 4
+    400444: Spoon 5
+    400446: Spoon 6
+    400448: Spoon 7
+    400450: Spoon 8
+    400452: Spoon 9
+    400454: WALL MOUNTED HDTV (comes with a wall bracket)
+    2300000: Component#112
+    2300002: Component#112 1
+    2300004: Component#112 10
+    2300006: Component#112 11
+    2300008: Component#112 12
+    2300010: Component#112 13
+    2300012: Component#112 14
+    2300014: Component#112 15
+    2300016: Component#112 16
+    2300018: Component#112 17
+    2300020: Component#112 18
+    2300022: Component#112 19
+    2300024: Component#112 2
+    2300026: Component#112 20
+    2300028: Component#112 21
+    2300030: Component#112 22
+    2300032: Component#112 23
+    2300034: Component#112 3
+    2300036: Component#112 4
+    2300038: Component#112 5
+    2300040: Component#112 6
+    2300042: Component#112 7
+    2300044: Component#112 8
+    2300046: Component#112 9
+    2300048: Component#130
+    2300050: Component#14
+    2300052: Component#14 1
+    2300054: Component#14 2
+    2300056: Component#14 3
+    2300058: Component#14 4
+    2300060: Component#14 5
+    2300062: Component#14 6
+    2300064: Component#14 7
+    2300066: Component#14 8
+    2300068: Component#14 9
+    2300070: Component#165
+    2300072: Component#165 1
+    2300074: Component#165 2
+    2300076: Component#165 3
+    2300078: Component#165 4
+    2300080: Component#165 5
+    2300082: Component#165 6
+    2300084: Component#165 7
+    2300086: Component#165 8
+    2300088: Component#17
+    2300090: Component#19
+    2300092: Component#19 1
+    2300094: Component#19 2
+    2300096: Component#19 3
+    2300098: Component#19 4
+    2300100: Component#20
+    2300102: Component#21
+    2300104: Component#210
+    2300106: Component#210 1
+    2300108: Component#210 2
+    2300110: Component#210 3
+    2300112: Component#210 4
+    2300114: Component#210 5
+    2300116: Component#210 6
+    2300118: Component#210 7
+    2300120: Component#210 8
+    2300122: Component#210 9
+    2300124: Component#213
+    2300126: Component#213 1
+    2300128: Component#213 2
+    2300130: Component#213 3
+    2300132: Component#213 4
+    2300134: Component#213 5
+    2300136: Component#213 6
+    2300138: Component#213 7
+    2300140: Component#213 8
+    2300142: Component#213 9
+    2300144: Component#253
+    2300146: Component#50
+    2300148: Component#50 1
+    2300150: Component#50 10
+    2300152: Component#50 11
+    2300154: Component#50 12
+    2300156: Component#50 13
+    2300158: Component#50 14
+    2300160: Component#50 15
+    2300162: Component#50 16
+    2300164: Component#50 17
+    2300166: Component#50 18
+    2300168: Component#50 19
+    2300170: Component#50 2
+    2300172: Component#50 3
+    2300174: Component#50 4
+    2300176: Component#50 5
+    2300178: Component#50 6
+    2300180: Component#50 7
+    2300182: Component#50 8
+    2300184: Component#50 9
+    2300186: Fork
+    2300188: Fork 1
+    2300190: Fork 2
+    2300192: Fork 3
+    2300194: Fork 4
+    2300196: Fork 5
+    2300198: Fork 6
+    2300200: Fork 7
+    2300202: Fork 8
+    2300204: Fork 9
+    2300206: Group 102
+    2300208: Group 104
+    2300210: Group 106
+    2300212: Group 108
+    2300214: Group 11
+    2300216: Group 115
+    2300218: Group 117
+    2300220: Group 119
+    2300222: Group 122
+    2300224: Group 124
+    2300226: Group 135
+    2300228: Group 138
+    2300230: Group 14
+    2300232: Group 140
+    2300234: Group 143
+    2300236: Group 145
+    2300238: Group 148
+    2300240: Group 150
+    2300242: Group 16
+    2300244: Group 18
+    2300246: Group 21
+    2300248: Group 23
+    2300250: Group 25
+    2300252: Group 28
+    2300254: Group 30
+    2300256: Group 32
+    2300258: Group 38
+    2300260: Group 4
+    2300262: Group 42
+    2300264: Group 44
+    2300266: Group 46
+    2300268: Group 48
+    2300270: Group 50
+    2300272: Group 52
+    2300274: Group 54
+    2300276: Group 56
+    2300278: Group 58
+    2300280: Group 60
+    2300282: Group 62
+    2300284: Group 64
+    2300286: Group 66
+    2300288: Group 68
+    2300290: Group 7
+    2300292: Group 70
+    2300294: Group 72
+    2300296: Group 74
+    2300298: Group 76
+    2300300: Group 78
+    2300302: Group 80
+    2300304: Group 82
+    2300306: Group 84
+    2300308: Group 88
+    2300310: Group 9
+    2300312: Group 90
+    2300314: Group 92
+    2300316: Group 95
+    2300318: Group 97
+    2300320: Group 99
+    2300322: Group#2
+    2300324: Group#2 1
+    2300326: Group#23
+    2300328: Group#23 1
+    2300330: HDTV#1
+    2300332: Image 40
+    2300334: Image 41
+    2300336: Knife
+    2300338: Knife 1
+    2300340: Knife 2
+    2300342: Knife 3
+    2300344: Knife 4
+    2300346: Knife 5
+    2300348: Knife 6
+    2300350: Knife 7
+    2300352: Knife 8
+    2300354: Knife 9
+    2300356: //RootNode
+    2300358: Remedy 3D 2,5-seater
+    2300360: Remedy 3D 2-seater
+    2300362: Spoon
+    2300364: Spoon 1
+    2300366: Spoon 2
+    2300368: Spoon 3
+    2300370: Spoon 4
+    2300372: Spoon 5
+    2300374: Spoon 6
+    2300376: Spoon 7
+    2300378: Spoon 8
+    2300380: Spoon 9
+    3300000: Component#112
+    3300002: Component#112 1
+    3300004: Component#112 10
+    3300006: Component#112 11
+    3300008: Component#112 12
+    3300010: Component#112 13
+    3300012: Component#112 14
+    3300014: Component#112 15
+    3300016: Component#112 16
+    3300018: Component#112 17
+    3300020: Component#112 18
+    3300022: Component#112 19
+    3300024: Component#112 2
+    3300026: Component#112 20
+    3300028: Component#112 21
+    3300030: Component#112 22
+    3300032: Component#112 23
+    3300034: Component#112 3
+    3300036: Component#112 4
+    3300038: Component#112 5
+    3300040: Component#112 6
+    3300042: Component#112 7
+    3300044: Component#112 8
+    3300046: Component#112 9
+    3300048: Component#130
+    3300050: Component#14
+    3300052: Component#14 1
+    3300054: Component#14 2
+    3300056: Component#14 3
+    3300058: Component#14 4
+    3300060: Component#14 5
+    3300062: Component#14 6
+    3300064: Component#14 7
+    3300066: Component#14 8
+    3300068: Component#14 9
+    3300070: Component#165
+    3300072: Component#165 1
+    3300074: Component#165 2
+    3300076: Component#165 3
+    3300078: Component#165 4
+    3300080: Component#165 5
+    3300082: Component#165 6
+    3300084: Component#165 7
+    3300086: Component#165 8
+    3300088: Component#17
+    3300090: Component#19
+    3300092: Component#19 1
+    3300094: Component#19 2
+    3300096: Component#19 3
+    3300098: Component#19 4
+    3300100: Component#20
+    3300102: Component#21
+    3300104: Component#210
+    3300106: Component#210 1
+    3300108: Component#210 2
+    3300110: Component#210 3
+    3300112: Component#210 4
+    3300114: Component#210 5
+    3300116: Component#210 6
+    3300118: Component#210 7
+    3300120: Component#210 8
+    3300122: Component#210 9
+    3300124: Component#213
+    3300126: Component#213 1
+    3300128: Component#213 2
+    3300130: Component#213 3
+    3300132: Component#213 4
+    3300134: Component#213 5
+    3300136: Component#213 6
+    3300138: Component#213 7
+    3300140: Component#213 8
+    3300142: Component#213 9
+    3300144: Component#253
+    3300146: Component#50
+    3300148: Component#50 1
+    3300150: Component#50 10
+    3300152: Component#50 11
+    3300154: Component#50 12
+    3300156: Component#50 13
+    3300158: Component#50 14
+    3300160: Component#50 15
+    3300162: Component#50 16
+    3300164: Component#50 17
+    3300166: Component#50 18
+    3300168: Component#50 19
+    3300170: Component#50 2
+    3300172: Component#50 3
+    3300174: Component#50 4
+    3300176: Component#50 5
+    3300178: Component#50 6
+    3300180: Component#50 7
+    3300182: Component#50 8
+    3300184: Component#50 9
+    3300186: Fork
+    3300188: Fork 1
+    3300190: Fork 2
+    3300192: Fork 3
+    3300194: Fork 4
+    3300196: Fork 5
+    3300198: Fork 6
+    3300200: Fork 7
+    3300202: Fork 8
+    3300204: Fork 9
+    3300206: Group 102
+    3300208: Group 104
+    3300210: Group 106
+    3300212: Group 108
+    3300214: Group 11
+    3300216: Group 115
+    3300218: Group 117
+    3300220: Group 119
+    3300222: Group 122
+    3300224: Group 124
+    3300226: Group 135
+    3300228: Group 138
+    3300230: Group 14
+    3300232: Group 140
+    3300234: Group 143
+    3300236: Group 145
+    3300238: Group 148
+    3300240: Group 150
+    3300242: Group 16
+    3300244: Group 18
+    3300246: Group 21
+    3300248: Group 23
+    3300250: Group 25
+    3300252: Group 28
+    3300254: Group 30
+    3300256: Group 32
+    3300258: Group 38
+    3300260: Group 4
+    3300262: Group 42
+    3300264: Group 44
+    3300266: Group 46
+    3300268: Group 48
+    3300270: Group 50
+    3300272: Group 52
+    3300274: Group 54
+    3300276: Group 56
+    3300278: Group 58
+    3300280: Group 60
+    3300282: Group 62
+    3300284: Group 64
+    3300286: Group 66
+    3300288: Group 68
+    3300290: Group 7
+    3300292: Group 70
+    3300294: Group 72
+    3300296: Group 74
+    3300298: Group 76
+    3300300: Group 78
+    3300302: Group 80
+    3300304: Group 82
+    3300306: Group 84
+    3300308: Group 88
+    3300310: Group 9
+    3300312: Group 90
+    3300314: Group 92
+    3300316: Group 95
+    3300318: Group 97
+    3300320: Group 99
+    3300322: Group#2
+    3300324: Group#2 1
+    3300326: Group#23
+    3300328: Group#23 1
+    3300330: HDTV#1
+    3300332: Image 40
+    3300334: Image 41
+    3300336: Knife
+    3300338: Knife 1
+    3300340: Knife 2
+    3300342: Knife 3
+    3300344: Knife 4
+    3300346: Knife 5
+    3300348: Knife 6
+    3300350: Knife 7
+    3300352: Knife 8
+    3300354: Knife 9
+    3300356: //RootNode
+    3300358: Remedy 3D 2,5-seater
+    3300360: Remedy 3D 2-seater
+    3300362: Spoon
+    3300364: Spoon 1
+    3300366: Spoon 2
+    3300368: Spoon 3
+    3300370: Spoon 4
+    3300372: Spoon 5
+    3300374: Spoon 6
+    3300376: Spoon 7
+    3300378: Spoon 8
+    3300380: Spoon 9
+    4300000: Mesh KS P030 151009a v2015
+    4300002: Mesh Group 4
+    4300004: Mesh Group 7
+    4300006: Mesh Group 9
+    4300008: Mesh Group#2
+    4300010: Mesh Group 38
+    4300012: Mesh Group 38
+    4300014: Mesh Group 38
+    4300016: Mesh Group 42
+    4300018: Mesh Group 44
+    4300020: Mesh Group 46
+    4300022: Mesh Group 50
+    4300024: Mesh Group 52
+    4300026: Mesh Group 54
+    4300028: Mesh Group 56
+    4300030: Mesh Group 62
+    4300032: Mesh Group 66
+    4300034: Mesh Group 68
+    4300036: Mesh HDTV#1
+    4300038: Mesh Group 88
+    4300040: Mesh Group 90
+    4300042: Mesh Group 92
+    4300044: Mesh Group 108
+    4300046: Mesh Group#23
+    4300048: Mesh Group 115
+    4300050: Mesh Group 117
+    4300052: Mesh Group 119
+    4300054: Mesh Remedy 3D 2,5-seater
+    4300056: Mesh Remedy 3D 2-seater
+    4300058: Mesh Group 135
+    4300060: Mesh Group 138
+    4300062: Mesh Group 148
+    4300064: Mesh Group 150
+    4300066: Mesh Component#21
+    4300068: Mesh Component#17
+    4300070: Mesh Component#253
+    4300072: Mesh Component#165
+    4300074: Mesh Component#50
+    4300076: Mesh Component#112
+    4300078: Mesh Component#19
+    4300080: Mesh Component#20
+    4300082: Mesh Component#130
+    4300084: Mesh Component#14
+    4300086: Mesh Component#213
+    4300088: Mesh Fork
+    4300090: Mesh Knife
+    4300092: Mesh Spoon
+    4300094: Mesh Component#210
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0020_Red
+    second: {fileID: 2100000, guid: ea1296f99d0385f44951deb36fb960a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0045_Goldenrod
+    second: {fileID: 2100000, guid: a045601c5c0d3e344846ddfc59243f4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0046_Gold
+    second: {fileID: 2100000, guid: 7eced4f2afe87534b9560356ab2a615f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0073_MediumSeaGreen
+    second: {fileID: 2100000, guid: b2d3813086226864ca58ceec1431c514, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0075_ForestGreen
+    second: {fileID: 2100000, guid: 646cc46b09544094db188afdfb8e6128, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0105_Navy
+    second: {fileID: 2100000, guid: 2aefca8cf52df8841805ea246dd46911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0129_WhiteSmoke
+    second: {fileID: 2100000, guid: c6597a6c049a1d645a325808a5f73622, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_000
+    second: {fileID: 2100000, guid: 6df65d1d268835d46a59405f88deed9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_001
+    second: {fileID: 2100000, guid: e83de64c89a8da741850e5f34b49f040, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002
+    second: {fileID: 2100000, guid: ac4d2e581c9bf73488bff7d06077cdd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_003
+    second: {fileID: 2100000, guid: bb620e1587d5639479cd55718f858f59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_004
+    second: {fileID: 2100000, guid: 9b359ab178908814bb4f8edce0aa03cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_005
+    second: {fileID: 2100000, guid: f6e440051316c1b45821aed6d845b085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_006
+    second: {fileID: 2100000, guid: ac11ff49c7241cc48859f57ef9271aba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007
+    second: {fileID: 2100000, guid: 8264429cac2d0594ab979e0bd1447fb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_008
+    second: {fileID: 2100000, guid: b30ecf3509b472d47b3f6455f6104cfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A01
+    second: {fileID: 2100000, guid: 4b5b9433a603c49438aa1893e0b6225b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C16
+    second: {fileID: 2100000, guid: 2e81007ce74603f4397029282b656fd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D15
+    second: {fileID: 2100000, guid: cac2e1f47ef0b9448bc60c5d4f0b2842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_I05
+    second: {fileID: 2100000, guid: 3089fbc6bd2793e4583bec0ffd642ef7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEIEN
+    second: {fileID: 2100000, guid: fb0be52326644b4439a5af2d340b2f76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material 24
+    second: {fileID: 2100000, guid: ee8a1862f4d0c3c44964e629dafa5210, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material 25
+    second: {fileID: 2100000, guid: fdb9dc5975876844aa2ba0760b0f388f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SCREW1
+    second: {fileID: 2100000, guid: f14dcc76835bd7e4aa8810c5e0841d71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: fdbfecca017b90c4897c186d86b63ecf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vegetation_Grass_Artificial
+    second: {fileID: 2100000, guid: 3cc15f55089e6ce45b387f1ca0dce3c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0064_Chartreuse]2'
+    second: {fileID: 2100000, guid: 2758dd134f8073349a686b0ef4e7ad1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0064_Chartreuse]3'
+    second: {fileID: 2100000, guid: 16c8ca25cc41b444d8a8790bcd80caaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0131_Silver]2'
+    second: {fileID: 2100000, guid: 941b4511863cc5f4186a01c93edc2d11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0137_Black]1'
+    second: {fileID: 2100000, guid: 111e4c49c81be8f41aadeb420e2fbbae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0137_Black]2'
+    second: {fileID: 2100000, guid: 1c0911752762103468da5238462589b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Corrogated_Shiny]1'
+    second: {fileID: 2100000, guid: f834cfac370e3f04789e8b5e4663deb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Translucent_Glass_Gray]1'
+    second: {fileID: 2100000, guid: 5575392a72971d84481f8e2252b0b717, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _5
+    second: {fileID: 2100000, guid: e2fb56ad962010544900039db4967c39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LightGray_
+    second: {fileID: 2100000, guid: 608946c36cf7b354a8ffcae62030a0b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Silver_
+    second: {fileID: 2100000, guid: 3e0aa3da1a80a44418af8172727393be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: fb758b790e6d4ac4a895e749c882ef23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: basalt
+    second: {fileID: 2100000, guid: 9469a064c2e8fa041b960c86bdaabf13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: b0f7e8e43545ffa40ab58106eb8bdcd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gevelsteen
+    second: {fileID: 2100000, guid: f66fe2232483a314b95bc135a10575a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen
+    second: {fileID: 2100000, guid: 3f91c5395f54cf9438dfec9e184c7980, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wenge hout
+    second: {fileID: 2100000, guid: f9457048188e9134986136da1981b155, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

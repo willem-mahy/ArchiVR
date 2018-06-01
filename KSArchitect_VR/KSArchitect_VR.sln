@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSArchitect_VR", "KSArchitect_VR.csproj", "{C616ECAA-A0A4-560C-6438-F2BEB07EE1B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSArchitect_VR.Editor", "KSArchitect_VR.Editor.csproj", "{AE376710-C339-E4EF-F6C4-3AC2BCE48532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C616ECAA-A0A4-560C-6438-F2BEB07EE1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C616ECAA-A0A4-560C-6438-F2BEB07EE1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C616ECAA-A0A4-560C-6438-F2BEB07EE1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C616ECAA-A0A4-560C-6438-F2BEB07EE1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE376710-C339-E4EF-F6C4-3AC2BCE48532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE376710-C339-E4EF-F6C4-3AC2BCE48532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE376710-C339-E4EF-F6C4-3AC2BCE48532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE376710-C339-E4EF-F6C4-3AC2BCE48532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
