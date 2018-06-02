@@ -18,6 +18,21 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
+
+class StringUtil
+{
+    public static String Get3Digit(int value)
+    {
+        var result = value.ToString();
+
+        while (result.Length < 3)
+            result = "0" + result;
+
+        return result;
+    }
+}
+
 namespace GoogleARCore.Examples.HelloAR
 {
     using System;
@@ -92,6 +107,7 @@ namespace GoogleARCore.Examples.HelloAR
 
         public void Start()
         {
+            DynamicallyLoadProjects();
         }
 
         public void ToggleMenuVisible()
@@ -224,14 +240,42 @@ namespace GoogleARCore.Examples.HelloAR
             1.0f
         };
 
-        public List<String> m_projectNames = new List<String>()
-        {
-            "Project002"
-            ,"Project016"
-        };
+        public List<String> m_projectNames = new List<String>();
 
         private int m_activeProjectIndex = 0;
 
+        private void DynamicallyLoadProjects()
+        {
+            //m_projects.Clear();
+            m_projectNames.Clear();
+
+            for (int i = 0; i < 100; ++i) // Check for Project000 up to to Project100
+            {
+                var sceneName = "Project" + StringUtil.Get3Digit(i);
+
+                var scenePath = "KS/Projects/Scenes/" + sceneName;
+
+                if (SceneUtility.GetBuildIndexByScenePath(scenePath) != -1)
+                {
+                    //Project project = new Project();
+                    //project.m_name = sceneName;
+
+                    //var spriteProjectPreviewPath = "ProjectPreview/" + sceneName;
+                    //var spriteProjectPreview = (Sprite)Resources.Load(spriteProjectPreviewPath, typeof(Sprite));
+
+                    //if (null == spriteProjectPreview)
+                    //{
+                    //    Debug.LogWarning("Project preview Sprite for project '" + sceneName + "' not found!");
+                    //}
+
+                    //project.m_image = spriteProjectPreview;
+
+                    //m_projects.Add(project);
+                    m_projectNames.Add(sceneName);
+                }
+            }
+        }
+        
         public void NextProject()
         {
             if (m_loadingProject)

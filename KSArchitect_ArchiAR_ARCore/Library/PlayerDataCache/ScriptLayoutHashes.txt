@@ -1,11 +1,22 @@
 Android
 PlayerPath?
-C:/Dev/Unity/Builds/KSArchitect_AR/KSArchitect_AR_180601a.apk
+C:/Dev/Unity/Builds/KSArchitect_AR/KSArchitect_ArchiAR_ARCore_180601a.apk
 SceneListBegin?
 Assets/_Scenes/KSArchitect_AR.unity
-Assets/_Scenes/Projects/Project002.unity
-Assets/_Scenes/Projects/Project016.unity
-Assets/_Scenes/Projects/Project025.unity
+Assets/KS/Projects/Scenes/Project001.unity
+Assets/KS/Projects/Scenes/Project002.unity
+Assets/KS/Projects/Scenes/Project003.unity
+Assets/KS/Projects/Scenes/Project008.unity
+Assets/KS/Projects/Scenes/Project009.unity
+Assets/KS/Projects/Scenes/Project011.unity
+Assets/KS/Projects/Scenes/Project016.unity
+Assets/KS/Projects/Scenes/Project024.unity
+Assets/KS/Projects/Scenes/Project025.unity
+Assets/KS/Projects/Scenes/Project027.unity
+Assets/KS/Projects/Scenes/Project030.unity
+Assets/KS/Projects/Scenes/Project031.unity
+Assets/KS/Projects/Scenes/Project032.unity
+Assets/KS/Projects/Scenes/Project040.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack

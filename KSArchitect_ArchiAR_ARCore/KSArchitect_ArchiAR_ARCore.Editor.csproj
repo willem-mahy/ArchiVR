@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A44A9759-DD2C-8214-EDB4-BBE3B4F7BDFB}</ProjectGuid>
+    <ProjectGuid>{9DA3637C-6FC0-A9B0-2E1B-694D243D98CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -306,9 +306,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="KSArchitect_AR.csproj">
-      <Project>{DE15899B-A265-9921-36B3-8B1778E3C5B0}</Project>
-      <Name>KSArchitect_AR</Name>
+    <ProjectReference Include="KSArchitect_ArchiAR_ARCore.csproj">
+      <Project>{E314A129-B9A4-E89F-69F7-05CE96143606}</Project>
+      <Name>KSArchitect_ArchiAR_ARCore</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

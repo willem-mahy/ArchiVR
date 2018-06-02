@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/KS/Projects/Scenes/Project001.unity
+- path: Assets/KS/Projects/Scenes/Project006.unity
   isLoaded: 1
   isActive: 1
