@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: 692bdfb2f4f8a364eb52d1c52187aa54
+timeCreated: 1512323505
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 9ad27ac744086713378e55ee2036d609
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.27631882, y: 0.5090274, z: 0.4790466}
+      lookAt: {x: 0.1498263, y: 0.14831938, z: 0.14402603}
+      up: {x: -0.25067246, y: 0.70454144, z: -0.6639162}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: apple
+    100002: apple 1
+    100004: apple half
+    100006: apple half 1
+    100008: apple half 2
+    100010: apple half 3
+    100012: apple1
+    100014: apple1 1
+    100016: apple2
+    100018: apple2 1
+    100020: apple4
+    100022: apple4 1
+    100024: apples
+    100026: apples 1
+    100028: banana
+    100030: banana 1
+    100032: bowl
+    100034: bowl of fruit
+    100036: //RootNode
+    100038: leaf
+    100040: leaf 1
+    100042: leaf 2
+    100044: leaf 3
+    100046: pear
+    100048: pear 1
+    100050: stem
+    100052: stem 1
+    400000: apple
+    400002: apple 1
+    400004: apple half
+    400006: apple half 1
+    400008: apple half 2
+    400010: apple half 3
+    400012: apple1
+    400014: apple1 1
+    400016: apple2
+    400018: apple2 1
+    400020: apple4
+    400022: apple4 1
+    400024: apples
+    400026: apples 1
+    400028: banana
+    400030: banana 1
+    400032: bowl
+    400034: bowl of fruit
+    400036: //RootNode
+    400038: leaf
+    400040: leaf 1
+    400042: leaf 2
+    400044: leaf 3
+    400046: pear
+    400048: pear 1
+    400050: stem
+    400052: stem 1
+    2300000: apple
+    2300002: apple 1
+    2300004: apple half
+    2300006: apple half 1
+    2300008: apple half 2
+    2300010: apple half 3
+    2300012: apples
+    2300014: apples 1
+    2300016: banana
+    2300018: banana 1
+    2300020: bowl
+    2300022: leaf
+    2300024: leaf 1
+    2300026: leaf 2
+    2300028: leaf 3
+    2300030: pear
+    2300032: pear 1
+    2300034: stem
+    2300036: stem 1
+    3300000: apple
+    3300002: apple 1
+    3300004: apple half
+    3300006: apple half 1
+    3300008: apple half 2
+    3300010: apple half 3
+    3300012: apples
+    3300014: apples 1
+    3300016: banana
+    3300018: banana 1
+    3300020: bowl
+    3300022: leaf
+    3300024: leaf 1
+    3300026: leaf 2
+    3300028: leaf 3
+    3300030: pear
+    3300032: pear 1
+    3300034: stem
+    3300036: stem 1
+    4300000: Mesh stem
+    4300002: Mesh apple
+    4300004: Mesh banana
+    4300006: Mesh bowl
+    4300008: Mesh leaf
+    4300010: Mesh apple half
+    4300012: Mesh apples
+    4300014: Mesh pear
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_001
+    second: {fileID: 2100000, guid: 41a946fd897da4b4fb1e55096624874e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D02
+    second: {fileID: 2100000, guid: 830ce91dd597ac04ab15db5654756438, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D17
+    second: {fileID: 2100000, guid: ed3e8f9ff852db841bb0791fe81898be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_F02
+    second: {fileID: 2100000, guid: 5905dbe4efee22f479e1f58d48161ef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 506fe755fcf5d534790f7d914bf4af5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4
+    second: {fileID: 2100000, guid: 64478558f59fd364a837f4faba3b0745, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _5
+    second: {fileID: 2100000, guid: 019e0bd093e39aa4fa788ab3f61cf0b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _6
+    second: {fileID: 2100000, guid: dca145523a5330a43a427cfd9948416c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _7
+    second: {fileID: 2100000, guid: cb42b2ba6cb2b2a478f94bd59bf16974, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _FireBrick_
+    second: {fileID: 2100000, guid: cfdd4ab81a5106a4f87f0e2d98b6efc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 2e5535688b6b62045834ab5bb898fd45, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/KS/Projects/Scenes/Project030.unity
+  isLoaded: 1
+  isActive: 1

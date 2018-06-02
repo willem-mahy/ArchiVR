@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 93b65703762e27941bbe0da7d34d5129
+timeCreated: 1511569619
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 55076734319a2463cc4569cce3d99b60
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 101.12518, y: 55.057377, z: -34.87703}
+      lookAt: {x: 22.227457, y: 15.608517, z: 44.020695}
+      up: {x: -0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: DLP_cbs#1
+    100004: DLP_cbs#1 1
+    100006: DLP_chr#1
+    100008: DLP_chr#1 1
+    100010: DLP_gum#1
+    100012: DLP_gum#1 1
+    100014: DLP_lak#1
+    100016: DLP_lak#1 1
+    100018: Group 10
+    100020: Group 14
+    100022: Group 165
+    100024: Group 6
+    100026: Group 80
+    100028: Group 95
+    100030: Group 99
+    100032: Group#1
+    100034: Group#11
+    100036: Group#12
+    100038: Group#12 1
+    100040: Group#13
+    100042: Group#13 1
+    100044: Group#14
+    100046: Group#14 1
+    100048: Group#15
+    100050: Group#15 1
+    100052: Group#16
+    100054: Group#16 1
+    100056: Group#17
+    100058: Group#17 1
+    100060: Group#18
+    100062: Group#18 1
+    100064: Group#19
+    100066: Group#19 1
+    100068: Group#2
+    100070: Group#2 1
+    100072: Group#20
+    100074: Group#20 1
+    100076: Group#21
+    100078: Group#21 1
+    100080: Group#22
+    100082: Group#22 1
+    100084: Group#23
+    100086: Group#23 1
+    100088: Group#24
+    100090: Group#24 1
+    100092: Group#25
+    100094: Group#25 1
+    100096: Group#26
+    100098: Group#26 1
+    100100: Group#28
+    100102: Group#28 1
+    100104: Group#30
+    100106: Group#30 1
+    100108: Group#31
+    100110: Group#31 1
+    100112: Group#32
+    100114: Group#32 1
+    100116: Group#33
+    100118: Group#33 1
+    100120: Group#34
+    100122: Group#34 1
+    100124: Group#35
+    100126: Group#35 1
+    100128: Group#36
+    100130: Group#36 1
+    100132: Group#38
+    100134: Group#39
+    100136: Group#39 1
+    100138: Group#4
+    100140: Group#4 1
+    100142: Group#5
+    100144: Group#5 1
+    100146: Group#5 2
+    100148: Group#5 3
+    100150: Group#6
+    100152: Group#6 1
+    100154: Group#7
+    100156: Group#7 1
+    100158: Group#8
+    100160: Group#8 1
+    100162: Group#9
+    100164: Group#9 1
+    100166: Kar_alu
+    100168: Kar_alu 1
+    100170: Kar_cbs
+    100172: Kar_cbs 1
+    100174: Kar_chr#1
+    100176: Kar_gum
+    100178: Kar_gum#1
+    100180: Kar_lak
+    100182: Kar_sbs
+    100184: Kar_sbs 1
+    100186: Kar_skl#1
+    100188: Kar_skl#1 1
+    100190: Kar_tex#1
+    100192: KLP_p1b
+    100194: KLP_p1b 1
+    100196: KLP_p1b 2
+    100198: KLP_p1b 3
+    100200: KLP_tex
+    100202: KLP_tex 1
+    100204: KLP_tex 2
+    100206: KLP_tex 3
+    100208: POLO
+    100210: skp2809
+    100212: skp895
+    400000: //RootNode
+    400002: DLP_cbs#1
+    400004: DLP_cbs#1 1
+    400006: DLP_chr#1
+    400008: DLP_chr#1 1
+    400010: DLP_gum#1
+    400012: DLP_gum#1 1
+    400014: DLP_lak#1
+    400016: DLP_lak#1 1
+    400018: Group 10
+    400020: Group 14
+    400022: Group 165
+    400024: Group 6
+    400026: Group 80
+    400028: Group 95
+    400030: Group 99
+    400032: Group#1
+    400034: Group#11
+    400036: Group#12
+    400038: Group#12 1
+    400040: Group#13
+    400042: Group#13 1
+    400044: Group#14
+    400046: Group#14 1
+    400048: Group#15
+    400050: Group#15 1
+    400052: Group#16
+    400054: Group#16 1
+    400056: Group#17
+    400058: Group#17 1
+    400060: Group#18
+    400062: Group#18 1
+    400064: Group#19
+    400066: Group#19 1
+    400068: Group#2
+    400070: Group#2 1
+    400072: Group#20
+    400074: Group#20 1
+    400076: Group#21
+    400078: Group#21 1
+    400080: Group#22
+    400082: Group#22 1
+    400084: Group#23
+    400086: Group#23 1
+    400088: Group#24
+    400090: Group#24 1
+    400092: Group#25
+    400094: Group#25 1
+    400096: Group#26
+    400098: Group#26 1
+    400100: Group#28
+    400102: Group#28 1
+    400104: Group#30
+    400106: Group#30 1
+    400108: Group#31
+    400110: Group#31 1
+    400112: Group#32
+    400114: Group#32 1
+    400116: Group#33
+    400118: Group#33 1
+    400120: Group#34
+    400122: Group#34 1
+    400124: Group#35
+    400126: Group#35 1
+    400128: Group#36
+    400130: Group#36 1
+    400132: Group#38
+    400134: Group#39
+    400136: Group#39 1
+    400138: Group#4
+    400140: Group#4 1
+    400142: Group#5
+    400144: Group#5 1
+    400146: Group#5 2
+    400148: Group#5 3
+    400150: Group#6
+    400152: Group#6 1
+    400154: Group#7
+    400156: Group#7 1
+    400158: Group#8
+    400160: Group#8 1
+    400162: Group#9
+    400164: Group#9 1
+    400166: Kar_alu
+    400168: Kar_alu 1
+    400170: Kar_cbs
+    400172: Kar_cbs 1
+    400174: Kar_chr#1
+    400176: Kar_gum
+    400178: Kar_gum#1
+    400180: Kar_lak
+    400182: Kar_sbs
+    400184: Kar_sbs 1
+    400186: Kar_skl#1
+    400188: Kar_skl#1 1
+    400190: Kar_tex#1
+    400192: KLP_p1b
+    400194: KLP_p1b 1
+    400196: KLP_p1b 2
+    400198: KLP_p1b 3
+    400200: KLP_tex
+    400202: KLP_tex 1
+    400204: KLP_tex 2
+    400206: KLP_tex 3
+    400208: POLO
+    400210: skp2809
+    400212: skp895
+    2300000: DLP_cbs#1
+    2300002: DLP_cbs#1 1
+    2300004: DLP_chr#1
+    2300006: DLP_chr#1 1
+    2300008: DLP_gum#1
+    2300010: DLP_gum#1 1
+    2300012: DLP_lak#1
+    2300014: DLP_lak#1 1
+    2300016: Group 10
+    2300018: Group 14
+    2300020: Group 165
+    2300022: Group 6
+    2300024: Group 80
+    2300026: Group 95
+    2300028: Group 99
+    2300030: Group#11
+    2300032: Group#12
+    2300034: Group#12 1
+    2300036: Group#13
+    2300038: Group#13 1
+    2300040: Group#14
+    2300042: Group#14 1
+    2300044: Group#15
+    2300046: Group#15 1
+    2300048: Group#16
+    2300050: Group#16 1
+    2300052: Group#19
+    2300054: Group#19 1
+    2300056: Group#20
+    2300058: Group#20 1
+    2300060: Group#21
+    2300062: Group#21 1
+    2300064: Group#22
+    2300066: Group#22 1
+    2300068: Group#25
+    2300070: Group#25 1
+    2300072: Group#26
+    2300074: Group#26 1
+    2300076: Group#28
+    2300078: Group#28 1
+    2300080: Group#30
+    2300082: Group#30 1
+    2300084: Group#31
+    2300086: Group#31 1
+    2300088: Group#32
+    2300090: Group#32 1
+    2300092: Group#33
+    2300094: Group#33 1
+    2300096: Group#34
+    2300098: Group#34 1
+    2300100: Group#35
+    2300102: Group#35 1
+    2300104: Group#36
+    2300106: Group#36 1
+    2300108: Group#38
+    2300110: Group#39
+    2300112: Group#39 1
+    2300114: Group#6
+    2300116: Group#6 1
+    2300118: Group#7
+    2300120: Group#7 1
+    2300122: Group#8
+    2300124: Group#8 1
+    2300126: Kar_alu
+    2300128: Kar_alu 1
+    2300130: Kar_cbs
+    2300132: Kar_cbs 1
+    2300134: Kar_chr#1
+    2300136: Kar_gum
+    2300138: Kar_gum#1
+    2300140: Kar_lak
+    2300142: Kar_sbs
+    2300144: Kar_sbs 1
+    2300146: Kar_skl#1
+    2300148: Kar_skl#1 1
+    2300150: Kar_tex#1
+    2300152: KLP_p1b
+    2300154: KLP_p1b 1
+    2300156: KLP_p1b 2
+    2300158: KLP_p1b 3
+    2300160: KLP_tex
+    2300162: KLP_tex 1
+    2300164: KLP_tex 2
+    2300166: KLP_tex 3
+    2300168: POLO
+    3300000: DLP_cbs#1
+    3300002: DLP_cbs#1 1
+    3300004: DLP_chr#1
+    3300006: DLP_chr#1 1
+    3300008: DLP_gum#1
+    3300010: DLP_gum#1 1
+    3300012: DLP_lak#1
+    3300014: DLP_lak#1 1
+    3300016: Group 10
+    3300018: Group 14
+    3300020: Group 165
+    3300022: Group 6
+    3300024: Group 80
+    3300026: Group 95
+    3300028: Group 99
+    3300030: Group#11
+    3300032: Group#12
+    3300034: Group#12 1
+    3300036: Group#13
+    3300038: Group#13 1
+    3300040: Group#14
+    3300042: Group#14 1
+    3300044: Group#15
+    3300046: Group#15 1
+    3300048: Group#16
+    3300050: Group#16 1
+    3300052: Group#19
+    3300054: Group#19 1
+    3300056: Group#20
+    3300058: Group#20 1
+    3300060: Group#21
+    3300062: Group#21 1
+    3300064: Group#22
+    3300066: Group#22 1
+    3300068: Group#25
+    3300070: Group#25 1
+    3300072: Group#26
+    3300074: Group#26 1
+    3300076: Group#28
+    3300078: Group#28 1
+    3300080: Group#30
+    3300082: Group#30 1
+    3300084: Group#31
+    3300086: Group#31 1
+    3300088: Group#32
+    3300090: Group#32 1
+    3300092: Group#33
+    3300094: Group#33 1
+    3300096: Group#34
+    3300098: Group#34 1
+    3300100: Group#35
+    3300102: Group#35 1
+    3300104: Group#36
+    3300106: Group#36 1
+    3300108: Group#38
+    3300110: Group#39
+    3300112: Group#39 1
+    3300114: Group#6
+    3300116: Group#6 1
+    3300118: Group#7
+    3300120: Group#7 1
+    3300122: Group#8
+    3300124: Group#8 1
+    3300126: Kar_alu
+    3300128: Kar_alu 1
+    3300130: Kar_cbs
+    3300132: Kar_cbs 1
+    3300134: Kar_chr#1
+    3300136: Kar_gum
+    3300138: Kar_gum#1
+    3300140: Kar_lak
+    3300142: Kar_sbs
+    3300144: Kar_sbs 1
+    3300146: Kar_skl#1
+    3300148: Kar_skl#1 1
+    3300150: Kar_tex#1
+    3300152: KLP_p1b
+    3300154: KLP_p1b 1
+    3300156: KLP_p1b 2
+    3300158: KLP_p1b 3
+    3300160: KLP_tex
+    3300162: KLP_tex 1
+    3300164: KLP_tex 2
+    3300166: KLP_tex 3
+    3300168: POLO
+    4300000: Mesh Kar_gum
+    4300002: Mesh Kar_lak
+    4300004: Mesh Group 6
+    4300006: Mesh Group 10
+    4300008: Mesh Group#8
+    4300010: Mesh Group 14
+    4300012: Mesh KLP_p1b
+    4300014: Mesh KLP_tex
+    4300016: Mesh Group#12
+    4300018: Mesh Group#6
+    4300020: Mesh Group#13
+    4300022: Mesh Group#14
+    4300024: Mesh Group#15
+    4300026: Mesh Group#16
+    4300028: Mesh Group#26
+    4300030: Mesh Kar_skl#1
+    4300032: Mesh Kar_sbs
+    4300034: Mesh Kar_cbs
+    4300036: Mesh Kar_alu
+    4300038: Mesh Group#22
+    4300040: Mesh Group#21
+    4300042: Mesh Group#25
+    4300044: Mesh Group#28
+    4300046: Mesh Group#7
+    4300048: Mesh DLP_chr#1
+    4300050: Mesh DLP_cbs#1
+    4300052: Mesh DLP_lak#1
+    4300054: Mesh DLP_gum#1
+    4300056: Mesh Group#30
+    4300058: Mesh Group#31
+    4300060: Mesh Group#32
+    4300062: Mesh Group#19
+    4300064: Mesh Group 80
+    4300066: Mesh Group#20
+    4300068: Mesh Group#33
+    4300070: Mesh Group#34
+    4300072: Mesh Group#35
+    4300074: Mesh Group#36
+    4300076: Mesh Group#39
+    4300078: Mesh Kar_tex#1
+    4300080: Mesh Group#11
+    4300082: Mesh Kar_chr#1
+    4300084: Mesh Kar_gum#1
+    4300086: Mesh POLO
+    4300088: Mesh Group#38
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_alu1
+    second: {fileID: 2100000, guid: 8d09385ca51d67743ab06ac276cfaa50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_cbs2
+    second: {fileID: 2100000, guid: ac1d645b87f73d240bb214aff9a7303a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_chr1
+    second: {fileID: 2100000, guid: 80496ee924938e6419b6d444db1c899a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_gum1
+    second: {fileID: 2100000, guid: 39277f525614ee249a37dc6252583cdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_sbs1
+    second: {fileID: 2100000, guid: 135e3640f9a0d3d4ab5529521161b81f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gar_skl1
+    second: {fileID: 2100000, guid: 5921fde10c3ed774882b1c7009b4d9ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material1
+    second: {fileID: 2100000, guid: da7351edd5c02b847bb93a6453ac404a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material5
+    second: {fileID: 2100000, guid: 9d3af18f654acb84fb44d731107307d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body1
+    second: {fileID: 2100000, guid: 51c761189d394844da6bb939d9988bc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrome1
+    second: {fileID: 2100000, guid: 10be56ec78f7df149bfc2348dfc65e1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grille1
+    second: {fileID: 2100000, guid: 90159d0cd42d95a468b1568152f647a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hlglass1
+    second: {fileID: 2100000, guid: d71bbd49184ea0e4cb715793bc64307c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hlglass2
+    second: {fileID: 2100000, guid: 8e4b45e672c851c49a0eff2bd3d4bef9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plate1
+    second: {fileID: 2100000, guid: e5f5a6514be2ea84c9ba524af99646b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redlight1
+    second: {fileID: 2100000, guid: 66482c7668b91064aa000f92bf31a205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rim1
+    second: {fileID: 2100000, guid: 4c6cadc2bbe9618458c3152b2e8b5bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tailight1
+    second: {fileID: 2100000, guid: ff2fbb063ccfe05479d0e5cbaf476a9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tailightdarkred1
+    second: {fileID: 2100000, guid: 2d279af7f64906643bd4839a6e0146bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tailightglass2
+    second: {fileID: 2100000, guid: ddcfb5055f8c07b44ae5f0623efe0330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whtlight2
+    second: {fileID: 2100000, guid: d77c8cb3b292edc46bfde5a3ee52168f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window1
+    second: {fileID: 2100000, guid: 6385a940478da48408ccf4d15b394027, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

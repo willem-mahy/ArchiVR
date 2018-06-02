@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: ad0ae69ad670be144ae130dbd15d8200
+timeCreated: 1512323495
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 207c9bda0494fbd806b213301b7cceb4
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -0.108071335, y: 0.23536742, z: -0.095621675}
+      lookAt: {x: 9.242669, y: -5.8040257, z: 8.239489}
+      up: {x: 0.3241921, y: 0.900772, z: 0.28897998}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Component#439
+    100002: Component#440
+    100004: Fruit - Banana
+    100006: Fruit - Banana 1
+    100008: Fruit - Green Apple
+    100010: Fruit - Orange
+    100012: Fruit - Orange 1
+    100014: Fruit - Red Apple
+    100016: Fruit - Red Apple 1
+    100018: //RootNode
+    400000: Component#439
+    400002: Component#440
+    400004: Fruit - Banana
+    400006: Fruit - Banana 1
+    400008: Fruit - Green Apple
+    400010: Fruit - Orange
+    400012: Fruit - Orange 1
+    400014: Fruit - Red Apple
+    400016: Fruit - Red Apple 1
+    400018: //RootNode
+    2300000: Component#439
+    2300002: Fruit - Banana
+    2300004: Fruit - Banana 1
+    2300006: Fruit - Green Apple
+    2300008: Fruit - Orange
+    2300010: Fruit - Orange 1
+    2300012: Fruit - Red Apple
+    2300014: Fruit - Red Apple 1
+    3300000: Component#439
+    3300002: Fruit - Banana
+    3300004: Fruit - Banana 1
+    3300006: Fruit - Green Apple
+    3300008: Fruit - Orange
+    3300010: Fruit - Orange 1
+    3300012: Fruit - Red Apple
+    3300014: Fruit - Red Apple 1
+    4300000: Mesh Fruit - Orange
+    4300002: Mesh Fruit - Banana
+    4300004: Mesh Component#439
+    4300006: Mesh Fruit - Red Apple
+    4300008: Mesh Fruit - Green Apple
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Apple - Stem
+    second: {fileID: 2100000, guid: d929a8629eac1c04c84f93a680ee0a0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Banana - Body
+    second: {fileID: 2100000, guid: 236bc4aba4b9692448ca468726f7f0df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Banana - Stem
+    second: {fileID: 2100000, guid: 6b1a67b0ee78b4940a8b2a28a046965e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Green Apple Body
+    second: {fileID: 2100000, guid: 8a690401fa5f1fe4cbdb59117a7c1e80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Orange - Body
+    second: {fileID: 2100000, guid: 69b6221eb39843243b027300866a36ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Orange - Stem
+    second: {fileID: 2100000, guid: 4a7ce18f72c867f4abed8694a446941e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit - Red Apple - Body
+    second: {fileID: 2100000, guid: 684ef44ef32afad44a4023934da2dc84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 0cfd727ba3ae4fe469a7b4aa1506f86d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

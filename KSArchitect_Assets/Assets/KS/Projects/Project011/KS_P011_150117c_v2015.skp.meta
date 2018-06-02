@@ -1,0 +1,937 @@
+fileFormatVersion: 2
+guid: cbbe047bb0e687d4482c7542aaeface9
+timeCreated: 1500756951
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c010000
+  assetHash:
+    serializedVersion: 2
+    Hash: d9f825e1951eedcdea45ed6add8f24df
+  longitude: 17.38194076562166
+  latitude: 49.29241493227156
+  northCorrection: 1.4990177321447504
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -26.446007, y: 3.548668, z: -13.547457}
+      lookAt: {x: 5.359768, y: 3.0912359, z: -0.96808344}
+      up: {x: 0.012435529, y: 0.9999106, z: 0.0049183257}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bureau chair wheel
+    100002: bureau chair wheel 1
+    100004: bureau chair wheel 2
+    100006: bureau chair wheel 3
+    100008: bureau chair wheel 4
+    100010: chair
+    100012: CHAIR#1
+    100014: CHAIR#1 1
+    100016: CHAIR#1 2
+    100018: CHAIR#1 3
+    100020: CHAIR#1 4
+    100022: CHAIR#1 5
+    100024: Chinese Fan Palm Tree 01 Billboard
+    100026: Chinese Fan Palm Tree 01 Billboard 1
+    100028: Chinese Fan Palm Tree 02 Billboard
+    100030: Chinese Fan Palm Tree 02 Billboard 1
+    100032: cocina
+    100034: Component#6
+    100036: Component#6 1
+    100038: Component#6 10
+    100040: Component#6 100
+    100042: Component#6 101
+    100044: Component#6 102
+    100046: Component#6 11
+    100048: Component#6 12
+    100050: Component#6 13
+    100052: Component#6 14
+    100054: Component#6 15
+    100056: Component#6 16
+    100058: Component#6 17
+    100060: Component#6 18
+    100062: Component#6 19
+    100064: Component#6 2
+    100066: Component#6 20
+    100068: Component#6 21
+    100070: Component#6 22
+    100072: Component#6 23
+    100074: Component#6 24
+    100076: Component#6 25
+    100078: Component#6 26
+    100080: Component#6 27
+    100082: Component#6 28
+    100084: Component#6 29
+    100086: Component#6 3
+    100088: Component#6 30
+    100090: Component#6 31
+    100092: Component#6 32
+    100094: Component#6 33
+    100096: Component#6 34
+    100098: Component#6 35
+    100100: Component#6 36
+    100102: Component#6 37
+    100104: Component#6 38
+    100106: Component#6 39
+    100108: Component#6 4
+    100110: Component#6 40
+    100112: Component#6 41
+    100114: Component#6 42
+    100116: Component#6 43
+    100118: Component#6 44
+    100120: Component#6 45
+    100122: Component#6 46
+    100124: Component#6 47
+    100126: Component#6 48
+    100128: Component#6 49
+    100130: Component#6 5
+    100132: Component#6 50
+    100134: Component#6 51
+    100136: Component#6 52
+    100138: Component#6 53
+    100140: Component#6 54
+    100142: Component#6 55
+    100144: Component#6 56
+    100146: Component#6 57
+    100148: Component#6 58
+    100150: Component#6 59
+    100152: Component#6 6
+    100154: Component#6 60
+    100156: Component#6 61
+    100158: Component#6 62
+    100160: Component#6 63
+    100162: Component#6 64
+    100164: Component#6 65
+    100166: Component#6 66
+    100168: Component#6 67
+    100170: Component#6 68
+    100172: Component#6 69
+    100174: Component#6 7
+    100176: Component#6 70
+    100178: Component#6 71
+    100180: Component#6 72
+    100182: Component#6 73
+    100184: Component#6 74
+    100186: Component#6 75
+    100188: Component#6 76
+    100190: Component#6 77
+    100192: Component#6 78
+    100194: Component#6 79
+    100196: Component#6 8
+    100198: Component#6 80
+    100200: Component#6 81
+    100202: Component#6 82
+    100204: Component#6 83
+    100206: Component#6 84
+    100208: Component#6 85
+    100210: Component#6 86
+    100212: Component#6 87
+    100214: Component#6 88
+    100216: Component#6 89
+    100218: Component#6 9
+    100220: Component#6 90
+    100222: Component#6 91
+    100224: Component#6 92
+    100226: Component#6 93
+    100228: Component#6 94
+    100230: Component#6 95
+    100232: Component#6 96
+    100234: Component#6 97
+    100236: Component#6 98
+    100238: Component#6 99
+    100240: cookers
+    100242: desk chair ikea karsten
+    100244: Dining Wall
+    100246: Door Handle Modern Inox Round
+    100248: ENTER KEY
+    100250: Environment
+    100252: Environment_Main
+    100254: Environment_Vegetation
+    100256: Fencing
+    100258: foot
+    100260: Garden Porch 01
+    100262: Gevel
+    100264: Ground
+    100266: Group 353
+    100268: Group 359
+    100270: Group 370
+    100272: Group 55
+    100274: House
+    100276: karsten
+    100278: karsten bureau chair
+    100280: Keyboard
+    100282: Kitchen Island
+    100284: Kitchen Vent Wall
+    100286: Kitchen Wall
+    100288: //RootNode
+    100290: L0
+    100292: L0 1
+    100294: L0_Binnenmuur
+    100296: L0_Buro
+    100298: L0_Buro_Desk
+    100300: L0_Buro_Furniture
+    100302: L0_Buro_Wall
+    100304: L0_Dining
+    100306: L0_Dining_Furniture
+    100308: L0_Garage
+    100310: L0_Kitchen
+    100312: L0_Kitchen_Furniture
+    100314: L0_Living
+    100316: L0_Living_Furniture
+    100318: L0_Living_Wall
+    100320: L1
+    100322: L1_Bedroom1_Wall
+    100324: L1_Hall_Wall
+    100326: Laptop
+    100328: Leg 1
+    100330: Leg 1 1
+    100332: Leg 1 2
+    100334: Leg 1 3
+    100336: Leg 1 4
+    100338: Leg 1 5
+    100340: Leg 2
+    100342: Leg 2 1
+    100344: Leg 2 2
+    100346: Leg 2 3
+    100348: Leg 2 4
+    100350: Leg 2 5
+    100352: Leg 3
+    100354: Leg 3 1
+    100356: Leg 3 2
+    100358: Leg 3 3
+    100360: Leg 3 4
+    100362: Leg 3 5
+    100364: Leg 4
+    100366: Leg 4 1
+    100368: Leg 4 2
+    100370: Leg 4 3
+    100372: Leg 4 4
+    100374: Leg 4 5
+    100376: Oak 01 Billboard
+    100378: Oak 01 Billboard 1
+    100380: Roof Back
+    100382: Roof Front
+    100384: Roof Main
+    100386: Roofs
+    100388: Seat
+    100390: Seat 1
+    100392: Seat 2
+    100394: Seat 3
+    100396: Seat 4
+    100398: Seat 5
+    100400: Sink
+    100402: SINK UNIT
+    100404: skp113
+    100406: skp113 1
+    100408: skp113 2
+    100410: skp113 3
+    100412: skp113 4
+    100414: skp113 5
+    100416: Sofa 2P
+    100418: Sofa 3P
+    100420: Table
+    100422: tap
+    100424: tap handle
+    100426: tap nozzle
+    100428: Tree 1
+    100430: Tree 2
+    100432: Tree 3
+    400000: bureau chair wheel
+    400002: bureau chair wheel 1
+    400004: bureau chair wheel 2
+    400006: bureau chair wheel 3
+    400008: bureau chair wheel 4
+    400010: chair
+    400012: CHAIR#1
+    400014: CHAIR#1 1
+    400016: CHAIR#1 2
+    400018: CHAIR#1 3
+    400020: CHAIR#1 4
+    400022: CHAIR#1 5
+    400024: Chinese Fan Palm Tree 01 Billboard
+    400026: Chinese Fan Palm Tree 01 Billboard 1
+    400028: Chinese Fan Palm Tree 02 Billboard
+    400030: Chinese Fan Palm Tree 02 Billboard 1
+    400032: cocina
+    400034: Component#6
+    400036: Component#6 1
+    400038: Component#6 10
+    400040: Component#6 100
+    400042: Component#6 101
+    400044: Component#6 102
+    400046: Component#6 11
+    400048: Component#6 12
+    400050: Component#6 13
+    400052: Component#6 14
+    400054: Component#6 15
+    400056: Component#6 16
+    400058: Component#6 17
+    400060: Component#6 18
+    400062: Component#6 19
+    400064: Component#6 2
+    400066: Component#6 20
+    400068: Component#6 21
+    400070: Component#6 22
+    400072: Component#6 23
+    400074: Component#6 24
+    400076: Component#6 25
+    400078: Component#6 26
+    400080: Component#6 27
+    400082: Component#6 28
+    400084: Component#6 29
+    400086: Component#6 3
+    400088: Component#6 30
+    400090: Component#6 31
+    400092: Component#6 32
+    400094: Component#6 33
+    400096: Component#6 34
+    400098: Component#6 35
+    400100: Component#6 36
+    400102: Component#6 37
+    400104: Component#6 38
+    400106: Component#6 39
+    400108: Component#6 4
+    400110: Component#6 40
+    400112: Component#6 41
+    400114: Component#6 42
+    400116: Component#6 43
+    400118: Component#6 44
+    400120: Component#6 45
+    400122: Component#6 46
+    400124: Component#6 47
+    400126: Component#6 48
+    400128: Component#6 49
+    400130: Component#6 5
+    400132: Component#6 50
+    400134: Component#6 51
+    400136: Component#6 52
+    400138: Component#6 53
+    400140: Component#6 54
+    400142: Component#6 55
+    400144: Component#6 56
+    400146: Component#6 57
+    400148: Component#6 58
+    400150: Component#6 59
+    400152: Component#6 6
+    400154: Component#6 60
+    400156: Component#6 61
+    400158: Component#6 62
+    400160: Component#6 63
+    400162: Component#6 64
+    400164: Component#6 65
+    400166: Component#6 66
+    400168: Component#6 67
+    400170: Component#6 68
+    400172: Component#6 69
+    400174: Component#6 7
+    400176: Component#6 70
+    400178: Component#6 71
+    400180: Component#6 72
+    400182: Component#6 73
+    400184: Component#6 74
+    400186: Component#6 75
+    400188: Component#6 76
+    400190: Component#6 77
+    400192: Component#6 78
+    400194: Component#6 79
+    400196: Component#6 8
+    400198: Component#6 80
+    400200: Component#6 81
+    400202: Component#6 82
+    400204: Component#6 83
+    400206: Component#6 84
+    400208: Component#6 85
+    400210: Component#6 86
+    400212: Component#6 87
+    400214: Component#6 88
+    400216: Component#6 89
+    400218: Component#6 9
+    400220: Component#6 90
+    400222: Component#6 91
+    400224: Component#6 92
+    400226: Component#6 93
+    400228: Component#6 94
+    400230: Component#6 95
+    400232: Component#6 96
+    400234: Component#6 97
+    400236: Component#6 98
+    400238: Component#6 99
+    400240: cookers
+    400242: desk chair ikea karsten
+    400244: Dining Wall
+    400246: Door Handle Modern Inox Round
+    400248: ENTER KEY
+    400250: Environment
+    400252: Environment_Main
+    400254: Environment_Vegetation
+    400256: Fencing
+    400258: foot
+    400260: Garden Porch 01
+    400262: Gevel
+    400264: Ground
+    400266: Group 353
+    400268: Group 359
+    400270: Group 370
+    400272: Group 55
+    400274: House
+    400276: karsten
+    400278: karsten bureau chair
+    400280: Keyboard
+    400282: Kitchen Island
+    400284: Kitchen Vent Wall
+    400286: Kitchen Wall
+    400288: //RootNode
+    400290: L0
+    400292: L0 1
+    400294: L0_Binnenmuur
+    400296: L0_Buro
+    400298: L0_Buro_Desk
+    400300: L0_Buro_Furniture
+    400302: L0_Buro_Wall
+    400304: L0_Dining
+    400306: L0_Dining_Furniture
+    400308: L0_Garage
+    400310: L0_Kitchen
+    400312: L0_Kitchen_Furniture
+    400314: L0_Living
+    400316: L0_Living_Furniture
+    400318: L0_Living_Wall
+    400320: L1
+    400322: L1_Bedroom1_Wall
+    400324: L1_Hall_Wall
+    400326: Laptop
+    400328: Leg 1
+    400330: Leg 1 1
+    400332: Leg 1 2
+    400334: Leg 1 3
+    400336: Leg 1 4
+    400338: Leg 1 5
+    400340: Leg 2
+    400342: Leg 2 1
+    400344: Leg 2 2
+    400346: Leg 2 3
+    400348: Leg 2 4
+    400350: Leg 2 5
+    400352: Leg 3
+    400354: Leg 3 1
+    400356: Leg 3 2
+    400358: Leg 3 3
+    400360: Leg 3 4
+    400362: Leg 3 5
+    400364: Leg 4
+    400366: Leg 4 1
+    400368: Leg 4 2
+    400370: Leg 4 3
+    400372: Leg 4 4
+    400374: Leg 4 5
+    400376: Oak 01 Billboard
+    400378: Oak 01 Billboard 1
+    400380: Roof Back
+    400382: Roof Front
+    400384: Roof Main
+    400386: Roofs
+    400388: Seat
+    400390: Seat 1
+    400392: Seat 2
+    400394: Seat 3
+    400396: Seat 4
+    400398: Seat 5
+    400400: Sink
+    400402: SINK UNIT
+    400404: skp113
+    400406: skp113 1
+    400408: skp113 2
+    400410: skp113 3
+    400412: skp113 4
+    400414: skp113 5
+    400416: Sofa 2P
+    400418: Sofa 3P
+    400420: Table
+    400422: tap
+    400424: tap handle
+    400426: tap nozzle
+    400428: Tree 1
+    400430: Tree 2
+    400432: Tree 3
+    2300000: bureau chair wheel
+    2300002: bureau chair wheel 1
+    2300004: bureau chair wheel 2
+    2300006: bureau chair wheel 3
+    2300008: bureau chair wheel 4
+    2300010: chair
+    2300012: Chinese Fan Palm Tree 01 Billboard
+    2300014: Chinese Fan Palm Tree 01 Billboard 1
+    2300016: Chinese Fan Palm Tree 02 Billboard
+    2300018: Chinese Fan Palm Tree 02 Billboard 1
+    2300020: cocina
+    2300022: Component#6
+    2300024: Component#6 1
+    2300026: Component#6 10
+    2300028: Component#6 100
+    2300030: Component#6 101
+    2300032: Component#6 102
+    2300034: Component#6 11
+    2300036: Component#6 12
+    2300038: Component#6 13
+    2300040: Component#6 14
+    2300042: Component#6 15
+    2300044: Component#6 16
+    2300046: Component#6 17
+    2300048: Component#6 18
+    2300050: Component#6 19
+    2300052: Component#6 2
+    2300054: Component#6 20
+    2300056: Component#6 21
+    2300058: Component#6 22
+    2300060: Component#6 23
+    2300062: Component#6 24
+    2300064: Component#6 25
+    2300066: Component#6 26
+    2300068: Component#6 27
+    2300070: Component#6 28
+    2300072: Component#6 29
+    2300074: Component#6 3
+    2300076: Component#6 30
+    2300078: Component#6 31
+    2300080: Component#6 32
+    2300082: Component#6 33
+    2300084: Component#6 34
+    2300086: Component#6 35
+    2300088: Component#6 36
+    2300090: Component#6 37
+    2300092: Component#6 38
+    2300094: Component#6 39
+    2300096: Component#6 4
+    2300098: Component#6 40
+    2300100: Component#6 41
+    2300102: Component#6 42
+    2300104: Component#6 43
+    2300106: Component#6 44
+    2300108: Component#6 45
+    2300110: Component#6 46
+    2300112: Component#6 47
+    2300114: Component#6 48
+    2300116: Component#6 49
+    2300118: Component#6 5
+    2300120: Component#6 50
+    2300122: Component#6 51
+    2300124: Component#6 52
+    2300126: Component#6 53
+    2300128: Component#6 54
+    2300130: Component#6 55
+    2300132: Component#6 56
+    2300134: Component#6 57
+    2300136: Component#6 58
+    2300138: Component#6 59
+    2300140: Component#6 6
+    2300142: Component#6 60
+    2300144: Component#6 61
+    2300146: Component#6 62
+    2300148: Component#6 63
+    2300150: Component#6 64
+    2300152: Component#6 65
+    2300154: Component#6 66
+    2300156: Component#6 67
+    2300158: Component#6 68
+    2300160: Component#6 69
+    2300162: Component#6 7
+    2300164: Component#6 70
+    2300166: Component#6 71
+    2300168: Component#6 72
+    2300170: Component#6 73
+    2300172: Component#6 74
+    2300174: Component#6 75
+    2300176: Component#6 76
+    2300178: Component#6 77
+    2300180: Component#6 78
+    2300182: Component#6 79
+    2300184: Component#6 8
+    2300186: Component#6 80
+    2300188: Component#6 81
+    2300190: Component#6 82
+    2300192: Component#6 83
+    2300194: Component#6 84
+    2300196: Component#6 85
+    2300198: Component#6 86
+    2300200: Component#6 87
+    2300202: Component#6 88
+    2300204: Component#6 89
+    2300206: Component#6 9
+    2300208: Component#6 90
+    2300210: Component#6 91
+    2300212: Component#6 92
+    2300214: Component#6 93
+    2300216: Component#6 94
+    2300218: Component#6 95
+    2300220: Component#6 96
+    2300222: Component#6 97
+    2300224: Component#6 98
+    2300226: Component#6 99
+    2300228: Dining Wall
+    2300230: Door Handle Modern Inox Round
+    2300232: ENTER KEY
+    2300234: Fencing
+    2300236: foot
+    2300238: Garden Porch 01
+    2300240: Gevel
+    2300242: Ground
+    2300244: Group 353
+    2300246: Group 359
+    2300248: Group 370
+    2300250: Group 55
+    2300252: House
+    2300254: karsten
+    2300256: Kitchen Island
+    2300258: Kitchen Vent Wall
+    2300260: Kitchen Wall
+    2300262: L0_Binnenmuur
+    2300264: L0_Buro_Desk
+    2300266: L0_Buro_Wall
+    2300268: L0_Garage
+    2300270: L0_Living_Wall
+    2300272: L1_Bedroom1_Wall
+    2300274: L1_Hall_Wall
+    2300276: Laptop
+    2300278: Leg 1
+    2300280: Leg 1 1
+    2300282: Leg 1 2
+    2300284: Leg 1 3
+    2300286: Leg 1 4
+    2300288: Leg 1 5
+    2300290: Leg 2
+    2300292: Leg 2 1
+    2300294: Leg 2 2
+    2300296: Leg 2 3
+    2300298: Leg 2 4
+    2300300: Leg 2 5
+    2300302: Leg 3
+    2300304: Leg 3 1
+    2300306: Leg 3 2
+    2300308: Leg 3 3
+    2300310: Leg 3 4
+    2300312: Leg 3 5
+    2300314: Leg 4
+    2300316: Leg 4 1
+    2300318: Leg 4 2
+    2300320: Leg 4 3
+    2300322: Leg 4 4
+    2300324: Leg 4 5
+    2300326: Oak 01 Billboard
+    2300328: Oak 01 Billboard 1
+    2300330: Roof Back
+    2300332: Roof Front
+    2300334: Roof Main
+    2300336: Seat
+    2300338: Seat 1
+    2300340: Seat 2
+    2300342: Seat 3
+    2300344: Seat 4
+    2300346: Seat 5
+    2300348: SINK UNIT
+    2300350: Sofa 2P
+    2300352: Sofa 3P
+    2300354: Table
+    2300356: tap handle
+    2300358: tap nozzle
+    3300000: bureau chair wheel
+    3300002: bureau chair wheel 1
+    3300004: bureau chair wheel 2
+    3300006: bureau chair wheel 3
+    3300008: bureau chair wheel 4
+    3300010: chair
+    3300012: Chinese Fan Palm Tree 01 Billboard
+    3300014: Chinese Fan Palm Tree 01 Billboard 1
+    3300016: Chinese Fan Palm Tree 02 Billboard
+    3300018: Chinese Fan Palm Tree 02 Billboard 1
+    3300020: cocina
+    3300022: Component#6
+    3300024: Component#6 1
+    3300026: Component#6 10
+    3300028: Component#6 100
+    3300030: Component#6 101
+    3300032: Component#6 102
+    3300034: Component#6 11
+    3300036: Component#6 12
+    3300038: Component#6 13
+    3300040: Component#6 14
+    3300042: Component#6 15
+    3300044: Component#6 16
+    3300046: Component#6 17
+    3300048: Component#6 18
+    3300050: Component#6 19
+    3300052: Component#6 2
+    3300054: Component#6 20
+    3300056: Component#6 21
+    3300058: Component#6 22
+    3300060: Component#6 23
+    3300062: Component#6 24
+    3300064: Component#6 25
+    3300066: Component#6 26
+    3300068: Component#6 27
+    3300070: Component#6 28
+    3300072: Component#6 29
+    3300074: Component#6 3
+    3300076: Component#6 30
+    3300078: Component#6 31
+    3300080: Component#6 32
+    3300082: Component#6 33
+    3300084: Component#6 34
+    3300086: Component#6 35
+    3300088: Component#6 36
+    3300090: Component#6 37
+    3300092: Component#6 38
+    3300094: Component#6 39
+    3300096: Component#6 4
+    3300098: Component#6 40
+    3300100: Component#6 41
+    3300102: Component#6 42
+    3300104: Component#6 43
+    3300106: Component#6 44
+    3300108: Component#6 45
+    3300110: Component#6 46
+    3300112: Component#6 47
+    3300114: Component#6 48
+    3300116: Component#6 49
+    3300118: Component#6 5
+    3300120: Component#6 50
+    3300122: Component#6 51
+    3300124: Component#6 52
+    3300126: Component#6 53
+    3300128: Component#6 54
+    3300130: Component#6 55
+    3300132: Component#6 56
+    3300134: Component#6 57
+    3300136: Component#6 58
+    3300138: Component#6 59
+    3300140: Component#6 6
+    3300142: Component#6 60
+    3300144: Component#6 61
+    3300146: Component#6 62
+    3300148: Component#6 63
+    3300150: Component#6 64
+    3300152: Component#6 65
+    3300154: Component#6 66
+    3300156: Component#6 67
+    3300158: Component#6 68
+    3300160: Component#6 69
+    3300162: Component#6 7
+    3300164: Component#6 70
+    3300166: Component#6 71
+    3300168: Component#6 72
+    3300170: Component#6 73
+    3300172: Component#6 74
+    3300174: Component#6 75
+    3300176: Component#6 76
+    3300178: Component#6 77
+    3300180: Component#6 78
+    3300182: Component#6 79
+    3300184: Component#6 8
+    3300186: Component#6 80
+    3300188: Component#6 81
+    3300190: Component#6 82
+    3300192: Component#6 83
+    3300194: Component#6 84
+    3300196: Component#6 85
+    3300198: Component#6 86
+    3300200: Component#6 87
+    3300202: Component#6 88
+    3300204: Component#6 89
+    3300206: Component#6 9
+    3300208: Component#6 90
+    3300210: Component#6 91
+    3300212: Component#6 92
+    3300214: Component#6 93
+    3300216: Component#6 94
+    3300218: Component#6 95
+    3300220: Component#6 96
+    3300222: Component#6 97
+    3300224: Component#6 98
+    3300226: Component#6 99
+    3300228: Dining Wall
+    3300230: Door Handle Modern Inox Round
+    3300232: ENTER KEY
+    3300234: Fencing
+    3300236: foot
+    3300238: Garden Porch 01
+    3300240: Gevel
+    3300242: Ground
+    3300244: Group 353
+    3300246: Group 359
+    3300248: Group 370
+    3300250: Group 55
+    3300252: House
+    3300254: karsten
+    3300256: Kitchen Island
+    3300258: Kitchen Vent Wall
+    3300260: Kitchen Wall
+    3300262: L0_Binnenmuur
+    3300264: L0_Buro_Desk
+    3300266: L0_Buro_Wall
+    3300268: L0_Garage
+    3300270: L0_Living_Wall
+    3300272: L1_Bedroom1_Wall
+    3300274: L1_Hall_Wall
+    3300276: Laptop
+    3300278: Leg 1
+    3300280: Leg 1 1
+    3300282: Leg 1 2
+    3300284: Leg 1 3
+    3300286: Leg 1 4
+    3300288: Leg 1 5
+    3300290: Leg 2
+    3300292: Leg 2 1
+    3300294: Leg 2 2
+    3300296: Leg 2 3
+    3300298: Leg 2 4
+    3300300: Leg 2 5
+    3300302: Leg 3
+    3300304: Leg 3 1
+    3300306: Leg 3 2
+    3300308: Leg 3 3
+    3300310: Leg 3 4
+    3300312: Leg 3 5
+    3300314: Leg 4
+    3300316: Leg 4 1
+    3300318: Leg 4 2
+    3300320: Leg 4 3
+    3300322: Leg 4 4
+    3300324: Leg 4 5
+    3300326: Oak 01 Billboard
+    3300328: Oak 01 Billboard 1
+    3300330: Roof Back
+    3300332: Roof Front
+    3300334: Roof Main
+    3300336: Seat
+    3300338: Seat 1
+    3300340: Seat 2
+    3300342: Seat 3
+    3300344: Seat 4
+    3300346: Seat 5
+    3300348: SINK UNIT
+    3300350: Sofa 2P
+    3300352: Sofa 3P
+    3300354: Table
+    3300356: tap handle
+    3300358: tap nozzle
+    4300000: Mesh Oak 01 Billboard
+    4300002: Mesh Chinese Fan Palm Tree 02 Billboard
+    4300004: Mesh Chinese Fan Palm Tree 01 Billboard
+    4300006: Mesh Fencing
+    4300008: Mesh Ground
+    4300010: Mesh Garden Porch 01
+    4300012: Mesh House
+    4300014: Mesh L0_Buro_Wall
+    4300016: Mesh L0_Buro_Desk
+    4300018: Mesh bureau chair wheel
+    4300020: Mesh foot
+    4300022: Mesh karsten
+    4300024: Mesh chair
+    4300026: Mesh Laptop
+    4300028: Mesh Group 55
+    4300030: Mesh Component#6
+    4300032: Mesh ENTER KEY
+    4300034: Mesh Table
+    4300036: Mesh Leg 2
+    4300038: Mesh Leg 1
+    4300040: Mesh Leg 3
+    4300042: Mesh Leg 4
+    4300044: Mesh Seat
+    4300046: Mesh Dining Wall
+    4300048: Mesh Kitchen Vent Wall
+    4300050: Mesh Kitchen Island
+    4300052: Mesh SINK UNIT
+    4300054: Mesh Group 353
+    4300056: Mesh tap nozzle
+    4300058: Mesh tap handle
+    4300060: Mesh Group 359
+    4300062: Mesh Kitchen Wall
+    4300064: Mesh cocina
+    4300066: Mesh Sofa 3P
+    4300068: Mesh Group 370
+    4300070: Mesh Sofa 2P
+    4300072: Mesh L0_Living_Wall
+    4300074: Mesh Roof Back
+    4300076: Mesh Roof Main
+    4300078: Mesh Roof Front
+    4300080: Mesh L1_Bedroom1_Wall
+    4300082: Mesh L1_Hall_Wall
+    4300084: Mesh Gevel
+    4300086: Mesh L0_Binnenmuur
+    4300088: Mesh Door Handle Modern Inox Round
+    4300090: Mesh L0_Garage
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

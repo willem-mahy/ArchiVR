@@ -1,0 +1,964 @@
+fileFormatVersion: 2
+guid: 91e984d55e1dbe544bf7ebc8d4df05d5
+timeCreated: 1510653373
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000
+  assetHash:
+    serializedVersion: 2
+    Hash: bb8b78baffbd839fad163755a24dff06
+  longitude: -0.167
+  latitude: 51.5
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 12.967192, y: 6.177474, z: 9.798731}
+      lookAt: {x: -12.615765, y: 0.07721399, z: -9.729672}
+      up: {x: -0.14802653, y: 0.9825072, z: -0.11299405}
+      fov: 30
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AanrechtKastenEiland
+    100002: Achterbouw Buren L
+    100004: Achterdeur
+    100006: Bar stool
+    100008: Bar stool 1
+    100010: Bestaande Achtergevel
+    100012: BetonMuurR
+    100014: Body
+    100016: bowlfruit.dxf
+    100018: Brizo - Solna Stainless Steel Single Handle Pull-Down Bar_Prep Faucet
+    100020: Component#184
+    100022: Component#184 1
+    100024: Component#184 10
+    100026: Component#184 11
+    100028: Component#184 2
+    100030: Component#184 3
+    100032: Component#184 4
+    100034: Component#184 5
+    100036: Component#184 6
+    100038: Component#184 7
+    100040: Component#184 8
+    100042: Component#184 9
+    100044: Component#186
+    100046: Component#192
+    100048: Component#195
+    100050: Component#195 1
+    100052: Component#196
+    100054: Component#196 1
+    100056: Cooking Plates
+    100058: DakRaam
+    100060: Deur Keukenkast Boven
+    100062: Deur Keukenkast Boven 1
+    100064: Deur Keukenkast Boven 2
+    100066: Deur Keukenkast Boven 3
+    100068: DeurKeukenkastOnderPompbak
+    100070: DeurKeukenkastOnderPompbak 1
+    100072: DeurKeukenkastOnderPompbak 2
+    100074: Fruit bowl
+    100076: Group 10
+    100078: Group 192
+    100080: Group 194
+    100082: Group 198
+    100084: Group 200
+    100086: Group 203
+    100088: Group 205
+    100090: Group 207
+    100092: Group 209
+    100094: Group 212
+    100096: Group 214
+    100098: Group 216
+    100100: Group 218
+    100102: half LED strip 250mm
+    100104: half LED strip 250mm 1
+    100106: half LED strip 250mm 10
+    100108: half LED strip 250mm 11
+    100110: half LED strip 250mm 12
+    100112: half LED strip 250mm 13
+    100114: half LED strip 250mm 14
+    100116: half LED strip 250mm 15
+    100118: half LED strip 250mm 2
+    100120: half LED strip 250mm 3
+    100122: half LED strip 250mm 4
+    100124: half LED strip 250mm 5
+    100126: half LED strip 250mm 6
+    100128: half LED strip 250mm 7
+    100130: half LED strip 250mm 8
+    100132: half LED strip 250mm 9
+    100134: KeukenKast deur 600mm x 750mm
+    100136: Keukenkast Deur 600mm x 872mm
+    100138: KeukenKast deur 600mm x200mm
+    100140: KeukenKast deur 600mm x200mm 1
+    100142: KeukenKast deur 600mm x200mm 2
+    100144: KeukenKast deur 600mm x200mm 3
+    100146: KeukenKast lade 70mm x18mm
+    100148: KeukenKast lade 70mm x18mm 1
+    100150: KeukenKast lade 70mm x18mm 2
+    100152: KeukenKast lade 70mm x18mm 3
+    100154: KeukenKast lade 70mm x18mm 4
+    100156: KeukenKast lade 70mm x18mm 5
+    100158: KeukenKast lade 70mm x18mm 6
+    100160: KeukenKast lade 70mm x18mm 7
+    100162: //RootNode
+    100164: L0
+    100166: L0 Achtergevel
+    100168: L0 Platdak
+    100170: L0 Walls Inside
+    100172: L0 Walls Outside
+    100174: L0_Ceiling
+    100176: L0_Eethoek
+    100178: L0_Floor
+    100180: L0_Keuken
+    100182: L1
+    100184: L1 Binnenmuur
+    100186: L1 Buitenmuur
+    100188: L1 Plafond
+    100190: L1 Platdak
+    100192: L1 Raam Badkamer
+    100194: L1 Vloer
+    100196: LED strip 1
+    100198: LED strip 2
+    100200: LED strip 3
+    100202: LED strip 4
+    100204: Light Eetkamer-Plafond 1
+    100206: Light Keuken-Aanrecht 1
+    100208: Light Keuken-Plafond 1
+    100210: Light Keuken-Plafond 2
+    100212: Light Keuken-Plafond 3
+    100214: Light Keuken-Plafond 4
+    100216: Light Keuken-Plafond 5
+    100218: Light Keuken-Plafond 6
+    100220: Light Keuken-Plafond 7
+    100222: Light Keuken-Plafond 8
+    100224: LightGroup KeukenPlafond
+    100226: P_sink_kitchen1
+    100228: Pillar
+    100230: Plexi
+    100232: Raam Voorgevel
+    100234: Shuifdeur keuken
+    100236: Simple Chair
+    100238: Simple Chair 1
+    100240: Simple Chair 2
+    100242: Simple Chair 3
+    100244: Simple dining table
+    100246: skpEFEF
+    100248: SpotLight
+    100250: SpotLight 1
+    100252: SpotLight 2
+    100254: SpotLight 3
+    100256: SpotLight 4
+    100258: SpotLight 5
+    100260: SpotLight 6
+    100262: SpotLight 7
+    100264: Suspension
+    100266: SustainableDesign_Hanglamp_01_2000x50
+    100268: SustainableDesign_Pendant_01_2000x50_150208b
+    100270: table
+    100272: tableleg
+    100274: tableleg 1
+    100276: tableleg 2
+    100278: tableleg 3
+    100280: Teak Table Outdoor Dining Setting with bench seats
+    100282: Terras
+    100284: Tuin
+    100286: Wall Oven 24in
+    100288: Wall Vent
+    100290: Wire1
+    100292: Wire2
+    100294: Zijkant1
+    100296: Zijkant2
+    400000: AanrechtKastenEiland
+    400002: Achterbouw Buren L
+    400004: Achterdeur
+    400006: Bar stool
+    400008: Bar stool 1
+    400010: Bestaande Achtergevel
+    400012: BetonMuurR
+    400014: Body
+    400016: bowlfruit.dxf
+    400018: Brizo - Solna Stainless Steel Single Handle Pull-Down Bar_Prep Faucet
+    400020: Component#184
+    400022: Component#184 1
+    400024: Component#184 10
+    400026: Component#184 11
+    400028: Component#184 2
+    400030: Component#184 3
+    400032: Component#184 4
+    400034: Component#184 5
+    400036: Component#184 6
+    400038: Component#184 7
+    400040: Component#184 8
+    400042: Component#184 9
+    400044: Component#186
+    400046: Component#192
+    400048: Component#195
+    400050: Component#195 1
+    400052: Component#196
+    400054: Component#196 1
+    400056: Cooking Plates
+    400058: DakRaam
+    400060: Deur Keukenkast Boven
+    400062: Deur Keukenkast Boven 1
+    400064: Deur Keukenkast Boven 2
+    400066: Deur Keukenkast Boven 3
+    400068: DeurKeukenkastOnderPompbak
+    400070: DeurKeukenkastOnderPompbak 1
+    400072: DeurKeukenkastOnderPompbak 2
+    400074: Fruit bowl
+    400076: Group 10
+    400078: Group 192
+    400080: Group 194
+    400082: Group 198
+    400084: Group 200
+    400086: Group 203
+    400088: Group 205
+    400090: Group 207
+    400092: Group 209
+    400094: Group 212
+    400096: Group 214
+    400098: Group 216
+    400100: Group 218
+    400102: half LED strip 250mm
+    400104: half LED strip 250mm 1
+    400106: half LED strip 250mm 10
+    400108: half LED strip 250mm 11
+    400110: half LED strip 250mm 12
+    400112: half LED strip 250mm 13
+    400114: half LED strip 250mm 14
+    400116: half LED strip 250mm 15
+    400118: half LED strip 250mm 2
+    400120: half LED strip 250mm 3
+    400122: half LED strip 250mm 4
+    400124: half LED strip 250mm 5
+    400126: half LED strip 250mm 6
+    400128: half LED strip 250mm 7
+    400130: half LED strip 250mm 8
+    400132: half LED strip 250mm 9
+    400134: KeukenKast deur 600mm x 750mm
+    400136: Keukenkast Deur 600mm x 872mm
+    400138: KeukenKast deur 600mm x200mm
+    400140: KeukenKast deur 600mm x200mm 1
+    400142: KeukenKast deur 600mm x200mm 2
+    400144: KeukenKast deur 600mm x200mm 3
+    400146: KeukenKast lade 70mm x18mm
+    400148: KeukenKast lade 70mm x18mm 1
+    400150: KeukenKast lade 70mm x18mm 2
+    400152: KeukenKast lade 70mm x18mm 3
+    400154: KeukenKast lade 70mm x18mm 4
+    400156: KeukenKast lade 70mm x18mm 5
+    400158: KeukenKast lade 70mm x18mm 6
+    400160: KeukenKast lade 70mm x18mm 7
+    400162: //RootNode
+    400164: L0
+    400166: L0 Achtergevel
+    400168: L0 Platdak
+    400170: L0 Walls Inside
+    400172: L0 Walls Outside
+    400174: L0_Ceiling
+    400176: L0_Eethoek
+    400178: L0_Floor
+    400180: L0_Keuken
+    400182: L1
+    400184: L1 Binnenmuur
+    400186: L1 Buitenmuur
+    400188: L1 Plafond
+    400190: L1 Platdak
+    400192: L1 Raam Badkamer
+    400194: L1 Vloer
+    400196: LED strip 1
+    400198: LED strip 2
+    400200: LED strip 3
+    400202: LED strip 4
+    400204: Light Eetkamer-Plafond 1
+    400206: Light Keuken-Aanrecht 1
+    400208: Light Keuken-Plafond 1
+    400210: Light Keuken-Plafond 2
+    400212: Light Keuken-Plafond 3
+    400214: Light Keuken-Plafond 4
+    400216: Light Keuken-Plafond 5
+    400218: Light Keuken-Plafond 6
+    400220: Light Keuken-Plafond 7
+    400222: Light Keuken-Plafond 8
+    400224: LightGroup KeukenPlafond
+    400226: P_sink_kitchen1
+    400228: Pillar
+    400230: Plexi
+    400232: Raam Voorgevel
+    400234: Shuifdeur keuken
+    400236: Simple Chair
+    400238: Simple Chair 1
+    400240: Simple Chair 2
+    400242: Simple Chair 3
+    400244: Simple dining table
+    400246: skpEFEF
+    400248: SpotLight
+    400250: SpotLight 1
+    400252: SpotLight 2
+    400254: SpotLight 3
+    400256: SpotLight 4
+    400258: SpotLight 5
+    400260: SpotLight 6
+    400262: SpotLight 7
+    400264: Suspension
+    400266: SustainableDesign_Hanglamp_01_2000x50
+    400268: SustainableDesign_Pendant_01_2000x50_150208b
+    400270: table
+    400272: tableleg
+    400274: tableleg 1
+    400276: tableleg 2
+    400278: tableleg 3
+    400280: Teak Table Outdoor Dining Setting with bench seats
+    400282: Terras
+    400284: Tuin
+    400286: Wall Oven 24in
+    400288: Wall Vent
+    400290: Wire1
+    400292: Wire2
+    400294: Zijkant1
+    400296: Zijkant2
+    2300000: AanrechtKastenEiland
+    2300002: Achterbouw Buren L
+    2300004: Achterdeur
+    2300006: Bestaande Achtergevel
+    2300008: BetonMuurR
+    2300010: Body
+    2300012: bowlfruit.dxf
+    2300014: Component#184
+    2300016: Component#184 1
+    2300018: Component#184 10
+    2300020: Component#184 11
+    2300022: Component#184 2
+    2300024: Component#184 3
+    2300026: Component#184 4
+    2300028: Component#184 5
+    2300030: Component#184 6
+    2300032: Component#184 7
+    2300034: Component#184 8
+    2300036: Component#184 9
+    2300038: Component#186
+    2300040: Component#195
+    2300042: Component#195 1
+    2300044: Cooking Plates
+    2300046: DakRaam
+    2300048: Deur Keukenkast Boven
+    2300050: Deur Keukenkast Boven 1
+    2300052: Deur Keukenkast Boven 2
+    2300054: Deur Keukenkast Boven 3
+    2300056: DeurKeukenkastOnderPompbak
+    2300058: DeurKeukenkastOnderPompbak 1
+    2300060: DeurKeukenkastOnderPompbak 2
+    2300062: Group 192
+    2300064: Group 194
+    2300066: Group 198
+    2300068: Group 200
+    2300070: Group 203
+    2300072: Group 205
+    2300074: Group 207
+    2300076: Group 209
+    2300078: Group 212
+    2300080: Group 214
+    2300082: Group 216
+    2300084: Group 218
+    2300086: half LED strip 250mm
+    2300088: half LED strip 250mm 1
+    2300090: half LED strip 250mm 10
+    2300092: half LED strip 250mm 11
+    2300094: half LED strip 250mm 12
+    2300096: half LED strip 250mm 13
+    2300098: half LED strip 250mm 14
+    2300100: half LED strip 250mm 15
+    2300102: half LED strip 250mm 2
+    2300104: half LED strip 250mm 3
+    2300106: half LED strip 250mm 4
+    2300108: half LED strip 250mm 5
+    2300110: half LED strip 250mm 6
+    2300112: half LED strip 250mm 7
+    2300114: half LED strip 250mm 8
+    2300116: half LED strip 250mm 9
+    2300118: KeukenKast deur 600mm x 750mm
+    2300120: Keukenkast Deur 600mm x 872mm
+    2300122: KeukenKast deur 600mm x200mm
+    2300124: KeukenKast deur 600mm x200mm 1
+    2300126: KeukenKast deur 600mm x200mm 2
+    2300128: KeukenKast deur 600mm x200mm 3
+    2300130: KeukenKast lade 70mm x18mm
+    2300132: KeukenKast lade 70mm x18mm 1
+    2300134: KeukenKast lade 70mm x18mm 2
+    2300136: KeukenKast lade 70mm x18mm 3
+    2300138: KeukenKast lade 70mm x18mm 4
+    2300140: KeukenKast lade 70mm x18mm 5
+    2300142: KeukenKast lade 70mm x18mm 6
+    2300144: KeukenKast lade 70mm x18mm 7
+    2300146: L0 Achtergevel
+    2300148: L0 Platdak
+    2300150: L0 Walls Inside
+    2300152: L0 Walls Outside
+    2300154: L0_Ceiling
+    2300156: L0_Floor
+    2300158: L1 Binnenmuur
+    2300160: L1 Buitenmuur
+    2300162: L1 Plafond
+    2300164: L1 Platdak
+    2300166: L1 Raam Badkamer
+    2300168: L1 Vloer
+    2300170: Light Eetkamer-Plafond 1
+    2300172: Light Keuken-Aanrecht 1
+    2300174: Light Keuken-Plafond 1
+    2300176: Light Keuken-Plafond 2
+    2300178: Light Keuken-Plafond 3
+    2300180: Light Keuken-Plafond 4
+    2300182: Light Keuken-Plafond 5
+    2300184: Light Keuken-Plafond 6
+    2300186: Light Keuken-Plafond 7
+    2300188: Light Keuken-Plafond 8
+    2300190: P_sink_kitchen1
+    2300192: Pillar
+    2300194: Plexi
+    2300196: Raam Voorgevel
+    2300198: Shuifdeur keuken
+    2300200: Simple Chair
+    2300202: Simple Chair 1
+    2300204: Simple Chair 2
+    2300206: Simple Chair 3
+    2300208: skpEFEF
+    2300210: SpotLight
+    2300212: SpotLight 1
+    2300214: SpotLight 2
+    2300216: SpotLight 3
+    2300218: SpotLight 4
+    2300220: SpotLight 5
+    2300222: SpotLight 6
+    2300224: SpotLight 7
+    2300226: table
+    2300228: tableleg
+    2300230: tableleg 1
+    2300232: tableleg 2
+    2300234: tableleg 3
+    2300236: Terras
+    2300238: Tuin
+    2300240: Wall Oven 24in
+    2300242: Wall Vent
+    2300244: Wire1
+    2300246: Wire2
+    2300248: Zijkant1
+    2300250: Zijkant2
+    3300000: AanrechtKastenEiland
+    3300002: Achterbouw Buren L
+    3300004: Achterdeur
+    3300006: Bestaande Achtergevel
+    3300008: BetonMuurR
+    3300010: Body
+    3300012: bowlfruit.dxf
+    3300014: Component#184
+    3300016: Component#184 1
+    3300018: Component#184 10
+    3300020: Component#184 11
+    3300022: Component#184 2
+    3300024: Component#184 3
+    3300026: Component#184 4
+    3300028: Component#184 5
+    3300030: Component#184 6
+    3300032: Component#184 7
+    3300034: Component#184 8
+    3300036: Component#184 9
+    3300038: Component#186
+    3300040: Component#195
+    3300042: Component#195 1
+    3300044: Cooking Plates
+    3300046: DakRaam
+    3300048: Deur Keukenkast Boven
+    3300050: Deur Keukenkast Boven 1
+    3300052: Deur Keukenkast Boven 2
+    3300054: Deur Keukenkast Boven 3
+    3300056: DeurKeukenkastOnderPompbak
+    3300058: DeurKeukenkastOnderPompbak 1
+    3300060: DeurKeukenkastOnderPompbak 2
+    3300062: Group 192
+    3300064: Group 194
+    3300066: Group 198
+    3300068: Group 200
+    3300070: Group 203
+    3300072: Group 205
+    3300074: Group 207
+    3300076: Group 209
+    3300078: Group 212
+    3300080: Group 214
+    3300082: Group 216
+    3300084: Group 218
+    3300086: half LED strip 250mm
+    3300088: half LED strip 250mm 1
+    3300090: half LED strip 250mm 10
+    3300092: half LED strip 250mm 11
+    3300094: half LED strip 250mm 12
+    3300096: half LED strip 250mm 13
+    3300098: half LED strip 250mm 14
+    3300100: half LED strip 250mm 15
+    3300102: half LED strip 250mm 2
+    3300104: half LED strip 250mm 3
+    3300106: half LED strip 250mm 4
+    3300108: half LED strip 250mm 5
+    3300110: half LED strip 250mm 6
+    3300112: half LED strip 250mm 7
+    3300114: half LED strip 250mm 8
+    3300116: half LED strip 250mm 9
+    3300118: KeukenKast deur 600mm x 750mm
+    3300120: Keukenkast Deur 600mm x 872mm
+    3300122: KeukenKast deur 600mm x200mm
+    3300124: KeukenKast deur 600mm x200mm 1
+    3300126: KeukenKast deur 600mm x200mm 2
+    3300128: KeukenKast deur 600mm x200mm 3
+    3300130: KeukenKast lade 70mm x18mm
+    3300132: KeukenKast lade 70mm x18mm 1
+    3300134: KeukenKast lade 70mm x18mm 2
+    3300136: KeukenKast lade 70mm x18mm 3
+    3300138: KeukenKast lade 70mm x18mm 4
+    3300140: KeukenKast lade 70mm x18mm 5
+    3300142: KeukenKast lade 70mm x18mm 6
+    3300144: KeukenKast lade 70mm x18mm 7
+    3300146: L0 Achtergevel
+    3300148: L0 Platdak
+    3300150: L0 Walls Inside
+    3300152: L0 Walls Outside
+    3300154: L0_Ceiling
+    3300156: L0_Floor
+    3300158: L1 Binnenmuur
+    3300160: L1 Buitenmuur
+    3300162: L1 Plafond
+    3300164: L1 Platdak
+    3300166: L1 Raam Badkamer
+    3300168: L1 Vloer
+    3300170: Light Eetkamer-Plafond 1
+    3300172: Light Keuken-Aanrecht 1
+    3300174: Light Keuken-Plafond 1
+    3300176: Light Keuken-Plafond 2
+    3300178: Light Keuken-Plafond 3
+    3300180: Light Keuken-Plafond 4
+    3300182: Light Keuken-Plafond 5
+    3300184: Light Keuken-Plafond 6
+    3300186: Light Keuken-Plafond 7
+    3300188: Light Keuken-Plafond 8
+    3300190: P_sink_kitchen1
+    3300192: Pillar
+    3300194: Plexi
+    3300196: Raam Voorgevel
+    3300198: Shuifdeur keuken
+    3300200: Simple Chair
+    3300202: Simple Chair 1
+    3300204: Simple Chair 2
+    3300206: Simple Chair 3
+    3300208: skpEFEF
+    3300210: SpotLight
+    3300212: SpotLight 1
+    3300214: SpotLight 2
+    3300216: SpotLight 3
+    3300218: SpotLight 4
+    3300220: SpotLight 5
+    3300222: SpotLight 6
+    3300224: SpotLight 7
+    3300226: table
+    3300228: tableleg
+    3300230: tableleg 1
+    3300232: tableleg 2
+    3300234: tableleg 3
+    3300236: Terras
+    3300238: Tuin
+    3300240: Wall Oven 24in
+    3300242: Wall Vent
+    3300244: Wire1
+    3300246: Wire2
+    3300248: Zijkant1
+    3300250: Zijkant2
+    4300000: Mesh Tuin
+    4300002: Mesh BetonMuurR
+    4300004: Mesh Achterbouw Buren L
+    4300006: Mesh Terras
+    4300008: Mesh Component#195
+    4300010: Mesh Component#184
+    4300012: Mesh Component#184
+    4300014: Mesh Component#186
+    4300016: Mesh L0_Ceiling
+    4300018: Mesh DakRaam
+    4300020: Mesh L0 Walls Inside
+    4300022: Mesh Raam Voorgevel
+    4300024: Mesh Shuifdeur keuken
+    4300026: Mesh Cooking Plates
+    4300028: Mesh Light Keuken-Plafond 1
+    4300030: Mesh SpotLight
+    4300032: Mesh AanrechtKastenEiland
+    4300034: Mesh Deur Keukenkast Boven
+    4300036: Mesh DeurKeukenkastOnderPompbak
+    4300038: Mesh KeukenKast lade 70mm x18mm
+    4300040: Mesh KeukenKast deur 600mm x 750mm
+    4300042: Mesh Keukenkast Deur 600mm x 872mm
+    4300044: Mesh KeukenKast deur 600mm x200mm
+    4300046: Mesh Wall Vent
+    4300048: Mesh Pillar
+    4300050: Mesh P_sink_kitchen1
+    4300052: Mesh Wall Oven 24in
+    4300054: Mesh bowlfruit.dxf
+    4300056: Mesh Group 192
+    4300058: Mesh Group 194
+    4300060: Mesh skpEFEF
+    4300062: Mesh Group 198
+    4300064: Mesh Group 200
+    4300066: Mesh Group 203
+    4300068: Mesh Group 205
+    4300070: Mesh Group 207
+    4300072: Mesh Group 209
+    4300074: Mesh Simple Chair
+    4300076: Mesh table
+    4300078: Mesh tableleg
+    4300080: Mesh Body
+    4300082: Mesh Zijkant1
+    4300084: Mesh Plexi
+    4300086: Mesh Zijkant2
+    4300088: Mesh half LED strip 250mm
+    4300090: Mesh Wire1
+    4300092: Mesh Light Eetkamer-Plafond 1
+    4300094: Mesh L0_Floor
+    4300096: Mesh L0 Walls Outside
+    4300098: Mesh L0 Achtergevel
+    4300100: Mesh Achterdeur
+    4300102: Mesh L0 Platdak
+    4300104: Mesh L1 Platdak
+    4300106: Mesh L1 Raam Badkamer
+    4300108: Mesh L1 Binnenmuur
+    4300110: Mesh L1 Vloer
+    4300112: Mesh L1 Plafond
+    4300114: Mesh Bestaande Achtergevel
+    4300116: Mesh L1 Buitenmuur
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0056_Yellow
+    second: {fileID: 2100000, guid: 4946025380ebb9f4498dc0ab7221a2f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0133_Gray
+    second: {fileID: 2100000, guid: 6fc7c14ed8bb2834d96b6ed28a8907b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 63920LF-SS-B1
+    second: {fileID: 2100000, guid: df08b080b7f5eab4f87ac2b9cb39e28a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Baksteen
+    second: {fileID: 2100000, guid: e6d17576779c66b48b082f37e390e969, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Baksteen Buren R
+    second: {fileID: 2100000, guid: 66f850c5e00e18e49974fb14db1fb5d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BetonWand
+    second: {fileID: 2100000, guid: be02f969c83e77a4d80d21fc9d143609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cladding_Siding_White
+    second: {fileID: 2100000, guid: a96606fd6a2a8464cb144d3d583be13e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_000
+    second: {fileID: 2100000, guid: db9a0f35f88030f4ba342695d076f6d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002
+    second: {fileID: 2100000, guid: 9f8406500ba2e0648a69ef1c7d4e8fd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_005
+    second: {fileID: 2100000, guid: 0b3a227ed4d6f9341b6ccf859fd0c24d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007
+    second: {fileID: 2100000, guid: 4e0979fb13435e649b026c84bf33c254, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_009
+    second: {fileID: 2100000, guid: 041d1e22d9ecd3b4b895ce9ea84eaad8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C13
+    second: {fileID: 2100000, guid: b301fbdb46f63704facece6d1408212a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C17
+    second: {fileID: 2100000, guid: 8df79eefea9b2244385c2ad8ae7f7ab4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dampkap Gril
+    second: {fileID: 2100000, guid: 30be1da91e8c9b04c8d73fc32b6f27e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: b0d839fdfaa815f4caf3920b837fdf9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: c8b180a667268294c9dd11ffcbd70760, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hedge
+    second: {fileID: 2100000, guid: 11173ce656a5c1847a7f191faba5ced6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kookplaat
+    second: {fileID: 2100000, guid: a83e31d91bcffc1409c1b2afd310ff5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LED group
+    second: {fileID: 2100000, guid: 9d0e561ee5a0e4145b83c59407c33dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetaalZwartGelakt
+    second: {fileID: 2100000, guid: abfda20a77875bc41bdbe54946e40177, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Corrogated_Brown
+    second: {fileID: 2100000, guid: 1ecbfa022fb061b4db9677270ff97d8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Steel_Textured
+    second: {fileID: 2100000, guid: 0249793c9afcf9b4e8dbe50b8d3e7aba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parket
+    second: {fileID: 2100000, guid: 8d0dfd3f5bd003f40a3baed749386ad5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlatDakBedekking
+    second: {fileID: 2100000, guid: 4dc89458bb3322c469603a0ff8daaae3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlexiGlas
+    second: {fileID: 2100000, guid: 0afd7091e7dcbec48a664b39055757e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StuccoWhite
+    second: {fileID: 2100000, guid: a1813f88cdcd4354d98295d2530d82d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TegelsInkom
+    second: {fileID: 2100000, guid: 2c5cc36545a11c14a83f743c12c8fb13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TilesTerras
+    second: {fileID: 2100000, guid: 9e02654224b52b04697bc5e980f08d7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Cherry_Original
+    second: {fileID: 2100000, guid: 4b1402cb6d1b2304f968e1cdc344a464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Metal_Corrogated_Shiny]1'
+    second: {fileID: 2100000, guid: 0732431d9c8af2940accc7e8bcadf8b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2
+    second: {fileID: 2100000, guid: c6555b3fb35b5d4499d29bc5c9aee9e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4
+    second: {fileID: 2100000, guid: a026564c1da37c34b82ec40b54bf15da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _8
+    second: {fileID: 2100000, guid: e6714cf612693f24fbf4997c07178330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Black_
+    second: {fileID: 2100000, guid: 078f64a2ab188c4459b983e232abd233, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Brown_
+    second: {fileID: 2100000, guid: 7b35378aba04ba845aec9bf510070352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Charcoal_
+    second: {fileID: 2100000, guid: 277f282ee5d9baf4e9c39fd3b85f5d42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _DarkGray_
+    second: {fileID: 2100000, guid: d7246dda57e11e64b83443d58d248c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _GhostWhite_
+    second: {fileID: 2100000, guid: 319a4f4704106f64ab5037ece05e7cb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Gray_
+    second: {fileID: 2100000, guid: 30b60db937bd6f745a91e97e7e07e94a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LightGray_
+    second: {fileID: 2100000, guid: eb85845858628b0478ec4f748d88e860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LimeGreen_
+    second: {fileID: 2100000, guid: cea8f855c4e414b4e83d790cc1187b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Red_
+    second: {fileID: 2100000, guid: 1285f08a7a8bc5b4598b73140f5a49fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: beb7406ba340e794880556508071f5d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_texture
+    second: {fileID: 2100000, guid: d0aeb9bf310bf0048b4a3b40802f0363, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bananas
+    second: {fileID: 2100000, guid: b56551a9dfd0825469e3032daee6f0a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light-sketch-stone
+    second: {fileID: 2100000, guid: 194b5c975131c3a47be290d3d04fe746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orange
+    second: {fileID: 2100000, guid: f40f8d192c2d027479f2ec7badbc4375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phoca_thumb_l_Woodgrain_(rough-cut)_YG70-04_Modified_By_FLS
+    second: {fileID: 2100000, guid: 23c739bebda4448459de0b05a911afeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roseleaf
+    second: {fileID: 2100000, guid: 5d119ccc946240a4d89b299544e4a873, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
