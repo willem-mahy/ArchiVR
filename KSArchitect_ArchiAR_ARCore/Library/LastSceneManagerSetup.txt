@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/KS/Projects/Scenes/Project006.unity
+- path: Assets/_Scenes/KSArchitect_AR.unity
   isLoaded: 1
   isActive: 1

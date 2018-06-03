@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1368
     height: 779
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 1520
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 927
     height: 779
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 1534
+  controlID: 75
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 927
     height: 502
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 1535
+  controlID: 11
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 361
     height: 502
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -369,9 +369,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a330000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: b04ef4ff9866f4ff7867f4ffd698f4ffa0a3f4ff98a5f4ff100bf5ff920cf5ffa00cf5ff220df5ff300df5ff7c14f5ffdc16f5ff0c49f5ff0a52f5ff1a58f5ff067cf5ff127cf5ff808ff5fff28ff5ff4cc1f5ff12ccf5ff06cef5ff7a33f6fff834f6ff0235f6ff8035f6ff8a35f6ffd23cf6ff2e3ff6ff5a71f6ff547af6ff6080f6ff48a4f6ff50a4f6ffeeb3f6ff6cb4f6ffc6e5f6ff8cf0f6ff80f2f6fff457f7ff7259f7ff7c59f7fffa59f7ff045af7ff4c61f7ffa863f7ffd495f7ffce9ef7ffdaa4f7ffc2c8f7ffcac8f7ff12cef7ff8ccef7ffe6fff7ffac0af8ffa00cf8ff1472f8ff9273f8ff9c73f8ff1a74f8ff2474f8ff6c7bf8ffc87df8fff4aff8ffeeb8f8fffabef8ffe2e2f8ffeae2f8ff22f9f8ff9e03f9ff9e04f9fff206f9ffbc11f9ffb413f9ff2c79f9ffae7af9ffbc7af9ff3e7bf9ff4c7bf9ff9882f9fff884f9ff28b7f9ff26c0f9ff36c6f9ff22eaf9ff52eaf9ff4c4dfaff2c5bfaff7a60faff42c9faff8ecefaff8cd2faff2ed6faff7cd9faffeae3faff06eafaffda20fbff10b1fcffaed9fcff48e6fcffe2f1fcffaafefcff562afdff7af7ffff98fbffff00000000
+    m_ExpandedIDs: 02e2f2ff78e2f2ffd213f3ff981ef3ff8c20f3ff0086f3ff7e87f3ff8887f3ff0688f3ff1088f3ff588ff3ffb491f3ffe0c3f3ff8c50f5ff8659f5ff925ff5ff7a83f5ff8283f5ffaab0f6ff20b1f6ff7ae2f6ff40edf6ff34eff6ffa854f7ff2656f7ff3056f7ffae56f7ffb856f7ff005ef7ff5c60f7ff8892f7ff341ff9ff2e28f9ff3a2ef9ff2252f9ff2a52f9ff7cf9fcff1068feff98fbffff00000000d4b40000f8b4000070b500000ab60000b6ac0100caac0100faac010042ae0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -390,7 +390,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Project006
+  - KSArchitect_AR
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -422,14 +422,14 @@ MonoBehaviour:
     height: 481
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 17417.322778434784
+  lastFramingTime: 155.61000347826086
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.463627, y: 13.229451, z: 0}
+    m_Target: {x: 250.23975, y: 312.6089, z: 0}
     speed: 2
-    m_Value: {x: 18.463627, y: 13.229451, z: 0}
+    m_Value: {x: 250.23975, y: 312.6089, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -457,9 +457,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 66.00717
+    m_Target: 428.52597
     speed: 2
-    m_Value: 66.00717
+    m_Value: 428.52597
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -537,19 +537,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/KS/Projects/Scenes
+    - Assets/_Scenes
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/KS/Projects/Scenes
+  - Assets/_Scenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Dev\Unity\ArchiVR\KSArchitect_ArchiAR_ARCore
   m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 197}
-    m_SelectedIDs: b22d0000
-    m_LastClickedID: 11698
-    m_ExpandedIDs: 00000000ca2a0000662b00000c2d00002e2e00009c2e0000ae2e0000263000008434000086340000ffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: fe310000
+    m_LastClickedID: 12798
+    m_ExpandedIDs: 00000000ca2a0000282c0000fe310000f037000094390000c4390000d03d000096b4000098b40000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca2a00000c2d00002e2e00009c2e0000ae2e0000263000008434000086340000ffffff7f
+    m_ExpandedIDs: 00000000ca2a0000282c0000fe310000f037000094390000c4390000d03d000096b4000098b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

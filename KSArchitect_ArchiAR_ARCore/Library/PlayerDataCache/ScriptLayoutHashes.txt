@@ -6,6 +6,7 @@ Assets/_Scenes/KSArchitect_AR.unity
 Assets/KS/Projects/Scenes/Project001.unity
 Assets/KS/Projects/Scenes/Project002.unity
 Assets/KS/Projects/Scenes/Project003.unity
+Assets/KS/Projects/Scenes/Project006.unity
 Assets/KS/Projects/Scenes/Project008.unity
 Assets/KS/Projects/Scenes/Project009.unity
 Assets/KS/Projects/Scenes/Project011.unity
@@ -137,7 +138,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-80ed1be119260b9ad95d990da39c9036 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
+d9b5bcbce56c365256b4ec9a202d25c8 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
 4294352ce43e027e71b199587be57c74 Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour

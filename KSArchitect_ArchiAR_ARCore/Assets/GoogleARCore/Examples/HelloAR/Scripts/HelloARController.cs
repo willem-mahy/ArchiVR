@@ -77,6 +77,8 @@ namespace GoogleARCore.Examples.HelloAR
 
         public Text m_textCameraRotation = null;
 
+        public Text m_textCameraClipRange = null;
+
         public Text m_textLastInputEvent = null;
 
         public Text m_textModelScale = null;
@@ -105,9 +107,13 @@ namespace GoogleARCore.Examples.HelloAR
 
         public Anchor m_modelAnchor = null;
 
+        private float m_defaultNearClipPlane = 0.1f;
+
         public void Start()
         {
             DynamicallyLoadProjects();
+
+            m_defaultNearClipPlane = Camera.main.nearClipPlane;
         }
 
         public void ToggleMenuVisible()
@@ -156,14 +162,22 @@ namespace GoogleARCore.Examples.HelloAR
                 }
             }
 
+            var c = Camera.main;
+
             if (m_textCameraPosition)
             {
-                m_textCameraPosition.text = Camera.current ? Camera.current.transform.position.ToString() : "-";
+                m_textCameraPosition.text = c ? c.transform.position.ToString() : "-";
             }
 
             if (m_textCameraRotation)
             {
-                m_textCameraRotation.text = Camera.current ? Camera.current.transform.rotation.eulerAngles.ToString() : "-";
+                m_textCameraRotation.text = c ? c.transform.rotation.eulerAngles.ToString() : "-";
+            }
+
+            if (m_textCameraClipRange)
+            {
+                m_textCameraClipRange.text = c ? "[" + c.nearClipPlane.ToString() + ", " + c.farClipPlane.ToString() + "]" : "-";
+                m_textCameraClipRange.text = "dn:" + m_defaultNearClipPlane.ToString() + " " + m_textCameraClipRange.text;
             }
 
             if (m_textModelPosition)
@@ -396,6 +410,11 @@ namespace GoogleARCore.Examples.HelloAR
             m_modelScaleIndex = Mathf.Min(++m_modelScaleIndex, (m_modelScales.Count-1));
             float s = m_modelScales[m_modelScaleIndex];
             m_model.transform.localScale = new Vector3(s, s, s);
+
+            // Adjust near clipping plane.
+            // This prevents the model from becoming partially or entirely clipped
+            // when viewing the model at smaller scales from close up.
+            Camera.main.nearClipPlane = m_defaultNearClipPlane * s;
         }
 
         public void ModelPositionDown()
