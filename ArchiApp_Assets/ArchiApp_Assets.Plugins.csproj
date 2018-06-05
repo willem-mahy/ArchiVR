@@ -306,9 +306,9 @@
     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\HorizonDome.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\SkyDome.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\Sun.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\HorizonDome.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\SkyDome.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\Sun.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

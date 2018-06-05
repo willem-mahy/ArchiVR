@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.4.4f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -240,99 +242,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_ArchiApp\Application\ApplicationState\ApplicationState.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\ApplicationState\ApplicationStateHome.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\ApplicationState\ApplicationStatePlay.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\ConstructionLighting.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\Document.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\ModelLayer.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\PointOfInterest.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\Project.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Entity\ProjectModel.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Manager\CloudManager.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Manager\LayerManager.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Manager\POIManager.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Manager\ProjectManager.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\Manager\VegetationManager.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\SceneSelection.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\SceneSelectionBase.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\ButtonConstructionLightingMode.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\LayerButton.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\Menu\Home_MainMenu.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\Menu\MenuLayer.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\Menu\Play_MenuMain.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\Menu\POIMenu.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\ProjectSelectButton.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\TextActivePOIName.cs" />
-    <Compile Include="Assets\_ArchiApp\Application\UI\TextActiveProjectName.cs" />
-    <Compile Include="Assets\_WM\ButtonSelectProjectWS.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigation.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeBase.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeFly.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeFPS.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTeleport.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTracked.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeVuforiaAR.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlBase.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlGamepad.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlGearVRTrackpad.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlGyro.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlKeyboard.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlMouse.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\RotationControl\RotationControlSwipe.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\TranslationControl\TranslationControlBase.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\TranslationControl\TranslationControlFly.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\TranslationControl\TranslationControlFPS.cs" />
-    <Compile Include="Assets\_WM\CameraNavigation\TranslationControl\TranslationControlTeleport.cs" />
-    <Compile Include="Assets\_WM\Environment\LightCelestialBehavior.cs" />
-    <Compile Include="Assets\_WM\Environment\MenuClouds.cs" />
-    <Compile Include="Assets\_WM\Environment\SkyBehavior.cs" />
-    <Compile Include="Assets\_WM\GamePadPreview.cs" />
-    <Compile Include="Assets\_WM\MenuSceneSelectionVR.cs" />
-    <Compile Include="Assets\_WM\Script\PhysicalGamepad.cs" />
-    <Compile Include="Assets\_WM\Script\UI\FocusableItem.cs" />
-    <Compile Include="Assets\_WM\Script\UI\Menu\MenuControlsSettings.cs" />
-    <Compile Include="Assets\_WM\Script\UI\Menu\MenuGraphicsSettings.cs" />
-    <Compile Include="Assets\_WM\Script\UI\Menu\MenuPlay.cs" />
-    <Compile Include="Assets\_WM\Script\UI\Menu\MenuSettings.cs" />
-    <Compile Include="Assets\_WM\Script\VirtualGamepad.cs" />
-    <Compile Include="Assets\_WM\Settings\ApplicationSettings.cs" />
-    <Compile Include="Assets\_WM\Settings\ControlSettings.cs" />
-    <Compile Include="Assets\_WM\Settings\GraphicsSettings.cs" />
-    <Compile Include="Assets\_WM\Settings\StateSettings.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ButtonCameraNavigationMode.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ButtonTimeOfDay.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\CheckBox.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\DeviceSensors.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\DisplayCamera.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\DisplayFPS.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\DPadBehavior.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\InputSwipe.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\Menu.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\OnHoverHighlight.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\TabView.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\TextCameraLocation.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ToastMessage.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ToastMessageManager.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ToggleActiveBehavior.cs" />
-    <Compile Include="Assets\_WM\UI\Controls\ToggleButton.cs" />
-    <Compile Include="Assets\_WM\UI\UI Management\UIManager.cs" />
-    <Compile Include="Assets\_WM\UI\UI Management\Widget.cs" />
-    <Compile Include="Assets\_WM\UI\UI Management\WMMenu.cs" />
-    <Compile Include="Assets\_WM\UI\VR\OnHoverHighlight.cs" />
-    <Compile Include="Assets\_WM\UI\VR\PlayerGazeMenuBehavior.cs" />
-    <Compile Include="Assets\_WM\UI\VR\TimedGazeItem.cs" />
-    <Compile Include="Assets\_WM\UI\VR\VRButton.cs" />
-    <Compile Include="Assets\_WM\Util\DebugUtil.cs" />
-    <Compile Include="Assets\_WM\Util\InputUtil.cs" />
-    <Compile Include="Assets\_WM\Util\Math.cs" />
-    <Compile Include="Assets\_WM\Util\MenuTime.cs" />
-    <Compile Include="Assets\_WM\Util\StringUtil.cs" />
-    <Compile Include="Assets\_WM\Util\TimeBehavior.cs" />
-    <Compile Include="Assets\_WM\VirtualGamepad\VirtualGamepad_AR.cs" />
-    <Compile Include="Assets\_WM\VirtualGamepad\VirtualGamepad_Fly.cs" />
-    <Compile Include="Assets\_WM\VirtualGamepad\VirtualGamepad_FPS.cs" />
-    <Compile Include="Assets\_WM\VirtualGamepad\VirtualGamepad_Teleport.cs" />
+    <Compile Include="Assets\ArchiApp\Application\ApplicationStates\ApplicationState.cs" />
+    <Compile Include="Assets\ArchiApp\Application\ApplicationStates\ApplicationStateHome.cs" />
+    <Compile Include="Assets\ArchiApp\Application\ApplicationStates\ApplicationStatePlay.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\ConstructionLighting.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\Document.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\ModelLayer.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\PointOfInterest.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\Project.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Entities\ProjectModel.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Managers\CloudManager.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Managers\LayerManager.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Managers\POIManager.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Managers\ProjectManager.cs" />
+    <Compile Include="Assets\ArchiApp\Application\Managers\VegetationManager.cs" />
+    <Compile Include="Assets\ArchiApp\Application\SceneSelection.cs" />
+    <Compile Include="Assets\ArchiApp\Application\SceneSelectionBase.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\ButtonConstructionLightingMode.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\ButtonSelectProjectWS.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\LayerButton.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\Menus\Home_MainMenu.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\Menus\MenuLayer.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\Menus\Play_MenuMain.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\Menus\POIMenu.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\MenuSceneSelectionVR.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\ProjectSelectButton.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\TextActivePOIName.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\TextActiveProjectName.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
@@ -390,6 +326,72 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigation.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeBase.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeFly.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeFPS.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTeleport.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeTracked.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\CameraNavigationMode\CameraNavigationModeVuforiaAR.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlBase.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlGamepad.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlGearVRTrackpad.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlGyro.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlKeyboard.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlMouse.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\RotationControl\RotationControlSwipe.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\TranslationControl\TranslationControlBase.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\TranslationControl\TranslationControlFly.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\TranslationControl\TranslationControlFPS.cs" />
+    <Compile Include="Assets\WM\CameraNavigation\TranslationControl\TranslationControlTeleport.cs" />
+    <Compile Include="Assets\WM\Environment\LightCelestialBehavior.cs" />
+    <Compile Include="Assets\WM\Environment\MenuClouds.cs" />
+    <Compile Include="Assets\WM\Environment\SkyBehavior.cs" />
+    <Compile Include="Assets\WM\Gamepad\GamePadPreview.cs" />
+    <Compile Include="Assets\WM\Gamepad\PhysicalGamepad.cs" />
+    <Compile Include="Assets\WM\Gamepad\VirtualGamepad.cs" />
+    <Compile Include="Assets\WM\Gamepad\VirtualGamepad\VirtualGamepad_AR.cs" />
+    <Compile Include="Assets\WM\Gamepad\VirtualGamepad\VirtualGamepad_Fly.cs" />
+    <Compile Include="Assets\WM\Gamepad\VirtualGamepad\VirtualGamepad_FPS.cs" />
+    <Compile Include="Assets\WM\Gamepad\VirtualGamepad\VirtualGamepad_Teleport.cs" />
+    <Compile Include="Assets\WM\Settings\ApplicationSettings.cs" />
+    <Compile Include="Assets\WM\Settings\ControlSettings.cs" />
+    <Compile Include="Assets\WM\Settings\GraphicsSettings.cs" />
+    <Compile Include="Assets\WM\Settings\StateSettings.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ButtonCameraNavigationMode.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ButtonTimeOfDay.cs" />
+    <Compile Include="Assets\WM\UI\Controls\CheckBox.cs" />
+    <Compile Include="Assets\WM\UI\Controls\DeviceSensors.cs" />
+    <Compile Include="Assets\WM\UI\Controls\DisplayCamera.cs" />
+    <Compile Include="Assets\WM\UI\Controls\DisplayFPS.cs" />
+    <Compile Include="Assets\WM\UI\Controls\DPadBehavior.cs" />
+    <Compile Include="Assets\WM\UI\Controls\FocusableItem.cs" />
+    <Compile Include="Assets\WM\UI\Controls\InputSwipe.cs" />
+    <Compile Include="Assets\WM\UI\Controls\Menu.cs" />
+    <Compile Include="Assets\WM\UI\Controls\OnHoverHighlight.cs" />
+    <Compile Include="Assets\WM\UI\Controls\TabView.cs" />
+    <Compile Include="Assets\WM\UI\Controls\TextCameraLocation.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ToastMessage.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ToastMessageManager.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ToggleActiveBehavior.cs" />
+    <Compile Include="Assets\WM\UI\Controls\ToggleButton.cs" />
+    <Compile Include="Assets\WM\UI\Menu\MenuControlsSettings.cs" />
+    <Compile Include="Assets\WM\UI\Menu\MenuGraphicsSettings.cs" />
+    <Compile Include="Assets\WM\UI\Menu\MenuPlay.cs" />
+    <Compile Include="Assets\WM\UI\Menu\MenuSettings.cs" />
+    <Compile Include="Assets\WM\UI\UI Management\UIManager.cs" />
+    <Compile Include="Assets\WM\UI\UI Management\Widget.cs" />
+    <Compile Include="Assets\WM\UI\UI Management\WMMenu.cs" />
+    <Compile Include="Assets\WM\UI\VR\OnHoverHighlight.cs" />
+    <Compile Include="Assets\WM\UI\VR\PlayerGazeMenuBehavior.cs" />
+    <Compile Include="Assets\WM\UI\VR\TimedGazeItem.cs" />
+    <Compile Include="Assets\WM\UI\VR\VRButton.cs" />
+    <Compile Include="Assets\WM\Util\DebugUtil.cs" />
+    <Compile Include="Assets\WM\Util\InputUtil.cs" />
+    <Compile Include="Assets\WM\Util\Math.cs" />
+    <Compile Include="Assets\WM\Util\MenuTime.cs" />
+    <Compile Include="Assets\WM\Util\StringUtil.cs" />
+    <Compile Include="Assets\WM\Util\TimeBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
@@ -413,9 +415,9 @@
     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\HorizonDome.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\SkyDome.shader" />
-    <None Include="Assets\_WM\Prefab\Lighting\Shader\Sun.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\HorizonDome.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\SkyDome.shader" />
+    <None Include="Assets\WM\Prefab\Lighting\Shader\Sun.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
