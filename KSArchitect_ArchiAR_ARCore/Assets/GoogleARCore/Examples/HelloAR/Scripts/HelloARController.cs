@@ -197,6 +197,8 @@ namespace GoogleARCore.Examples.HelloAR
                 {
                     m_textProjectName.text = m_projectNames[m_activeProjectIndex];
                 }
+
+            UpdateCameraClipPlanes();
         }
 
         private void AddModel(Vector2 position)
@@ -231,16 +233,6 @@ namespace GoogleARCore.Examples.HelloAR
                     SetModel(hit.Pose.position, hit.Pose.rotation, k_ModelRotation);       
                 }                
             }
-        }
-
-        private void DrawDebugRayCamera(Color rayColor)
-        {
-            if (Camera.current == null)
-                return;
-
-            var transform = Camera.current.transform;
-            Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-            Debug.DrawRay(transform.position, forward, rayColor, 2, true);
         }
 
         private int m_modelScaleIndex = 0;
@@ -388,33 +380,38 @@ namespace GoogleARCore.Examples.HelloAR
         
         public void ModelScaleDown()
         {
-            if (m_loadingProject)
-                return;
-
-            if (!m_model)
-                return;
-
-            m_modelScaleIndex = Mathf.Max(--m_modelScaleIndex, 0);
-            float s = m_modelScales[m_modelScaleIndex];
-            m_model.transform.localScale = new Vector3(s, s, s);
+            SetModelScale(Mathf.Max(m_modelScaleIndex - 1, 0));
         }
 
         public void ModelScaleUp()
         {
+            SetModelScale(Mathf.Min(++m_modelScaleIndex, (m_modelScales.Count - 1)));
+        }
+
+        private void SetModelScale(int modelScaleIndex)
+        {
             if (m_loadingProject)
                 return;
-            
+
             if (!m_model)
                 return;
 
-            m_modelScaleIndex = Mathf.Min(++m_modelScaleIndex, (m_modelScales.Count-1));
+            m_modelScaleIndex = modelScaleIndex;
+
             float s = m_modelScales[m_modelScaleIndex];
             m_model.transform.localScale = new Vector3(s, s, s);
+                        
+            UpdateCameraClipPlanes();
+        }
 
-            // Adjust near clipping plane.
-            // This prevents the model from becoming partially or entirely clipped
-            // when viewing the model at smaller scales from close up.
-            Camera.main.nearClipPlane = m_defaultNearClipPlane * s;
+        // Adjust near clipping plane.
+        // This prevents the model from becoming clipped (partially or entirely)
+        // when viewing the model at smaller scales from close up.
+        private void UpdateCameraClipPlanes()
+        {            
+            float s = m_modelScales[m_modelScaleIndex];
+
+            Camera.main.nearClipPlane = 0.1f;// m_defaultNearClipPlane * s;
         }
 
         public void ModelPositionDown()

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ArchiApp/Scenes/Project/Project040.unity
+- path: Assets/ArchiApp/Scenes/Play.unity
   isLoaded: 1
   isActive: 1

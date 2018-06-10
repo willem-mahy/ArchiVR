@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.4.4f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -261,7 +259,7 @@
     <Compile Include="Assets\ArchiApp\Application\UI\ButtonConstructionLightingMode.cs" />
     <Compile Include="Assets\ArchiApp\Application\UI\ButtonSelectProjectWS.cs" />
     <Compile Include="Assets\ArchiApp\Application\UI\LayerButton.cs" />
-    <Compile Include="Assets\ArchiApp\Application\UI\Menus\Home_MainMenu.cs" />
+    <Compile Include="Assets\ArchiApp\Application\UI\Menus\Home_MenuMain.cs" />
     <Compile Include="Assets\ArchiApp\Application\UI\Menus\MenuLayer.cs" />
     <Compile Include="Assets\ArchiApp\Application\UI\Menus\Play_MenuMain.cs" />
     <Compile Include="Assets\ArchiApp\Application\UI\Menus\POIMenu.cs" />

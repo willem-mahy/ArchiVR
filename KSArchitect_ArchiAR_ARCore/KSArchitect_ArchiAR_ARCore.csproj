@@ -361,6 +361,20 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPSession.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPSessionStatus.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPTrackingState.cs" />
+    <Compile Include="Assets\KS\Entities\Layer.cs" />
+    <Compile Include="Assets\KS\Entities\Model.cs" />
+    <Compile Include="Assets\KS\Managers\LayerManager.cs" />
+    <Compile Include="Assets\KSArchitect_ArchiAR_AR\ApplicationState\ApplicationState.cs" />
+    <Compile Include="Assets\KSArchitect_ArchiAR_AR\ApplicationState\ApplicationStateDefault.cs" />
+    <Compile Include="Assets\KSArchitect_ArchiAR_AR\ProjectManager.cs" />
+    <Compile Include="Assets\WM\StringUtil.cs" />
+    <Compile Include="Assets\WM\UI\DisplayCameraClipRange.cs" />
+    <Compile Include="Assets\WM\UI\DisplayCameraPosition.cs" />
+    <Compile Include="Assets\WM\UI\DisplayCameraRotation.cs" />
+    <Compile Include="Assets\WM\UI\DisplayGameObjectPosition.cs" />
+    <Compile Include="Assets\WM\UI\DisplayGameObjectRotation.cs" />
+    <Compile Include="Assets\WM\UI\LayerOption.cs" />
+    <Compile Include="Assets\WM\UI\MenuLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleARCore\Editor\AppDependencies.xml" />
