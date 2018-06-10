@@ -9,7 +9,9 @@ namespace WM.UI
     {
         public ScrollRect m_scrollView = null;
 
-        public Button m_showAllButton = null;
+        public Button m_showAllLayersButton = null;
+
+        public Button m_hideAllLayersButton = null;
 
         public GameObject m_layerButtonPanel = null;
 
@@ -29,7 +31,16 @@ namespace WM.UI
         // Update is called once per frame
         public new void Update()
         {
-            m_showAllButton.interactable = m_layerManager != null && !m_layerManager.AreAllLayersVisible();
+            if (m_layerManager != null)
+            {
+                m_showAllLayersButton.interactable = m_layerManager != null && !m_layerManager.AreAllLayersVisible();
+                m_hideAllLayersButton.interactable = m_layerManager != null && !m_layerManager.AreAllLayersInvisible();
+            }
+            else
+            {
+                m_showAllLayersButton.interactable = false;
+                m_hideAllLayersButton.interactable = false;
+            }
         }
 
         private float GetLayerScrollStep()

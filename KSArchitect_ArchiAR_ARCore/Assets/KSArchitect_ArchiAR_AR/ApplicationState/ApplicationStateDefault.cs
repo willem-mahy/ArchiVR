@@ -46,6 +46,8 @@ namespace ArchiAR_ARCore_AR
         /// </summary>
         public GameObject SearchingForPlaneUI;
 
+        public GameObject m_panelLoadingModel = null;
+
         public Text m_textProjectName = null;
 
         public Text m_textLastInputEvent = null;
@@ -57,8 +59,6 @@ namespace ArchiAR_ARCore_AR
         public Text m_textModelRotation = null;
 
         public GameObject m_menu = null;
-
-        public GameObject m_panelModelEditControls = null;
 
         public GameObject m_panelDebugInfo = null;
 
@@ -101,14 +101,6 @@ namespace ArchiAR_ARCore_AR
                 return;
 
             m_menu.SetActive(!m_menu.activeSelf);
-        }
-
-        public void TogglePanelModelEditControlsVisible()
-        {
-            if (!m_panelModelEditControls)
-                return;
-
-            m_panelModelEditControls.SetActive(!m_panelModelEditControls.activeSelf);
         }
 
         public void ToggleShowDebugInfo_ValueChanged(Toggle toggle)
@@ -280,8 +272,8 @@ namespace ArchiAR_ARCore_AR
         {
             m_loadingProject = true;
 
-            if (m_textProjectName)
-                m_textProjectName.text = "Loading...";
+            if (m_panelLoadingModel)
+                m_panelLoadingModel.SetActive(true);
 
             // The Application loads the Scene in the background as the current Scene runs.
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
@@ -329,7 +321,24 @@ namespace ArchiAR_ARCore_AR
 
             m_menuLayer.Init(layerManager);
 
+            if (m_panelLoadingModel)
+                m_panelLoadingModel.SetActive(false);
+
             m_loadingProject = false;
+        }
+
+        public void ShowAllLayers()
+        {
+            var layerManager = gameObject.GetComponent<LayerManager>();
+
+            layerManager.SetAllLayersVisible(true);
+        }
+
+        public void HideAllLayers()
+        {
+            var layerManager = gameObject.GetComponent<LayerManager>();
+
+            layerManager.SetAllLayersVisible(true);
         }
 
         public void ModelScaleDown()

@@ -106,5 +106,18 @@ namespace KS.Managers
 
             return true;
         }
+
+        public bool AreAllLayersInvisible()
+        {
+            foreach (var layer in GetLayers())
+            {
+                if (layer.IsVisible())
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }
