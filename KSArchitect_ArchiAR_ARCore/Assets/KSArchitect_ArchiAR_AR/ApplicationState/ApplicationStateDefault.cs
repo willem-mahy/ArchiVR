@@ -180,13 +180,20 @@ namespace ArchiAR_ARCore_AR
             if (m_loadingProject)
                 return;
 
-#if UNITY_EDITOR
-            // Instantiate model at the hit pose.
-            SetModel(Vector3.zero, Quaternion.identity, k_ModelRotation);
-            return;
-#endif
+            AddModelToAnchor(position);
+            //AddModelAtOrigin();
+        }
 
-            // Raycast against the location the player touched to search for planes.
+        // Instantiate model at the World Origin without world anchor.
+        private void AddModelAtOrigin()
+        {            
+            SetModel(Vector3.zero, Quaternion.identity, k_ModelRotation);
+        }
+
+        // Raycast against the location the player touched to search for planes.
+        // Instantiate model at the hit pose and attach it to a world anchor.
+        private void AddModelToAnchor(Vector2 position)
+        {            
             TrackableHit hit;
             TrackableHitFlags raycastFilter =
                 TrackableHitFlags.PlaneWithinPolygon |
@@ -272,6 +279,7 @@ namespace ArchiAR_ARCore_AR
         {
             m_loadingProject = true;
 
+            Debug.Log("Loading model from " + sceneName + "...");
             if (m_panelLoadingModel)
                 m_panelLoadingModel.SetActive(true);
 
@@ -284,7 +292,7 @@ namespace ArchiAR_ARCore_AR
                 yield return null;
             }
 
-            m_model = GameObject.Find("World");            
+            m_model = GameObject.Find("World");
 
             if (m_model)
             {
@@ -320,11 +328,18 @@ namespace ArchiAR_ARCore_AR
             layerManager.DynamicallyCreateLayers();
 
             m_menuLayer.Init(layerManager);
+            
+            Debug.Log("Loading model from " + sceneName + " completed.");
 
             if (m_panelLoadingModel)
                 m_panelLoadingModel.SetActive(false);
 
             m_loadingProject = false;
+            
+            // Necessary model reinitialization (must be performed AFTER loading completes)
+            ModelRotationReset();
+            ModelPositionReset();
+            ModelScaleReset();
         }
 
         public void ShowAllLayers()
@@ -351,6 +366,12 @@ namespace ArchiAR_ARCore_AR
             SetModelScale(Mathf.Min(++m_modelScaleIndex, (m_modelScales.Count - 1)));
         }
 
+        public void ModelScaleReset()
+        {
+            m_modelScaleIndex = 0;
+            SetModelScale(m_modelScaleIndex);
+        }
+
         private void SetModelScale(int modelScaleIndex)
         {
             if (m_loadingProject)
@@ -374,7 +395,7 @@ namespace ArchiAR_ARCore_AR
         {
             float s = m_modelScales[m_modelScaleIndex];
 
-            Camera.main.nearClipPlane = 0.1f;// m_defaultNearClipPlane * s;
+            Camera.main.nearClipPlane = m_defaultNearClipPlane * s;
         }
 
         public void ModelRotationDown()
@@ -399,6 +420,16 @@ namespace ArchiAR_ARCore_AR
             m_model.transform.Rotate(0, 30, 0);
         }
 
+        public void ModelRotationReset()
+        {
+            if (m_loadingProject)
+                return;
+
+            if (!m_model)
+                return;
+
+            m_model.transform.localRotation = Quaternion.identity;
+        }
 
         public void ModelPositionDown()
         {
@@ -422,6 +453,17 @@ namespace ArchiAR_ARCore_AR
 
             var pos = m_model.transform.localPosition + 0.1f * Vector3.up;
             m_model.transform.localPosition = pos;
+        }
+
+        public void ModelPositionReset()
+        {
+            if (m_loadingProject)
+                return;
+
+            if (!m_model)
+                return;
+
+            m_model.transform.localPosition = Vector3.zero;
         }
 
         /// <summary>

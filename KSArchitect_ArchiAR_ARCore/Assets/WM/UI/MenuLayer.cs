@@ -20,7 +20,7 @@ namespace WM.UI
         private LayerManager m_layerManager = null;
 
         // Use this for initialization
-        public new void Start()
+        public void Start()
         {
             if (null == m_layerButtonPanel)
             {
@@ -29,7 +29,7 @@ namespace WM.UI
         }
 
         // Update is called once per frame
-        public new void Update()
+        public void Update()
         {
             if (m_layerManager != null)
             {
@@ -114,7 +114,7 @@ namespace WM.UI
             foreach (var layer in layers)
             {
                 // Adds a layer option for the given layer to m_layerButtonPanel at local position Vector3.zero.
-                GameObject layerOption = DynamicallyAddButton(layer, y);
+                /*GameObject layerOption =*/ DynamicallyAddButton(layer, y);
 
                 y += yStep;
             }

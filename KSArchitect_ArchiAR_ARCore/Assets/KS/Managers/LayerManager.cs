@@ -76,7 +76,7 @@ namespace KS.Managers
 
                     var layer = GetOrAddLayer(layerName);
 
-                    m_layers[layerName].Add(go);
+                    layer.Add(go);
                 }
             }
         }

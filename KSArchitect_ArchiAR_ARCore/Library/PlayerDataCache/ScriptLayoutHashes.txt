@@ -101,7 +101,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-f15b500bf45131a63c2db203ef9483fc Assembly-CSharp.dll:WM.UI.MenuLayer
+39d86e945142de405b4c791198c0963c Assembly-CSharp.dll:WM.UI.MenuLayer
 33827705840024ed836ed3a4d87156e5 Assembly-CSharp.dll:WM.UI.DisplayGameObjectRotation
 56ce15dd7401a24d085fbe0967ae56c6 Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.TextureReader
 b203c0a7615dfebdf3d7d05b7551f462 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchor.CloudAnchorController
@@ -260,7 +260,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.Examples.Common.DetectedPlaneVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:KS.Entities.Model
-18843d7040d5c271d9c52b02129ce671 Assembly-CSharp.dll:ArchiAR_ARCore_AR.ApplicationStateDefault
+b3a62f9b45e39d35b9a461129df43c9e Assembly-CSharp.dll:ArchiAR_ARCore_AR.ApplicationStateDefault
 63ee4d254596e7e33706786578d0fdfc Assembly-CSharp.dll:WM.UI.DisplayCameraRotation
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
