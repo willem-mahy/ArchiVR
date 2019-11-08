@@ -1,2 +1,2 @@
 # ArchiVR
-Architectural preview application for desktop/mobile/VR
+(DEPRECATED) Architectural preview application for desktop/mobile/VR
